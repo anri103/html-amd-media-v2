@@ -1,0 +1,306 @@
+/*!
+ * Theme: AMD Media v2
+ * Author: Andrew G
+ * Version: 1.0.0
+ */
+/*------------------------------------------------------------------
+[ fonts ]*/
+/* Muller */
+@font-face {
+  font-family: "Muller";
+  src: url("MullerRegular.eot");
+  src: local("Muller Regular"), local("MullerRegular"), url("../fonts/muller/MullerRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/muller/MullerRegular.woff2") format("woff2"), url("../fonts/muller/MullerRegular.woff") format("woff"), url("../fonts/muller/MullerRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("MullerLight.eot");
+  src: local("Muller Light"), local("MullerLight"), url("../fonts/muller/MullerLight.eot?#iefix") format("embedded-opentype"), url("../fonts/muller/MullerLight.woff2") format("woff2"), url("../fonts/muller/MullerLight.woff") format("woff"), url("../fonts/muller/MullerLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("MullerMedium.eot");
+  src: local("Muller Medium"), local("MullerMedium"), url("../fonts/muller/MullerMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/muller/MullerMedium.woff2") format("woff2"), url("../fonts/muller/MullerMedium.woff") format("woff"), url("../fonts/muller/MullerMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("MullerBold.eot");
+  src: local("Muller Bold"), local("MullerBold"), url("../fonts/muller/MullerBold.eot?#iefix") format("embedded-opentype"), url("../fonts/muller/MullerBold.woff2") format("woff2"), url("../fonts/muller/MullerBold.woff") format("woff"), url("../fonts/muller/MullerBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+/* Spectral */
+@font-face {
+  font-family: "Spectral";
+  src: local("Spectral Medium"), url("../fonts/spectral/Spectral-Medium.woff2") format("woff2"), url("../fonts/spectral/Spectral-Medium.woff") format("woff"), url("../fonts/spectral/Spectral-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Spectral";
+  src: local("Spectral SemiBold"), url("../fonts/spectral/Spectral-SemiBold.woff2") format("woff2"), url("../fonts/spectral/Spectral-SemiBold.woff") format("woff"), url("../fonts/spectral/Spectral-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/*------------------------------------------------------------------
+[ variables ]*/
+:root {
+  --theme-ff-main: "Muller", sans-serif;
+  --theme-ff-title: "Spectral", serif;
+  --cui-primary: #566B61;
+  --cui-secondary: #B4664C;
+  --cui-success: #1AB86D;
+  --cui-info: #0dcaf0;
+  --cui-warning: #ffc107;
+  --cui-danger: #dc3545;
+  --cui-light: #f8f9fa;
+  --cui-dark: #212529;
+  --cui-primary-rgb: 86, 107, 97;
+  --cui-secondary-rgb: 180, 102, 76;
+  --cui-success-rgb: 26, 184, 109;
+  --cui-info-rgb: 13, 202, 240;
+  --cui-warning-rgb: 255, 193, 7;
+  --cui-danger-rgb: 220, 53, 69;
+  --cui-light-rgb: 248, 249, 250;
+  --cui-dark-rgb: 33, 37, 41;
+  --cui-secondary-color: rgba(155, 155, 155, 0.875);
+  --cui-secondary-color-rgb: 155, 155, 155;
+  --cui-body-font-family: var(--theme-ff-main);
+  --cui-body-font-size: 1rem;
+  --cui-body-font-weight: 400;
+  --cui-body-line-height: 1.25;
+  --cui-body-color: #1F3326;
+  --cui-body-color-rgb: 31, 51, 38;
+  --cui-body-bg: #F6F6F6;
+  --cui-body-bg-rgb: 246, 246, 246;
+  --cui-border-width: 1px;
+  --cui-border-style: solid;
+  --cui-border-color: #dee2e6;
+  --cui-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --cui-border-radius: 0.625rem;
+  --cui-border-radius-sm: 0.25rem;
+  --cui-border-radius-lg: 0.5rem;
+  --cui-border-radius-xl: 1rem;
+  --cui-border-radius-2xl: 2rem;
+  --cui-border-radius-pill: 50rem;
+  --cui-link-color: #566B61;
+  --cui-link-color-rgb: 86, 107, 97;
+  --cui-link-hover-color: #1F3326;
+  --cui-link-hover-color-rgb: 31, 51, 38;
+  --swiper-theme-color: #C3846F;
+}
+
+/*------------------------------------------------------------------
+[ general ]*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body.catalog-menu-active, body.genres-menu-active {
+  overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  body.catalog-menu-active, body.genres-menu-active {
+    padding-right: 15px;
+  }
+}
+
+.main {
+  flex: 1;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ BASE STYLES ]*/
+.bg-img {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.g-2rem,
+.gy-2rem {
+  --cui-gutter-y: 2rem;
+}
+
+@media (min-width: 1600px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    --container-xxxl: 1400px;
+    max-width: calc(var(--container-xxxl) + var(--cui-gutter-x));
+  }
+}
+/*------------------------------------------------------------------
+[ typography ]*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.75rem;
+  font-family: var(--theme-ff-title);
+  font-weight: 500;
+}
+
+h1,
+.h1 {
+  font-size: 1.625rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.5rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.375rem;
+}
+
+h4,
+.h4 {
+  font-size: 1rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.125rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  h1,
+  .h1 {
+    font-size: 2rem;
+  }
+  h2,
+  .h2 {
+    font-size: 1.75rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.5rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.375rem;
+  }
+  h5,
+  .h5 {
+    font-size: 1.125rem;
+  }
+  h6,
+  .h6 {
+    font-size: 1.125rem;
+  }
+}
+.fs-1 {
+  font-size: 1.625rem !important;
+}
+
+.fs-2 {
+  font-size: 1.5rem !important;
+}
+
+.fs-3 {
+  font-size: 1.375rem !important;
+}
+
+.fs-4 {
+  font-size: 1rem !important;
+}
+
+.fs-5 {
+  font-size: 1.125rem !important;
+}
+
+.fs-6 {
+  font-size: 1rem !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .fs-1 {
+    font-size: 2rem !important;
+  }
+  .fs-2 {
+    font-size: 1.75rem !important;
+  }
+  .fs-3 {
+    font-size: 1.5rem !important;
+  }
+  .fs-4 {
+    font-size: 1.375rem !important;
+  }
+  .fs-5 {
+    font-size: 1.125rem !important;
+  }
+  .fs-6 {
+    font-size: 1.125rem !important;
+  }
+}
+.fs-small {
+  font-size: 0.875rem;
+}
+
+.fs-xs-small {
+  font-size: 0.75rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/*------------------------------------------------------------------
+[ links ]*/
+a {
+  text-decoration: none;
+}
+
+/*------------------------------------------------------------------
+[ buttons ]*/
+/*------------------------------------------------------------------
+[ swiper ]*/
+/*------------------------------------------------------------------
+[ sections ]*/
+.section {
+  position: relative;
+  padding: 30px 0px;
+}
+
+.section-heading {
+  margin-bottom: 15px;
+}
+
+/*------------------------------------------------------------------
+[ cards ]*/
+/*------------------------------------------------------------------
+[ header ]*/
+/*------------------------------------------------------------------
+[ footer ]*/

@@ -1,0 +1,143 @@
+<header class="header">
+
+    <div class="container">
+
+        <!-- header__logo -->
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="img/logo.svg" alt="AMD Media">
+            </a>
+        </div>
+
+        <!-- header__catalog-btn -->
+        <div class="header__catalog-btn">
+            <button type="button" class="btn catalog-menu-toggler js-catalog-toggler">Каталог</button>
+        </div>
+
+        <!-- header__main-menu -->
+        <nav class="header__main-menu">
+            <div class="links-wrapper">
+                <a href="#" class="menu-link">Моя библиотека</a>
+                <a href="#" class="menu-link">Стать автором</a>
+            </div>
+        </nav>
+
+        <!-- header__user-mobile-menu -->
+        <nav class="header__user-mobile-menu">
+            <div class="links-wrapper">
+                <!-- icon-auth -->
+                <a href="#" class="menu-link">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.8157 25.5778H0.87793V21.4322C4.72597 19.2898 9.05851 18.1684 13.4627 18.175C15.7665 18.175 17.9992 18.4755 20.1253 19.0396"
+                            stroke="currentColor" stroke-width="1.57927" />
+                        <path
+                            d="M7.54053 7.44085C7.54053 9.1097 8.20348 10.7102 9.38353 11.8903C10.5636 13.0703 12.1641 13.7333 13.8329 13.7333C15.5018 13.7333 17.1023 13.0703 18.2823 11.8903C19.4624 10.7102 20.1253 9.1097 20.1253 7.44085C20.1253 5.772 19.4624 4.1715 18.2823 2.99144C17.1023 1.81139 15.5018 1.14844 13.8329 1.14844C12.1641 1.14844 10.5636 1.81139 9.38353 2.99144C8.20348 4.1715 7.54053 5.772 7.54053 7.44085Z"
+                            stroke="currentColor" stroke-width="1.57927" />
+                        <path d="M30.4894 25.5778H17.1643" stroke="currentColor" stroke-width="1.57927" />
+                        <path d="M24.5669 19.6555L30.4892 25.5778L24.5669 31.5001" stroke="currentColor"
+                            stroke-width="1.57927" />
+                    </svg>
+                    <span>Войти</span>
+                </a>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Catalog menu -->
+    <div class="catalog-menu-area collapse" id="collapseCatalogMenu">
+        <div class="catalog-menu-wrapper">
+            <div class="container">
+                <div class="catalog-menu-body">
+                    <div class="row gy-4">
+                        <div class="col-lg-3">
+                            <div class="h2">Книги</div>
+                            <div class="d-flex flex-column align-items-start gap-4">
+                                <a class="btn btn-gray-light" href="#">
+                                    <svg width="20" height="21" class="me-1">
+                                        <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                    </svg>
+                                    <span>Новинки</span>
+                                </a>
+                                <a class="btn btn-gray-light" href="#">
+                                    <svg width="20" height="21" class="me-1">
+                                        <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                    </svg>
+                                    <span>Бесплатные</span>
+                                </a>
+                                <a class="btn btn-gray-light" href="#">
+                                    <svg width="20" height="21" class="me-1">
+                                        <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                    </svg>
+                                    <span>Рекомендуемые</span>
+                                </a>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#" class="align-middle">
+                                    <span>Все книги</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                                        <path d="M1 1L7 6L1 11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="h2">Жанры</div>
+                            <div class="row row-cols-1 row-cols-lg-2 gy-4">
+                                <div class="col">
+                                    <div class="catalog-genre-title h3">
+                                        <a href="#">Художественная литература</a>
+                                    </div>
+                                    <ul class="catalog-genre-menu">
+                                        <li>
+                                            <a href="#">Современная проза</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Историческая и военная литература</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контркультура</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Поэзия и драматургия</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Зарубежная литература</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <div class="catalog-genre-title h3">
+                                        <a href="#">Нон-фикшн</a>
+                                    </div>
+                                    <ul class="catalog-genre-menu">
+                                        <li>
+                                            <a href="#">Менеджмент</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Финансовый менеджмент</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Маркетинг, PR, реклама</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Психология</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Научно-популярная литература</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-center text-lg-start">
+                                <button type="button" class="btn btn-outline btn-lg rounded-pill">полный список жанров</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</header>
