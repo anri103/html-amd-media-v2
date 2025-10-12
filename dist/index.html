@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+    <!-- <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
     <link rel="shortcut icon" href="img/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Libristika" />
-    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" /> -->
 
     <!-- styles -->
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
@@ -28,55 +28,63 @@
 <body>
 
     <!-- header -->
-    <header class="header">
+    <header class="header" id="site-header">
 
-    <div class="container">
+    <div class="fixed-header">
+        <div class="container">
+            <div class="main-header">
 
-        <!-- header__logo -->
-        <div class="header__logo">
-            <a href="index.html">
-                <img src="img/logo.svg" alt="AMD Media">
-            </a>
-        </div>
+                <!-- main-header__logo -->
+                <div class="main-header__logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="AMD Media">
+                    </a>
+                </div>
 
-        <!-- header__catalog-btn -->
-        <div class="header__catalog-btn">
-            <button type="button" class="btn catalog-menu-toggler js-catalog-toggler">Каталог</button>
-        </div>
+                <!-- main-header__navigation -->
+                <nav class="main-header__navigation">
+                    <ul class="primary-nav">
+                        <li class="nav-item">
+                            <a href="#">Проекты</a>
+                        </li>
+                        <li class="nav-item has-mega-menu">
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#">Партнёры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Блог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="btn-box">
+                        <a href="tel:+74951595901" class="btn btn-outline-dark btn-m">
+                            <span>+7 495 159-59-01</span>
+                        </a>
+                        <button type="button" class="btn btn-primary btn-m">
+                            <span>Связаться</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                    <path d="M12.271 1.52197L1.22803 1.52197L1.22803 0.521973L13.978 0.521973L13.978 13.272H12.978L12.978 2.229L0.718262 14.4888L0.0112305 13.7817L12.271 1.52197Z" fill="#F8FEFF"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </nav>
 
-        <!-- header__main-menu -->
-        <nav class="header__main-menu">
-            <div class="links-wrapper">
-                <a href="#" class="menu-link">Моя библиотека</a>
-                <a href="#" class="menu-link">Стать автором</a>
             </div>
-        </nav>
 
-        <!-- header__user-mobile-menu -->
-        <nav class="header__user-mobile-menu">
-            <div class="links-wrapper">
-                <!-- icon-auth -->
-                <a href="#" class="menu-link">
-                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.8157 25.5778H0.87793V21.4322C4.72597 19.2898 9.05851 18.1684 13.4627 18.175C15.7665 18.175 17.9992 18.4755 20.1253 19.0396"
-                            stroke="currentColor" stroke-width="1.57927" />
-                        <path
-                            d="M7.54053 7.44085C7.54053 9.1097 8.20348 10.7102 9.38353 11.8903C10.5636 13.0703 12.1641 13.7333 13.8329 13.7333C15.5018 13.7333 17.1023 13.0703 18.2823 11.8903C19.4624 10.7102 20.1253 9.1097 20.1253 7.44085C20.1253 5.772 19.4624 4.1715 18.2823 2.99144C17.1023 1.81139 15.5018 1.14844 13.8329 1.14844C12.1641 1.14844 10.5636 1.81139 9.38353 2.99144C8.20348 4.1715 7.54053 5.772 7.54053 7.44085Z"
-                            stroke="currentColor" stroke-width="1.57927" />
-                        <path d="M30.4894 25.5778H17.1643" stroke="currentColor" stroke-width="1.57927" />
-                        <path d="M24.5669 19.6555L30.4892 25.5778L24.5669 31.5001" stroke="currentColor"
-                            stroke-width="1.57927" />
-                    </svg>
-                    <span>Войти</span>
-                </a>
-            </div>
-        </nav>
-
+        </div>
     </div>
 
     <!-- Catalog menu -->
-    <div class="catalog-menu-area collapse" id="collapseCatalogMenu">
+    <!-- <div class="catalog-menu-area collapse" id="collapseCatalogMenu">
         <div class="catalog-menu-wrapper">
             <div class="container">
                 <div class="catalog-menu-body">
@@ -168,7 +176,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
 </header>
 
@@ -178,7 +186,133 @@
         <!-- section__home-hero -->
         <section class="section section__home-hero">
             <div class="container">
-                
+                <div class="section-body overflow-hidden rounded-3 bg-light">
+                    <div class="hero-grid">
+                        <div></div>
+                        <div class="card card-hero-info">
+                            <div class="card-body">
+                                <h1 class="hero-title">Digital-продукты для бизнеса: эффективная стратегия под отрасль</h1>
+                                <div class="d-flex gap-2">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                            <circle cx="18" cy="2" r="2" fill="#F74251"/>
+                                            <circle cx="18" cy="10" r="2" fill="#F74251"/>
+                                            <circle cx="18" cy="18" r="2" fill="#F74251"/>
+                                            <circle cx="26" cy="18" r="2" fill="#F74251"/>
+                                            <circle cx="10" cy="18" r="2" fill="#F74251"/>
+                                            <circle cx="2" cy="18" r="2" fill="#F74251"/>
+                                            <circle cx="12" cy="12" r="2" fill="#F74251"/>
+                                            <circle cx="12" cy="23" r="2" fill="#F74251"/>
+                                            <circle cx="7" cy="29" r="2" fill="#F74251"/>
+                                            <circle cx="7" cy="7" r="2" fill="#F74251"/>
+                                            <circle cx="24" cy="12" r="2" fill="#F74251"/>
+                                            <circle cx="24" cy="24" r="2" fill="#F74251"/>
+                                            <circle cx="30" cy="29" r="2" fill="#F74251"/>
+                                            <circle cx="30" cy="8" r="2" fill="#F74251"/>
+                                            <circle cx="34" cy="18" r="2" fill="#F74251"/>
+                                            <circle cx="18" cy="26" r="2" fill="#F74251"/>
+                                            <circle cx="18" cy="34" r="2" fill="#F74251"/>
+                                        </svg>
+                                    </span>
+                                    <div class="hero-subtitle">От шаблона до сложных экосистем. Быстрый старт за 14 дней с возможностью масштабирования</div>
+                                </div>
+                            </div>
+                            <div class="card-btn-wrapper">
+                                <a href="#" class="btn btn-primary btn-l w-100">Обсудить проект</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section__partners-slider -->
+        <section class="section section__partners-slider">
+            <div class="bg-light">
+                <div class="swiper swiperPartners">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-01.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-02.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-03.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-04.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-05.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-01.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-02.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-03.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-04.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-05.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

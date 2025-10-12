@@ -1,2 +1,23 @@
 /*------------------------------------------------------------------
 [ swiper ]*/
+
+.swiperPartners {
+
+    .swiper-wrapper {
+        -webkit-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
+    }
+
+    .swiper-slide {
+        width: auto;
+    }
+    
+    .swiper-img {
+        padding: 40px 20px;
+
+        img {
+            height: 60px;
+            opacity: 0.5;
+        }
+    }
+}

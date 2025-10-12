@@ -1,4 +1,90 @@
 /*------------------------------------------------------------------
 [ header ]*/
 
-.header {}
+.header {
+    position: relative;
+    height: 75px;
+    margin-bottom: 20px;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #F8FEFF;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    &.fixed-active {
+        border-color: var(--bs-body-bg);
+    }
+
+    &__logo {
+        width: 142px;
+        max-height: 34px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .primary-nav {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            gap: 32px;
+
+            .nav-item {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+
+                &.has-mega-menu > a::after,
+                &.has-sub-menu > a::after {
+                    content: "";
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    margin-left: 8px;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15' viewBox='0 0 14 15' fill='none'%3E%3Cpath d='M13.8407 3.60692C14.0346 3.76404 14.0542 4.03657 13.8845 4.2161L7.35092 11.1279L7 11.5L6.64908 11.1279L0.115513 4.2161C-0.0541926 4.03657 -0.034646 3.76404 0.159265 3.60692C0.353214 3.44983 0.647628 3.46793 0.817361 3.64742L7 10.188L13.1826 3.64742C13.3524 3.46793 13.6468 3.44984 13.8407 3.60692Z' fill='currentColor'/%3E%3C/svg%3E");
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                & > a {
+                    line-height: 75px;
+                }
+            }
+        }
+
+        .btn-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            margin-left: 40px;
+        }
+    }
+}
