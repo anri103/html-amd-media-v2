@@ -2,41 +2,76 @@
 [ variables ]*/
 
 :root {
+    // Theme fonts
     --theme-ff-main: 'Inter', sans-serif;
     --theme-ff-title: 'Inter', sans-serif;
 
-    --bs-primary: #4251f7; 
-    --bs-secondary: #f74251;
-    --bs-light: #f8feff;
-    --bs-dark: #100102;
-    --bs-primary-rgb: 66, 81, 247;
-    --bs-secondary-rgb: 247, 66, 81;
-    --bs-light-rgb: 248, 254, 255;
-    --bs-dark-rgb: 16, 1, 2;
+    // Theme colors HEX
+    --theme-white: #F8FEFF;
+    --theme-gray: #ECECEC;
+    --theme-stroke-gray: #E4E4E5;
+    --theme-blue-light: #F0F7FF;
+    --theme-blue-gradient: linear-gradient(180deg, #4251C3 0%, #7483F5 100%);
+    --theme-blue: #4251F7;
+    --theme-red-gradient: linear-gradient(180deg, #E13847 0%, #EB5665 100%);
+    --theme-red: #F74251;
+    --theme-black: #100102;
 
-    --bs-body-font-family: var(--theme-ff-main);
-    --bs-body-font-size: 1rem;
+    // Theme colors RGB
+    --theme-white-rgb: 248, 254, 255;
+    --theme-gray-rgb: 236, 236, 236;
+    --theme-stroke-gray-rgb: 228, 228, 229;
+    --theme-blue-light-rgb: 240, 247, 255;
+    --theme-blue-rgb: 66, 81, 247;
+    --theme-red-rgb: 247, 66, 81;
+    --theme-black-rgb: 16, 1, 2;
+
+    // Theme text
+    --fs-l-43: 43px;
+    // --fs-xl-lineheight: 32px;
+    --fs-l-40: 40px;
+    // --fs-lg-lineheight: 28px;
+    --fs-l-28: 28px;
+    // --fs-md-lineheight: 24px;
+    --fs-l-22: 22px;
+    // --fs-xs-lineheight: 22px;
+    --fs-l-18: 18px;
+    // --fs-xss-lineheight: 20px;
+    --fs-l-16: 16px;
+    --fs-l-14: 14px;
+
+    // Bootstrap
+    --bs-primary: var(--theme-blue); 
+    --bs-secondary: var(--theme-red);
+    --bs-white: var(--theme-white);
+    --bs-black: var(--theme-black);
+    --bs-primary-rgb: var(--theme-blue-rgb);
+    --bs-secondary-rgb: var(--theme-red-rgb);
+    --bs-white-rgb: var(--theme-white-rgb);
+    --bs-black-rgb: var(--theme-black-rgb);
+
+    --bs-body-font-family: var(--theme-ff-main), var(--bs-font-sans-serif);
+    --bs-body-font-size: 16px;
     --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.25;
-    --bs-body-color: #100102;
-    --bs-body-color-rgb: 16, 1, 2;
-    --bs-body-bg: #ececec;
-    --bs-body-bg-rgb: 236, 236, 236;
+    --bs-body-line-height: 1.4;
+    --bs-body-color: var(--theme-black);
+    --bs-body-color-rgb: var(--theme-black-rgb);
+    --bs-body-bg: var(--theme-gray);
+    --bs-body-bg-rgb: var(--theme-gray-rgb);
     --bs-border-width: 1px;
     --bs-border-style: solid;
-    --bs-border-color: #e4e4e5;
-    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-color: var(--theme-stroke-gray);
     --bs-border-radius: 16px;
     --bs-border-radius-sm: 8px; 
     --bs-border-radius-lg: 20px;
     --bs-border-radius-xl: 22px;
     --bs-border-radius-2xl: 24px;
-    --bs-border-radius-pill: 50rem;
+    --bs-border-radius-pill: 50px;
 
-    --bs-link-color: #100102;
-    --bs-link-color-rgb: 16, 1, 2;
-    --bs-link-hover-color: #4251f7;
-    --bs-link-hover-color-rgb: 66, 81, 247;
+    --bs-link-color: var(--theme-black);
+    --bs-link-color-rgb: var(--theme-black-rgb);
+    --bs-link-hover-color: var(--theme-blue);
+    --bs-link-hover-color-rgb: var(--theme-blue-rgb);
 
-    --swiper-theme-color: #4251f7;
+    --swiper-theme-color: var(--theme-blue);
 }

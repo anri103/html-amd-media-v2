@@ -3,48 +3,58 @@
 
 .btn {
     --bs-btn-focus-box-shadow: none;
-    // display: inline-flex;
-    // align-items: center;
 }
 
 .btn-m {
     --bs-btn-padding-x: 24px;
     --bs-btn-padding-y: 12px;
-    // min-height: 50px;
-    // line-height: 50px;
 }
 
 .btn-l {
     --bs-btn-padding-y: 16px;
-    // min-height: 58px;
 }
 
 .btn-primary {
-    --bs-btn-color: var(--bs-light);
-    --bs-btn-bg: var(--bs-primary);
-    --bs-btn-border-color: var(--bs-primary);
-    --bs-btn-hover-color: var(--bs-light);
-    --bs-btn-hover-bg: var(--bs-dark);
-    --bs-btn-hover-border-color: var(--bs-dark);
-    --bs-btn-active-color: var(--bs-light);
-    --bs-btn-active-bg: var(--bs-dark);
-    --bs-btn-active-border-color: var(--bs-dark);
-    --bs-btn-disabled-color: var(--bs-light);
-    --bs-btn-disabled-bg: var(--bs-dark);
-    --bs-btn-disabled-border-color: var(--bs-dark);
+    --bs-btn-color: var(--theme-white);
+    --bs-btn-bg: var(--theme-blue);
+    --bs-btn-border-color: var(--theme-blue);
+    --bs-btn-hover-color: var(--theme-white);
+    --bs-btn-hover-bg: var(--theme-black);
+    --bs-btn-hover-border-color: var(--theme-black);
+    --bs-btn-active-color: var(--theme-white);
+    --bs-btn-active-bg: var(--theme-black);
+    --bs-btn-active-border-color: var(--theme-black);
+    --bs-btn-disabled-color: var(--theme-white);
+    --bs-btn-disabled-bg: var(--theme-black);
+    --bs-btn-disabled-border-color: var(--theme-black);
 }
 
-.btn-outline-dark {
-    --bs-btn-color: var(--bs-dark);
-    --bs-btn-border-color: var(--bs-dark);
-    --bs-btn-hover-color: var(--bs-light);
-    --bs-btn-hover-bg: var(--bs-dark);
-    --bs-btn-hover-border-color: var(--bs-dark);
-    --bs-btn-active-color: var(--bs-light);
-    --bs-btn-active-bg: var(--bs-dark);
-    --bs-btn-active-border-color: var(--bs-dark);
-    --bs-btn-disabled-color: var(--bs-dark);
+.btn-secondary {
+    --bs-btn-color: var(--theme-white);
+    --bs-btn-bg: var(--theme-red);
+    --bs-btn-border-color: var(--theme-red);
+    --bs-btn-hover-color: var(--theme-white);
+    --bs-btn-hover-bg: var(--theme-black);
+    --bs-btn-hover-border-color: var(--theme-black);
+    --bs-btn-active-color: var(--theme-white);
+    --bs-btn-active-bg: var(--theme-black);
+    --bs-btn-active-border-color: var(--theme-black);
+    --bs-btn-disabled-color: var(--theme-white);
+    --bs-btn-disabled-bg: var(--theme-black);
+    --bs-btn-disabled-border-color: var(--theme-black);
+}
+
+.btn-outline-black {
+    --bs-btn-color: var(--theme-black);
+    --bs-btn-border-color: var(--theme-black);
+    --bs-btn-hover-color: var(--theme-white);
+    --bs-btn-hover-bg: var(--theme-black);
+    --bs-btn-hover-border-color: var(--theme-black);
+    --bs-btn-active-color: var(--theme-white);
+    --bs-btn-active-bg: var(--theme-black);
+    --bs-btn-active-border-color: var(--theme-black);
+    --bs-btn-disabled-color: var(--theme-black);
     --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: var(--bs-dark);
+    --bs-btn-disabled-border-color: var(--theme-black);
     --bs-gradient: none;
 }

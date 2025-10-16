@@ -50,6 +50,27 @@ body {
     background-size: cover;
 }
 
+.bg-blue-gradient {
+    background-image: var(--theme-blue-gradient);
+}
+
+.bg-red-gradient {
+    background-image: var(--theme-red-gradient);
+}
+
+.opacity-60 {
+    opacity: 0.6 !important
+}
+
+.p-40 {
+    padding: 40px;
+}
+
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 @media (min-width: 1600px) {
 
     .container,

@@ -1,6 +1,8 @@
 /*------------------------------------------------------------------
 [ typography ]*/
 
+// Headings
+
 h1,
 h2,
 h3,
@@ -15,7 +17,7 @@ h6,
 .h6 {
     margin-bottom: 0.75rem;
     font-family: var(--theme-ff-title);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 h1,
@@ -81,63 +83,37 @@ h6,
     }
 }
 
-.fs-1 {
-    font-size: 1.625rem !important;
+// Font Size
+
+.fs-43 {
+    font-size: var(--fs-l-43);
 }
 
-.fs-2 {
-    font-size: 1.5rem !important;
+.fs-40 {
+    font-size: var(--fs-l-40);
 }
 
-.fs-3 {
-    font-size: 1.375rem !important;
+.fs-28 {
+    font-size: var(--fs-l-28);
 }
 
-.fs-4 {
-    font-size: 1rem !important;
+.fs-22 {
+    font-size: var(--fs-l-22);
 }
 
-.fs-5 {
-    font-size: 1.125rem !important;
+.fs-18 {
+    font-size: var(--fs-l-18);
 }
 
-.fs-6 {
-    font-size: 1rem !important;
+.fs-16 {
+    font-size: var(--fs-l-16);
 }
 
-@media screen and (min-width: 1200px) {
-    .fs-1 {
-        font-size: 2rem !important;
-    }
-
-    .fs-2 {
-        font-size: 1.75rem !important;
-    }
-
-    .fs-3 {
-        font-size: 1.5rem !important;
-    }
-
-    .fs-4 {
-        font-size: 1.375rem !important;
-    }
-
-    .fs-5 {
-        font-size: 1.125rem !important;
-    }
-
-    .fs-6 {
-        font-size: 1.125rem !important;
-    }
+.fs-14 {
+    font-size: var(--fs-l-14);
 }
 
-.fs-small {
-    font-size: 0.875rem;
-}
-
-.fs-xs-small {
-    font-size: 0.75rem;
-}
+// Paragraph
 
 p {
     margin-top: 0;

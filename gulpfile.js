@@ -71,10 +71,20 @@ export function scripts() {
     .pipe(bs.stream());
 }
 
-// ===== Копирование изображений и шрифтов =====
-export function assets() {
-  gulp.src(paths.images.src).pipe(gulp.dest(paths.images.dest));
-  return gulp.src(paths.fonts.src).pipe(gulp.dest(paths.fonts.dest));
+// ===== Копирование изображений =====
+export function images() {
+  return gulp
+    .src(paths.images.src, { encoding: false })
+    .pipe(gulp.dest(paths.images.dest))
+    .pipe(bs.stream());
+}
+
+// ===== Копирование шрифтов =====
+export function fonts() {
+  return gulp
+    .src(paths.fonts.src, { encoding: false })
+    .pipe(gulp.dest(paths.fonts.dest))
+    .pipe(bs.stream());
 }
 
 // ===== Вендоры из node_modules =====
@@ -125,13 +135,14 @@ export function serve() {
   gulp.watch(paths.html.watch, html);
   gulp.watch(paths.styles.watch, styles);
   gulp.watch(paths.scripts.watch, scripts);
-  gulp.watch([paths.images.src, paths.fonts.src], assets);
+  gulp.watch(paths.images.src, images);
+  gulp.watch(paths.fonts.src, fonts);
 }
 
 // ===== Сборка и режим разработки =====
 export const build = gulp.series(
   clean,
-  gulp.parallel(html, styles, scripts, assets, vendor)
+  gulp.parallel(html, styles, scripts, images, fonts, vendor)
 );
 
 export const dev = gulp.series(build, serve);
