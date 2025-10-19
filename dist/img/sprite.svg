@@ -1,7 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 
-    <symbol id="footer-arrow-down" viewBox="0 0 16 17" fill="none">
-        <path d="M15.818 4.07142C16.0396 4.25098 16.0619 4.56244 15.868 4.76761L8.40106 12.6668L8 13.0921L7.59894 12.6668L0.132015 4.76761C-0.0619335 4.56244 -0.0395966 4.25098 0.182016 4.07142C0.403673 3.89189 0.740146 3.91257 0.934127 4.1177L8 11.5927L15.0659 4.1177C15.2599 3.91257 15.5963 3.89189 15.818 4.07142Z" fill="#100102"/>
+    <symbol id="btn-arrow-up" viewBox="0 0 14 15" fill="none">
+        <path d="M12.271 1.52197L1.22803 1.52197L1.22803 0.521973L13.978 0.521973L13.978 13.272H12.978L12.978 2.229L0.718262 14.4888L0.0112305 13.7817L12.271 1.52197Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-phone" viewBox="0 0 30 30" fill="none">
+        <path d="M14.48 24.0313C11.4163 22.4368 8.81778 20.0761 6.93741 17.179C5.05703 14.282 3.95892 10.9474 3.75 7.5C3.75 6.83696 4.01339 6.20107 4.48223 5.73223C4.95107 5.26339 5.58696 5 6.25 5H11.25L13.75 11.25L10.625 13.125C11.9637 15.8394 14.1606 18.0363 16.875 19.375L18.75 16.25L19.5625 16.575" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M23.75 28.125C24.0066 27.0641 24.5508 26.0944 25.3226 25.3226C26.0944 24.5508 27.0641 24.0066 28.125 23.75C27.0641 23.4934 26.0944 22.9492 25.3226 22.1774C24.5508 21.4056 24.0066 20.4359 23.75 19.375C23.4934 20.4359 22.9492 21.4056 22.1774 22.1774C21.4056 22.9492 20.4359 23.4934 19.375 23.75C20.4359 24.0066 21.4056 24.5508 22.1774 25.3226C22.9492 26.0944 23.4934 27.0641 23.75 28.125Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-burger" viewBox="0 0 20 16" fill="none">
+        <rect width="20" height="2" rx="1" fill="currentColor"/>
+        <rect y="7" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect y="14" width="20" height="2" rx="1" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 20 20" fill="none">
+        <path d="M18 2L2 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 2L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- footer arrow down -->
+    <symbol id="arrow-down" viewBox="0 0 16 17" fill="none">
+        <path d="M15.818 4.07142C16.0396 4.25098 16.0619 4.56244 15.868 4.76761L8.40106 12.6668L8 13.0921L7.59894 12.6668L0.132015 4.76761C-0.0619335 4.56244 -0.0395966 4.25098 0.182016 4.07142C0.403673 3.89189 0.740146 3.91257 0.934127 4.1177L8 11.5927L15.0659 4.1177C15.2599 3.91257 15.5963 3.89189 15.818 4.07142Z" fill="currentColor"/>
     </symbol>
 
 </svg>

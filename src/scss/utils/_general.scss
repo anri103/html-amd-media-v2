@@ -11,15 +11,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-
-    &.catalog-menu-active,
-    &.genres-menu-active {
-        overflow: hidden;
-
-        @media screen and (min-width: 992px) {
-            padding-right: 15px;
-        }
-    }
 }
 
 .main {
@@ -71,15 +62,15 @@ body {
     padding-bottom: 20px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1920px) {
 
     .container,
+    .container-fluid,
     .container-lg,
     .container-md,
     .container-sm,
     .container-xl,
     .container-xxl {
-        --container-xxxl: 1400px;
-        max-width: calc(var(--container-xxxl) + var(--bs-gutter-x));
+        max-width: 1900px;
     }
 }

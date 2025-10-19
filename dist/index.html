@@ -28,59 +28,57 @@
 <body>
 
     <!-- header -->
-    <header class="header" id="site-header">
+    <header class="header header-fixed" id="site-header">
 
-    <div class="fixed-header">
-        <div class="container-fluid">
-            <div class="main-header">
+    <div class="container-fluid">
+        <div class="header-row">
 
-                <!-- main-header__logo -->
-                <div class="main-header__logo">
-                    <a href="index.html">
-                        <img src="img/logo.svg" alt="AMD Media">
-                    </a>
-                </div>
-
-                <!-- main-header__navigation -->
-                <nav class="main-header__navigation">
-                    <ul class="primary-nav">
-                        <li class="nav-item">
-                            <a href="#">Проекты</a>
-                        </li>
-                        <li class="nav-item has-mega-menu">
-                            <a href="#">Услуги</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="#">Партнёры</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">О нас</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Блог</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Контакты</a>
-                        </li>
-                    </ul>
-                    <div class="btn-box">
-                        <a href="tel:+74951595901" class="btn btn-outline-black btn-m">
-                            <span>+7 495 159-59-01</span>
-                        </a>
-                        <button type="button" class="btn btn-primary btn-m">
-                            <span>Связаться</span>
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
-                                    <path d="M12.271 1.52197L1.22803 1.52197L1.22803 0.521973L13.978 0.521973L13.978 13.272H12.978L12.978 2.229L0.718262 14.4888L0.0112305 13.7817L12.271 1.52197Z" fill="#F8FEFF"/>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                </nav>
-
+            <!-- header-row__logo -->
+            <div class="header-row__logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="AMD Media">
+                </a>
             </div>
 
+            <!-- header-row__navigation -->
+            <nav class="header-row__navigation">
+                <ul class="primary-nav">
+                    <li class="nav-item">
+                        <a href="#">Проекты</a>
+                    </li>
+                    <li class="nav-item has-mega-menu">
+                        <a href="#">Услуги</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">Партнёры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="btn-box">
+                    <a href="tel:+74951595901" class="btn btn-outline-black btn-m">
+                        <span>+7 495 159-59-01</span>
+                    </a>
+                    <button type="button" class="btn btn-primary btn-m">
+                        <span>Связаться</span>
+                        <span>
+                            <svg width="14" height="15">
+                                <use xlink:href="img/sprite.svg#btn-arrow-up"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </nav>
+
         </div>
+
     </div>
     
 </header>
@@ -90,43 +88,61 @@
 
         <!-- section__home-hero -->
         <section class="section section__home-hero">
-            <div class="container">
-                <div class="rounded-3 p-40" style="min-height: 720px;">
-                    <!-- <div class="hero-grid">
-                        <div></div>
-                        <div class="card card-hero-info">
-                            <div class="card-body">
-                                <h1 class="hero-title">Digital-продукты для бизнеса: эффективная стратегия под отрасль</h1>
-                                <div class="d-flex gap-2">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                            <circle cx="18" cy="2" r="2" fill="#F74251"/>
-                                            <circle cx="18" cy="10" r="2" fill="#F74251"/>
-                                            <circle cx="18" cy="18" r="2" fill="#F74251"/>
-                                            <circle cx="26" cy="18" r="2" fill="#F74251"/>
-                                            <circle cx="10" cy="18" r="2" fill="#F74251"/>
-                                            <circle cx="2" cy="18" r="2" fill="#F74251"/>
-                                            <circle cx="12" cy="12" r="2" fill="#F74251"/>
-                                            <circle cx="12" cy="23" r="2" fill="#F74251"/>
-                                            <circle cx="7" cy="29" r="2" fill="#F74251"/>
-                                            <circle cx="7" cy="7" r="2" fill="#F74251"/>
-                                            <circle cx="24" cy="12" r="2" fill="#F74251"/>
-                                            <circle cx="24" cy="24" r="2" fill="#F74251"/>
-                                            <circle cx="30" cy="29" r="2" fill="#F74251"/>
-                                            <circle cx="30" cy="8" r="2" fill="#F74251"/>
-                                            <circle cx="34" cy="18" r="2" fill="#F74251"/>
-                                            <circle cx="18" cy="26" r="2" fill="#F74251"/>
-                                            <circle cx="18" cy="34" r="2" fill="#F74251"/>
-                                        </svg>
-                                    </span>
-                                    <div class="hero-subtitle">От шаблона до сложных экосистем. Быстрый старт за 14 дней с возможностью масштабирования</div>
-                                </div>
+            <div class="container-fluid">
+                <div class="hero-grid" style="min-height: 720px;">
+                    <!-- hero-video -->
+                    <div class="hero-video">
+                        <img class="img-fluid w-100" src="img/home/hero-video-cover.png">
+                    </div>
+                    <!-- hero-card -->
+                    <div class="card card-hero-info">
+                        <div class="card-body">
+                            <h1 class="hero-title">Digital-продукты для бизнеса: эффективная стратегия под отрасль</h1>
+                            <div class="d-flex gap-2">
+                                <span class="me-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <circle cx="18" cy="2" r="2" fill="#F74251"/>
+                                        <circle cx="18" cy="10" r="2" fill="#F74251"/>
+                                        <circle cx="18" cy="18" r="2" fill="#F74251"/>
+                                        <circle cx="26" cy="18" r="2" fill="#F74251"/>
+                                        <circle cx="10" cy="18" r="2" fill="#F74251"/>
+                                        <circle cx="2" cy="18" r="2" fill="#F74251"/>
+                                        <circle cx="12" cy="12" r="2" fill="#F74251"/>
+                                        <circle cx="12" cy="23" r="2" fill="#F74251"/>
+                                        <circle cx="7" cy="29" r="2" fill="#F74251"/>
+                                        <circle cx="7" cy="7" r="2" fill="#F74251"/>
+                                        <circle cx="24" cy="12" r="2" fill="#F74251"/>
+                                        <circle cx="24" cy="24" r="2" fill="#F74251"/>
+                                        <circle cx="30" cy="29" r="2" fill="#F74251"/>
+                                        <circle cx="30" cy="8" r="2" fill="#F74251"/>
+                                        <circle cx="34" cy="18" r="2" fill="#F74251"/>
+                                        <circle cx="18" cy="26" r="2" fill="#F74251"/>
+                                        <circle cx="18" cy="34" r="2" fill="#F74251"/>
+                                    </svg>
+                                </span>
+                                <div class="hero-subtitle h5 fw-light opacity-60 mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
                             </div>
                             <div class="card-btn-wrapper">
                                 <a href="#" class="btn btn-primary btn-l w-100">Обсудить проект</a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
+                    <!-- hero-slider -->
+                    <div class="hero-glass-cards">
+                        <div class="card card-glass">
+                            <div class="card-body">
+                                <!-- img -->
+                                <div class="me-lg-2">
+                                    <img class="img-fluid" src="img/home/card-glass-01.svg">
+                                </div>
+                                <!-- text -->
+                                <div>
+                                    <div class="h4 fw-medium text-white mb-1 ">Гибкость под бизнес</div>
+                                    <div class="fs-16 fw-light text-white opacity-60">Разрабатываем от Tilda до Bitrix и кастомных решений</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -238,10 +254,10 @@
                     </div>
                     <div class="cta-content__contacts">
                         <div class="contact-link link-phone">
-                            <a href="tel:+74951595901" class="fs-40">+7 495 159-59-01</a>
+                            <span class="h2"><a href="tel:+74951595901">+7 495 159-59-01</a></span>
                         </div>
                         <div class="contact-link link-email">
-                            <a href="mailto:support@amdmedia.ru" class="fs-22 fw-medium">support@amdmedia.ru</a>
+                            <span class="h4 fw-medium"><a href="mailto:support@amdmedia.ru">support@amdmedia.ru</a></span>
                         </div>
                         <div class="contact-socials">
                             <a href="#" class="link-social">
@@ -262,7 +278,7 @@
                         </div>
                     </div>
                     <div class="cta-content__form-title">
-                        <div class="fs-22 fw-medium text-white">Оставляйте заявку и мы свяжемся с вами</div>
+                        <div class="h4 fw-medium text-white mb-0">Оставляйте заявку<br> и мы свяжемся с вами</div>
                     </div>
                     <div class="cta-content__form">
                         <div class="form-wrapper">
@@ -296,16 +312,16 @@
                     <div class="col">
                         <!-- Разработка -->
                         <div class="footer-widget">
-                            <div class="footer-widget__title fs-22 fw-medium">
-                                <div class="h3">Разработка</div>
-                                <a href="#" class="h3 collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                            <div class="footer-widget__title">
+                                <div class="fs-22 fw-medium">Разработка</div>
+                                <a href="#footerNavDev" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                     Разработка
                                     <svg width="16" height="17">
-                                        <use xlink:href="img/sprite.svg#footer-arrow-down"/>
+                                        <use xlink:href="img/sprite.svg#arrow-down"/>
                                     </svg>
                                 </a>
                             </div>
-                            <div class="collapse">
+                            <div class="collapse" id="footerNavDev">
                                 <nav class="footer-widget__menu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -332,16 +348,16 @@
                         </div>
                         <!-- Выбор платформы -->
                         <div class="footer-widget">
-                            <div class="footer-widget__title fs-22 fw-medium">
-                                <div class="h3">Выбор платформы</div>
-                                <a href="#" class="h3 collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                            <div class="footer-widget__title">
+                                <div class="fs-22 fw-medium">Выбор платформы</div>
+                                <a href="#footerNavPlatform" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                     Выбор платформы
                                     <svg width="16" height="17">
-                                        <use xlink:href="img/sprite.svg#footer-arrow-down"/>
+                                        <use xlink:href="img/sprite.svg#arrow-down"/>
                                     </svg>
                                 </a>
                             </div>
-                            <div class="collapse">
+                            <div class="collapse" id="footerNavPlatform">
                                 <nav class="footer-widget__menu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -380,16 +396,16 @@
                     <div class="col">
                         <!-- Дизайн -->
                         <div class="footer-widget">
-                            <div class="footer-widget__title fs-22 fw-medium">
-                                <div class="h3">Дизайн</div>
-                                <a href="#" class="h3 collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                            <div class="footer-widget__title">
+                                <div class="fs-22 fw-medium">Дизайн</div>
+                                <a href="#footerNavDesign" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                     Дизайн
                                     <svg width="16" height="17">
-                                        <use xlink:href="img/sprite.svg#footer-arrow-down"/>
+                                        <use xlink:href="img/sprite.svg#arrow-down"/>
                                     </svg>
                                 </a>
                             </div>
-                            <div class="collapse">
+                            <div class="collapse" id="footerNavDesign">
                                 <nav class="footer-widget__menu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -407,16 +423,16 @@
                         </div>
                         <!-- Интеграции -->
                         <div class="footer-widget">
-                            <div class="footer-widget__title fs-22 fw-medium">
-                                <div class="h3">Интеграции</div>
-                                <a href="#" class="h3 collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                            <div class="footer-widget__title">
+                                <div class="fs-22 fw-medium">Интеграции</div>
+                                <a href="#footerNavIntegrations" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                     Интеграции
                                     <svg width="16" height="17">
-                                        <use xlink:href="img/sprite.svg#footer-arrow-down"/>
+                                        <use xlink:href="img/sprite.svg#arrow-down"/>
                                     </svg>
                                 </a>
                             </div>
-                            <div class="collapse">
+                            <div class="collapse" id="footerNavIntegrations">
                                 <nav class="footer-widget__menu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -464,16 +480,16 @@
                     <div class="col">
                         <!-- Поддержка -->
                         <div class="footer-widget">
-                            <div class="footer-widget__title fs-22 fw-medium">
-                                <div class="h3">Поддержка</div>
-                                <a href="#" class="h3 collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                            <div class="footer-widget__title">
+                                <div class="fs-22 fw-medium">Поддержка</div>
+                                <a href="#footerNavSupport" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                     Поддержка
                                     <svg width="16" height="17">
-                                        <use xlink:href="img/sprite.svg#footer-arrow-down"/>
+                                        <use xlink:href="img/sprite.svg#arrow-down"/>
                                     </svg>
                                 </a>
                             </div>
-                            <div class="collapse">
+                            <div class="collapse" id="footerNavSupport">
                                 <nav class="footer-widget__menu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -485,16 +501,16 @@
                         </div>
                         <!-- Компания -->
                         <div class="footer-widget">
-                            <div class="footer-widget__title fs-22 fw-medium">
-                                <div class="h3">Компания</div>
-                                <a href="#" class="h3 collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                            <div class="footer-widget__title">
+                                <div class="fs-22 fw-medium">Компания</div>
+                                <a href="#footerNavCompany" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                     Компания
                                     <svg width="16" height="17">
-                                        <use xlink:href="img/sprite.svg#footer-arrow-down"/>
+                                        <use xlink:href="img/sprite.svg#arrow-down"/>
                                     </svg>
                                 </a>
                             </div>
-                            <div class="collapse">
+                            <div class="collapse" id="footerNavCompany">
                                 <nav class="footer-widget__menu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -521,16 +537,16 @@
                         </div>
                         <!-- Проекты -->
                         <div class="footer-widget">
-                            <div class="footer-widget__title fs-22 fw-medium">
-                                <div class="h3">Проекты</div>
-                                <a href="#" class="h3 collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                            <div class="footer-widget__title">
+                                <div class="fs-22 fw-medium">Проекты</div>
+                                <a href="#footerNavProjects" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                     Проекты
                                     <svg width="16" height="17">
-                                        <use xlink:href="img/sprite.svg#footer-arrow-down"/>
+                                        <use xlink:href="img/sprite.svg#arrow-down"/>
                                     </svg>
                                 </a>
                             </div>
-                            <div class="collapse">
+                            <div class="collapse" id="footerNavProjects">
                                 <nav class="footer-widget__menu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
