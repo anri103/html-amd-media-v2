@@ -18,10 +18,26 @@
         <!-- section__home-hero -->
         <section class="section section__home-hero">
             <div class="container-fluid">
-                <div class="hero-grid" style="min-height: 720px;">
+                <div class="hero-grid">
                     <!-- hero-video -->
                     <div class="hero-video">
-                        <img class="img-fluid w-100" src="img/home/hero-video-cover.png">
+                        <video 
+                            autoplay 
+                            muted 
+                            loop 
+                            playsinline
+                            class="responsive-media"
+                            poster="img/home/hero-video-cover.png"
+                        >
+                            <!-- Desktop -->
+                            <source src="img/home/hero-video(1080x1080).mp4" type="video/mp4" media="(min-width: 992px)">
+                            <!-- Tablet -->
+                            <source src="img/home/hero-video(600x600).mp4" type="video/mp4" media="(min-width: 768px)">
+                            <!-- Mobile & Fallback -->
+                            <source src="img/home/hero-video(400x400).mp4" type="video/mp4">
+                            <!-- Image Fallback -->
+                            <img src="img/home/hero-video.gif">
+                        </video>
                     </div>
                     <!-- hero-card -->
                     <div class="card card-hero-info">
@@ -81,6 +97,46 @@
             <div class="bg-white">
                 <div class="swiper swiperPartners">
                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-01.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-02.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-03.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-04.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img 
+                                class="img-fluid"
+                                src="img/home/partner-logo-05.svg" 
+                                alt="ЗИД">
+                            </div>
+                        </div>
                         <div class="swiper-slide">
                             <div class="swiper-img">
                                 <img 
