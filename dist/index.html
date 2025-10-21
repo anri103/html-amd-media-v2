@@ -77,6 +77,45 @@
                 </div>
             </nav>
 
+            <div class="header-row__tablet-navigation">
+                <div class="btn-box">
+                    <button type="button" class="btn btn-outline-black btn-m">
+                        <span>Связаться</span>
+                        <span>
+                            <svg width="14" height="15">
+                                <use xlink:href="img/sprite.svg#btn-arrow-up"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <button type="button" class="btn-mobile-toggler btn btn-primary">
+                        <span>
+                            <svg width="20" height="16">
+                                <use xlink:href="img/sprite.svg#icon-burger"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="header-row__mobile-navigation">
+                <div class="btn-box">
+                    <button type="button" class="btn btn-outline-black btn-m">
+                        <span>
+                            <svg width="30" height="30">
+                                <use xlink:href="img/sprite.svg#icon-phone"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <button type="button" class="btn-mobile-toggler btn btn-primary">
+                        <span>
+                            <svg width="20" height="16">
+                                <use xlink:href="img/sprite.svg#icon-burger"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -97,7 +136,7 @@
                             muted 
                             loop 
                             playsinline
-                            class="responsive-media"
+                            class="desktop-video"
                             poster="img/home/hero-video-cover.png"
                         >
                             <!-- Desktop -->
@@ -109,6 +148,12 @@
                             <!-- Image Fallback -->
                             <img src="img/home/hero-video.gif">
                         </video>
+
+                        <picture class="mobile-image">
+                            <source srcset="img/home/hero-video.webp" type="image/webp">
+                            <source srcset="img/home/hero-video.gif" type="image/gif">
+                            <img src="img/home/hero-video.gif">
+                        </picture>
                     </div>
                     <!-- hero-card -->
                     <div class="card card-hero-info">
@@ -136,7 +181,7 @@
                                         <circle cx="18" cy="34" r="2" fill="#F74251"/>
                                     </svg>
                                 </span>
-                                <div class="hero-subtitle h5 fw-light opacity-60 mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
+                                <div class="hero-subtitle h5 fw-light text-muted mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
                             </div>
                             <div class="card-btn-wrapper">
                                 <a href="#" class="btn btn-primary btn-l w-100">Обсудить проект</a>
@@ -145,18 +190,70 @@
                     </div>
                     <!-- hero-slider -->
                     <div class="hero-glass-cards">
-                        <div class="card card-glass">
-                            <div class="card-body">
-                                <!-- img -->
-                                <div class="me-lg-2">
-                                    <img class="img-fluid" src="img/home/card-glass-01.svg">
+                        <div class="swiper swiperHeroGlassCards">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card card-glass">
+                                        <div class="card-body">
+                                            <!-- img -->
+                                            <div class="me-lg-2">
+                                                <img class="img-fluid" src="img/home/card-glass-01.svg">
+                                            </div>
+                                            <!-- text -->
+                                            <div>
+                                                <div class="h4 fw-medium text-white mb-1 ">Гибкость под бизнес</div>
+                                                <div class="fs-16 fw-light text-white text-opacity-60">Разрабатываем от Tilda до Bitrix и кастомных решений</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- text -->
-                                <div>
-                                    <div class="h4 fw-medium text-white mb-1 ">Гибкость под бизнес</div>
-                                    <div class="fs-16 fw-light text-white opacity-60">Разрабатываем от Tilda до Bitrix и кастомных решений</div>
+                                <div class="swiper-slide">
+                                    <div class="card card-glass">
+                                        <div class="card-body">
+                                            <!-- img -->
+                                            <div class="me-lg-2">
+                                                <img class="img-fluid" src="img/home/card-glass-02.svg">
+                                            </div>
+                                            <!-- text -->
+                                            <div>
+                                                <div class="h4 fw-medium text-white mb-1 ">Прямое общение</div>
+                                                <div class="fs-16 fw-light text-white text-opacity-60">Проектная команда доступна для открытого диалога</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card-glass">
+                                        <div class="card-body">
+                                            <!-- img -->
+                                            <div class="me-lg-2">
+                                                <img class="img-fluid" src="img/home/card-glass-03.svg">
+                                            </div>
+                                            <!-- text -->
+                                            <div>
+                                                <div class="h4 fw-medium text-white mb-1 ">Автоматизация процессов</div>
+                                                <div class="fs-16 fw-light text-white text-opacity-60">Повышение производительности за счёт интеграций</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card-glass">
+                                        <div class="card-body">
+                                            <!-- img -->
+                                            <div class="me-lg-2">
+                                                <img class="img-fluid" src="img/home/card-glass-04.svg">
+                                            </div>
+                                            <!-- text -->
+                                            <div>
+                                                <div class="h4 fw-medium text-white mb-1 ">Аналитика с первого дня</div>
+                                                <div class="fs-16 fw-light text-white text-opacity-60">Реальную эффективность маркетинга и поддержка продаж</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -301,7 +398,7 @@
     <!-- footer__cta-bar -->
     <div class="footer__cta-bar">
         <div class="container-fluid">
-            <div class="rounded-3 p-40 bg-blue-gradient position-relative overflow-hidden">
+            <div class="rounded-3 p-15 py-20 p-lg-40 bg-blue-gradient position-relative overflow-hidden">
                 <img class="bg-absolute-img img-fluid" src="img/footer/footer-bg-figure.png" style="position: absolute; top: -230px; right: -40px;">
                 <!-- grid -->
                 <div class="cta-content">
@@ -352,7 +449,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="text-center fs-14 text-white opacity-60 mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
+                        <div class="text-center fs-14 text-white text-opacity-60 mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
                     </div>
                 </div>
             </div>
@@ -362,7 +459,7 @@
     <!-- footer__main-bar -->
     <div class="footer__main-bar">
         <div class="container-fluid">
-            <div class="rounded-3 p-40 py-20 bg-white">
+            <div class="rounded-3 p-15 p-lg-40 py-lg-20 bg-white">
                 <div class="row row-cols-1 row-cols-lg-3">
 
                     <div class="col">
@@ -637,8 +734,8 @@
     <!-- footer__copyright-bar -->
     <div class="footer__copyright-bar">
         <div class="container-fluid">
-            <div class="rounded-3 p-40 py-20 bg-white">
-                <div class="copyright-text"><span>2014–2025г. © ООО «АМД Медиа» /</span> <span>сайт не является публичной офертой 2025г. /</span> <span><a href="#">Политика конфиденциальности</a></span></div>
+            <div class="rounded-3 p-15 p-lg-40 py-lg-20 bg-white">
+                <div class="copyright-text text-center text-muted link-opacity-60"><span>2014–2025г. © ООО «АМД Медиа» /</span> <span>сайт не является публичной офертой 2025г. /</span> <span><a href="#">Политика конфиденциальности</a></span></div>
             </div>
         </div>
     </div>

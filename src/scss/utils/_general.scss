@@ -49,8 +49,24 @@ body {
     background-image: var(--theme-red-gradient);
 }
 
-.opacity-60 {
-    opacity: 0.6 !important
+// .opacity-60 {
+//     opacity: 0.6 !important
+// }
+
+.text-opacity-60 {
+    --bs-text-opacity: 0.6;
+}
+
+.link-opacity-60 {
+    --bs-link-opacity: 0.6;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.p-20 {
+    padding: 20px;
 }
 
 .p-40 {
@@ -60,6 +76,22 @@ body {
 .py-20 {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+
+    .p-lg-20 {
+        padding: 20px;
+    }
+
+    .p-lg-40 {
+        padding: 40px;
+    }
+
+    .py-lg-20 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 
 @media (min-width: 1920px) {

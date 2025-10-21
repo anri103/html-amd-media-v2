@@ -29,8 +29,27 @@ window.onload = () => {
             allowTouchMove: false,
             autoplay: {
                 delay: 1,
-                disableOnInteraction: false
-            }
+                disableOnInteraction: false,
+            },
+        });
+    }
+
+    // swiperHeroGlassCards
+    const swiperHeroGlassCards = document.querySelector('.swiperHeroGlassCards');
+    if (swiperHeroGlassCards) {
+        var swiper = new Swiper(swiperHeroGlassCards, {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            speed: 3000,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                // clickable: true,
+            },
         });
     }
 }

@@ -21,3 +21,14 @@
         }
     }
 }
+
+.swiperHeroGlassCards {
+    --swiper-theme-color: var(--theme-white);
+    --swiper-pagination-bottom: 0;
+    --swiper-pagination-bullet-inactive-color: var(--theme-white);
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+
+    .swiper-wrapper {
+        margin-bottom: 28px;
+    }
+}

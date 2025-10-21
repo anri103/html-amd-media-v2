@@ -26,7 +26,7 @@
                             muted 
                             loop 
                             playsinline
-                            class="responsive-media"
+                            class="desktop-video"
                             poster="img/home/hero-video-cover.png"
                         >
                             <!-- Desktop -->
@@ -38,6 +38,12 @@
                             <!-- Image Fallback -->
                             <img src="img/home/hero-video.gif">
                         </video>
+
+                        <picture class="mobile-image">
+                            <source srcset="img/home/hero-video.webp" type="image/webp">
+                            <source srcset="img/home/hero-video.gif" type="image/gif">
+                            <img src="img/home/hero-video.gif">
+                        </picture>
                     </div>
                     <!-- hero-card -->
                     <div class="card card-hero-info">
@@ -65,7 +71,7 @@
                                         <circle cx="18" cy="34" r="2" fill="#F74251"/>
                                     </svg>
                                 </span>
-                                <div class="hero-subtitle h5 fw-light opacity-60 mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
+                                <div class="hero-subtitle h5 fw-light text-muted mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
                             </div>
                             <div class="card-btn-wrapper">
                                 <a href="#" class="btn btn-primary btn-l w-100">Обсудить проект</a>
@@ -74,18 +80,70 @@
                     </div>
                     <!-- hero-slider -->
                     <div class="hero-glass-cards">
-                        <div class="card card-glass">
-                            <div class="card-body">
-                                <!-- img -->
-                                <div class="me-lg-2">
-                                    <img class="img-fluid" src="img/home/card-glass-01.svg">
+                        <div class="swiper swiperHeroGlassCards">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card card-glass">
+                                        <div class="card-body">
+                                            <!-- img -->
+                                            <div class="me-lg-2">
+                                                <img class="img-fluid" src="img/home/card-glass-01.svg">
+                                            </div>
+                                            <!-- text -->
+                                            <div>
+                                                <div class="h4 fw-medium text-white mb-1 ">Гибкость под бизнес</div>
+                                                <div class="fs-16 fw-light text-white text-opacity-60">Разрабатываем от Tilda до Bitrix и кастомных решений</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- text -->
-                                <div>
-                                    <div class="h4 fw-medium text-white mb-1 ">Гибкость под бизнес</div>
-                                    <div class="fs-16 fw-light text-white opacity-60">Разрабатываем от Tilda до Bitrix и кастомных решений</div>
+                                <div class="swiper-slide">
+                                    <div class="card card-glass">
+                                        <div class="card-body">
+                                            <!-- img -->
+                                            <div class="me-lg-2">
+                                                <img class="img-fluid" src="img/home/card-glass-02.svg">
+                                            </div>
+                                            <!-- text -->
+                                            <div>
+                                                <div class="h4 fw-medium text-white mb-1 ">Прямое общение</div>
+                                                <div class="fs-16 fw-light text-white text-opacity-60">Проектная команда доступна для открытого диалога</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card-glass">
+                                        <div class="card-body">
+                                            <!-- img -->
+                                            <div class="me-lg-2">
+                                                <img class="img-fluid" src="img/home/card-glass-03.svg">
+                                            </div>
+                                            <!-- text -->
+                                            <div>
+                                                <div class="h4 fw-medium text-white mb-1 ">Автоматизация процессов</div>
+                                                <div class="fs-16 fw-light text-white text-opacity-60">Повышение производительности за счёт интеграций</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card card-glass">
+                                        <div class="card-body">
+                                            <!-- img -->
+                                            <div class="me-lg-2">
+                                                <img class="img-fluid" src="img/home/card-glass-04.svg">
+                                            </div>
+                                            <!-- text -->
+                                            <div>
+                                                <div class="h4 fw-medium text-white mb-1 ">Аналитика с первого дня</div>
+                                                <div class="fs-16 fw-light text-white text-opacity-60">Реальную эффективность маркетинга и поддержка продаж</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>

@@ -14,6 +14,11 @@
     --bs-btn-padding-y: 16px;
 }
 
+.btn-mobile-toggler {
+    --bs-btn-padding-x: 14px;
+    --bs-btn-padding-y: 12px;
+}
+
 .btn-primary {
     --bs-btn-color: var(--theme-white);
     --bs-btn-bg: var(--theme-blue);
