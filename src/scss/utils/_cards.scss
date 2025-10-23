@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------
 [ cards ]*/
 
-// Hero card-glas
+/* card-glas */
 
 .card-glass {
     --bs-card-spacer-y: 10px;
@@ -38,8 +38,81 @@
         gap: 10px;
     }
 
+    .card-media {
+        flex-shrink: 0;
+        width: 60px;
+    }
+
     @media (min-width: 992px) {
         --bs-card-spacer-y: 20px;
         --bs-card-spacer-x: 20px;
+
+        .card-body {
+            gap: 20px;
+        }
+
+        .card-media {
+            width: 80px;
+        }
+    }
+}
+
+/* card-service */
+
+.card-service {
+    --bs-card-spacer-y: 15px;
+    --bs-card-spacer-x: 15px;
+    --bs-card-height: 170px;
+    --bs-card-border-color: transparent;
+    --bs-card-border-radius: var(--bs-border-radius-lg);
+    --bs-card-bg: var(--theme-white);
+
+    .card-bg-img {
+        position: absolute;
+        bottom: calc(0px - var(--bs-card-border-width));
+        left: auto;
+        right: 15px;
+        max-width: 120px;
+        width: 100%;
+        height: auto;
+        transition: all 0.6s ease;
+    }
+
+    // &:hover {
+    //     .card-bg-img {
+    //         opacity: 1;
+    //     }
+    // }
+
+    .card-body {
+        position: relative;
+    }
+
+    @media (min-width: 992px) {
+        --bs-card-spacer-y: 30px;
+        --bs-card-spacer-x: 30px;
+        --bs-card-height: 262px;
+
+        .card-bg-img {
+            left: 30px;
+            right: auto;
+            max-width: 200px;
+            opacity: 0.1;
+        }
+    }
+}
+
+/* card-project */
+
+.card-project {
+    // --bs-card-spacer-y: 15px;
+    // --bs-card-spacer-x: 15px;
+    --bs-card-border-color: transparent;
+    --bs-card-border-radius: var(--bs-border-radius-lg);
+    --bs-card-bg: var(--theme-white);
+
+    @media (min-width: 992px) {
+        --bs-card-spacer-y: 40px;
+        --bs-card-spacer-x: 40px;
     }
 }

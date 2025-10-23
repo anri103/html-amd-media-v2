@@ -78,6 +78,14 @@ body {
     padding-bottom: 20px;
 }
 
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
 @media (min-width: 992px) {
 
     .p-lg-20 {
@@ -91,6 +99,10 @@ body {
     .py-lg-20 {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+
+    .mb-lg-40 {
+        margin-bottom: 40px;
     }
 }
 
