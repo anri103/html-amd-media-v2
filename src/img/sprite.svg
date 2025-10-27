@@ -1,7 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 
-    <symbol id="btn-arrow-up" viewBox="0 0 14 15" fill="none">
-        <path d="M12.271 1.52197L1.22803 1.52197L1.22803 0.521973L13.978 0.521973L13.978 13.272H12.978L12.978 2.229L0.718262 14.4888L0.0112305 13.7817L12.271 1.52197Z" fill="currentColor"/>
+    <symbol id="btn-arrow-up" viewBox="0 0 14 14" fill="none">
+        <path d="M12.271 1.02246L1.22803 1.02246L1.22803 0.0224615L13.978 0.0224609L13.978 12.7725H12.978L12.978 1.72949L0.718262 13.9893L0.0112305 13.2822L12.271 1.02246Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="btn-arrow-down" viewBox="0 0 14 14" fill="none">
+        <path d="M12.271 12.9775L1.22803 12.9775L1.22803 13.9775L13.978 13.9775L13.978 1.22754H12.978L12.978 12.2705L0.718262 0.0107412L0.0112305 0.717772L12.271 12.9775Z" fill="currentColor"/>
     </symbol>
 
     <symbol id="icon-phone" viewBox="0 0 30 30" fill="none">

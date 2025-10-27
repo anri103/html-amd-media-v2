@@ -1,6 +1,6 @@
 // ===== Импорт зависимостей =====
 import gulp from "gulp";
-import dartSass from "sass";
+import * as dartSass from "sass";
 import gulpSass from "gulp-sass";
 import { deleteAsync } from "del";
 import fileInclude from "gulp-file-include";
@@ -13,7 +13,7 @@ const bs = browserSync.create();
 // ===== Пути =====
 const paths = {
   html: {
-    src: ["src/html/**/*.html", "!src/html/partials/**"],
+    src: ["src/html/**/*.html", "!src/html/partials/**/*"],
     dest: "dist/",
     watch: "src/html/**/*.html",
   },
@@ -117,9 +117,9 @@ export function vendor() {
     },
   ];
 
-  const tasks = vendors.map((vendor) =>
-    gulp.src(vendor.files).pipe(gulp.dest(`dist/vendor/${vendor.name}`))
-  );
+  const tasks = vendors.map((vendor) => {
+    return gulp.src(vendor.files).pipe(gulp.dest(`dist/vendor/${vendor.name}`));
+  });
 
   return Promise.all(tasks);
 }

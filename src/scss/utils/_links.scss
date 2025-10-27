@@ -4,3 +4,9 @@
 a {
     text-decoration: none;
 }
+
+.text-muted {
+    --bs-link-color-rgb: var(--theme-blue-rgb);
+    --bs-link-hover-color-rgb: var(--theme-black-rgb);
+    --bs-link-opacity: 0.6;
+}

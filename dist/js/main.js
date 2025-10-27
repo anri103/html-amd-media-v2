@@ -17,10 +17,10 @@ window.addEventListener('scroll', function() {
 
 window.onload = () => {
 
-    // swiperPartners
-    const swiperPartners = document.querySelector('.swiperPartners');
-    if (swiperPartners) {
-        var swiper = new Swiper(swiperPartners, {
+    // swiperClients
+    const swiperClients = document.querySelector('.swiperClients');
+    if (swiperClients) {
+        var swiper = new Swiper(swiperClients, {
             slidesPerView: 'auto',
             spaceBetween: 0,
             loop: true,
@@ -49,6 +49,23 @@ window.onload = () => {
             pagination: {
                 el: ".swiper-pagination",
                 // clickable: true,
+            },
+        });
+    }
+
+    // swiperPartners
+    const swiperPartners = document.querySelector('.swiperPartners');
+    if (swiperPartners) {
+        var swiper = new Swiper(swiperPartners, {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            loop: true,
+            speed: 5000,
+            // centeredSlides: true,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 1,
+                disableOnInteraction: false,
             },
         });
     }

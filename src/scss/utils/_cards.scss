@@ -110,9 +110,107 @@
     --bs-card-border-color: transparent;
     --bs-card-border-radius: var(--bs-border-radius-lg);
     --bs-card-bg: var(--theme-white);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-head {
+        margin-bottom: 30px;
+    }
+
+    .card-tags {
+        --bs-link-color-rgb: var(--theme-blue-rgb);
+        --bs-link-hover-color-rgb: var(--theme-black-rgb);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+
+        a {
+            display: inline-block;
+            font-size: 13px;
+            line-height: 1;
+            border: 1px solid var(--theme-blue);
+            border-radius: 50px;
+            padding: 8px 12px;
+
+            &:hover {
+                border-color: var(--theme-black);
+            }
+        }
+    }
+
+    .card-features-wrapper {
+        flex: 1 1 auto;
+        margin-top: 30px;
+    }
+
+    .card-features {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px;
+
+        &__item {
+            min-height: 80px;
+            padding: 16px;
+            border-radius: var(--bs-border-radius);
+            background-color: var(--theme-blue-light);
+        }
+    }
+
+    .card-btn-wrapper {
+        margin-top: 30px;
+    }
+
+    @media (max-width: 991px) {
+        .card-media {
+            height: 200px;
+        }
+    }
+
+    @media (min-width: 576px) {
+        .card-features {
+            gap: 8px;
+            grid-template-columns: 1fr 1fr;
+
+            &__item {
+                min-height: 130px;
+            }
+        }
+    }
 
     @media (min-width: 992px) {
         --bs-card-spacer-y: 40px;
         --bs-card-spacer-x: 40px;
+        grid-template-columns: 1fr 1fr;
+
+        .card-tags {
+
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .card-tags {
+            justify-content: flex-end;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        grid-template-columns: 1fr;
+
+        .card-media {
+            display: none;
+        }
+
+        .card-head {
+            min-height: 75px;
+        }
     }
 }
