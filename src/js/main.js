@@ -69,4 +69,27 @@ window.onload = () => {
             },
         });
     }
+
+    // swiperReviews
+    const swiperReviews = document.querySelector('.swiperReviews');
+    if (swiperReviews) {
+        var swiper = new Swiper(swiperReviews, {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            loop: true,
+            navigation: {
+                nextEl: '.section-reviews-slider .btn-swiper-right',
+                prevEl: '.section-reviews-slider .btn-swiper-left',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    }
 }

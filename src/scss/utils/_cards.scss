@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------
 [ cards ]*/
 
-/* card-glas */
+/* card-glass */
 
 .card-glass {
     --bs-card-spacer-y: 10px;
@@ -212,5 +212,32 @@
         .card-head {
             min-height: 75px;
         }
+    }
+}
+
+/* card-review */
+
+.card-review {
+    --bs-card-spacer-y: 15px;
+    --bs-card-spacer-x: 15px;
+    --bs-card-border-radius: var(--bs-border-radius-lg);
+    --bs-card-bg: var(--theme-white);
+    border: none !important;
+
+    .card-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width: 992px) {
+        --bs-card-spacer-y: 30px;
+        --bs-card-spacer-x: 30px;
     }
 }

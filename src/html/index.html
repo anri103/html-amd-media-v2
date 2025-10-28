@@ -78,7 +78,16 @@
                                         <div class="hero-subtitle h5 fw-light text-muted mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
                                     </div>
                                     <div class="card-btn-wrapper">
-                                        <a href="#" class="btn btn-primary btn-l w-100">Обсудить проект</a>
+                                        <a href="#" class="btn btn-primary btn-l btn-animated w-100">
+                                            <div class="animated-content">
+                                                <div class="animated-content__default">
+                                                    <span>Обсудить проект</span>
+                                                </div>
+                                                <div class="animated-content__hidden">
+                                                    <span>Обсудить проект</span>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +303,7 @@
                     <h2 class="h2 mb-0">Наши услуги</h2>
                     <div class="d-flex align-items-center gap-10">
                         <span class="h2 mb-0">[39]</span>
-                        <a href="#" class="btn btn-outline-black d-none">Все услуги</a>
+                        <!-- <a href="#" class="btn btn-outline-black">Все услуги</a> -->
                     </div>
                 </div>
                 <!-- grid -->
@@ -359,7 +368,7 @@
                     <h2 class="h2 mb-0">Реализованные проекты</h2>
                     <div class="d-flex align-items-center gap-10">
                         <span class="h2 mb-0">[200+]</span>
-                        <a href="#" class="btn btn-outline-black d-none">Все проекты</a>
+                        <!-- <a href="#" class="btn btn-outline-black">Все проекты</a> -->
                     </div>
                 </div>
                 <!-- grid -->
@@ -544,12 +553,82 @@
             </div>
         </section>
 
-        <!-- section-testimonials-slider -->
-        <!-- <section class="section-testimonials-slider">
+        <!-- section-reviews-slider -->
+        <section class="section-reviews-slider">
             <div class="container-fluid">
-
+                <!-- title -->
+                <div class="d-flex align-items-center justify-content-between mb-15 mb-lg-40">
+                    <h2 class="h2 mb-0">Отзывы и благодарности</h2>
+                    <div class="d-flex align-items-center gap-10">
+                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-left">
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-left"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-right">
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-right"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <!-- slider -->
+                <div class="swiper swiperReviews">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-review.html', {
+                                "title": "ООО «НЕОДОМ»",
+                                "description": "Хотим выразить нашу искреннюю благодарность за вашу великолепную работу по созданию и комплексному SEO-продвижению сайта Neodom. С самого начала нашего сотрудничества вы проявили высокий уровень профессионализма и сумели найти индивидуальный подход к нашим потребностям. Особенно приятно было видеть",
+                                "author": "Романьков А.В.",
+                                "job": "Генеральный директор"
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-review.html', {
+                                "title": "ООО «Техническая платформа»",
+                                "description": "ООО «Техническая платформа» благодарит Веб-студию «AMD Media» за проявленный профессионализм и качественное выполнение работ под ключ: Дизайн, вёрстка и программирование, а также SEO-продвижение. Благодаря чему добились значительных результатов и достигли поставленных целей на нашем новом сайте по продаже промышленного и складского",
+                                "author": "Бочков Ю.В.",
+                                "job": "Генеральный директор"
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-review.html', {
+                                "title": "«Лавка садовника»",
+                                "description": "Хочу выразить огромную благодарность за вашу помощь в продвижении нашего сайта stroish.ru. Благодаря вашим усилиям наш бизнес стал более заметным и успешным в онлайн-сфере. Сначала сотрудничества я была приятно удивлена вашим профессионализмом и внимание к деталям. Работа по привлечению клиентов и наполнению сайта",
+                                "author": "Романьков А.В.",
+                                "job": "Генеральный директор"
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-review.html', {
+                                "title": "ООО «Омега СпецСталь»",
+                                "description": "В ходе совместной работы сотрудники студии проявили себя настоящими профессионалами. Ваша команда в кратчайшие сроки провела большую аналитическую работу, разработала необходимые страницы для нашего сайта, внесла необходимые изменения и корректировки, создала логотип компании для размещения на сайтах",
+                                "author": "Юрмин Б.Б.",
+                                "job": "Генеральный директор"
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-review.html', {
+                                "title": "ОАО «Завод имени В.А. Дегтярева»",
+                                "description": "Выражаем искреннюю признательность и благодарность коллективу веб-студии «АМД Медиа» и лично Латыпову А.Р. за техническую поддержку и адаптацию каталога продукции на французский язык. Специалисты веб-студии «АМД Медиа» зарекомендовали себя профессиональными и надёжными бизнес-партнёрами. Все поставленные задачи",
+                                "author": "Бочков Ю.В.",
+                                "job": "Генеральный директор"
+                            })
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
-        </section> -->
+        </section>
 
         <!-- section-blog-slider -->
         <!-- <section class="section-blog-slider">
@@ -565,13 +644,25 @@
                 <div class="d-flex justify-content-between mb-15 mb-lg-40">
                     <h2 class="h2 mb-0">Вопросы и ответы</h2>
                     <div class="d-flex align-items-center gap-10">
-                        <a href="#" class="btn btn-outline-black btn-m">
-                            <span>Написать в поддержку</span>
-                            <span>
-                            <svg width="14" height="14">
-                                <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
-                            </svg>
-                        </span>
+                        <a href="#" class="btn btn-outline-black btn-l btn-animated">
+                            <div class="animated-content">
+                                <div class="animated-content__default">
+                                    <span>Написать в поддержку</span>
+                                    <span>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="animated-content__hidden">
+                                    <span>Написать в поддержку</span>
+                                    <span>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>

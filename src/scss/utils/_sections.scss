@@ -227,9 +227,21 @@
     }
 }
 
-/* section-testimonials-slider */
+/* section-reviews-slider */
 
-// .section-testimonials-slider {}
+.section-reviews-slider {
+    margin-bottom: 50px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 70px;
+    }
+
+    @media (min-width: 992px) {
+        margin-bottom: 80px;
+    }
+}
+
+
 
 /* section-blog-slider */
 

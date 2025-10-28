@@ -63,16 +63,35 @@
                     </li>
                 </ul>
                 <div class="btn-box">
-                    <a href="tel:+74951595901" class="btn btn-outline-black btn-m">
-                        <span>+7 495 159-59-01</span>
+                    <a href="tel:+74951595901" class="btn btn-outline-black btn-m btn-animated">
+                        <div class="animated-content">
+                            <div class="animated-content__default">
+                                <span>+7 495 159-59-01</span>
+                            </div>
+                            <div class="animated-content__hidden">
+                                <span>+7 495 159-59-01</span>
+                            </div>
+                        </div>
                     </a>
-                    <button type="button" class="btn btn-primary btn-m">
-                        <span>Связаться</span>
-                        <span>
-                            <svg width="14" height="14">
-                                <use xlink:href="img/sprite.svg#btn-arrow-up"/>
-                            </svg>
-                        </span>
+                    <button type="button" class="btn btn-primary btn-m btn-animated">
+                        <div class="animated-content">
+                            <div class="animated-content__default">
+                                <span>Связаться</span>
+                                <span>
+                                    <svg width="14" height="14">
+                                        <use xlink:href="img/sprite.svg#btn-arrow-up"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="animated-content__hidden">
+                                <span>Связаться</span>
+                                <span>
+                                    <svg width="14" height="14">
+                                        <use xlink:href="img/sprite.svg#btn-arrow-down"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
                     </button>
                 </div>
             </nav>
@@ -87,7 +106,7 @@
                             </svg>
                         </span>
                     </button>
-                    <button type="button" class="btn-mobile-toggler btn btn-primary">
+                    <button type="button" class="btn-mobile-toggler btn btn-primary btn-icon-m">
                         <span>
                             <svg width="20" height="16">
                                 <use xlink:href="img/sprite.svg#icon-burger"/>
@@ -99,14 +118,14 @@
 
             <div class="header-row__mobile-navigation">
                 <div class="btn-box">
-                    <button type="button" class="btn btn-outline-black btn-m">
+                    <button type="button" class="btn btn-outline-black btn-icon-m">
                         <span>
                             <svg width="30" height="30">
                                 <use xlink:href="img/sprite.svg#icon-phone"/>
                             </svg>
                         </span>
                     </button>
-                    <button type="button" class="btn-mobile-toggler btn btn-primary">
+                    <button type="button" class="btn-mobile-toggler btn btn-primary btn-icon-m">
                         <span>
                             <svg width="20" height="16">
                                 <use xlink:href="img/sprite.svg#icon-burger"/>
@@ -188,7 +207,16 @@
                                         <div class="hero-subtitle h5 fw-light text-muted mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
                                     </div>
                                     <div class="card-btn-wrapper">
-                                        <a href="#" class="btn btn-primary btn-l w-100">Обсудить проект</a>
+                                        <a href="#" class="btn btn-primary btn-l btn-animated w-100">
+                                            <div class="animated-content">
+                                                <div class="animated-content__default">
+                                                    <span>Обсудить проект</span>
+                                                </div>
+                                                <div class="animated-content__hidden">
+                                                    <span>Обсудить проект</span>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -404,7 +432,7 @@
                     <h2 class="h2 mb-0">Наши услуги</h2>
                     <div class="d-flex align-items-center gap-10">
                         <span class="h2 mb-0">[39]</span>
-                        <a href="#" class="btn btn-outline-black d-none">Все услуги</a>
+                        <!-- <a href="#" class="btn btn-outline-black">Все услуги</a> -->
                     </div>
                 </div>
                 <!-- grid -->
@@ -469,7 +497,7 @@
                     <h2 class="h2 mb-0">Реализованные проекты</h2>
                     <div class="d-flex align-items-center gap-10">
                         <span class="h2 mb-0">[200+]</span>
-                        <a href="#" class="btn btn-outline-black d-none">Все проекты</a>
+                        <!-- <a href="#" class="btn btn-outline-black">Все проекты</a> -->
                     </div>
                 </div>
                 <!-- grid -->
@@ -531,8 +559,25 @@
             </div>
         </div>
         <div class="card-btn-wrapper">
-            <a href="#" class="btn btn-outline-black btn-m w-100">
-                <span>Подробнее</span>
+            <a href="#" class="btn btn-outline-black btn-l btn-animated w-100">
+                <div class="animated-content">
+                    <div class="animated-content__default">
+                        <span>Подробнее</span>
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="animated-content__hidden">
+                        <span>Подробнее</span>
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
             </a>
         </div>
     </div>
@@ -594,8 +639,25 @@
             </div>
         </div>
         <div class="card-btn-wrapper">
-            <a href="#" class="btn btn-outline-black btn-m w-100">
-                <span>Подробнее</span>
+            <a href="#" class="btn btn-outline-black btn-l btn-animated w-100">
+                <div class="animated-content">
+                    <div class="animated-content__default">
+                        <span>Подробнее</span>
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="animated-content__hidden">
+                        <span>Подробнее</span>
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
             </a>
         </div>
     </div>
@@ -657,8 +719,25 @@
             </div>
         </div>
         <div class="card-btn-wrapper">
-            <a href="#" class="btn btn-outline-black btn-m w-100">
-                <span>Подробнее</span>
+            <a href="#" class="btn btn-outline-black btn-l btn-animated w-100">
+                <div class="animated-content">
+                    <div class="animated-content__default">
+                        <span>Подробнее</span>
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="animated-content__hidden">
+                        <span>Подробнее</span>
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
             </a>
         </div>
     </div>
@@ -720,8 +799,25 @@
             </div>
         </div>
         <div class="card-btn-wrapper">
-            <a href="#" class="btn btn-outline-black btn-m w-100">
-                <span>Подробнее</span>
+            <a href="#" class="btn btn-outline-black btn-l btn-animated w-100">
+                <div class="animated-content">
+                    <div class="animated-content__default">
+                        <span>Подробнее</span>
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="animated-content__hidden">
+                        <span>Подробнее</span>
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
             </a>
         </div>
     </div>
@@ -849,12 +945,242 @@
             </div>
         </section>
 
-        <!-- section-testimonials-slider -->
-        <!-- <section class="section-testimonials-slider">
+        <!-- section-reviews-slider -->
+        <section class="section-reviews-slider">
             <div class="container-fluid">
-
+                <!-- title -->
+                <div class="d-flex align-items-center justify-content-between mb-15 mb-lg-40">
+                    <h2 class="h2 mb-0">Отзывы и благодарности</h2>
+                    <div class="d-flex align-items-center gap-10">
+                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-left">
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-left"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-right">
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-right"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <!-- slider -->
+                <div class="swiper swiperReviews">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            <div class="card card-review">
+    <div class="card-body">
+        <div class="mb-30 mb-lg-40">
+            <div class="h4 fw-medium mb-20">ООО «НЕОДОМ»</div>
+            <div class="card-description h5 fw-light text-muted mb-0">
+                Хотим выразить нашу искреннюю благодарность за вашу великолепную работу по созданию и комплексному SEO-продвижению сайта Neodom. С самого начала нашего сотрудничества вы проявили высокий уровень профессионализма и сумели найти индивидуальный подход к нашим потребностям. Особенно приятно было видеть
             </div>
-        </section> -->
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>
+                <div class="h4 fw-medium mb-2">Романьков А.В.</div>
+                <div class="text-muted">Генеральный директор</div>
+            </div>
+            <div>
+                <a href="#" class="btn btn-outline-black btn-l btn-animated">
+                    <div class="animated-content">
+                        <div class="animated-content__default">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="animated-content__hidden">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            <div class="card card-review">
+    <div class="card-body">
+        <div class="mb-30 mb-lg-40">
+            <div class="h4 fw-medium mb-20">ООО «Техническая платформа»</div>
+            <div class="card-description h5 fw-light text-muted mb-0">
+                ООО «Техническая платформа» благодарит Веб-студию «AMD Media» за проявленный профессионализм и качественное выполнение работ под ключ: Дизайн, вёрстка и программирование, а также SEO-продвижение. Благодаря чему добились значительных результатов и достигли поставленных целей на нашем новом сайте по продаже промышленного и складского
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>
+                <div class="h4 fw-medium mb-2">Бочков Ю.В.</div>
+                <div class="text-muted">Генеральный директор</div>
+            </div>
+            <div>
+                <a href="#" class="btn btn-outline-black btn-l btn-animated">
+                    <div class="animated-content">
+                        <div class="animated-content__default">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="animated-content__hidden">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            <div class="card card-review">
+    <div class="card-body">
+        <div class="mb-30 mb-lg-40">
+            <div class="h4 fw-medium mb-20">«Лавка садовника»</div>
+            <div class="card-description h5 fw-light text-muted mb-0">
+                Хочу выразить огромную благодарность за вашу помощь в продвижении нашего сайта stroish.ru. Благодаря вашим усилиям наш бизнес стал более заметным и успешным в онлайн-сфере. Сначала сотрудничества я была приятно удивлена вашим профессионализмом и внимание к деталям. Работа по привлечению клиентов и наполнению сайта
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>
+                <div class="h4 fw-medium mb-2">Романьков А.В.</div>
+                <div class="text-muted">Генеральный директор</div>
+            </div>
+            <div>
+                <a href="#" class="btn btn-outline-black btn-l btn-animated">
+                    <div class="animated-content">
+                        <div class="animated-content__default">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="animated-content__hidden">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            <div class="card card-review">
+    <div class="card-body">
+        <div class="mb-30 mb-lg-40">
+            <div class="h4 fw-medium mb-20">ООО «Омега СпецСталь»</div>
+            <div class="card-description h5 fw-light text-muted mb-0">
+                В ходе совместной работы сотрудники студии проявили себя настоящими профессионалами. Ваша команда в кратчайшие сроки провела большую аналитическую работу, разработала необходимые страницы для нашего сайта, внесла необходимые изменения и корректировки, создала логотип компании для размещения на сайтах
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>
+                <div class="h4 fw-medium mb-2">Юрмин Б.Б.</div>
+                <div class="text-muted">Генеральный директор</div>
+            </div>
+            <div>
+                <a href="#" class="btn btn-outline-black btn-l btn-animated">
+                    <div class="animated-content">
+                        <div class="animated-content__default">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="animated-content__hidden">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            <div class="card card-review">
+    <div class="card-body">
+        <div class="mb-30 mb-lg-40">
+            <div class="h4 fw-medium mb-20">ОАО «Завод имени В.А. Дегтярева»</div>
+            <div class="card-description h5 fw-light text-muted mb-0">
+                Выражаем искреннюю признательность и благодарность коллективу веб-студии «АМД Медиа» и лично Латыпову А.Р. за техническую поддержку и адаптацию каталога продукции на французский язык. Специалисты веб-студии «АМД Медиа» зарекомендовали себя профессиональными и надёжными бизнес-партнёрами. Все поставленные задачи
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>
+                <div class="h4 fw-medium mb-2">Бочков Ю.В.</div>
+                <div class="text-muted">Генеральный директор</div>
+            </div>
+            <div>
+                <a href="#" class="btn btn-outline-black btn-l btn-animated">
+                    <div class="animated-content">
+                        <div class="animated-content__default">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="animated-content__hidden">
+                            <span>Читать</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
 
         <!-- section-blog-slider -->
         <!-- <section class="section-blog-slider">
@@ -870,13 +1196,25 @@
                 <div class="d-flex justify-content-between mb-15 mb-lg-40">
                     <h2 class="h2 mb-0">Вопросы и ответы</h2>
                     <div class="d-flex align-items-center gap-10">
-                        <a href="#" class="btn btn-outline-black btn-m">
-                            <span>Написать в поддержку</span>
-                            <span>
-                            <svg width="14" height="14">
-                                <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
-                            </svg>
-                        </span>
+                        <a href="#" class="btn btn-outline-black btn-l btn-animated">
+                            <div class="animated-content">
+                                <div class="animated-content__default">
+                                    <span>Написать в поддержку</span>
+                                    <span>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="animated-content__hidden">
+                                    <span>Написать в поддержку</span>
+                                    <span>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -1084,13 +1422,22 @@
                             <form action="#">
                                 <div class="row row-cols-1 row-cols-lg-3 gy-4 gx-2">
                                     <div class="col">
-                                        <input type="text" class="form-control input-m" placeholder="Ваше имя">
+                                        <input type="text" class="form-control input-l" placeholder="Ваше имя">
                                     </div>
                                     <div class="col">
-                                        <input type="tel" class="form-control input-m" placeholder="+7 (___) ___-__-__">
+                                        <input type="tel" class="form-control input-l" placeholder="+7 (___) ___-__-__">
                                     </div>
                                     <div class="col">
-                                        <button type="submit" class="btn btn-secondary btn-m w-100">Отправить</button>
+                                        <button type="submit" class="btn btn-secondary btn-l btn-animated w-100">
+                                            <div class="animated-content">
+                                                <div class="animated-content__default">
+                                                    <span>Отправить</span>
+                                                </div>
+                                                <div class="animated-content__hidden">
+                                                    <span>Отправить</span>
+                                                </div>
+                                            </div>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
