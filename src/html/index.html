@@ -52,30 +52,32 @@
                             <!-- hero-card -->
                             <div class="card card-hero-info">
                                 <div class="card-body">
-                                    <h1 class="hero-title">Digital-продукты для бизнеса: эффективная стратегия под отрасль</h1>
-                                    <div class="d-flex gap-2">
-                                        <span class="me-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                                <circle cx="18" cy="2" r="2" fill="#F74251"/>
-                                                <circle cx="18" cy="10" r="2" fill="#F74251"/>
-                                                <circle cx="18" cy="18" r="2" fill="#F74251"/>
-                                                <circle cx="26" cy="18" r="2" fill="#F74251"/>
-                                                <circle cx="10" cy="18" r="2" fill="#F74251"/>
-                                                <circle cx="2" cy="18" r="2" fill="#F74251"/>
-                                                <circle cx="12" cy="12" r="2" fill="#F74251"/>
-                                                <circle cx="12" cy="23" r="2" fill="#F74251"/>
-                                                <circle cx="7" cy="29" r="2" fill="#F74251"/>
-                                                <circle cx="7" cy="7" r="2" fill="#F74251"/>
-                                                <circle cx="24" cy="12" r="2" fill="#F74251"/>
-                                                <circle cx="24" cy="24" r="2" fill="#F74251"/>
-                                                <circle cx="30" cy="29" r="2" fill="#F74251"/>
-                                                <circle cx="30" cy="8" r="2" fill="#F74251"/>
-                                                <circle cx="34" cy="18" r="2" fill="#F74251"/>
-                                                <circle cx="18" cy="26" r="2" fill="#F74251"/>
-                                                <circle cx="18" cy="34" r="2" fill="#F74251"/>
-                                            </svg>
-                                        </span>
-                                        <div class="hero-subtitle h5 fw-light text-muted mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
+                                    <div>
+                                        <h1 class="hero-title">Digital-продукты для бизнеса: эффективная стратегия под отрасль</h1>
+                                        <div class="d-flex gap-2">
+                                            <span class="me-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                                    <circle cx="18" cy="2" r="2" fill="#F74251"/>
+                                                    <circle cx="18" cy="10" r="2" fill="#F74251"/>
+                                                    <circle cx="18" cy="18" r="2" fill="#F74251"/>
+                                                    <circle cx="26" cy="18" r="2" fill="#F74251"/>
+                                                    <circle cx="10" cy="18" r="2" fill="#F74251"/>
+                                                    <circle cx="2" cy="18" r="2" fill="#F74251"/>
+                                                    <circle cx="12" cy="12" r="2" fill="#F74251"/>
+                                                    <circle cx="12" cy="23" r="2" fill="#F74251"/>
+                                                    <circle cx="7" cy="29" r="2" fill="#F74251"/>
+                                                    <circle cx="7" cy="7" r="2" fill="#F74251"/>
+                                                    <circle cx="24" cy="12" r="2" fill="#F74251"/>
+                                                    <circle cx="24" cy="24" r="2" fill="#F74251"/>
+                                                    <circle cx="30" cy="29" r="2" fill="#F74251"/>
+                                                    <circle cx="30" cy="8" r="2" fill="#F74251"/>
+                                                    <circle cx="34" cy="18" r="2" fill="#F74251"/>
+                                                    <circle cx="18" cy="26" r="2" fill="#F74251"/>
+                                                    <circle cx="18" cy="34" r="2" fill="#F74251"/>
+                                                </svg>
+                                            </span>
+                                            <div class="hero-subtitle h5 fw-light text-muted mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
+                                        </div>
                                     </div>
                                     <div class="card-btn-wrapper">
                                         <a href="#" class="btn btn-primary btn-l btn-animated w-100">
@@ -631,11 +633,101 @@
         </section>
 
         <!-- section-blog-slider -->
-        <!-- <section class="section-blog-slider">
+        <section class="section-blog-slider">
             <div class="container-fluid">
-
+                <!-- title -->
+                <div class="d-flex align-items-center justify-content-between mb-15 mb-lg-40">
+                    <h2 class="h2 mb-0">Статьи и новости</h2>
+                    <div class="d-flex align-items-center gap-10">
+                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-left">
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-left"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-right">
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-right"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <!-- slider -->
+                <div class="swiper swiperBlog">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Стратегия"
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-02.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Скидка 10% на первый месяц работ по SEO-продвижению",
+                                "tag1": "Продвижение",
+                                "tag2": "Аналитика",
+                                "tag3": "Стратегия"
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Длинный тег",
+                                "tag5": "Еще длинный тег"
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Стратегия"
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Стратегия"
+                            })
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
-        </section> -->
+        </section>
 
         <!-- section-faq -->
         <section class="section section-faq">

@@ -92,4 +92,31 @@ window.onload = () => {
             },
         });
     }
+
+    // swiperBlog
+    const swiperBlog = document.querySelector('.swiperBlog');
+    if (swiperBlog) {
+        var swiper = new Swiper(swiperBlog, {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            loop: true,
+            navigation: {
+                nextEl: '.section-blog-slider .btn-swiper-right',
+                prevEl: '.section-blog-slider .btn-swiper-left',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                }
+            },
+        });
+    }
 }

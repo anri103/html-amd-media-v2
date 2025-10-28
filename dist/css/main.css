@@ -457,6 +457,17 @@ a {
   padding-bottom: 60px;
 }
 
+/* swiperBlog */
+.swiperBlog .swiper-wrapper {
+  padding-bottom: 60px;
+}
+.swiperBlog .swiper-slide {
+  height: auto;
+}
+.swiperBlog .card-blog {
+  height: 100%;
+}
+
 /*------------------------------------------------------------------
 [ sections ]*/
 .section {
@@ -521,6 +532,7 @@ a {
 .section-home-hero .card-hero-info .card-body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .section-home-hero .card-hero-info .card-btn-wrapper {
   margin-top: 15px;
@@ -530,9 +542,6 @@ a {
     --bs-card-spacer-y: 40px;
     --bs-card-spacer-x: 40px;
     margin-bottom: 20px;
-  }
-  .section-home-hero .card-hero-info .card-btn-wrapper {
-    margin-top: auto;
   }
 }
 .section-home-hero .hero-swiper-wrapper {
@@ -549,7 +558,17 @@ a {
 
 /* section-clients-slider */
 .section-clients-slider {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .section-clients-slider {
+    margin-bottom: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .section-clients-slider {
+    margin-bottom: 80px;
+  }
 }
 
 /* section-services-grid */
@@ -660,6 +679,20 @@ a {
 }
 
 /* section-blog-slider */
+.section-blog-slider {
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .section-blog-slider {
+    margin-bottom: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .section-blog-slider {
+    margin-bottom: 40px;
+  }
+}
+
 /* section-faq */
 .section-faq {
   margin-bottom: 50px;
@@ -948,6 +981,127 @@ a {
   .card-review {
     --bs-card-spacer-y: 30px;
     --bs-card-spacer-x: 30px;
+  }
+}
+
+/* card-blog */
+.card-blog {
+  --bs-card-spacer-y: 15px;
+  --bs-card-spacer-x: 15px;
+  --bs-card-bg: var(--theme-white);
+  position: relative;
+  overflow: hidden;
+  border: none !important;
+}
+.card-blog .card-media {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+.card-blog .card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-blog .card-body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px !important;
+}
+.card-blog .card-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.card-blog .card-author {
+  --bs-link-color-rgb: var(--theme-black-rgb);
+  --bs-link-hover-color-rgb: var(--theme-blue-rgb);
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+.card-blog .card-author .card-avatar-wrapper {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+.card-blog .card-author .card-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-blog .card-author a {
+  text-decoration: underline;
+}
+.card-blog .card-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
+}
+.card-blog .card-date svg {
+  flex-shrink: 0;
+}
+.card-blog .card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+.card-blog .card-tags {
+  --bs-link-color-rgb: var(--theme-blue-rgb);
+  --bs-link-bg-color-rgb: var(--theme-blue-light-rgb);
+  --bs-link-hover-color-rgb: var(--theme-white-rgb);
+  --bs-link-hover-bg-color-rgb: var(--theme-black-rgb);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+.card-blog .card-tags a {
+  display: inline-block;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: var(--bs-border-radius-lg);
+  background-color: rgb(var(--bs-link-bg-color-rgb));
+}
+.card-blog .card-tags a:hover {
+  background-color: rgb(var(--bs-link-hover-bg-color-rgb));
+}
+.card-blog .card-bottom {
+  display: flex;
+  gap: 10px;
+}
+.card-blog .card-views {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 1;
+}
+.card-blog .card-views svg {
+  flex-shrink: 0;
+}
+.card-blog .card-read-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 1;
+}
+.card-blog .card-read-time svg {
+  flex-shrink: 0;
+}
+@media (min-width: 992px) {
+  .card-blog {
+    --bs-card-spacer-y: 30px;
+    --bs-card-spacer-x: 30px;
+  }
+  .card-blog .card-media {
+    height: 280px;
   }
 }
 
