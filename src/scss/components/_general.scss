@@ -35,6 +35,11 @@ body {
 /*//////////////////////////////////////////////////////////////////
 [ BASE STYLES ]*/
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
 .bg-img {
     background-position: 50% 50%;
     background-repeat: no-repeat;

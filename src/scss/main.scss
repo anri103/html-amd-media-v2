@@ -4,21 +4,21 @@
  * Version: 1.0.0
  */
 
-// utils
-@use 'utils/fonts';
-@use 'utils/variables';
-@use 'utils/general';
-@use 'utils/typography';
-@use 'utils/links';
-@use 'utils/forms';
-@use 'utils/buttons';
-@use 'utils/swiper';
-@use 'utils/sections';
-@use 'utils/cards';
+// vendors
+@import "vendors/bootstrap";
+@import "vendors/swiper";
+@import "vendors/fancybox";
 
 // components
-@use 'components/header';
-@use 'components/footer';
-
-// pages
-// @use 'pages/home';
+@import 'components/fonts';
+@import 'components/variables';
+@import 'components/general';
+@import 'components/typography';
+@import 'components/links';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/swiper';
+@import 'components/cards';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sections';

@@ -1,150 +1,114 @@
-// ===== Импорт зависимостей =====
-import gulp from "gulp";
-import * as dartSass from "sass";
-import gulpSass from "gulp-sass";
-import { deleteAsync } from "del";
-import fileInclude from "gulp-file-include";
-import browserSync from "browser-sync";
+const { src, dest, watch, series, parallel } = require('gulp');
+const fileInclude = require('gulp-file-include');
+const sass = require('gulp-sass')(require('sass'));
+const sourcemaps = require('gulp-sourcemaps');
+// const cleanCSS = require('gulp-clean-css');
+const browserSync = require('browser-sync').create();
+const del = require('del');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 
-// ===== Инициализация =====
-const sass = gulpSass(dartSass);
-const bs = browserSync.create();
-
-// ===== Пути =====
+// Paths
 const paths = {
   html: {
-    src: ["src/html/**/*.html", "!src/html/partials/**/*"],
-    dest: "dist/",
-    watch: "src/html/**/*.html",
+    src: 'src/html/**/*.html',
+    dest: 'dist/'
   },
   styles: {
-    src: "src/scss/**/*.scss",
-    dest: "dist/css/",
-    watch: "src/scss/**/*.scss",
+    src: 'src/scss/main.scss',
+    watch: 'src/scss/**/*.scss',
+    dest: 'dist/css/'
   },
   scripts: {
-    src: "src/js/**/*.js",
-    dest: "dist/js/",
-    watch: "src/js/**/*.js",
+    src: 'src/js/**/*.js',
+    dest: 'dist/'
   },
   images: {
-    src: "src/img/**/*",
-    dest: "dist/img/",
+    src: 'src/img/**/*',
+    dest: 'dist/img/'
   },
   fonts: {
-    src: "src/fonts/**/*",
-    dest: "dist/fonts/",
-  },
+    src: 'src/fonts/**/*',
+    dest: 'dist/fonts/'
+  }
 };
 
-// ===== Очистка =====
-export const clean = () => deleteAsync(["dist"]);
-
-// ===== HTML include =====
-export function html() {
-  return gulp
-    .src(paths.html.src)
-    .pipe(
-      fileInclude({
-        prefix: "@@",
-        basepath: "@file",
-      })
-    )
-    .pipe(gulp.dest(paths.html.dest))
-    .pipe(bs.stream());
+// clean
+function clean() {
+  return del(['dist/**', '!dist']);
 }
 
-// ===== SCSS → CSS =====
-export function styles() {
-  return gulp
-    .src(paths.styles.src)
-    .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest(paths.styles.dest))
-    .pipe(bs.stream());
+// html (file include)
+function html() {
+  return src(['src/html/*.html'])
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@file' // относительные пути
+    }))
+    .pipe(dest(paths.html.dest))
+    .pipe(browserSync.stream());
 }
 
-// ===== Копирование JS =====
-export function scripts() {
-  return gulp
-    .src(paths.scripts.src)
-    .pipe(gulp.dest(paths.scripts.dest))
-    .pipe(bs.stream());
+// styles (sass -> css, sourcemaps, autoprefixer) — no minify
+function styles() {
+  return src(paths.styles.src)
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    // .pipe(cleanCSS({ level: 2 }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest(paths.styles.dest))
+    .pipe(browserSync.stream());
 }
 
-// ===== Копирование изображений =====
-export function images() {
-  return gulp
-    .src(paths.images.src, { encoding: false })
-    .pipe(gulp.dest(paths.images.dest))
-    .pipe(bs.stream());
+// scripts (webpack)
+function scripts() {
+  // webpack config already outputs to dist/js/[name].bundle.js
+  return src('src/js/main.js')
+    .pipe(webpackStream(webpackConfig))
+    .pipe(dest(paths.scripts.dest))
+    .pipe(browserSync.stream());
 }
 
-// ===== Копирование шрифтов =====
-export function fonts() {
-  return gulp
-    .src(paths.fonts.src, { encoding: false })
-    .pipe(gulp.dest(paths.fonts.dest))
-    .pipe(bs.stream());
+// copy images
+function images() {
+  return src(paths.images.src, { encoding: false })
+    .pipe(dest(paths.images.dest))
+    .pipe(browserSync.stream());
 }
 
-// ===== Вендоры из node_modules =====
-export function vendor() {
-  const vendors = [
-    {
-      name: "bootstrap",
-      files: [
-        "node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-      ],
+// copy fonts
+function fonts() {
+  return src(paths.fonts.src, { encoding: false })
+    .pipe(dest(paths.fonts.dest))
+    .pipe(browserSync.stream());
+}
+
+// watch + serve
+function serve() {
+  browserSync.init({
+    server: {
+      baseDir: 'dist'
     },
-    {
-      name: "jquery",
-      files: ["node_modules/jquery/dist/jquery.min.js"],
-    },
-    {
-      name: "swiper",
-      files: [
-        "node_modules/swiper/swiper-bundle.min.css",
-        "node_modules/swiper/swiper-bundle.min.js",
-      ],
-    },
-    {
-      name: "fancybox",
-      files: [
-        "node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
-        "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
-      ],
-    },
-  ];
-
-  const tasks = vendors.map((vendor) => {
-    return gulp.src(vendor.files).pipe(gulp.dest(`dist/vendor/${vendor.name}`));
-  });
-
-  return Promise.all(tasks);
-}
-
-// ===== Сервер и слежка =====
-export function serve() {
-  bs.init({
-    server: { baseDir: "dist/" },
-    notify: false,
     port: 3000,
+    open: true,
+    notify: false
   });
 
-  gulp.watch(paths.html.watch, html);
-  gulp.watch(paths.styles.watch, styles);
-  gulp.watch(paths.scripts.watch, scripts);
-  gulp.watch(paths.images.src, images);
-  gulp.watch(paths.fonts.src, fonts);
+  watch('src/html/**/*.html', html);
+  watch(paths.styles.watch, styles);
+  watch(paths.scripts.src, scripts);
+  watch(paths.images.src, images);
+  watch(paths.fonts.src, fonts);
 }
 
-// ===== Сборка и режим разработки =====
-export const build = gulp.series(
-  clean,
-  gulp.parallel(html, styles, scripts, images, fonts, vendor)
-);
+// build (production-like but without minification per your request)
+const build = series(clean, parallel(html, styles, scripts, images, fonts));
 
-export const dev = gulp.series(build, serve);
-
-export default dev;
+exports.clean = clean;
+exports.html = html;
+exports.styles = styles;
+exports.scripts = scripts;
+exports.images = images;
+exports.fonts = fonts;
+exports.build = build;
+exports.default = series(build, serve);

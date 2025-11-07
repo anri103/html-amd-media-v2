@@ -1,26 +1,25 @@
-//////////////////////////////////////////////////////////////////
-// [ Fixed headers ]
+// import 'bootstrap';
+import { Button, Collapse, Dropdown, Modal, Offcanvas, Tab } from 'bootstrap';
+import Swiper from 'swiper/bundle';
+import { Fancybox } from "@fancyapps/ui";
 
-window.addEventListener('scroll', function() {
-    const fixedHeader = document.querySelector('.header-fixed');
-    // const mainHeader = document.querySelector('.main-header');
-    
-    if (window.scrollY > 100) {
-        fixedHeader.classList.add('js-fixed');
-    } else {
-        fixedHeader.classList.remove('js-fixed');
-    }
-});
+document.addEventListener('DOMContentLoaded', () => {
 
-//////////////////////////////////////////////////////////////////
-// [ swiper ]
+    // Fixed header
+    window.addEventListener('scroll', function () {
+        const fixedHeader = document.querySelector('.header-fixed');
+        if (fixedHeader) {
+        fixedHeader.classList.toggle('js-fixed', window.scrollY > 100);
+        }
+    });
 
-window.onload = () => {
+    // Fancybox
+    Fancybox.bind("[data-fancybox]", {});
 
     // swiperClients
     const swiperClients = document.querySelector('.swiperClients');
     if (swiperClients) {
-        var swiper = new Swiper(swiperClients, {
+        new Swiper(swiperClients, {
             slidesPerView: 'auto',
             spaceBetween: 0,
             loop: true,
@@ -37,7 +36,7 @@ window.onload = () => {
     // swiperHeroGlassCards
     const swiperHeroGlassCards = document.querySelector('.swiperHeroGlassCards');
     if (swiperHeroGlassCards) {
-        var swiper = new Swiper(swiperHeroGlassCards, {
+        new Swiper(swiperHeroGlassCards, {
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
@@ -56,7 +55,7 @@ window.onload = () => {
     // swiperPartners
     const swiperPartners = document.querySelector('.swiperPartners');
     if (swiperPartners) {
-        var swiper = new Swiper(swiperPartners, {
+        new Swiper(swiperPartners, {
             slidesPerView: 'auto',
             spaceBetween: 0,
             loop: true,
@@ -73,7 +72,7 @@ window.onload = () => {
     // swiperReviews
     const swiperReviews = document.querySelector('.swiperReviews');
     if (swiperReviews) {
-        var swiper = new Swiper(swiperReviews, {
+        new Swiper(swiperReviews, {
             slidesPerView: 1,
             spaceBetween: 15,
             loop: true,
@@ -96,7 +95,7 @@ window.onload = () => {
     // swiperBlog
     const swiperBlog = document.querySelector('.swiperBlog');
     if (swiperBlog) {
-        var swiper = new Swiper(swiperBlog, {
+        new Swiper(swiperBlog, {
             slidesPerView: 1,
             spaceBetween: 15,
             loop: true,
@@ -119,4 +118,5 @@ window.onload = () => {
             },
         });
     }
-}
+    
+});
