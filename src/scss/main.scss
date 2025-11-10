@@ -4,10 +4,8 @@
  * Version: 1.0.0
  */
 
-// vendors
-@import "vendors/bootstrap";
-@import "vendors/swiper";
-@import "vendors/fancybox";
+// bootstrap
+@import 'bootstrap-custom';
 
 // components
 @import 'components/fonts';

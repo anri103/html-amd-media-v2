@@ -59,8 +59,10 @@
         border-radius: var(--bs-border-radius);
         margin: 0 2px;
         background-color: var(--theme-blue-light);
-        
-        @media (min-width: 992px) {
+    }
+
+    @include media-breakpoint-up(lg) {
+        .swiper-img {
             margin: 0 10px;
         }
     }

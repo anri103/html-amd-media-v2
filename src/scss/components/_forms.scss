@@ -18,3 +18,13 @@
     min-height: 58px;
     padding: 12px 20px;
 }
+
+@include media-breakpoint-up(xxl) {
+    .input-m {
+        min-height: 66px;
+    }
+
+    .input-l {
+        min-height: 66px;
+    }
+}

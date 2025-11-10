@@ -7,6 +7,11 @@ a {
 
 .text-muted {
     --bs-link-color-rgb: var(--theme-blue-rgb);
-    --bs-link-hover-color-rgb: var(--theme-black-rgb);
+    --bs-link-hover-color-rgb: var(--bs-body-color-rgb);
     --bs-link-opacity: 0.6;
+}
+
+.text-gray {
+    --bs-link-color-rgb: 133, 142, 242;
+    --bs-link-hover-color-rgb: var(--theme-blue-rgb);
 }

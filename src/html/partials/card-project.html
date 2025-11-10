@@ -5,10 +5,10 @@
     <div class="card-body">
         <div class="card-head">
             <div class="row gy-3">
-                <div class="col-xxl-5">
+                <div class="col-xl-5">
                     <img class="img-fluid" src="@@logoURL">
                 </div>
-                <div class="col-xxl">
+                <div class="col-xl">
                     <div class="card-tags">
                         @@if (context.tag1) {<a href="#">@@tag1</a>}
                         @@if (context.tag2) {<a href="#">@@tag2</a>}
@@ -20,35 +20,35 @@
             </div>
         </div>
         <div class="h3 fw-medium mb-1">@@title</div>
-        <div class="h5 fw-light text-muted mb-0">@@subtitle</div>
-        <div class="card-features-wrapper">
-            <div class="card-features">
+        <div class="h5 fw-light text-gray mb-0">@@subtitle</div>
+        <div class="card-project-features-wrapper">
+            <div class="card-project-features">
                 <!-- Фича 1 -->
                 @@if (context.feature1) {
-                <div class="card-features__item">
+                <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">@@feature1.value</div>
-                    <div class="h5 fw-light text-muted mb-0">@@feature1.text</div>
+                    <div class="h5 fw-light text-gray mb-0">@@feature1.text</div>
                 </div>
                 }
                 <!-- Фича 2 -->
                 @@if (context.feature2) {
-                <div class="card-features__item">
+                <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">@@feature2.value</div>
-                    <div class="h5 fw-light text-muted mb-0">@@feature2.text</div>
+                    <div class="h5 fw-light text-gray mb-0">@@feature2.text</div>
                 </div>
                 }
                 <!-- Фича 3 -->
                 @@if (context.feature3) {
-                <div class="card-features__item">
+                <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">@@feature3.value</div>
-                    <div class="h5 fw-light text-muted mb-0">@@feature3.text</div>
+                    <div class="h5 fw-light text-gray mb-0">@@feature3.text</div>
                 </div>
                 }
                 <!-- Фича 4 -->
                 @@if (context.feature4) {
-                <div class="card-features__item">
+                <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">@@feature4.value</div>
-                    <div class="h5 fw-light text-muted mb-0">@@feature4.text</div>
+                    <div class="h5 fw-light text-gray mb-0">@@feature4.text</div>
                 </div>
                 }
             </div>

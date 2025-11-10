@@ -1,6 +1,41 @@
 /*------------------------------------------------------------------
 [ cards ]*/
 
+/* card-hero-info */
+
+.card-hero-info {
+    --bs-card-spacer-y: 20px;
+    --bs-card-spacer-x: 15px;
+    --bs-card-border-radius: var(--bs-border-radius-lg);
+    --bs-card-bg: var(--bs-white);
+    flex-grow: 1;
+    margin-bottom: 30px;
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hero-title {
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .card-btn-wrapper {
+        margin-top: 15px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        --bs-card-spacer-y: 40px;
+        --bs-card-spacer-x: 40px;
+
+        .hero-title {
+            margin-bottom: 20px;
+        }
+    }
+}
+
 /* card-glass */
 
 .card-glass {
@@ -43,7 +78,7 @@
         width: 60px;
     }
 
-    @media (min-width: 992px) {
+    @include media-breakpoint-up(lg) {
         --bs-card-spacer-y: 20px;
         --bs-card-spacer-x: 20px;
 
@@ -88,7 +123,7 @@
         position: relative;
     }
 
-    @media (min-width: 992px) {
+    @include media-breakpoint-up(lg) {
         --bs-card-spacer-y: 30px;
         --bs-card-spacer-x: 30px;
         --bs-card-height: 262px;
@@ -144,12 +179,12 @@
         }
     }
 
-    .card-features-wrapper {
+    .card-project-features-wrapper {
         flex: 1 1 auto;
         margin-top: 30px;
     }
 
-    .card-features {
+    .card-project-features {
         display: grid;
         grid-template-columns: 1fr;
         gap: 4px;
@@ -166,14 +201,14 @@
         margin-top: 30px;
     }
 
-    @media (max-width: 991px) {
+    @include media-breakpoint-down(lg) {
         .card-media {
             height: 200px;
         }
     }
 
-    @media (min-width: 576px) {
-        .card-features {
+    @include media-breakpoint-up(sm) {
+        .card-project-features {
             gap: 8px;
             grid-template-columns: 1fr 1fr;
 
@@ -183,7 +218,7 @@
         }
     }
 
-    @media (min-width: 992px) {
+    @include media-breakpoint-up(lg) {
         --bs-card-spacer-y: 40px;
         --bs-card-spacer-x: 40px;
         grid-template-columns: 1fr 1fr;
@@ -196,17 +231,23 @@
         }
     }
 
-    @media (min-width: 1400px) {
+    @include media-breakpoint-up(xl) {
+        grid-template-columns: 1fr;
+
+        .card-media {
+            display: none;
+        }
+
         .card-tags {
             justify-content: flex-end;
         }
     }
 
-    @media (min-width: 1600px) {
-        grid-template-columns: 1fr;
+    @include media-breakpoint-up(xxl) {
+        grid-template-columns: 1fr 1fr;
 
         .card-media {
-            display: none;
+            display: block;
         }
 
         .card-head {
@@ -236,7 +277,7 @@
         }
     }
 
-    @media (min-width: 992px) {
+    @include media-breakpoint-up(lg) {
         --bs-card-spacer-y: 30px;
         --bs-card-spacer-x: 30px;
     }
@@ -373,7 +414,7 @@
         }
     }
 
-    @media (min-width: 992px) {
+    @include media-breakpoint-up(lg) {
         --bs-card-spacer-y: 30px;
         --bs-card-spacer-x: 30px;
 

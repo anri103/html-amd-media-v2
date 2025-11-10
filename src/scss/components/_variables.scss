@@ -27,47 +27,12 @@
     --theme-black-rgb: 16, 1, 2;
 
     // Theme titles sizes
-    --fs-h1: clamp(36px, 4vw, 43px);
-    --fs-h2: clamp(28px, 3.2vw, 40px);
-    --fs-h3: clamp(22px, 2.2vw, 28px);
-    --fs-h4: clamp(18px, 1.8vw, 22px);
-    --fs-h5: clamp(16px, 1.2vw, 18px);
+    --fs-h1: clamp(36px, 4vw, 58px);
+    --fs-h2: clamp(28px, 3.2vw, 52px);
+    --fs-h3: clamp(22px, 2.2vw, 36px);
+    --fs-h4: clamp(18px, 1.8vw, 30px);
+    --fs-h5: clamp(16px, 1.2vw, 22px);
     --fs-h6: 14px;
-
-    // Bootstrap CSS variables (for runtime use)
-    --bs-primary: var(--theme-blue);
-    --bs-secondary: var(--theme-red);
-    --bs-white: var(--theme-white);
-    --bs-black: var(--theme-black);
-    --bs-primary-rgb: var(--theme-blue-rgb);
-    --bs-secondary-rgb: var(--theme-red-rgb);
-    --bs-white-rgb: var(--theme-white-rgb);
-    --bs-black-rgb: var(--theme-black-rgb);
-    --bs-secondary-color: rgba(16, 1, 2, 0.6);
-    --bs-secondary-color-rgb: 16, 1, 2;
-
-    --bs-body-font-family: var(--theme-ff-main), var(--bs-font-sans-serif);
-    --bs-body-font-size: 16px;
-    --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.4;
-    --bs-body-color: var(--theme-black);
-    --bs-body-color-rgb: var(--theme-black-rgb);
-    --bs-body-bg: var(--theme-gray);
-    --bs-body-bg-rgb: var(--theme-gray-rgb);
-    --bs-border-width: 1px;
-    --bs-border-style: solid;
-    --bs-border-color: var(--theme-stroke-gray);
-    --bs-border-radius: 16px;
-    --bs-border-radius-sm: 8px; 
-    --bs-border-radius-lg: 20px;
-    --bs-border-radius-xl: 22px;
-    --bs-border-radius-2xl: 24px;
-    --bs-border-radius-pill: 50px;
-
-    --bs-link-color: var(--theme-black);
-    --bs-link-color-rgb: var(--theme-black-rgb);
-    --bs-link-hover-color: var(--theme-blue);
-    --bs-link-hover-color-rgb: var(--theme-blue-rgb);
 
     // Swiper
     --swiper-theme-color: var(--theme-blue);

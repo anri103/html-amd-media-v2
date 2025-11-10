@@ -1,497 +1,99 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-@@include('partials/head.html', {
-    "title": "Главная"
+@@include('partials/header.html', {
+    "title": "Главная",
+    "headerAbsolute": "true"
 })
 
-<body>
+<!-- main -->
+<main class="main">
 
-    <!-- header -->
-    @@include('partials/header.html')
+    <!-- section-home-hero -->
+    <section class="section section-home-hero">
+        <div class="container-fluid">
+            <div class="hero-grid">
+                <div class="grid-col">
+                    <!-- hero-video-wrapper -->
+                    <div class="hero-video-wrapper">
+                        <video 
+                            autoplay 
+                            muted 
+                            loop 
+                            playsinline
+                            class="desktop-video"
+                            poster="img/home/hero-video-cover.png"
+                        >
+                            <!-- Desktop -->
+                            <!-- <source src="img/home/hero-video(1080x1080).mp4" type="video/mp4" media="(min-width: 992px)"> -->
+                            <!-- Tablet -->
+                            <source src="img/home/hero-video(600x600).mp4" type="video/mp4" media="(min-width: 768px)">
+                            <!-- Mobile & Fallback -->
+                            <source src="img/home/hero-video(400x400).mp4" type="video/mp4">
+                            <!-- Image Fallback -->
+                            <img src="img/home/hero-video.gif">
+                        </video>
 
-    <!-- main -->
-    <main class="main">
-
-        <!-- section-home-hero -->
-        <section class="section section-home-hero">
-            <div class="container-fluid">
-                <div class="hero-grid">
-                    <div class="grid-col">
-                        <!-- hero-video-wrapper -->
-                        <div class="hero-video-wrapper">
-                            <video 
-                                autoplay 
-                                muted 
-                                loop 
-                                playsinline
-                                class="desktop-video"
-                                poster="img/home/hero-video-cover.png"
-                            >
-                                <!-- Desktop -->
-                                <source src="img/home/hero-video(1080x1080).mp4" type="video/mp4" media="(min-width: 992px)">
-                                <!-- Tablet -->
-                                <source src="img/home/hero-video(600x600).mp4" type="video/mp4" media="(min-width: 768px)">
-                                <!-- Mobile & Fallback -->
-                                <source src="img/home/hero-video(400x400).mp4" type="video/mp4">
-                                <!-- Image Fallback -->
-                                <img src="img/home/hero-video.gif">
-                            </video>
-    
-                            <picture class="mobile-image">
-                                <source srcset="img/home/hero-video.webp" type="image/webp">
-                                <source srcset="img/home/hero-video.gif" type="image/gif">
-                                <img src="img/home/hero-video.gif">
-                            </picture>
-                        </div>
+                        <picture class="mobile-image">
+                            <source srcset="img/home/hero-video.webp" type="image/webp">
+                            <source srcset="img/home/hero-video.gif" type="image/gif">
+                            <img src="img/home/hero-video.gif">
+                        </picture>
                     </div>
-                    <div class="grid-col">
-                        <div class="d-flex flex-column h-100">
-                            <!-- hero-card -->
-                            <div class="card card-hero-info">
-                                <div class="card-body">
-                                    <div>
-                                        <h1 class="hero-title">Digital-продукты для бизнеса: эффективная стратегия<br> под отрасль</h1>
-                                        <div class="d-flex gap-2">
-                                            <span class="me-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                                    <circle cx="18" cy="2" r="2" fill="#F74251"/>
-                                                    <circle cx="18" cy="10" r="2" fill="#F74251"/>
-                                                    <circle cx="18" cy="18" r="2" fill="#F74251"/>
-                                                    <circle cx="26" cy="18" r="2" fill="#F74251"/>
-                                                    <circle cx="10" cy="18" r="2" fill="#F74251"/>
-                                                    <circle cx="2" cy="18" r="2" fill="#F74251"/>
-                                                    <circle cx="12" cy="12" r="2" fill="#F74251"/>
-                                                    <circle cx="12" cy="23" r="2" fill="#F74251"/>
-                                                    <circle cx="7" cy="29" r="2" fill="#F74251"/>
-                                                    <circle cx="7" cy="7" r="2" fill="#F74251"/>
-                                                    <circle cx="24" cy="12" r="2" fill="#F74251"/>
-                                                    <circle cx="24" cy="24" r="2" fill="#F74251"/>
-                                                    <circle cx="30" cy="29" r="2" fill="#F74251"/>
-                                                    <circle cx="30" cy="8" r="2" fill="#F74251"/>
-                                                    <circle cx="34" cy="18" r="2" fill="#F74251"/>
-                                                    <circle cx="18" cy="26" r="2" fill="#F74251"/>
-                                                    <circle cx="18" cy="34" r="2" fill="#F74251"/>
-                                                </svg>
-                                            </span>
-                                            <div class="hero-subtitle h5 fw-light text-muted mb-0">От шаблона до сложных экосистем.<br> Быстрый старт за 14 дней с возможностью масштабирования</div>
-                                        </div>
+                </div>
+                <div class="grid-col">
+                    <div class="d-flex flex-column h-100">
+                        <!-- hero-card -->
+                        @@include('partials/card-hero-info.html')
+                        <!-- hero-slider -->
+                        <div class="hero-swiper-wrapper">
+                            <div class="swiper swiperHeroGlassCards">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!-- card -->
+                                        @@include('partials/card-glass.html', {
+                                            "imgIconURL": "img/home/card-glass-01.svg",
+                                            "title": "Гибкость под бизнес",
+                                            "subtitle": "Разрабатываем от Tilda до Bitrix и кастомных решений",
+                                        })
                                     </div>
-                                    <div class="card-btn-wrapper">
-                                        <a href="#" class="btn btn-primary btn-l btn-animated w-100">
-                                            <div class="animated-content">
-                                                <div class="animated-content__default">
-                                                    <span>Обсудить проект</span>
-                                                </div>
-                                                <div class="animated-content__hidden">
-                                                    <span>Обсудить проект</span>
-                                                </div>
-                                            </div>
-                                        </a>
+                                    <div class="swiper-slide">
+                                        <!-- card -->
+                                        @@include('partials/card-glass.html', {
+                                            "imgIconURL": "img/home/card-glass-02.svg",
+                                            "title": "Прямое общение",
+                                            "subtitle": "Проектная команда доступна для открытого диалога",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- card -->
+                                        @@include('partials/card-glass.html', {
+                                            "imgIconURL": "img/home/card-glass-03.svg",
+                                            "title": "Автоматизация процессов",
+                                            "subtitle": "Повышение производительности за счёт интеграций",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- card -->
+                                        @@include('partials/card-glass.html', {
+                                            "imgIconURL": "img/home/card-glass-04.svg",
+                                            "title": "Аналитика с первого дня",
+                                            "subtitle": "Реальную эффективность маркетинга и поддержка продаж",
+                                        })
                                     </div>
                                 </div>
-                            </div>
-                            <!-- hero-slider -->
-                            <div class="hero-swiper-wrapper">
-                                <div class="swiper swiperHeroGlassCards">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('partials/card-glass.html', {
-                                                "imgIconURL": "img/home/card-glass-01.svg",
-                                                "title": "Гибкость под бизнес",
-                                                "subtitle": "Разрабатываем от Tilda до Bitrix и кастомных решений",
-                                            })
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('partials/card-glass.html', {
-                                                "imgIconURL": "img/home/card-glass-02.svg",
-                                                "title": "Прямое общение",
-                                                "subtitle": "Проектная команда доступна для открытого диалога",
-                                            })
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('partials/card-glass.html', {
-                                                "imgIconURL": "img/home/card-glass-03.svg",
-                                                "title": "Автоматизация процессов",
-                                                "subtitle": "Повышение производительности за счёт интеграций",
-                                            })
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('partials/card-glass.html', {
-                                                "imgIconURL": "img/home/card-glass-04.svg",
-                                                "title": "Аналитика с первого дня",
-                                                "subtitle": "Реальную эффективность маркетинга и поддержка продаж",
-                                            })
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- section-clients-slider -->
-        <section class="section section-clients-slider">
-            <div class="bg-white">
-                <div class="swiper swiperClients">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-01.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-02.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-03.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-04.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-05.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-01.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-02.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-03.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-04.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-05.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-01.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-02.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-03.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-04.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-img">
-                                <img 
-                                class="img-fluid"
-                                src="img/home/client-logo-05.svg" 
-                                alt="...">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- section-services-grid -->
-        <section class="section section-services-grid">
-            <div class="container-fluid">
-                <!-- title -->
-                <div class="d-flex justify-content-between mb-15 mb-lg-40">
-                    <h2 class="h2 mb-0">Наши услуги</h2>
-                    <div class="d-flex align-items-center gap-10">
-                        <span class="h2 mb-0">[39]</span>
-                        <!-- <a href="#" class="btn btn-outline-black">Все услуги</a> -->
-                    </div>
-                </div>
-                <!-- grid -->
-                <div class="cards-grid">
-                    <!-- card -->
-                    @@include('partials/card-service.html', {
-                        "bgImgURL": "img/home/card-service-bg-01.svg",
-                        "title": "Разработка сайтов",
-                        "subtitle": "Создание сайта под ваши цели с уникальным дизайном",
-                    })
-                    <!-- card -->
-                    @@include('partials/card-service.html', {
-                        "bgImgURL": "img/home/card-service-bg-02.svg",
-                        "title": "SEO-продвижение",
-                        "subtitle": "Раскрутка сайтов в Топ органической выдачи поисковых систем",
-                    })
-                    <!-- card -->
-                    @@include('partials/card-service.html', {
-                        "bgImgURL": "img/home/card-service-bg-03.svg",
-                        "title": "Мобильные приложения",
-                        "subtitle": "Создание мобильных приложений для вашего бизнеса",
-                    })
-                    <!-- card -->
-                    @@include('partials/card-service.html', {
-                        "bgImgURL": "img/home/card-service-bg-04.svg",
-                        "title": "E-COMMERCE решения",
-                        "subtitle": "Создание интернет-магазинов и сервисов для бизнеса",
-                    })
-                    <!-- card -->
-                    @@include('partials/card-service.html', {
-                        "bgImgURL": "img/home/card-service-bg-05.svg",
-                        "title": "UX/UI-дизайн",
-                        "subtitle": "Создание уникального и стильного дизайна для роста продаж",
-                    })
-                    <!-- card -->
-                    @@include('partials/card-service.html', {
-                        "bgImgURL": "img/home/card-service-bg-06.svg",
-                        "title": "CRM-системы на заказ",
-                        "subtitle": "Проектируем инфраструктуру с минимальными рисками отказа системы",
-                    })
-                </div>
-            </div>
-        </section>
-
-        <!-- section-projects-grid -->
-        <section class="section section-projects-grid">
-            <div class="container-fluid">
-                <!-- title -->
-                <div class="d-flex justify-content-between mb-15 mb-lg-40">
-                    <h2 class="h2 mb-0">Реализованные проекты</h2>
-                    <div class="d-flex align-items-center gap-10">
-                        <span class="h2 mb-0">[200+]</span>
-                        <!-- <a href="#" class="btn btn-outline-black">Все проекты</a> -->
-                    </div>
-                </div>
-                <!-- grid -->
-                <div class="cards-grid">
-                    <!-- card -->
-                    @@include('partials/card-project.html', {
-                        "imgThumbURL": "img/projects/card-project-thumb-01.png",
-                        "logoURL": "img/projects/card-project-logo-01.png",
-                        "title": "Интернет-магазин керамической плитки",
-                        "subtitle": "Разработка интернет-магазина с нуля",
-                        "tag1": "Интернет-магазин",
-                        "tag2": "Интеграция с ERP",
-                        "tag3": "SEO-Оптимизация",
-                        "tag4": "Техподдержка",
-                        "feature1": {"value": "&gt;30%", "text": "запросов в ТОП 30 за 4 месяца"},
-                        "feature2": {"value": "+8 269", "text": "уникальных посетителей за 4 месяца"},
-                        "feature3": {"value": "4,08 мин", "text": "среднее время посещения"},
-                        "feature4": {"value": "ТОП 5", "text": "по ключу Магазин плитки"}
-                    })
-                    <!-- card -->
-                    @@include('partials/card-project.html', {
-                        "imgThumbURL": "img/projects/card-project-thumb-02.png",
-                        "logoURL": "img/projects/card-project-logo-02.png",
-                        "title": "Интернет-магазин для садоводов",
-                        "subtitle": "SEO-продвижение сайта в ТОП-10: вывели приоритетные кластеры",
-                        "tag1": "SEO-продвижение",
-                        "feature1": {"value": "+60%", "text": "увеличили трафик из поисковых систем"},
-                        "feature2": {"value": "+16 650", "text": "прирост уникальных посетителей"},
-                        "feature3": {"value": "+1000", "text": "запросов к семантике"},
-                        "feature4": {"value": "ТОП 1-10", "text": "вывели основной кластер Фунгициды"}
-                    })
-                    <!-- card -->
-                    @@include('partials/card-project.html', {
-                        "imgThumbURL": "img/projects/card-project-thumb-03.png",
-                        "logoURL": "img/projects/card-project-logo-03.png",
-                        "title": "Интернет-магазин ювелирных украшений",
-                        "subtitle": "Клиенту был необходим проработанный интернет-магазин с массой функций и преимуществ: отслеживанием клиентской базы, удобной доставкой, промокодами и т.д.",
-                        "tag1": "Интернет-магазин",
-                        "tag2": "1С Система",
-                        "tag3": "Эквайринг",
-                        "tag4": "Доставка",
-                        "feature1": {"value": "91%", "text": "поисковая оптимизация по данным PageSpeed"},
-                        "feature2": {"value": "х1,9", "text": "увеличился трафик на сайт по сравнению с предыдущим периодом"},
-                        "feature3": {"value": "на 9%", "text": "уменьшилась доля отказов"},
-                        "feature4": {"value": "+18%", "text": "глубина просмотров страниц "}
-                    })
-                    <!-- card -->
-                    @@include('partials/card-project.html', {
-                        "imgThumbURL": "img/projects/card-project-thumb-04.png",
-                        "logoURL": "img/projects/card-project-logo-04.png",
-                        "title": "Интернет-магазин для кудрявых",
-                        "subtitle": "Техническая поддержка и доработка сайтов, верстка лендинга",
-                        "tag1": "Интернет-магазин",
-                        "tag2": "1С Система",
-                        "tag3": "Эквайринг",
-                        "tag4": "Доставка",
-                        "feature1": {"value": "0,8 сек", "text": "FCP по данным PageSpeed"},
-                        "feature2": {"value": "+12%", "text": "выросло количество заказов через корзину"},
-                        "feature3": {"value": "х36 раз", "text": "увеличилось количество регулярных покупок"},
-                        "feature4": {"value": "х2 раза", "text": "вырос средний чек"}
-                    })
-                </div>
-            </div>
-        </section>
-
-        <!-- section-cta -->
-        <section class="section section-cta">
-            <div class="container-fluid">
-                <div class="rounded-3 p-15 py-20 p-lg-40 bg-blue-gradient position-relative overflow-hidden">
-                    <img class="bg-absolute-img" src="img/home/cta-bg-figure.png">
-                    <!-- grid -->
-                    <div class="cta-content">
-                        <div class="cta-content__heading">
-                            <div class="h2 fw-normal text-white mb-10">Напишите нам</div>
-                            <div class="h5 fw-light text-white text-opacity-60 mb-0">Получите бесплатный разбор вашей задачи<br> с экспертом. Обсудим ваши потребности и цели, подскажем с чего начать и сколько это будет стоить</div>
-                        </div>
-                        <div class="cta-content__form">
-                            <div class="form-wrapper">
-                                <form action="#">
-                                    <div class="row row-cols-1 row-cols-lg-3 gy-4 gx-2">
-                                        <div class="col">
-                                            <input type="text" class="form-control input-l" placeholder="Ваше имя">
-                                        </div>
-                                        <div class="col">
-                                            <input type="tel" class="form-control input-l" placeholder="+7 (___) ___-__-__">
-                                        </div>
-                                        <div class="col">
-                                            <button type="submit" class="btn btn-secondary btn-l btn-animated w-100">
-                                                <div class="animated-content">
-                                                    <div class="animated-content__default">
-                                                        <span>Отправить</span>
-                                                    </div>
-                                                    <div class="animated-content__hidden">
-                                                        <span>Отправить</span>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="text-center fs-14 text-white text-opacity-60 mt-2 mt-lg-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
-                        </div>
-                        <div class="cta-content__socials">
-                            <div class="content-divider"></div>
-                            <div class="content-wrapper">
-                                <div class="h5 fw-light text-white text-opacity-60 mb-0">Заполните форму или свяжитесь с нами напрямую через мессенджер, нажав на кнопку</div>
-                                <div class="contact-socials">
-                                    <!-- telegram -->
-                                    <a href="#" class="link-social">
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#039BE5"></path>
-                                            <path d="M9.15162 19.566L28.435 12.131C29.33 11.8077 30.1116 12.3494 29.8216 13.7027L29.8233 13.701L26.5399 29.1694C26.2966 30.266 25.6449 30.5327 24.7333 30.016L19.7333 26.331L17.3216 28.6544C17.0549 28.921 16.8299 29.146 16.3133 29.146L16.6683 24.0577L25.9349 15.686C26.3383 15.331 25.8449 15.131 25.3133 15.4844L13.8616 22.6944L8.92495 21.1544C7.85328 20.8144 7.82995 20.0827 9.15162 19.566Z" fill="white"></path>
-                                        </svg>
-                                    </a>
-                                    <!-- whatsapp -->
-                                    <a href="#" class="link-social">
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#29A71A"></path>
-                                            <path d="M13.1347 10.3934C15.4034 8.75513 18.183 7.98126 20.9719 8.21176C23.7608 8.44231 26.3754 9.66206 28.3443 11.6506C30.2969 13.6263 31.4852 16.2306 31.6978 19.0002C31.9104 21.7697 31.1332 24.5251 29.5051 26.7756C27.8771 29.026 25.5034 30.6259 22.8066 31.2905C20.1096 31.9552 17.264 31.6414 14.7766 30.4051L14.5605 30.2977L8.34497 31.7704L9.60278 25.6636L9.65031 25.4351L9.54419 25.2274C8.27575 22.733 7.94065 19.8672 8.59888 17.1473C9.25719 14.4274 10.8659 12.0318 13.1347 10.3934ZM19.9999 9.52361C17.2481 9.52365 14.6088 10.6171 12.6627 12.5627C11.1139 14.1117 10.0948 16.1114 9.75187 18.2749C9.40914 20.4378 9.75991 22.6534 10.7532 24.605L11.0748 25.2411L10.3293 28.8648L10.3196 28.9045L10.0689 29.9572L14.7258 28.8537L15.384 29.1792C17.3289 30.1466 19.5284 30.4795 21.6724 30.131C23.817 29.7825 25.798 28.7694 27.3365 27.2352L27.3372 27.2346C29.2734 25.298 30.3656 22.6748 30.3756 19.9364C30.3856 17.1979 29.3126 14.5667 27.3905 12.6161L27.373 12.5978L27.3619 12.5881L27.3534 12.5783L27.3372 12.5627L27.1529 12.3823C25.2262 10.5494 22.6658 9.52361 19.9999 9.52361Z" fill="white"></path>
-                                            <path d="M26.5249 23.9289C26.0545 24.6698 25.3113 25.5766 24.3772 25.8016C22.7408 26.197 20.2295 25.8152 17.1045 22.9016L17.0658 22.8675C14.3181 20.3198 13.6045 18.1993 13.7772 16.5175C13.8727 15.5629 14.6681 14.6993 15.3386 14.1357C15.4446 14.0452 15.5703 13.9808 15.7056 13.9476C15.8409 13.9144 15.9822 13.9133 16.118 13.9445C16.2538 13.9756 16.3805 14.0381 16.4879 14.1269C16.5952 14.2158 16.6803 14.3285 16.7363 14.4561L17.7477 16.7289C17.8134 16.8762 17.8377 17.0387 17.8181 17.1989C17.7985 17.359 17.7356 17.5108 17.6363 17.6379L17.1249 18.3016C17.0152 18.4386 16.949 18.6053 16.9348 18.7803C16.9206 18.9553 16.9592 19.1305 17.0454 19.2834C17.3317 19.7857 18.0181 20.5243 18.7795 21.2084C19.634 21.9811 20.5817 22.6879 21.1817 22.9289C21.3423 22.9944 21.5188 23.0105 21.6885 22.9748C21.8583 22.9392 22.0134 22.8535 22.134 22.7289L22.7272 22.1311C22.8417 22.0183 22.984 21.9378 23.1397 21.8978C23.2954 21.8579 23.4589 21.86 23.6136 21.9039L26.0158 22.5857C26.1484 22.6263 26.2698 22.6967 26.3709 22.7915C26.4721 22.8863 26.5502 23.003 26.5993 23.1326C26.6484 23.2622 26.6673 23.4013 26.6544 23.5393C26.6415 23.6774 26.5972 23.8106 26.5249 23.9289Z" fill="white"></path>
-                                        </svg>
-                                    </a>
-                                    <!-- vk -->
-                                    <a href="#" class="link-social">
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.198242 19.2C0.198242 10.149 0.198242 5.62356 2.98218 2.81178C5.76612 0 10.2468 0 19.2081 0H20.7923C29.7536 0 34.2343 0 37.0183 2.81178C39.8022 5.62356 39.8022 10.149 39.8022 19.2V20.8C39.8022 29.851 39.8022 34.3764 37.0183 37.1882C34.2343 40 29.7536 40 20.7923 40H19.2081C10.2468 40 5.76612 40 2.98218 37.1882C0.198242 34.3764 0.198242 29.851 0.198242 20.8V19.2Z" fill="#0077FF"></path>
-                                            <path d="M21.2708 28.817C12.2444 28.817 7.09588 22.567 6.88135 12.167H11.4028C11.5513 19.8003 14.8846 23.0336 17.5248 23.7003V12.167H21.7824V18.7503C24.3897 18.467 27.1286 15.467 28.0527 12.167H32.3103C31.6007 16.2337 28.6304 19.2336 26.5182 20.467C28.6304 21.467 32.0134 24.0836 33.3005 28.817H28.6139C27.6073 25.6503 25.0992 23.2003 21.7824 22.867V28.817H21.2708Z" fill="white"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- section-tariffs -->
-        <!-- <section class="section-tariffs">
-            <div class="container-fluid">
-
-            </div>
-        </section> -->
-
-        <!-- section-partners-slider -->
-        <section class="section-partners-slider">
-            <div class="container-fluid">
-                <div class="mb-20 mb-lg-40">
-                    <div style="max-width: 630px;">
-                        <!-- title -->
-                        <h2 class="h2 mb-10">Официальные партнёры</h2>
-                        <div class="h5 fw-light text-muted mb-0">Мы работаем в сфере интернет-маркетинга с 2013 года. За это время мы реализовали более <strong><a href="#">200 проектов</a></strong> совместно с нашими партнёрами</div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper swiperPartners">
+        </div>
+        <div class="bg-white">
+            <div class="swiper swiperClients">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-01.png" 
+                            src="img/home/client-logo-01.svg" 
                             alt="...">
                         </div>
                     </div>
@@ -499,7 +101,7 @@
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-02.png" 
+                            src="img/home/client-logo-02.svg" 
                             alt="...">
                         </div>
                     </div>
@@ -507,7 +109,7 @@
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-03.png" 
+                            src="img/home/client-logo-03.svg" 
                             alt="...">
                         </div>
                     </div>
@@ -515,7 +117,7 @@
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-04.png" 
+                            src="img/home/client-logo-04.svg" 
                             alt="...">
                         </div>
                     </div>
@@ -523,7 +125,7 @@
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-05.png" 
+                            src="img/home/client-logo-05.svg" 
                             alt="...">
                         </div>
                     </div>
@@ -531,7 +133,7 @@
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-01.png" 
+                            src="img/home/client-logo-01.svg" 
                             alt="...">
                         </div>
                     </div>
@@ -539,7 +141,7 @@
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-02.png" 
+                            src="img/home/client-logo-02.svg" 
                             alt="...">
                         </div>
                     </div>
@@ -547,7 +149,7 @@
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-03.png" 
+                            src="img/home/client-logo-03.svg" 
                             alt="...">
                         </div>
                     </div>
@@ -555,7 +157,7 @@
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-04.png" 
+                            src="img/home/client-logo-04.svg" 
                             alt="...">
                         </div>
                     </div>
@@ -563,370 +165,716 @@
                         <div class="swiper-img">
                             <img 
                             class="img-fluid"
-                            src="img/home/partner-logo-05.png" 
+                            src="img/home/client-logo-05.svg" 
+                            alt="...">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img 
+                            class="img-fluid"
+                            src="img/home/client-logo-01.svg" 
+                            alt="...">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img 
+                            class="img-fluid"
+                            src="img/home/client-logo-02.svg" 
+                            alt="...">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img 
+                            class="img-fluid"
+                            src="img/home/client-logo-03.svg" 
+                            alt="...">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img 
+                            class="img-fluid"
+                            src="img/home/client-logo-04.svg" 
+                            alt="...">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img 
+                            class="img-fluid"
+                            src="img/home/client-logo-05.svg" 
                             alt="...">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- section-reviews-slider -->
-        <section class="section-reviews-slider">
-            <div class="container-fluid">
-                <!-- title -->
-                <div class="d-flex align-items-center justify-content-between mb-15 mb-lg-40">
-                    <h2 class="h2 mb-0">Отзывы и благодарности</h2>
-                    <div class="d-flex align-items-center gap-10">
-                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-left">
-                            <span>
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-left"></use>
-                                </svg>
-                            </span>
-                        </button>
-                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-right">
-                            <span>
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-right"></use>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <!-- slider -->
-                <div class="swiper swiperReviews">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-review.html', {
-                                "title": "ООО «НЕОДОМ»",
-                                "description": "Хотим выразить нашу искреннюю благодарность за вашу великолепную работу по созданию и комплексному SEO-продвижению сайта Neodom. С самого начала нашего сотрудничества вы проявили высокий уровень профессионализма и сумели найти индивидуальный подход к нашим потребностям. Особенно приятно было видеть",
-                                "author": "Романьков А.В.",
-                                "job": "Генеральный директор"
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-review.html', {
-                                "title": "ООО «Техническая платформа»",
-                                "description": "ООО «Техническая платформа» благодарит Веб-студию «AMD Media» за проявленный профессионализм и качественное выполнение работ под ключ: Дизайн, вёрстка и программирование, а также SEO-продвижение. Благодаря чему добились значительных результатов и достигли поставленных целей на нашем новом сайте по продаже промышленного и складского",
-                                "author": "Бочков Ю.В.",
-                                "job": "Генеральный директор"
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-review.html', {
-                                "title": "«Лавка садовника»",
-                                "description": "Хочу выразить огромную благодарность за вашу помощь в продвижении нашего сайта stroish.ru. Благодаря вашим усилиям наш бизнес стал более заметным и успешным в онлайн-сфере. Сначала сотрудничества я была приятно удивлена вашим профессионализмом и внимание к деталям. Работа по привлечению клиентов и наполнению сайта",
-                                "author": "Романьков А.В.",
-                                "job": "Генеральный директор"
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-review.html', {
-                                "title": "ООО «Омега СпецСталь»",
-                                "description": "В ходе совместной работы сотрудники студии проявили себя настоящими профессионалами. Ваша команда в кратчайшие сроки провела большую аналитическую работу, разработала необходимые страницы для нашего сайта, внесла необходимые изменения и корректировки, создала логотип компании для размещения на сайтах",
-                                "author": "Юрмин Б.Б.",
-                                "job": "Генеральный директор"
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-review.html', {
-                                "title": "ОАО «Завод имени В.А. Дегтярева»",
-                                "description": "Выражаем искреннюю признательность и благодарность коллективу веб-студии «АМД Медиа» и лично Латыпову А.Р. за техническую поддержку и адаптацию каталога продукции на французский язык. Специалисты веб-студии «АМД Медиа» зарекомендовали себя профессиональными и надёжными бизнес-партнёрами. Все поставленные задачи",
-                                "author": "Бочков Ю.В.",
-                                "job": "Генеральный директор"
-                            })
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
+    <!-- section-clients-slider -->
+    <!-- <section class="section section-clients-slider">
+    </section> -->
+
+    <!-- section-services-grid -->
+    <section class="section section-services-grid">
+        <div class="container-fluid">
+            <!-- title -->
+            <div class="d-flex justify-content-between mb-15 mb-lg-40">
+                <h2 class="h2 mb-0">Наши услуги</h2>
+                <div class="d-flex align-items-center gap-10">
+                    <span class="h2 mb-0">[39]</span>
+                    <!-- <a href="#" class="btn btn-outline-black">Все услуги</a> -->
                 </div>
             </div>
-        </section>
+            <!-- grid -->
+            <div class="cards-grid">
+                <!-- card -->
+                @@include('partials/card-service.html', {
+                    "bgImgURL": "img/home/card-service-bg-01.svg",
+                    "title": "Разработка сайтов",
+                    "subtitle": "Создание сайта под&nbsp;ваши цели с&nbsp;уникальным дизайном",
+                })
+                <!-- card -->
+                @@include('partials/card-service.html', {
+                    "bgImgURL": "img/home/card-service-bg-02.svg",
+                    "title": "SEO-продвижение",
+                    "subtitle": "Раскрутка сайтов в&nbsp;Топ&nbsp;органической выдачи поисковых систем",
+                })
+                <!-- card -->
+                @@include('partials/card-service.html', {
+                    "bgImgURL": "img/home/card-service-bg-03.svg",
+                    "title": "Мобильные приложения",
+                    "subtitle": "Создание мобильных приложений для&nbsp;вашего бизнеса",
+                })
+                <!-- card -->
+                @@include('partials/card-service.html', {
+                    "bgImgURL": "img/home/card-service-bg-04.svg",
+                    "title": "E-COMMERCE решения",
+                    "subtitle": "Создание интернет-магазинов и&nbsp;сервисов для&nbsp;бизнеса",
+                })
+                <!-- card -->
+                @@include('partials/card-service.html', {
+                    "bgImgURL": "img/home/card-service-bg-05.svg",
+                    "title": "UX/UI-дизайн",
+                    "subtitle": "Создание уникального и&nbsp;стильного дизайна для&nbsp;роста продаж",
+                })
+                <!-- card -->
+                @@include('partials/card-service.html', {
+                    "bgImgURL": "img/home/card-service-bg-06.svg",
+                    "title": "CRM-системы на заказ",
+                    "subtitle": "Проектируем инфраструктуру с&nbsp;минимальными рисками отказа системы",
+                })
+            </div>
+        </div>
+    </section>
 
-        <!-- section-blog-slider -->
-        <section class="section-blog-slider">
-            <div class="container-fluid">
-                <!-- title -->
-                <div class="d-flex align-items-center justify-content-between mb-15 mb-lg-40">
-                    <h2 class="h2 mb-0">Статьи и новости</h2>
-                    <div class="d-flex align-items-center gap-10">
-                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-left">
-                            <span>
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-left"></use>
-                                </svg>
-                            </span>
-                        </button>
-                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-right">
-                            <span>
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-right"></use>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <!-- slider -->
-                <div class="swiper swiperBlog">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-blog.html', {
-                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
-                                "authorAvatarURL": "img/blog/author-avatar-01.png",
-                                "authorName": "Виталий Кучеров",
-                                "title": "Реферальная программа",
-                                "tag1": "SEO",
-                                "tag2": "Продвижение",
-                                "tag3": "Аналитика",
-                                "tag4": "Стратегия"
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-blog.html', {
-                                "mediaThumbURL": "img/blog/card-blog-02.jpg",
-                                "authorAvatarURL": "img/blog/author-avatar-01.png",
-                                "authorName": "Виталий Кучеров",
-                                "title": "Скидка 10% на первый месяц работ по SEO-продвижению",
-                                "tag1": "Продвижение",
-                                "tag2": "Аналитика",
-                                "tag3": "Стратегия"
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-blog.html', {
-                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
-                                "authorAvatarURL": "img/blog/author-avatar-01.png",
-                                "authorName": "Виталий Кучеров",
-                                "title": "Реферальная программа",
-                                "tag1": "SEO",
-                                "tag2": "Продвижение",
-                                "tag3": "Аналитика",
-                                "tag4": "Длинный тег",
-                                "tag5": "Еще длинный тег"
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-blog.html', {
-                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
-                                "authorAvatarURL": "img/blog/author-avatar-01.png",
-                                "authorName": "Виталий Кучеров",
-                                "title": "Реферальная программа",
-                                "tag1": "SEO",
-                                "tag2": "Продвижение",
-                                "tag3": "Аналитика",
-                                "tag4": "Стратегия"
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            <!-- card -->
-                            @@include('partials/card-blog.html', {
-                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
-                                "authorAvatarURL": "img/blog/author-avatar-01.png",
-                                "authorName": "Виталий Кучеров",
-                                "title": "Реферальная программа",
-                                "tag1": "SEO",
-                                "tag2": "Продвижение",
-                                "tag3": "Аналитика",
-                                "tag4": "Стратегия"
-                            })
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
+    <!-- section-projects-grid -->
+    <section class="section section-projects-grid">
+        <div class="container-fluid">
+            <!-- title -->
+            <div class="d-flex justify-content-between mb-15 mb-lg-40">
+                <h2 class="h2 mb-0">Реализованные проекты</h2>
+                <div class="d-flex align-items-center gap-10">
+                    <span class="h2 mb-0">[200+]</span>
+                    <!-- <a href="#" class="btn btn-outline-black">Все проекты</a> -->
                 </div>
             </div>
-        </section>
+            <!-- grid -->
+            <div class="cards-grid">
+                <!-- card -->
+                @@include('partials/card-project.html', {
+                    "imgThumbURL": "img/projects/card-project-thumb-01.png",
+                    "logoURL": "img/projects/card-project-logo-01.png",
+                    "title": "Интернет-магазин керамической плитки",
+                    "subtitle": "Разработка интернет-магазина с нуля",
+                    "tag1": "Интернет-магазин",
+                    "tag2": "Интеграция с ERP",
+                    "tag3": "SEO-Оптимизация",
+                    "tag4": "Техподдержка",
+                    "feature1": {"value": "&gt;30%", "text": "запросов в ТОП 30 за 4 месяца"},
+                    "feature2": {"value": "+8 269", "text": "уникальных посетителей за 4 месяца"},
+                    "feature3": {"value": "4,08 мин", "text": "среднее время посещения"},
+                    "feature4": {"value": "ТОП 5", "text": "по ключу Магазин плитки"}
+                })
+                <!-- card -->
+                @@include('partials/card-project.html', {
+                    "imgThumbURL": "img/projects/card-project-thumb-02.png",
+                    "logoURL": "img/projects/card-project-logo-02.png",
+                    "title": "Интернет-магазин для садоводов",
+                    "subtitle": "SEO-продвижение сайта в ТОП-10: вывели приоритетные кластеры",
+                    "tag1": "SEO-продвижение",
+                    "feature1": {"value": "+60%", "text": "увеличили трафик из поисковых систем"},
+                    "feature2": {"value": "+16 650", "text": "прирост уникальных посетителей"},
+                    "feature3": {"value": "+1000", "text": "запросов к семантике"},
+                    "feature4": {"value": "ТОП 1-10", "text": "вывели основной кластер Фунгициды"}
+                })
+                <!-- card -->
+                @@include('partials/card-project.html', {
+                    "imgThumbURL": "img/projects/card-project-thumb-03.png",
+                    "logoURL": "img/projects/card-project-logo-03.png",
+                    "title": "Интернет-магазин ювелирных украшений",
+                    "subtitle": "Клиенту был необходим проработанный интернет-магазин с массой функций и преимуществ: отслеживанием клиентской базы, удобной доставкой, промокодами и т.д.",
+                    "tag1": "Интернет-магазин",
+                    "tag2": "1С Система",
+                    "tag3": "Эквайринг",
+                    "tag4": "Доставка",
+                    "feature1": {"value": "91%", "text": "поисковая оптимизация по данным PageSpeed"},
+                    "feature2": {"value": "х1,9", "text": "увеличился трафик на сайт по сравнению с предыдущим периодом"},
+                    "feature3": {"value": "на 9%", "text": "уменьшилась доля отказов"},
+                    "feature4": {"value": "+18%", "text": "глубина просмотров страниц "}
+                })
+                <!-- card -->
+                @@include('partials/card-project.html', {
+                    "imgThumbURL": "img/projects/card-project-thumb-04.png",
+                    "logoURL": "img/projects/card-project-logo-04.png",
+                    "title": "Интернет-магазин для кудрявых",
+                    "subtitle": "Техническая поддержка и доработка сайтов, верстка лендинга",
+                    "tag1": "Интернет-магазин",
+                    "tag2": "1С Система",
+                    "tag3": "Эквайринг",
+                    "tag4": "Доставка",
+                    "feature1": {"value": "0,8 сек", "text": "FCP по данным PageSpeed"},
+                    "feature2": {"value": "+12%", "text": "выросло количество заказов через корзину"},
+                    "feature3": {"value": "х36 раз", "text": "увеличилось количество регулярных покупок"},
+                    "feature4": {"value": "х2 раза", "text": "вырос средний чек"}
+                })
+            </div>
+        </div>
+    </section>
 
-        <!-- section-faq -->
-        <section class="section section-faq">
-            <div class="container-fluid">
-                <!-- title -->
-                <div class="d-flex justify-content-between mb-15 mb-lg-40">
-                    <h2 class="h2 mb-0">Вопросы и ответы</h2>
-                    <div class="d-flex align-items-center gap-10">
-                        <a href="#" class="btn btn-outline-black btn-l btn-animated">
-                            <div class="animated-content">
-                                <div class="animated-content__default">
-                                    <span>Написать в поддержку</span>
-                                    <span>
-                                        <svg width="14" height="14">
-                                            <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <div class="animated-content__hidden">
-                                    <span>Написать в поддержку</span>
-                                    <span>
-                                        <svg width="14" height="14">
-                                            <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </a>
+    <!-- section-cta -->
+    <section class="section section-cta">
+        <div class="container-fluid">
+            <div class="rounded-3 p-15 py-20 p-lg-40 bg-blue-gradient position-relative overflow-hidden">
+                <img class="bg-absolute-img" src="img/home/cta-bg-figure.png">
+                <!-- grid -->
+                <div class="cta-content">
+                    <div class="cta-content__heading">
+                        <div class="h2 fw-normal text-white mb-10">Напишите нам</div>
+                        <div class="h5 fw-light text-white-blue mb-0">Получите бесплатный разбор вашей задачи<br> с экспертом. Обсудим ваши потребности и цели, подскажем с чего начать и сколько это будет стоить</div>
                     </div>
-                </div>
-                <!-- accordion -->
-                <div class="accordion accordion-faq" id="faq">
-                    <div class="accordion-item">
-                        <div id="faq-question-1" class="accordion-header">
-                            <button
-                            type="button"
-                            class="accordion-button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faq-answer-1"
-                            aria-expanded="true"
-                            aria-controls="faq-answer-1"
-                            >
-                                <span class="h3 fw-medium mb-0">Для чего компаниям нужна разработка сайтов?</span>
-                                <span class="accordion-icon">
-                                    <svg width="14" height="14">
-                                        <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                    </svg>
-                                </span>
-                            </button>
-                        </div>
-                        <div id="faq-answer-1" class="collapse show" data-bs-parent="#faq">
-                            <div class="accordion-divider"></div>
-                            <div class="accordion-body">
-                                <div class="accordion-content">
-                                    <p><a href="#">Создание сайта под ключ</a> – 89% заказчиков AMD Media интересуются именно этой услугой. Не важно, как давно существует Ваша фирма и насколько она масштабна. Если ваш бизнес присутствует в Интернете, а значит развивается гораздо быстрее.</p>
-                                    <p>Продуманный качественный сайт поможет Вам удержать внимание потенциальной аудитории и привлечь новых клиентов, получить узнаваемость бренда = увеличить прибыль. Посмотрите&nbsp;<a href="#">портфолио</a>.</p>
+                    <div class="cta-content__form">
+                        <div class="form-wrapper">
+                            <form action="#">
+                                <div class="row row-cols-1 gy-4">
+                                    <div class="col">
+                                        <input type="text" class="form-control input-l" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="col">
+                                        <input type="tel" class="form-control input-l" placeholder="+7 (___) ___-__-__">
+                                    </div>
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-secondary btn-l btn-animated w-100">
+                                            <div class="animated-content">
+                                                <div class="animated-content__default">
+                                                    <span>Отправить</span>
+                                                </div>
+                                                <div class="animated-content__hidden">
+                                                    <span>Отправить</span>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+                            <div class="fs-14 text-white-blue mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <div id="faq-question-2" class="accordion-header">
-                            <button
-                            type="button"
-                            class="accordion-button collapsed"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faq-answer-2"
-                            aria-expanded="false"
-                            aria-controls="faq-answer-2"
-                            >
-                                <span class="h3 fw-medium mb-0">Почему сайты AMD Media – хорошо продают?</span>
-                                <span class="accordion-icon">
-                                    <svg width="14" height="14">
-                                        <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                    <div class="cta-content__socials">
+                        <div class="content-divider"></div>
+                        <div class="content-wrapper">
+                            <div class="h5 fw-light text-white-blue mb-0">Заполните форму или&nbsp;свяжитесь с&nbsp;нами напрямую через&nbsp;мессенджер, нажав на&nbsp;кнопку</div>
+                            <div class="contact-socials">
+                                <!-- telegram -->
+                                <a href="#" class="link-social">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#039BE5"></path>
+                                        <path d="M9.15162 19.566L28.435 12.131C29.33 11.8077 30.1116 12.3494 29.8216 13.7027L29.8233 13.701L26.5399 29.1694C26.2966 30.266 25.6449 30.5327 24.7333 30.016L19.7333 26.331L17.3216 28.6544C17.0549 28.921 16.8299 29.146 16.3133 29.146L16.6683 24.0577L25.9349 15.686C26.3383 15.331 25.8449 15.131 25.3133 15.4844L13.8616 22.6944L8.92495 21.1544C7.85328 20.8144 7.82995 20.0827 9.15162 19.566Z" fill="white"></path>
                                     </svg>
-                                </span>
-                            </button>
-                        </div>
-                        <div id="faq-answer-2" class="collapse" data-bs-parent="#faq">
-                            <div class="accordion-divider"></div>
-                            <div class="accordion-body">
-                                <div class="accordion-content">
-                                    <p>Наше Digital-Агентство создаст эффективный, современный сайт, который привлечет внимание потенциальных клиентов, повысит продажи. AMD Media — команда опытных специалистов. Находим персональный подход к каждому заказчику. Работаем на различных платформах и с разными технологиями для разработки ресурса, который соответствует вашим потребностям и требованиям.<br>
-                                    Вторым этапом предлагаем услуги по продвижению в поисковых системах. Увеличим видимость и привлечем больше ЦА. Создаем качественный контент, оптимизируем мета-теги, ключевые слова, используем социальные сети. Закажите у нас&nbsp;<a href="#">продвижение сайтов</a>&nbsp;и получите скидку 10% на первый месяц.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div id="faq-question-3" class="accordion-header">
-                            <button
-                            type="button"
-                            class="accordion-button collapsed"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faq-answer-3"
-                            aria-expanded="false"
-                            aria-controls="faq-answer-3"
-                            >
-                                <span class="h3 fw-medium mb-0">Кто работает над Вашим сайтом?</span>
-                                <span class="accordion-icon">
-                                    <svg width="14" height="14">
-                                        <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </a>
+                                <!-- whatsapp -->
+                                <a href="#" class="link-social">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#29A71A"></path>
+                                        <path d="M13.1347 10.3934C15.4034 8.75513 18.183 7.98126 20.9719 8.21176C23.7608 8.44231 26.3754 9.66206 28.3443 11.6506C30.2969 13.6263 31.4852 16.2306 31.6978 19.0002C31.9104 21.7697 31.1332 24.5251 29.5051 26.7756C27.8771 29.026 25.5034 30.6259 22.8066 31.2905C20.1096 31.9552 17.264 31.6414 14.7766 30.4051L14.5605 30.2977L8.34497 31.7704L9.60278 25.6636L9.65031 25.4351L9.54419 25.2274C8.27575 22.733 7.94065 19.8672 8.59888 17.1473C9.25719 14.4274 10.8659 12.0318 13.1347 10.3934ZM19.9999 9.52361C17.2481 9.52365 14.6088 10.6171 12.6627 12.5627C11.1139 14.1117 10.0948 16.1114 9.75187 18.2749C9.40914 20.4378 9.75991 22.6534 10.7532 24.605L11.0748 25.2411L10.3293 28.8648L10.3196 28.9045L10.0689 29.9572L14.7258 28.8537L15.384 29.1792C17.3289 30.1466 19.5284 30.4795 21.6724 30.131C23.817 29.7825 25.798 28.7694 27.3365 27.2352L27.3372 27.2346C29.2734 25.298 30.3656 22.6748 30.3756 19.9364C30.3856 17.1979 29.3126 14.5667 27.3905 12.6161L27.373 12.5978L27.3619 12.5881L27.3534 12.5783L27.3372 12.5627L27.1529 12.3823C25.2262 10.5494 22.6658 9.52361 19.9999 9.52361Z" fill="white"></path>
+                                        <path d="M26.5249 23.9289C26.0545 24.6698 25.3113 25.5766 24.3772 25.8016C22.7408 26.197 20.2295 25.8152 17.1045 22.9016L17.0658 22.8675C14.3181 20.3198 13.6045 18.1993 13.7772 16.5175C13.8727 15.5629 14.6681 14.6993 15.3386 14.1357C15.4446 14.0452 15.5703 13.9808 15.7056 13.9476C15.8409 13.9144 15.9822 13.9133 16.118 13.9445C16.2538 13.9756 16.3805 14.0381 16.4879 14.1269C16.5952 14.2158 16.6803 14.3285 16.7363 14.4561L17.7477 16.7289C17.8134 16.8762 17.8377 17.0387 17.8181 17.1989C17.7985 17.359 17.7356 17.5108 17.6363 17.6379L17.1249 18.3016C17.0152 18.4386 16.949 18.6053 16.9348 18.7803C16.9206 18.9553 16.9592 19.1305 17.0454 19.2834C17.3317 19.7857 18.0181 20.5243 18.7795 21.2084C19.634 21.9811 20.5817 22.6879 21.1817 22.9289C21.3423 22.9944 21.5188 23.0105 21.6885 22.9748C21.8583 22.9392 22.0134 22.8535 22.134 22.7289L22.7272 22.1311C22.8417 22.0183 22.984 21.9378 23.1397 21.8978C23.2954 21.8579 23.4589 21.86 23.6136 21.9039L26.0158 22.5857C26.1484 22.6263 26.2698 22.6967 26.3709 22.7915C26.4721 22.8863 26.5502 23.003 26.5993 23.1326C26.6484 23.2622 26.6673 23.4013 26.6544 23.5393C26.6415 23.6774 26.5972 23.8106 26.5249 23.9289Z" fill="white"></path>
                                     </svg>
-                                </span>
-                            </button>
-                        </div>
-                        <div id="faq-answer-3" class="collapse" data-bs-parent="#faq">
-                            <div class="accordion-divider"></div>
-                            <div class="accordion-body">
-                                <div class="accordion-content">
-                                    <p>МАРКЕТОЛОГИ: выявляют УТП; проводят анализ вашей ниши и конкурентов; продумывают размещение всех разделов и блоков.<br>
-                                    КОНТЕНТ-МЕНЕДЖЕРЫ: наполняют сайт текстами и визуальными материалами; готовят его для продвижения в поисковиках.<br>
-                                    ДИЗАЙНЕРЫ: подбирают общую стилистику; разрабатывают айдентику и фирменный стиль; макет будущего ресурса.<br>
-                                    SEO-СПЕЦИАЛИСТЫ: оптимизируют ваш сайт для поисковых систем и продвинут в ТОП органической выдачи.<br>
-                                    ВЕБ-РАЗРАБОТЧИКИ: приступаем к верстке, перенося макеты дизайнера на HTML и CSS; настраивают формы обратной связи, интерактивные элементы и элементы управления; при необходимости интегрируют внешние сервисы.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div id="faq-question-4" class="accordion-header">
-                            <button
-                            type="button"
-                            class="accordion-button collapsed"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faq-answer-4"
-                            aria-expanded="false"
-                            aria-controls="faq-answer-4"
-                            >
-                                <span class="h3 fw-medium mb-0">Сколько стоит создать сайт?</span>
-                                <span class="accordion-icon">
-                                    <svg width="14" height="14">
-                                        <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </a>
+                                <!-- vk -->
+                                <a href="#" class="link-social">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.198242 19.2C0.198242 10.149 0.198242 5.62356 2.98218 2.81178C5.76612 0 10.2468 0 19.2081 0H20.7923C29.7536 0 34.2343 0 37.0183 2.81178C39.8022 5.62356 39.8022 10.149 39.8022 19.2V20.8C39.8022 29.851 39.8022 34.3764 37.0183 37.1882C34.2343 40 29.7536 40 20.7923 40H19.2081C10.2468 40 5.76612 40 2.98218 37.1882C0.198242 34.3764 0.198242 29.851 0.198242 20.8V19.2Z" fill="#0077FF"></path>
+                                        <path d="M21.2708 28.817C12.2444 28.817 7.09588 22.567 6.88135 12.167H11.4028C11.5513 19.8003 14.8846 23.0336 17.5248 23.7003V12.167H21.7824V18.7503C24.3897 18.467 27.1286 15.467 28.0527 12.167H32.3103C31.6007 16.2337 28.6304 19.2336 26.5182 20.467C28.6304 21.467 32.0134 24.0836 33.3005 28.817H28.6139C27.6073 25.6503 25.0992 23.2003 21.7824 22.867V28.817H21.2708Z" fill="white"></path>
                                     </svg>
-                                </span>
-                            </button>
-                        </div>
-                        <div id="faq-answer-4" class="collapse" data-bs-parent="#faq">
-                            <div class="accordion-divider"></div>
-                            <div class="accordion-body">
-                                <div class="accordion-content">
-                                    <p>Сразу на этот вопрос не ответит ни одно агентство. Стоимость любого сайта может складываться из количества страниц, сложности функционала, конкретных технических параметров. Каждый сайт уникален, поэтому цена индивидуальна.</p>
-                                    <p>Напишите, что вы хотите видеть в своём проекте. Разработаем ресурс любой сложности. Рекомендуем посмотреть&nbsp;<a href="#">портфолио</a>. Поймете профессиональные возможности специалистов студии и подберете для себя идеальный формат веб-ресурса.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div id="faq-question-5" class="accordion-header">
-                            <button
-                            type="button"
-                            class="accordion-button collapsed"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faq-answer-5"
-                            aria-expanded="false"
-                            aria-controls="faq-answer-5"
-                            >
-                                <span class="h3 fw-medium mb-0">Можно ли заказать у вас интернет-магазин?</span>
-                                <span class="accordion-icon">
-                                    <svg width="14" height="14">
-                                        <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                    </svg>
-                                </span>
-                            </button>
-                        </div>
-                        <div id="faq-answer-5" class="collapse" data-bs-parent="#faq">
-                            <div class="accordion-divider"></div>
-                            <div class="accordion-body">
-                                <div class="accordion-content">
-                                    <p>Идеальный вариант, если Вы реализуете какие-либо товары в большом количестве. Мы поможем разработать корпоративный дизайн для Вашего бизнеса. Внедрим все необходимые сторонние сервисы и создадим любой нужный функционал: заполним карточки товаров; создадим функцию корзины; добавим форму для отзывов; настроим панель управления.&nbsp;<a href="#">Примеры наших работ</a>.</p>
-                                    <p>Разместим ресурс на подходящей системе управления, обеспечим надежную защиту и регулярное наполнение сайта актуальной информацией. Как происходит&nbsp;<a href="#">разработка интернет-магазина</a>.</p>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- section-tariffs -->
+    <!-- <section class="section-tariffs">
+        <div class="container-fluid">
 
-    <!-- footer -->
-    @@include('partials/footer.html')
-</body>
+        </div>
+    </section> -->
 
-</html>
+    <!-- section-partners-slider -->
+    <section class="section-partners-slider">
+        <div class="container-fluid">
+            <div class="mb-20 mb-lg-40">
+                <div style="max-width: 630px;">
+                    <!-- title -->
+                    <h2 class="h2 mb-10">Официальные партнёры</h2>
+                    <div class="h5 fw-light text-gray mb-0">Мы работаем в сфере интернет-маркетинга с 2013 года. За это время мы реализовали более <strong><a href="#">200 проектов</a></strong> совместно с нашими партнёрами</div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper swiperPartners">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-01.png" 
+                        alt="...">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-02.png" 
+                        alt="...">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-03.png" 
+                        alt="...">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-04.png" 
+                        alt="...">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-05.png" 
+                        alt="...">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-01.png" 
+                        alt="...">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-02.png" 
+                        alt="...">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-03.png" 
+                        alt="...">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-04.png" 
+                        alt="...">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img 
+                        class="img-fluid"
+                        src="img/home/partner-logo-05.png" 
+                        alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-reviews-slider -->
+    <section class="section-reviews-slider">
+        <div class="container-fluid">
+            <!-- title -->
+            <div class="d-flex align-items-center justify-content-between mb-15 mb-lg-40">
+                <h2 class="h2 mb-0">Отзывы и благодарности</h2>
+                <div class="d-flex align-items-center gap-10">
+                    <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-left">
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-left"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-right">
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-right"></use>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- slider -->
+            <div class="swiper swiperReviews">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-review.html', {
+                            "title": "ООО «НЕОДОМ»",
+                            "description": "Хотим выразить нашу искреннюю благодарность за вашу великолепную работу по созданию и комплексному SEO-продвижению сайта Neodom. С самого начала нашего сотрудничества вы проявили высокий уровень профессионализма и сумели найти индивидуальный подход к нашим потребностям. Особенно приятно было видеть",
+                            "author": "Романьков А.В.",
+                            "job": "Генеральный директор"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-review.html', {
+                            "title": "ООО «Техническая платформа»",
+                            "description": "ООО «Техническая платформа» благодарит Веб-студию «AMD Media» за проявленный профессионализм и качественное выполнение работ под ключ: Дизайн, вёрстка и программирование, а также SEO-продвижение. Благодаря чему добились значительных результатов и достигли поставленных целей на нашем новом сайте по продаже промышленного и складского",
+                            "author": "Бочков Ю.В.",
+                            "job": "Генеральный директор"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-review.html', {
+                            "title": "«Лавка садовника»",
+                            "description": "Хочу выразить огромную благодарность за вашу помощь в продвижении нашего сайта stroish.ru. Благодаря вашим усилиям наш бизнес стал более заметным и успешным в онлайн-сфере. Сначала сотрудничества я была приятно удивлена вашим профессионализмом и внимание к деталям. Работа по привлечению клиентов и наполнению сайта",
+                            "author": "Романьков А.В.",
+                            "job": "Генеральный директор"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-review.html', {
+                            "title": "ООО «Омега СпецСталь»",
+                            "description": "В ходе совместной работы сотрудники студии проявили себя настоящими профессионалами. Ваша команда в кратчайшие сроки провела большую аналитическую работу, разработала необходимые страницы для нашего сайта, внесла необходимые изменения и корректировки, создала логотип компании для размещения на сайтах",
+                            "author": "Юрмин Б.Б.",
+                            "job": "Генеральный директор"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-review.html', {
+                            "title": "ОАО «Завод имени В.А. Дегтярева»",
+                            "description": "Выражаем искреннюю признательность и благодарность коллективу веб-студии «АМД Медиа» и лично Латыпову А.Р. за техническую поддержку и адаптацию каталога продукции на французский язык. Специалисты веб-студии «АМД Медиа» зарекомендовали себя профессиональными и надёжными бизнес-партнёрами. Все поставленные задачи",
+                            "author": "Бочков Ю.В.",
+                            "job": "Генеральный директор"
+                        })
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-blog-slider -->
+    <section class="section-blog-slider">
+        <div class="container-fluid">
+            <!-- title -->
+            <div class="d-flex align-items-center justify-content-between mb-15 mb-lg-40">
+                <h2 class="h2 mb-0">Статьи и новости</h2>
+                <div class="d-flex align-items-center gap-10">
+                    <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-left">
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-left"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-right">
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-right"></use>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- slider -->
+            <div class="swiper swiperBlog">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-blog.html', {
+                            "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                            "authorAvatarURL": "img/blog/author-avatar-01.png",
+                            "authorName": "Виталий Кучеров",
+                            "title": "Реферальная программа",
+                            "tag1": "SEO",
+                            "tag2": "Продвижение",
+                            "tag3": "Аналитика",
+                            "tag4": "Стратегия"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-blog.html', {
+                            "mediaThumbURL": "img/blog/card-blog-02.jpg",
+                            "authorAvatarURL": "img/blog/author-avatar-01.png",
+                            "authorName": "Виталий Кучеров",
+                            "title": "Скидка 10% на первый месяц работ по SEO-продвижению",
+                            "tag1": "Продвижение",
+                            "tag2": "Аналитика",
+                            "tag3": "Стратегия"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-blog.html', {
+                            "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                            "authorAvatarURL": "img/blog/author-avatar-01.png",
+                            "authorName": "Виталий Кучеров",
+                            "title": "Реферальная программа",
+                            "tag1": "SEO",
+                            "tag2": "Продвижение",
+                            "tag3": "Аналитика",
+                            "tag4": "Длинный тег",
+                            "tag5": "Еще длинный тег"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-blog.html', {
+                            "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                            "authorAvatarURL": "img/blog/author-avatar-01.png",
+                            "authorName": "Виталий Кучеров",
+                            "title": "Реферальная программа",
+                            "tag1": "SEO",
+                            "tag2": "Продвижение",
+                            "tag3": "Аналитика",
+                            "tag4": "Стратегия"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- card -->
+                        @@include('partials/card-blog.html', {
+                            "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                            "authorAvatarURL": "img/blog/author-avatar-01.png",
+                            "authorName": "Виталий Кучеров",
+                            "title": "Реферальная программа",
+                            "tag1": "SEO",
+                            "tag2": "Продвижение",
+                            "tag3": "Аналитика",
+                            "tag4": "Стратегия"
+                        })
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-faq -->
+    <section class="section section-faq">
+        <div class="container-fluid">
+            <!-- title -->
+            <div class="d-flex justify-content-between mb-15 mb-lg-40">
+                <h2 class="h2 mb-0">Вопросы и ответы</h2>
+                <div class="d-flex align-items-center gap-10">
+                    <a href="#" class="btn btn-outline-black btn-l btn-animated">
+                        <div class="animated-content">
+                            <div class="animated-content__default">
+                                <span>Написать в поддержку</span>
+                                <span>
+                                    <svg width="14" height="14">
+                                        <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="animated-content__hidden">
+                                <span>Написать в поддержку</span>
+                                <span>
+                                    <svg width="14" height="14">
+                                        <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- accordion -->
+            <div class="accordion accordion-faq" id="faq">
+                <div class="accordion-item">
+                    <div id="faq-question-1" class="accordion-header">
+                        <button
+                        type="button"
+                        class="accordion-button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-answer-1"
+                        aria-expanded="true"
+                        aria-controls="faq-answer-1"
+                        >
+                            <span class="h3 fw-medium mb-0">Для чего компаниям нужна разработка сайтов?</span>
+                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div id="faq-answer-1" class="collapse show" data-bs-parent="#faq">
+                        <div class="accordion-divider"></div>
+                        <div class="accordion-body">
+                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                                <p><a href="#">Создание сайта под ключ</a> – 89% заказчиков AMD Media интересуются именно этой услугой. Не важно, как давно существует Ваша фирма и насколько она масштабна. Если ваш бизнес присутствует в Интернете, а значит развивается гораздо быстрее.</p>
+                                <p>Продуманный качественный сайт поможет Вам удержать внимание потенциальной аудитории и привлечь новых клиентов, получить узнаваемость бренда = увеличить прибыль. Посмотрите&nbsp;<a href="#">портфолио</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div id="faq-question-2" class="accordion-header">
+                        <button
+                        type="button"
+                        class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-answer-2"
+                        aria-expanded="false"
+                        aria-controls="faq-answer-2"
+                        >
+                            <span class="h3 fw-medium mb-0">Почему сайты AMD Media – хорошо продают?</span>
+                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div id="faq-answer-2" class="collapse" data-bs-parent="#faq">
+                        <div class="accordion-divider"></div>
+                        <div class="accordion-body">
+                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                                <p>Наше Digital-Агентство создаст эффективный, современный сайт, который привлечет внимание потенциальных клиентов, повысит продажи. AMD Media — команда опытных специалистов. Находим персональный подход к каждому заказчику. Работаем на различных платформах и с разными технологиями для разработки ресурса, который соответствует вашим потребностям и требованиям.<br>
+                                Вторым этапом предлагаем услуги по продвижению в поисковых системах. Увеличим видимость и привлечем больше ЦА. Создаем качественный контент, оптимизируем мета-теги, ключевые слова, используем социальные сети. Закажите у нас&nbsp;<a href="#">продвижение сайтов</a>&nbsp;и получите скидку 10% на первый месяц.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div id="faq-question-3" class="accordion-header">
+                        <button
+                        type="button"
+                        class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-answer-3"
+                        aria-expanded="false"
+                        aria-controls="faq-answer-3"
+                        >
+                            <span class="h3 fw-medium mb-0">Кто работает над Вашим сайтом?</span>
+                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div id="faq-answer-3" class="collapse" data-bs-parent="#faq">
+                        <div class="accordion-divider"></div>
+                        <div class="accordion-body">
+                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                                <p>МАРКЕТОЛОГИ: выявляют УТП; проводят анализ вашей ниши и конкурентов; продумывают размещение всех разделов и блоков.<br>
+                                КОНТЕНТ-МЕНЕДЖЕРЫ: наполняют сайт текстами и визуальными материалами; готовят его для продвижения в поисковиках.<br>
+                                ДИЗАЙНЕРЫ: подбирают общую стилистику; разрабатывают айдентику и фирменный стиль; макет будущего ресурса.<br>
+                                SEO-СПЕЦИАЛИСТЫ: оптимизируют ваш сайт для поисковых систем и продвинут в ТОП органической выдачи.<br>
+                                ВЕБ-РАЗРАБОТЧИКИ: приступаем к верстке, перенося макеты дизайнера на HTML и CSS; настраивают формы обратной связи, интерактивные элементы и элементы управления; при необходимости интегрируют внешние сервисы.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div id="faq-question-4" class="accordion-header">
+                        <button
+                        type="button"
+                        class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-answer-4"
+                        aria-expanded="false"
+                        aria-controls="faq-answer-4"
+                        >
+                            <span class="h3 fw-medium mb-0">Сколько стоит создать сайт?</span>
+                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div id="faq-answer-4" class="collapse" data-bs-parent="#faq">
+                        <div class="accordion-divider"></div>
+                        <div class="accordion-body">
+                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                                <p>Сразу на этот вопрос не ответит ни одно агентство. Стоимость любого сайта может складываться из количества страниц, сложности функционала, конкретных технических параметров. Каждый сайт уникален, поэтому цена индивидуальна.</p>
+                                <p>Напишите, что вы хотите видеть в своём проекте. Разработаем ресурс любой сложности. Рекомендуем посмотреть&nbsp;<a href="#">портфолио</a>. Поймете профессиональные возможности специалистов студии и подберете для себя идеальный формат веб-ресурса.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div id="faq-question-5" class="accordion-header">
+                        <button
+                        type="button"
+                        class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-answer-5"
+                        aria-expanded="false"
+                        aria-controls="faq-answer-5"
+                        >
+                            <span class="h3 fw-medium mb-0">Можно ли заказать у вас интернет-магазин?</span>
+                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div id="faq-answer-5" class="collapse" data-bs-parent="#faq">
+                        <div class="accordion-divider"></div>
+                        <div class="accordion-body">
+                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                                <p>Идеальный вариант, если Вы реализуете какие-либо товары в большом количестве. Мы поможем разработать корпоративный дизайн для Вашего бизнеса. Внедрим все необходимые сторонние сервисы и создадим любой нужный функционал: заполним карточки товаров; создадим функцию корзины; добавим форму для отзывов; настроим панель управления.&nbsp;<a href="#">Примеры наших работ</a>.</p>
+                                <p>Разместим ресурс на подходящей системе управления, обеспечим надежную защиту и регулярное наполнение сайта актуальной информацией. Как происходит&nbsp;<a href="#">разработка интернет-магазина</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')

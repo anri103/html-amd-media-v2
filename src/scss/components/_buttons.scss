@@ -133,3 +133,29 @@
         }
     }
 }
+
+@include media-breakpoint-up(xxl) {
+    .btn {
+        --bs-btn-font-size: 20px;
+    }
+
+    .btn-m {
+        --bs-btn-padding-x: 40px;
+        min-height: 66px;
+    }
+
+    .btn-icon-m {
+        width: 66px;
+        height: 66px;
+    }
+
+    .btn-l {
+        --bs-btn-padding-x: 40px;
+        min-height: 66px;
+    }
+
+    .btn-icon-l {
+        width: 66px;
+        height: 66px;
+    }
+}

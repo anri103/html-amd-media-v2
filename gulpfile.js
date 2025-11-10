@@ -1,114 +1,123 @@
-const { src, dest, watch, series, parallel } = require('gulp');
-const fileInclude = require('gulp-file-include');
+const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const sourcemaps = require('gulp-sourcemaps');
-// const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
+const fileInclude = require('gulp-file-include');
 const del = require('del');
-const webpackStream = require('webpack-stream');
-const webpackConfig = require('./webpack.config.js');
 
-// Paths
-const paths = {
-  html: {
-    src: 'src/html/**/*.html',
-    dest: 'dist/'
-  },
-  styles: {
-    src: 'src/scss/main.scss',
-    watch: 'src/scss/**/*.scss',
-    dest: 'dist/css/'
-  },
-  scripts: {
-    src: 'src/js/**/*.js',
-    dest: 'dist/'
-  },
-  images: {
-    src: 'src/img/**/*',
-    dest: 'dist/img/'
-  },
-  fonts: {
-    src: 'src/fonts/**/*',
-    dest: 'dist/fonts/'
-  }
-};
-
-// clean
+// ===== Очистка dist =====
 function clean() {
-  return del(['dist/**', '!dist']);
+  return del(['dist/**/*']);
 }
 
-// html (file include)
+// ===== HTML include =====
 function html() {
-  return src(['src/html/*.html'])
+  return gulp.src(['src/html/**/*.html', '!src/html/partials/**/*'])
     .pipe(fileInclude({
       prefix: '@@',
-      basepath: '@file' // относительные пути
+      basepath: '@file'
     }))
-    .pipe(dest(paths.html.dest))
+    .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream());
 }
 
-// styles (sass -> css, sourcemaps, autoprefixer) — no minify
-function styles() {
-  return src(paths.styles.src)
-    .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-    // .pipe(cleanCSS({ level: 2 }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(dest(paths.styles.dest))
+// ===== SCSS: стили проекта =====
+function scssStyle() {
+  return gulp.src('src/scss/main.scss')
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('dist/css/'))
     .pipe(browserSync.stream());
 }
 
-// scripts (webpack)
+// ===== Вендоры: CSS =====
+function vendorsCss() {
+  return gulp.src([
+    'node_modules/swiper/swiper-bundle.min.css',
+    'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css'
+  ])
+  .pipe(gulp.dest('src/css/'));
+}
+
+// ===== Вендоры: JS =====
+function vendorsJs() {
+  return gulp.src([
+    'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
+    'node_modules/imask/dist/imask.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+  ])
+  .pipe(gulp.dest('src/js/'));
+}
+
+// ===== Копирование css/ =====
+function css() {
+  return gulp.src('src/css/**/*.css')
+    .pipe(gulp.dest('dist/css/'))
+    .pipe(browserSync.stream());
+}
+
+// ===== Копирование js/ =====
 function scripts() {
-  // webpack config already outputs to dist/js/[name].bundle.js
-  return src('src/js/main.js')
-    .pipe(webpackStream(webpackConfig))
-    .pipe(dest(paths.scripts.dest))
+  return gulp.src('src/js/**/*.js')
+    .pipe(gulp.dest('dist/js/'))
     .pipe(browserSync.stream());
 }
 
-// copy images
+// ===== Копирование img/ =====
 function images() {
-  return src(paths.images.src, { encoding: false })
-    .pipe(dest(paths.images.dest))
+  return gulp.src('src/img/**/*', { encoding: false })
+    .pipe(gulp.dest('dist/img/'))
     .pipe(browserSync.stream());
 }
 
-// copy fonts
+// ===== Копирование fonts/ =====
 function fonts() {
-  return src(paths.fonts.src, { encoding: false })
-    .pipe(dest(paths.fonts.dest))
+  return gulp.src('src/fonts/**/*', { encoding: false })
+    .pipe(gulp.dest('dist/fonts/'))
     .pipe(browserSync.stream());
 }
 
-// watch + serve
+// ===== Сервер BrowserSync =====
 function serve() {
   browserSync.init({
     server: {
-      baseDir: 'dist'
+      baseDir: "dist/"
     },
     port: 3000,
     open: true,
     notify: false
   });
-
-  watch('src/html/**/*.html', html);
-  watch(paths.styles.watch, styles);
-  watch(paths.scripts.src, scripts);
-  watch(paths.images.src, images);
-  watch(paths.fonts.src, fonts);
 }
 
-// build (production-like but without minification per your request)
-const build = series(clean, parallel(html, styles, scripts, images, fonts));
+// ===== Наблюдение за изменениями =====
+function watch() {
+  gulp.watch('src/html/**/*.html', html);
+  gulp.watch('src/scss/**/*.scss', scssStyle);
+  gulp.watch('src/css/**/*.css', css);
+  gulp.watch('src/js/**/*.js', scripts);
+  gulp.watch('src/img/**/*', images);
+  gulp.watch('src/fonts/**/*', fonts);
+}
 
+// ===== Сборка =====
+const build = gulp.series(clean, gulp.parallel(html, scssStyle, css, scripts, images, fonts));
+
+// ===== Разработка =====
+const dev = gulp.series(build, gulp.parallel(serve, watch));
+
+// ===== Объединённая задача для вендоров =====
+const vendors = gulp.parallel(vendorsCss, vendorsJs);
+
+// ===== Экспорт задач =====
 exports.clean = clean;
 exports.html = html;
-exports.styles = styles;
+exports.scssStyle = scssStyle;
+exports.css = css;
 exports.scripts = scripts;
 exports.images = images;
 exports.fonts = fonts;
+exports.vendors = vendors; // Выполнить один раз
 exports.build = build;
-exports.default = series(build, serve);
+exports.dev = dev;
+exports.default = dev;
