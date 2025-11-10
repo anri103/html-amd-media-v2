@@ -12,6 +12,7 @@
 
 .section-home-hero {
     position: relative;
+    padding-top: 81px;
     background-color: #000;
     margin-bottom: 60px;
 
@@ -59,6 +60,18 @@
         margin-bottom: 30px;
     }
 
+    // Максимальная ширина
+
+    @include media-breakpoint-down(sm) {
+        .hero-video-wrapper {
+            .mobile-image {
+                img {
+                    max-height: 250px;
+                }
+            }
+        }
+    }
+
     @include media-breakpoint-down(md) {
         .hero-video-wrapper {
             .desktop-video {
@@ -67,7 +80,11 @@
         }
     }
 
+    // Минимальная ширина
+
     @include media-breakpoint-up(md) {
+        margin-bottom: 70px;
+
         .hero-video-wrapper {
             .mobile-image {
                 display: none;
@@ -76,21 +93,29 @@
     }
 
     @include media-breakpoint-up(lg) {
-        // height: calc(100vh - 140px);
-        padding-top: 126px;
-        margin-bottom: 110px;
+        padding-top: 106px;
 
         .hero-grid {
             grid-template-columns: 1fr 1fr;
         }
+
+        .hero-swiper-wrapper {
+            margin-bottom: 20px;
+        }
     }
 
     @include media-breakpoint-up(xl) {
-        padding-top: 134px;
+        padding-top: 114px;
+        margin-bottom: 80px;
     }
 
     @include media-breakpoint-up(xxl) {
         padding-top: 150px;
+        margin-bottom: 110px;
+
+        .hero-swiper-wrapper {
+            margin-bottom: 30px;
+        }
     }
 }
 
