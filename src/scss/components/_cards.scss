@@ -19,6 +19,7 @@
 
     .hero-title {
         font-weight: 500;
+        line-height: 1;
         margin-bottom: 15px;
     }
 
@@ -47,6 +48,10 @@
         --bs-card-spacer-y: 50px;
         --bs-card-spacer-x: 50px;
         margin-bottom: 30px;
+
+        .hero-title {
+            line-height: 1.1;
+        }
     }
 }
 
