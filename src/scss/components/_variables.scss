@@ -16,6 +16,8 @@
     --theme-red-gradient: linear-gradient(180deg, #E13847 0%, #EB5665 100%);
     --theme-red: #F74251;
     --theme-black: #100102;
+    --theme-green: #006311;
+    --theme-green-light: #C0FCD9;
 
     // Theme colors RGB
     --theme-white-rgb: 248, 254, 255;
@@ -25,6 +27,8 @@
     --theme-blue-rgb: 66, 81, 247;
     --theme-red-rgb: 247, 66, 81;
     --theme-black-rgb: 16, 1, 2;
+    --theme-green-rgb: 0, 99, 17;
+    --theme-green-light-rgb: 192, 252, 217;
 
     // Theme titles sizes
     --fs-h1: clamp(36px, 4vw, 58px);

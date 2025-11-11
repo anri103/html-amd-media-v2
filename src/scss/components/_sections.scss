@@ -413,7 +413,33 @@
 
 /* section-tariffs */
 
-// .section-tariffs {}
+.section-tariffs {
+    margin-bottom: 50px;
+
+    .section-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 70px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section-grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 80px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        margin-bottom: 110px;
+    }
+}
 
 /* section-partners-slider */
 
@@ -457,9 +483,9 @@
     }
 }
 
-/* section-faq */
+/* section-faq-accordion */
 
-.section-faq {
+.section-faq-accordion {
     margin-bottom: 50px;
 
     @include media-breakpoint-up(md) {
