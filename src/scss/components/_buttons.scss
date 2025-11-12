@@ -65,6 +65,21 @@
     --bs-btn-disabled-border-color: var(--theme-black);
 }
 
+.btn-primary-light {
+    --bs-btn-color: var(--theme-blue);
+    --bs-btn-bg: var(--theme-blue-light);
+    --bs-btn-border-color: var(--theme-blue-light);
+    --bs-btn-hover-color: var(--theme-white);
+    --bs-btn-hover-bg: var(--theme-black);
+    --bs-btn-hover-border-color: var(--theme-black);
+    --bs-btn-active-color: var(--theme-white);
+    --bs-btn-active-bg: var(--theme-black);
+    --bs-btn-active-border-color: var(--theme-black);
+    --bs-btn-disabled-color: var(--theme-white);
+    --bs-btn-disabled-bg: var(--theme-black);
+    --bs-btn-disabled-border-color: var(--theme-black);
+}
+
 .btn-secondary {
     --bs-btn-color: var(--theme-white);
     --bs-btn-bg: var(--theme-red);
@@ -141,6 +156,12 @@
 
     .btn-l {
         --bs-btn-padding-x: 32px;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .btn {
+        --bs-btn-font-size: 16px;
     }
 }
 

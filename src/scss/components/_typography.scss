@@ -50,50 +50,34 @@ h6,
     font-size: var(--fs-h6);
 }
 
+.ff-title {
+    font-family: var(--theme-ff-title);
+}
+
 // Font Size
 
-.fs-36-58 {
-    font-size: clamp(36px, 4vw, 58px) !important;
+.fs-body {
+    font-size: var(--bs-body-font-size);
 }
 
-.fs-28-52 {
-    font-size: clamp(28px, 3.2vw, 52px) !important;
+.fs-small {
+    font-size: var(--fs-small);
 }
 
-.fs-22-36 {
-    font-size: clamp(22px, 2.2vw, 36px) !important;
-}
-
-.fs-18-30 {
-    font-size: clamp(18px, 1.8vw, 30px) !important;
-}
-
-.fs-16-22 {
-    font-size: clamp(16px, 1.2vw, 22px) !important;
-}
-
-.fs-16-20 {
-    font-size: clamp(16px, 1.2vw, 20px) !important;
-}
-
-.fs-13-22 {
-    font-size: clamp(13px, 1.2vw, 22px) !important;
-}
-
-.fs-22 {
-    font-size: 22px !important;
-}
-
-.fs-18 {
-    font-size: 18px !important;
-}
-
-.fs-16 {
-    font-size: 16px !important;
+.fs-x-small {
+    font-size: var(--fs-x-small);
 }
 
 .fs-14 {
-    font-size: 14px !important;
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-22 {
+    font-size: 22px;
 }
 
 .text-white-blue {
@@ -112,9 +96,19 @@ h6,
     color: #006311 !important;
 }
 
+.text-opacity-60 {
+    --bs-text-opacity: 0.6;
+}
+
 // Paragraph
 
 p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
+// @include media-breakpoint-up(xxl) {
+//     .fs-xxl-20 {
+//         font-size: 20px;
+//     }
+// }

@@ -30,14 +30,41 @@
     --theme-green-rgb: 0, 99, 17;
     --theme-green-light-rgb: 192, 252, 217;
 
-    // Theme titles sizes
-    --fs-h1: clamp(36px, 4vw, 58px);
-    --fs-h2: clamp(28px, 3.2vw, 52px);
-    --fs-h3: clamp(22px, 2.2vw, 36px);
-    --fs-h4: clamp(18px, 1.8vw, 30px);
-    --fs-h5: clamp(16px, 1.2vw, 22px);
-    --fs-h6: 14px;
+    // Theme font sizes
+    --bs-body-font-size: 16px;
+    --fs-h1: 36px;
+    --fs-h2: 28px;
+    --fs-h3: 22px;
+    --fs-h4: 18px;
+    --fs-h5: 16px;
+    --fs-h6: 16px;
+    --fs-small: 13px;
+    --fs-x-small: 13px;
 
     // Swiper
     --swiper-theme-color: var(--theme-blue);
+
+    @include media-breakpoint-up(xl) {
+        --bs-body-font-size: 18px;
+        --fs-h1: 43px;
+        --fs-h2: 40px;
+        --fs-h3: 28px;
+        --fs-h4: 22px;
+        --fs-h5: 18px;
+        --fs-h6: 16px;
+        --fs-small: 16px;
+        --fs-x-small: 14px;
+    }
+    
+    @include media-breakpoint-up(xxl) {
+        --bs-body-font-size: 22px;
+        --fs-h1: 58px;
+        --fs-h2: 52px;
+        --fs-h3: 36px;
+        --fs-h4: 30px;
+        --fs-h5: 22px;
+        --fs-h6: 20px;
+        --fs-small: 20px;
+        --fs-x-small: 14px;
+    }
 }

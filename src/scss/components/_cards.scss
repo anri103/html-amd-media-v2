@@ -9,7 +9,6 @@
     --bs-card-border-radius: var(--bs-border-radius-lg);
     --bs-card-bg: var(--bs-white);
     flex-grow: 1;
-    margin-bottom: 30px;
 
     .card-body {
         display: flex;
@@ -25,10 +24,6 @@
 
     .card-btn-wrapper {
         margin-top: 15px;
-    }
-
-    @include media-breakpoint-up(lg) {
-        margin-bottom: 20px;
     }
     
     @include media-breakpoint-up(xl) {
@@ -47,7 +42,6 @@
     @include media-breakpoint-up(xxl) {
         --bs-card-spacer-y: 50px;
         --bs-card-spacer-x: 50px;
-        margin-bottom: 30px;
 
         .hero-title {
             line-height: 1.1;
@@ -159,7 +153,7 @@
         position: relative;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         --bs-card-spacer-y: 30px;
         --bs-card-spacer-x: 30px;
         --bs-card-height: 262px;
@@ -171,13 +165,24 @@
             opacity: 0.1;
         }
     }
+
+    @include media-breakpoint-up(xxl) {
+        --bs-card-spacer-y: 40px;
+        --bs-card-spacer-x: 40px;
+        --bs-card-height: 320px;
+
+        .card-bg-img {
+            left: 40px;
+            max-width: 240px;
+        }
+    }
 }
 
 /* card-project */
 
 .card-project {
-    // --bs-card-spacer-y: 15px;
-    // --bs-card-spacer-x: 15px;
+    --bs-card-spacer-y: 15px;
+    --bs-card-spacer-x: 15px;
     --bs-card-border-color: transparent;
     --bs-card-border-radius: var(--bs-border-radius-lg);
     --bs-card-bg: var(--theme-white);
@@ -191,7 +196,11 @@
     }
 
     .card-head {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+    }
+
+    .project-logo {
+        max-width: 150px;
     }
 
     .card-tags {
@@ -217,7 +226,7 @@
 
     .card-project-features-wrapper {
         flex: 1 1 auto;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .card-project-features {
@@ -227,15 +236,17 @@
 
         &__item {
             min-height: 80px;
-            padding: 16px;
+            padding: 10px;
             border-radius: var(--bs-border-radius);
             background-color: var(--theme-blue-light);
         }
     }
 
     .card-btn-wrapper {
-        margin-top: 30px;
+        margin-top: 10px;
     }
+
+    // Максимальная ширина
 
     @include media-breakpoint-down(lg) {
         .card-media {
@@ -243,43 +254,76 @@
         }
     }
 
+    // Минимальная ширина
+
     @include media-breakpoint-up(sm) {
         .card-project-features {
-            gap: 8px;
+            gap: 4px;
             grid-template-columns: 1fr 1fr;
+        }
+    }
 
-            &__item {
-                min-height: 130px;
-            }
+    @include media-breakpoint-up(md) {
+        .card-project-features {
+            gap: 10px;
         }
     }
 
     @include media-breakpoint-up(lg) {
-        --bs-card-spacer-y: 40px;
-        --bs-card-spacer-x: 40px;
         grid-template-columns: 1fr 1fr;
 
-        .card-tags {
-
-            a {
-                font-size: 16px;
-            }
+        .card-project-features {
+            grid-template-columns: 1fr;
         }
     }
 
     @include media-breakpoint-up(xl) {
+        --bs-card-spacer-y: 40px;
+        --bs-card-spacer-x: 40px;
         grid-template-columns: 1fr;
 
         .card-media {
             display: none;
         }
 
+        .card-head {
+            margin-bottom: 30px;
+        }
+
+        .project-logo {
+            max-width: 240px;
+        }
+
         .card-tags {
             justify-content: flex-end;
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .card-project-features-wrapper {
+            margin-top: 30px;
+        }
+
+        .card-project-features {
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+
+            &__item {
+                min-height: 130px;
+                padding: 16px;
+            }
+        }
+
+        .card-btn-wrapper {
+            margin-top: 30px;
         }
     }
 
     @include media-breakpoint-up(xxl) {
+        --bs-card-spacer-y: 50px;
+        --bs-card-spacer-x: 50px;
         grid-template-columns: 1fr 1fr;
 
         .card-media {
@@ -288,6 +332,19 @@
 
         .card-head {
             min-height: 75px;
+        }
+
+        .card-tags {
+            a {
+                font-size: 20px;
+                padding: 10px 16px;
+            }
+        }
+
+        .card-project-features {
+            &__item {
+                padding: 20px;
+            }
         }
     }
 }
@@ -392,8 +449,9 @@
 
         &__icon {
             flex-shrink: 0;
-            user-select: none;
             -webkit-user-select: none;
+            -moz-user-select: none; 
+            user-select: none;
 
             img, svg {
                 max-width: 100%;

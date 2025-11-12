@@ -1,35 +1,27 @@
-// === Bootstrap Custom Import ===
+/* Start Bootstrap v5.3.8 Import */
+
+// === All Bootstrap ===
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Core
+// === Core ===
 @import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/maps";
-@import "../../node_modules/bootstrap/scss/mixins";
 
 // === Custom Variables ===
-// Colors
+
+// colors
 $primary: #4251F7;
 $secondary: #F74251;
 $white: #F8FEFF;
 $black: #100102;
 
-// $primary-rgb: 66, 81, 247;
-// $secondary-rgb: 247, 66, 81;
-// $white-rgb: 248, 254, 255;
-// $black-rgb: 16, 1, 2;
+// fonts
+$font-family-sans-serif: "Inter", sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-// Fonts
-$font-family-sans-serif: 'Inter', sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-size-base: 1rem; // 16px
-$font-weight-base: 400;
-$line-height-base: 1.4;
-
-// Body settings
+// body settings
 $body-color: #100102;
 $body-bg: #ECECEC;
 
-// Borders
+// borders
 $border-width: 1px;
 $border-color: #E4E4E5;
 $border-radius: 16px;
@@ -39,11 +31,11 @@ $border-radius-xl: 22px;
 $border-radius-2xl: 24px;
 $border-radius-pill: 50px;
 
-// Links
+// links
 $link-color: #100102;
 $link-hover-color: #4251F7;
 
-// Breakpoints
+// breakpoints
 $grid-breakpoints: (
   xs: 0,
   sm: 640px,
@@ -53,7 +45,7 @@ $grid-breakpoints: (
   xxl: 1600px
 );
 
-// Containers
+// containers
 $container-max-widths: (
   sm: 610px,
   md: 728px,
@@ -62,12 +54,17 @@ $container-max-widths: (
   xxl: 1540px
 );
 
-// Base
+// === Core ===
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// === Base ===
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";
 
-// Components
+// === Components ===
 @import "../../node_modules/bootstrap/scss/accordion";
 @import "../../node_modules/bootstrap/scss/breadcrumb";
 @import "../../node_modules/bootstrap/scss/buttons";
@@ -82,7 +79,7 @@ $container-max-widths: (
 @import "../../node_modules/bootstrap/scss/offcanvas";
 @import "../../node_modules/bootstrap/scss/transitions";
 
-// Utilities
+// === Utilities ===
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/utilities/api";
 

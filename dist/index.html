@@ -214,7 +214,7 @@
         <!-- text -->
         <div class="card-info">
             <div class="h4 fw-medium text-white mb-1">Гибкость под бизнес</div>
-            <div class="fs-16-20 fw-light text-white text-opacity-60">Разрабатываем от Tilda до Bitrix и кастомных решений</div>
+            <div class="h6 fw-light text-white text-opacity-60 mb-0">Разрабатываем от Tilda до Bitrix и кастомных решений</div>
         </div>
     </div>
 </div>
@@ -230,7 +230,7 @@
         <!-- text -->
         <div class="card-info">
             <div class="h4 fw-medium text-white mb-1">Прямое общение</div>
-            <div class="fs-16-20 fw-light text-white text-opacity-60">Проектная команда доступна для открытого диалога</div>
+            <div class="h6 fw-light text-white text-opacity-60 mb-0">Проектная команда доступна для открытого диалога</div>
         </div>
     </div>
 </div>
@@ -246,7 +246,7 @@
         <!-- text -->
         <div class="card-info">
             <div class="h4 fw-medium text-white mb-1">Автоматизация процессов</div>
-            <div class="fs-16-20 fw-light text-white text-opacity-60">Повышение производительности за счёт интеграций</div>
+            <div class="h6 fw-light text-white text-opacity-60 mb-0">Повышение производительности за счёт интеграций</div>
         </div>
     </div>
 </div>
@@ -262,7 +262,7 @@
         <!-- text -->
         <div class="card-info">
             <div class="h4 fw-medium text-white mb-1">Аналитика с первого дня</div>
-            <div class="fs-16-20 fw-light text-white text-opacity-60">Реальную эффективность маркетинга и поддержка продаж</div>
+            <div class="h6 fw-light text-white text-opacity-60 mb-0">Реальную эффективность маркетинга и поддержка продаж</div>
         </div>
     </div>
 </div>
@@ -410,16 +410,18 @@
     <!-- section-services-grid -->
     <section class="section section-services-grid">
         <div class="container-fluid">
-            <!-- title -->
-            <div class="d-flex justify-content-between mb-15 mb-lg-40">
+
+            <!-- section-services-grid__heading -->
+            <div class="section-services-grid__heading">
                 <h2 class="h2 mb-0">Наши услуги</h2>
                 <div class="d-flex align-items-center gap-10">
                     <span class="h2 mb-0">[39]</span>
                     <!-- <a href="#" class="btn btn-outline-black">Все услуги</a> -->
                 </div>
             </div>
-            <!-- grid -->
-            <div class="cards-grid">
+
+            <!-- section-services-grid__grid -->
+            <div class="section-services-grid__grid">
                 <!-- card -->
                 <div class="card card-service">
     <img class="card-bg-img" src="img/home/card-service-bg-01.svg">
@@ -469,22 +471,50 @@
     </div>
 </div>
             </div>
+
+            <!-- section-services-grid__btn-wrp -->
+            <div class="section-services-grid__btn-wrp">
+                <a href="#" class="btn btn-primary-light btn-l btn-animated w-100">
+                    <div class="animated-content">
+                        <div class="animated-content__default">
+                            <span>Все услуги</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="animated-content__hidden">
+                            <span>Все услуги</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </section>
 
     <!-- section-projects-grid -->
     <section class="section section-projects-grid">
         <div class="container-fluid">
-            <!-- title -->
-            <div class="d-flex justify-content-between mb-15 mb-lg-40">
-                <h2 class="h2 mb-0">Реализованные проекты</h2>
+
+            <!-- section-projects-grid__heading -->
+            <div class="section-projects-grid__heading">
+                <h2 class="h2 mb-0 d-none d-xl-block">Реализованные проекты</h2>
+                <div class="h2 mb-0 d-xl-none">Проекты</div>
                 <div class="d-flex align-items-center gap-10">
                     <span class="h2 mb-0">[200+]</span>
                     <!-- <a href="#" class="btn btn-outline-black">Все проекты</a> -->
                 </div>
             </div>
-            <!-- grid -->
-            <div class="cards-grid">
+
+            <!-- section-projects-grid__grid -->
+            <div class="section-projects-grid__grid">
                 <!-- card -->
                 <div class="card card-project">
     <div class="card-media">
@@ -492,9 +522,9 @@
     </div>
     <div class="card-body">
         <div class="card-head">
-            <div class="row gy-3">
-                <div class="col-xl-5">
-                    <img class="img-fluid" src="img/projects/card-project-logo-01.png">
+            <div class="row gy-2 gx-0">
+                <div class="col-xl-auto">
+                    <img class="project-logo img-fluid" src="img/projects/card-project-logo-01.png">
                 </div>
                 <div class="col-xl">
                     <div class="card-tags">
@@ -572,9 +602,9 @@
     </div>
     <div class="card-body">
         <div class="card-head">
-            <div class="row gy-3">
-                <div class="col-xl-5">
-                    <img class="img-fluid" src="img/projects/card-project-logo-02.png">
+            <div class="row gy-2 gx-0">
+                <div class="col-xl-auto">
+                    <img class="project-logo img-fluid" src="img/projects/card-project-logo-02.png">
                 </div>
                 <div class="col-xl">
                     <div class="card-tags">
@@ -652,9 +682,9 @@
     </div>
     <div class="card-body">
         <div class="card-head">
-            <div class="row gy-3">
-                <div class="col-xl-5">
-                    <img class="img-fluid" src="img/projects/card-project-logo-03.png">
+            <div class="row gy-2 gx-0">
+                <div class="col-xl-auto">
+                    <img class="project-logo img-fluid" src="img/projects/card-project-logo-03.png">
                 </div>
                 <div class="col-xl">
                     <div class="card-tags">
@@ -732,9 +762,9 @@
     </div>
     <div class="card-body">
         <div class="card-head">
-            <div class="row gy-3">
-                <div class="col-xl-5">
-                    <img class="img-fluid" src="img/projects/card-project-logo-04.png">
+            <div class="row gy-2 gx-0">
+                <div class="col-xl-auto">
+                    <img class="project-logo img-fluid" src="img/projects/card-project-logo-04.png">
                 </div>
                 <div class="col-xl">
                     <div class="card-tags">
@@ -806,15 +836,43 @@
     </div>
 </div>
             </div>
+
+            <!-- section-services-grid__btn-wrp -->
+            <div class="section-services-grid__btn-wrp">
+                <a href="#" class="btn btn-primary-light btn-l btn-animated w-100">
+                    <div class="animated-content">
+                        <div class="animated-content__default">
+                            <span>Все проекты</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="animated-content__hidden">
+                            <span>Все проекты</span>
+                            <span>
+                                <svg width="14" height="14">
+                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </section>
 
     <!-- section-cta -->
     <section class="section section-cta">
         <div class="container-fluid">
-            <div class="rounded-3 p-15 py-20 p-lg-40 bg-blue-gradient position-relative overflow-hidden">
+            <div class="cta-wrapper">
+
+                <!-- bg-absolute-img -->
                 <img class="bg-absolute-img" src="img/home/cta-bg-figure.png">
-                <!-- grid -->
+
+                <!-- cta-content -->
                 <div class="cta-content">
                     <div class="cta-content__heading">
                         <div class="h2 fw-normal text-white mb-10">Напишите нам</div>
@@ -844,7 +902,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <div class="fs-14 text-white-blue mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
+                            <div class="fs-x-small text-white-blue mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
                         </div>
                     </div>
                     <div class="cta-content__socials">
@@ -878,6 +936,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -885,6 +944,7 @@
     <!-- section-tariffs -->
     <section class="section section-tariffs">
         <div class="container-fluid">
+            
             <!-- title -->
             <div class="d-flex justify-content-between mb-15 mb-lg-40">
                 <h2 class="h2 mb-0">Тарифы под&nbsp;ваш&nbsp;бизнес и&nbsp;цели</h2>
@@ -911,6 +971,7 @@
                     </a>
                 </div>
             </div>
+
             <!-- grid -->
             <div class="section-grid">
                 <div class="grid-col">
@@ -1532,6 +1593,7 @@
 </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -2258,7 +2320,7 @@
                     <div id="faq-answer-1" class="collapse show" data-bs-parent="#faq">
                         <div class="accordion-divider"></div>
                         <div class="accordion-body">
-                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                            <div class="accordion-content fw-light text-gray">
                                 <p><a href="#">Создание сайта под ключ</a> – 89% заказчиков AMD Media интересуются именно этой услугой. Не важно, как давно существует Ваша фирма и насколько она масштабна. Если ваш бизнес присутствует в Интернете, а значит развивается гораздо быстрее.</p>
                                 <p>Продуманный качественный сайт поможет Вам удержать внимание потенциальной аудитории и привлечь новых клиентов, получить узнаваемость бренда = увеличить прибыль. Посмотрите&nbsp;<a href="#">портфолио</a>.</p>
                             </div>
@@ -2286,7 +2348,7 @@
                     <div id="faq-answer-2" class="collapse" data-bs-parent="#faq">
                         <div class="accordion-divider"></div>
                         <div class="accordion-body">
-                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                            <div class="accordion-content fw-light text-gray">
                                 <p>Наше Digital-Агентство создаст эффективный, современный сайт, который привлечет внимание потенциальных клиентов, повысит продажи. AMD Media — команда опытных специалистов. Находим персональный подход к каждому заказчику. Работаем на различных платформах и с разными технологиями для разработки ресурса, который соответствует вашим потребностям и требованиям.<br>
                                 Вторым этапом предлагаем услуги по продвижению в поисковых системах. Увеличим видимость и привлечем больше ЦА. Создаем качественный контент, оптимизируем мета-теги, ключевые слова, используем социальные сети. Закажите у нас&nbsp;<a href="#">продвижение сайтов</a>&nbsp;и получите скидку 10% на первый месяц.</p>
                             </div>
@@ -2314,7 +2376,7 @@
                     <div id="faq-answer-3" class="collapse" data-bs-parent="#faq">
                         <div class="accordion-divider"></div>
                         <div class="accordion-body">
-                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                            <div class="accordion-content fw-light text-gray">
                                 <p>МАРКЕТОЛОГИ: выявляют УТП; проводят анализ вашей ниши и конкурентов; продумывают размещение всех разделов и блоков.<br>
                                 КОНТЕНТ-МЕНЕДЖЕРЫ: наполняют сайт текстами и визуальными материалами; готовят его для продвижения в поисковиках.<br>
                                 ДИЗАЙНЕРЫ: подбирают общую стилистику; разрабатывают айдентику и фирменный стиль; макет будущего ресурса.<br>
@@ -2345,7 +2407,7 @@
                     <div id="faq-answer-4" class="collapse" data-bs-parent="#faq">
                         <div class="accordion-divider"></div>
                         <div class="accordion-body">
-                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                            <div class="accordion-content fw-light text-gray">
                                 <p>Сразу на этот вопрос не ответит ни одно агентство. Стоимость любого сайта может складываться из количества страниц, сложности функционала, конкретных технических параметров. Каждый сайт уникален, поэтому цена индивидуальна.</p>
                                 <p>Напишите, что вы хотите видеть в своём проекте. Разработаем ресурс любой сложности. Рекомендуем посмотреть&nbsp;<a href="#">портфолио</a>. Поймете профессиональные возможности специалистов студии и подберете для себя идеальный формат веб-ресурса.</p>
                             </div>
@@ -2373,7 +2435,7 @@
                     <div id="faq-answer-5" class="collapse" data-bs-parent="#faq">
                         <div class="accordion-divider"></div>
                         <div class="accordion-body">
-                            <div class="accordion-content fs-13-22 fw-light text-gray">
+                            <div class="accordion-content fw-light text-gray">
                                 <p>Идеальный вариант, если Вы реализуете какие-либо товары в большом количестве. Мы поможем разработать корпоративный дизайн для Вашего бизнеса. Внедрим все необходимые сторонние сервисы и создадим любой нужный функционал: заполним карточки товаров; создадим функцию корзины; добавим форму для отзывов; настроим панель управления.&nbsp;<a href="#">Примеры наших работ</a>.</p>
                                 <p>Разместим ресурс на подходящей системе управления, обеспечим надежную защиту и регулярное наполнение сайта актуальной информацией. Как происходит&nbsp;<a href="#">разработка интернет-магазина</a>.</p>
                             </div>
@@ -2458,7 +2520,7 @@
                                         </div>
                                     </div>
                                 </form>
-                                <div class="fs-14 text-white-blue mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
+                                <div class="fs-x-small text-white-blue mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
                             </div>
                         </div>
                     </div>
