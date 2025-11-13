@@ -1,0 +1,143 @@
+@@include('partials/header.html', {
+    "title": "Все проекты",
+    "headerAbsolute": false
+})
+
+<!-- main -->
+<main class="main">
+
+    <!-- section -->
+    <section class="section">
+        <div class="container-fluid">
+            <!-- wrapper -->
+            <div class="mb-60 mb-md-70 mb-xl-80 mb-xxl-110">
+
+                <!-- breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <span>Проекты</span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- heading -->
+                <div class="heading mb-20 mb-xl-40 mb-xxl-50">
+                    <div class="row">
+                        <div class="col-xl-7 col-xxl-8">
+                            <div class="h1 mb-0">Реализованные проекты</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tags -->
+                <div class="d-flex flex-wrap gap-1 mb-20 mb-md-40 mb-xxl-50">
+                    <a href="#" class="btn btn-outline-black btn-m">Корпоративный сайт</a>
+                    <a href="#" class="btn btn-outline-black btn-m">E-Commers</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Интернет магазин</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Сайт-визитка</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Индивидуальный проект</a>
+                    <a href="#" class="btn btn-outline-black btn-m">1С-БИТРИКС</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Tilda</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Wordpress</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Opencard</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Laravel</a>
+                    <a href="#" class="btn btn-outline-black btn-m">CS CART</a>
+                    <a href="#" class="btn btn-outline-black btn-m">SEO</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Контекст</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Дизайн</a>
+                    <a href="#" class="btn btn-outline-black btn-m">UX/UI</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Юзабилити</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Интеграции</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Настройка форм</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Доработки</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Локализация</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Техподдержка</a>
+                </div>
+
+                <!-- content -->
+                <div class="content d-flex flex-column gap-15 gap-md-20 gap-xxl-30">
+                    <!-- card -->
+                    @@include('partials/card-project.html', {
+                        "imgThumbURL": "img/projects/card-project-thumb-01.png",
+                        "logoURL": "img/projects/card-project-logo-01.png",
+                        "title": "Интернет-магазин керамической плитки",
+                        "subtitle": "Разработка интернет-магазина с нуля",
+                        "tag1": "Интернет-магазин",
+                        "tag2": "Интеграция с ERP",
+                        "tag3": "SEO-Оптимизация",
+                        "tag4": "Техподдержка",
+                        "feature1": {"value": "&gt;30%", "text": "запросов в ТОП 30 за 4 месяца"},
+                        "feature2": {"value": "+8 269", "text": "уникальных посетителей за 4 месяца"},
+                        "feature3": {"value": "4,08 мин", "text": "среднее время посещения"},
+                        "feature4": {"value": "ТОП 5", "text": "по ключу Магазин плитки"}
+                    })
+                    <!-- card -->
+                    @@include('partials/card-project.html', {
+                        "imgThumbURL": "img/projects/card-project-thumb-02.png",
+                        "logoURL": "img/projects/card-project-logo-02.png",
+                        "title": "Интернет-магазин для садоводов",
+                        "subtitle": "SEO-продвижение сайта в ТОП-10: вывели приоритетные кластеры",
+                        "tag1": "SEO-продвижение",
+                        "feature1": {"value": "+60%", "text": "увеличили трафик из поисковых систем"},
+                        "feature2": {"value": "+16 650", "text": "прирост уникальных посетителей"},
+                        "feature3": {"value": "+1000", "text": "запросов к семантике"},
+                        "feature4": {"value": "ТОП 1-10", "text": "вывели основной кластер Фунгициды"}
+                    })
+                    <!-- card -->
+                    @@include('partials/card-project.html', {
+                        "imgThumbURL": "img/projects/card-project-thumb-03.png",
+                        "logoURL": "img/projects/card-project-logo-03.png",
+                        "title": "Интернет-магазин ювелирных украшений",
+                        "subtitle": "Клиенту был необходим проработанный интернет-магазин с массой функций и преимуществ: отслеживанием клиентской базы, удобной доставкой, промокодами и т.д.",
+                        "tag1": "Интернет-магазин",
+                        "tag2": "1С Система",
+                        "tag3": "Эквайринг",
+                        "tag4": "Доставка",
+                        "feature1": {"value": "91%", "text": "поисковая оптимизация по данным PageSpeed"},
+                        "feature2": {"value": "х1,9", "text": "увеличился трафик на сайт по сравнению с предыдущим периодом"},
+                        "feature3": {"value": "на 9%", "text": "уменьшилась доля отказов"},
+                        "feature4": {"value": "+18%", "text": "глубина просмотров страниц "}
+                    })
+                    <!-- card -->
+                    @@include('partials/card-project.html', {
+                        "imgThumbURL": "img/projects/card-project-thumb-04.png",
+                        "logoURL": "img/projects/card-project-logo-04.png",
+                        "title": "Интернет-магазин для кудрявых",
+                        "subtitle": "Техническая поддержка и доработка сайтов, верстка лендинга",
+                        "tag1": "Интернет-магазин",
+                        "tag2": "1С Система",
+                        "tag3": "Эквайринг",
+                        "tag4": "Доставка",
+                        "feature1": {"value": "0,8 сек", "text": "FCP по данным PageSpeed"},
+                        "feature2": {"value": "+12%", "text": "выросло количество заказов через корзину"},
+                        "feature3": {"value": "х36 раз", "text": "увеличилось количество регулярных покупок"},
+                        "feature4": {"value": "х2 раза", "text": "вырос средний чек"}
+                    })
+                </div>
+
+                <!-- show-more -->
+                <div class="d-flex justify-content-center mt-15 mt-md-20 mt-xl-40 mt-xxl-50">
+                    <a href="#" class="btn btn-outline-black btn-m btn-animated">
+                        <div class="animated-content">
+                            <div class="animated-content__default">
+                                <span>Показать ещё</span>
+                            </div>
+                            <div class="animated-content__hidden">
+                                <span>Показать ещё</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')

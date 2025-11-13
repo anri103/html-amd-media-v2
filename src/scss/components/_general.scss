@@ -60,10 +60,34 @@ body {
     padding: 15px !important;
 }
 
+.pb-20 {
+    padding-bottom: 20px !important;
+}
+
 // margins
 
 .mb-10 {
     margin-bottom: 10px !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+
+.mb-60 {
+    margin-bottom: 60px !important;
+}
+
+.mt-15 {
+    margin-top: 15px !important;
 }
 
 // gaps
@@ -72,8 +96,21 @@ body {
     gap: 10px !important;
 }
 
+.gap-15 {
+    gap: 15px !important;
+}
+
 .gap-20 {
     gap: 20px !important;
+}
+
+.g-15 {
+    --bs-gutter-x: 15px;
+    --bs-gutter-y: 15px;
+}
+
+.gy-40 {
+    --bs-gutter-y: 40px;
 }
 
 // Максимальная ширина
@@ -86,6 +123,37 @@ body {
 
 // Минимальная ширина
 
+@include media-breakpoint-up(md) {
+    .mb-md-20 {
+        margin-bottom: 20px !important;
+    }
+
+    .mb-md-40 {
+        margin-bottom: 40px !important;
+    }
+
+    .mb-md-70 {
+        margin-bottom: 70px !important;
+    }
+
+    .mt-md-20 {
+        margin-top: 20px !important;
+    }
+
+    .gap-md-20 {
+        gap: 20px !important;
+    }
+
+    .g-md-20 {
+        --bs-gutter-x: 20px;
+        --bs-gutter-y: 20px;
+    }
+
+    .gy-md-20 {
+        --bs-gutter-y: 20px;
+    }
+}
+
 @include media-breakpoint-up(xl) {
     .p-xl-20 {
         padding: 20px !important;
@@ -94,11 +162,60 @@ body {
     .p-xl-40 {
         padding: 40px !important;
     }
+
+    .mb-xl-40 {
+        margin-bottom: 40px !important;
+    }
+
+    .mb-xl-60 {
+        margin-bottom: 60px !important;
+    }
+
+    .mb-xl-80 {
+        margin-bottom: 80px !important;
+    }
+
+    .mt-xl-40 {
+        margin-top: 40px !important;
+    }
+
+    .gy-xl-60 {
+        --bs-gutter-y: 60px;
+    }
 }
 
 @include media-breakpoint-up(xxl) {
     .p-xxl-50 {
         padding: 50px !important;
+    }
+
+    .mb-xxl-30 {
+        margin-bottom: 30px !important;
+    }
+
+    .mb-xxl-50 {
+        margin-bottom: 50px !important;
+    }
+
+    .mb-xxl-110 {
+        margin-bottom: 110px !important;
+    }
+
+    .mt-xxl-50 {
+        margin-top: 50px !important;
+    }
+
+    .gap-xxl-30 {
+        gap: 30px !important;
+    }
+
+    .g-xxl-30 {
+        --bs-gutter-x: 30px;
+        --bs-gutter-y: 30px;
+    }
+
+    .gy-xxl-30 {
+        --bs-gutter-y: 30px;
     }
 }
 

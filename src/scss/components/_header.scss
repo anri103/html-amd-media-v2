@@ -3,6 +3,8 @@
 
 .header {
     position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
     &.js-fixed {
         top: 10px;
@@ -10,6 +12,16 @@
         .header-row {
             border-color: var(--bs-body-bg);
         }
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 
@@ -19,6 +31,8 @@ body.header-absolute {
         top: 15px;
         left: 0;
         right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
         z-index: 100;
         transition: all 0.3s ease;
 
@@ -51,8 +65,8 @@ body.header-fixed {
     padding-left: 15px;
     padding-right: 8px;
     border: 1px solid transparent;
-    border-radius: 20px;
-    background-color: #F8FEFF;
+    border-radius: var(--bs-border-radius-lg);
+    background-color: var(--bs-white);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 

@@ -1,0 +1,197 @@
+@@include('partials/header.html', {
+    "title": "Блог",
+    "headerAbsolute": false
+})
+
+<!-- main -->
+<main class="main">
+
+    <!-- section -->
+    <section class="section">
+        <div class="container-fluid">
+            <!-- wrapper -->
+            <div class="mb-60 mb-md-70 mb-xl-80 mb-xxl-110">
+
+                <!-- breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <span>Блог</span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- heading -->
+                <div class="heading mb-40 mb-xl-60">
+                    <div class="row">
+                        <div class="col-xl-7 col-xxl-9">
+                            <div class="h1 mb-10">Блог: продвижение и&nbsp;развитие&nbsp;сайтов</div>
+                            <div class="h4 text-gray mb-0" style="max-width: 700px;">SEO, маркетинг и&nbsp;дизайн&nbsp;— просто о&nbsp;сложном для&nbsp;реального результата</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tags -->
+                <div class="d-flex flex-wrap gap-1 mb-20 mb-md-40 mb-xxl-50">
+                    <a href="#" class="btn btn-outline-black btn-m active">Все</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Продвижение</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Развитие</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Разработка</a>
+                    <a href="#" class="btn btn-outline-black btn-m">SEO</a>
+                    <a href="#" class="btn btn-outline-black btn-m">SMM</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Аналитика</a>
+                    <a href="#" class="btn btn-outline-black btn-m">E-Commers</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Serm</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Маркетинг</a>
+                    <a href="#" class="btn btn-outline-black btn-m">Стратегия</a>
+                    <a href="#" class="btn btn-outline-black btn-m">AMD Media</a>
+                </div>
+
+                <!-- content -->
+                <div class="content">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-15 gy-md-20 gy-xxl-30">
+                        <div class="col">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Стратегия"
+                            })
+                        </div>
+                        <div class="col">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-02.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Скидка 10% на первый месяц работ по SEO-продвижению",
+                                "tag1": "Продвижение",
+                                "tag2": "Аналитика",
+                                "tag3": "Стратегия"
+                            })
+                        </div>
+                        <div class="col">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Длинный тег",
+                                "tag5": "Еще длинный тег"
+                            })
+                        </div>
+                        <div class="col">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Стратегия"
+                            })
+                        </div>
+                        <div class="col">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Длинный тег",
+                                "tag5": "Еще длинный тег"
+                            })
+                        </div>
+                        <div class="col">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-02.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Скидка 10% на первый месяц работ по SEO-продвижению",
+                                "tag1": "Продвижение",
+                                "tag2": "Аналитика",
+                                "tag3": "Стратегия"
+                            })
+                        </div>
+                        <div class="col">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-02.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Скидка 10% на первый месяц работ по SEO-продвижению",
+                                "tag1": "Продвижение",
+                                "tag2": "Аналитика",
+                                "tag3": "Стратегия"
+                            })
+                        </div>
+                        <div class="col">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Стратегия"
+                            })
+                        </div>
+                        <div class="col">
+                            <!-- card -->
+                            @@include('partials/card-blog.html', {
+                                "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                                "authorAvatarURL": "img/blog/author-avatar-01.png",
+                                "authorName": "Виталий Кучеров",
+                                "title": "Реферальная программа",
+                                "tag1": "SEO",
+                                "tag2": "Продвижение",
+                                "tag3": "Аналитика",
+                                "tag4": "Длинный тег",
+                                "tag5": "Еще длинный тег"
+                            })
+                        </div>
+                    </div>
+                </div>
+
+                <!-- show-more -->
+                <div class="d-flex justify-content-center mt-15 mt-md-20 mt-xl-40 mt-xxl-50">
+                    <a href="#" class="btn btn-outline-black btn-m btn-animated">
+                        <div class="animated-content">
+                            <div class="animated-content__default">
+                                <span>Показать ещё</span>
+                            </div>
+                            <div class="animated-content__hidden">
+                                <span>Показать ещё</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')
