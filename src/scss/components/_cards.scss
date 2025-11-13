@@ -541,6 +541,20 @@
     --bs-card-bg: var(--theme-white);
     border: none !important;
 
+    .card-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-heading {
+        flex: 1 1 auto;
+        margin-bottom: 30px;
+    }
+
+    .card-title {
+        margin-bottom: 4px;
+    }
+
     .card-description {
         display: -webkit-box;
         -webkit-line-clamp: 4;
@@ -553,9 +567,26 @@
         }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         --bs-card-spacer-y: 30px;
         --bs-card-spacer-x: 30px;
+
+        .card-heading {
+            margin-bottom: 40px;
+        }
+
+        .card-title {
+            margin-bottom: 20px;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        --bs-card-spacer-y: 40px;
+        --bs-card-spacer-x: 40px;
+
+        .card-heading {
+            margin-bottom: 50px;
+        }
     }
 }
 
@@ -584,7 +615,7 @@
     .card-body {
         display: flex;
         flex-direction: column;
-        padding-top: 10px !important;
+        padding-top: 10px;
     }
 
     .card-top {
@@ -629,6 +660,10 @@
         }
     }
 
+    .card-title {
+        margin-bottom: 4px;
+    }
+
     .card-description {
         display: -webkit-box;
         -webkit-line-clamp: 4;
@@ -646,11 +681,11 @@
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
-        margin-bottom: 20px;
 
         a {
             display: inline-block;
-            font-size: 14px;
+            font-size: var(--fs-small);
+            line-height: 1.2;
             padding: 4px 10px;
             border-radius: var(--bs-border-radius-lg);
             background-color: rgb(var(--bs-link-bg-color-rgb));
@@ -664,14 +699,13 @@
     .card-bottom {
         display: flex;
         gap: 10px;
+        margin-top: 20px;
     }
 
     .card-views {
         display: flex;
         align-items: center;
         gap: 4px;
-        font-size: 14px;
-        line-height: 1;
 
         svg {
             flex-shrink: 0;
@@ -682,20 +716,41 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        font-size: 14px;
-        line-height: 1;
 
         svg {
             flex-shrink: 0;
         }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         --bs-card-spacer-y: 30px;
         --bs-card-spacer-x: 30px;
 
         .card-media {
             height: 280px;
+        }
+
+        .card-title {
+            margin-bottom: 10px;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        --bs-card-spacer-y: 40px;
+        --bs-card-spacer-x: 40px;
+
+        .card-body {
+            padding-top: 20px;
+        }
+
+        .card-description {
+            margin-bottom: 20px;
+        }
+
+        .card-tags {
+            a {
+                padding: 8px 16px;
+            }
         }
     }
 }

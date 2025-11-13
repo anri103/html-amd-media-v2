@@ -11,23 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fancybox
     Fancybox.bind("[data-fancybox]", {});
 
-    // swiperClients
-    const swiperClients = document.querySelector('.swiperClients');
-    if (swiperClients) {
-        new Swiper(swiperClients, {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            loop: true,
-            speed: 5000,
-            // centeredSlides: true,
-            allowTouchMove: false,
-            autoplay: {
-                delay: 1,
-                disableOnInteraction: false,
-            },
-        });
-    }
-
     // swiperHeroGlassCards
     const swiperHeroGlassCards = document.querySelector('.swiperHeroGlassCards');
     if (swiperHeroGlassCards) {
@@ -43,6 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
             pagination: {
                 el: ".swiper-pagination",
                 // clickable: true,
+            },
+        });
+    }
+
+    // swiperClients
+    const swiperClients = document.querySelector('.swiperClients');
+    if (swiperClients) {
+        new Swiper(swiperClients, {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            loop: true,
+            speed: 5000,
+            // centeredSlides: true,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 1,
+                disableOnInteraction: false,
             },
         });
     }
@@ -79,10 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 el: '.swiper-pagination',
             },
             breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
                 768: {
                     slidesPerView: 2,
                     spaceBetween: 20,
                 },
+                1600: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                }
             },
         });
     }
@@ -102,13 +110,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 el: '.swiper-pagination',
             },
             breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
                 768: {
                     slidesPerView: 2,
                     spaceBetween: 20,
                 },
-                992: {
+                960 : {
                     slidesPerView: 3,
                     spaceBetween: 20,
+                },
+                1600: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
                 }
             },
         });
