@@ -352,8 +352,8 @@
 /* card-tariff-plan */
 
 .card-tariff-plan {
-    --bs-card-spacer-y: 30px;
-    --bs-card-spacer-x: 30px;
+    --bs-card-spacer-y: 20px;
+    --bs-card-spacer-x: 15px;
     --bs-card-border-radius: var(--bs-border-radius-lg);
     --bs-card-bg: var(--theme-white);
     border: none !important;
@@ -528,6 +528,32 @@
                 border-radius: var(--bs-border-radius-pill);
                 background-color: var(--theme-blue-light);
             }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        --bs-card-spacer-y: 30px;
+        --bs-card-spacer-x: 30px;
+    }
+    
+    @include media-breakpoint-up(xxl) {
+        --bs-card-spacer-y: 50px;
+        --bs-card-spacer-x: 50px;
+
+        .card-heading {
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            margin-bottom: 20px;
+        }
+
+        .card-subtitle {
+            margin-bottom: 20px;
+        }
+
+        .card-price {
+            margin-bottom: 20px;
         }
     }
 }
