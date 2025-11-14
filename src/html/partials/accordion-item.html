@@ -1,0 +1,27 @@
+<div class="accordion-item">
+    <div id="faq-question-@@id" class="accordion-header">
+        <button
+        type="button"
+        class="accordion-button @@if (!isOpen) {collapsed}"
+        data-bs-toggle="collapse"
+        data-bs-target="#faq-answer-@@id"
+        aria-expanded="@@isOpen"
+        aria-controls="faq-answer-@@id"
+        >
+            <span class="h4 fw-medium mb-0">@@title</span>
+            <span class="accordion-icon btn btn-outline-black btn-icon-m">
+                <svg width="14" height="14">
+                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                </svg>
+            </span>
+        </button>
+    </div>
+    <div id="faq-answer-@@id" class="collapse @@if (isOpen) {show}" data-bs-parent="#faq">
+        <div class="accordion-divider"></div>
+        <div class="accordion-body">
+            <div class="accordion-content fw-light text-gray">
+                @@description
+            </div>
+        </div>
+    </div>
+</div>

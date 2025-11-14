@@ -227,7 +227,7 @@
                 <h2 class="h2 mb-0">Наши услуги</h2>
                 <div class="d-flex align-items-center gap-20">
                     <span class="h2 mb-0">[39]</span>
-                    <a href="#" class="btn btn-outline-black btn-l btn-animated hide-on-mobile">
+                    <a href="services.html" class="btn btn-outline-black btn-l btn-animated hide-on-mobile">
                         <div class="animated-content">
                             <div class="animated-content__default">
                                 <span>Все&nbsp;услуги</span>
@@ -292,7 +292,7 @@
 
             <!-- section-services-grid__btn-wrp -->
             <div class="section-services-grid__btn-wrp">
-                <a href="#" class="btn btn-primary-light btn-l btn-animated w-100">
+                <a href="services.html" class="btn btn-primary-light btn-l btn-animated w-100">
                     <div class="animated-content">
                         <div class="animated-content__default">
                             <span>Все услуги</span>
@@ -327,7 +327,7 @@
                 <div class="h2 mb-0 d-xl-none">Проекты</div>
                 <div class="d-flex align-items-center gap-20">
                     <span class="h2 mb-0">[200+]</span>
-                    <a href="#" class="btn btn-outline-black btn-l btn-animated hide-on-mobile">
+                    <a href="projects.html" class="btn btn-outline-black btn-l btn-animated hide-on-mobile">
                         <div class="animated-content">
                             <div class="animated-content__default">
                                 <span>Все&nbsp;проекты</span>
@@ -413,7 +413,7 @@
 
             <!-- section-services-grid__btn-wrp -->
             <div class="section-services-grid__btn-wrp">
-                <a href="#" class="btn btn-primary-light btn-l btn-animated w-100">
+                <a href="projects.html" class="btn btn-primary-light btn-l btn-animated w-100">
                     <div class="animated-content">
                         <div class="animated-content__default">
                             <span>Все проекты</span>
@@ -851,7 +851,7 @@
 
             <!-- section-blog-slider__btn-wrp -->
             <div class="section-blog-slider__btn-wrp">
-                <a href="#" class="btn btn-primary-light btn-l btn-animated w-100">
+                <a href="blog.html" class="btn btn-primary-light btn-l btn-animated w-100">
                     <div class="animated-content">
                         <div class="animated-content__default">
                             <span>Смотреть все</span>
@@ -910,153 +910,40 @@
             <!-- accordion-faq -->
             <div class="accordion accordion-faq" id="faq">
                 <!-- accordion-item -->
-                <div class="accordion-item">
-                    <div id="faq-question-1" class="accordion-header">
-                        <button
-                        type="button"
-                        class="accordion-button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#faq-answer-1"
-                        aria-expanded="true"
-                        aria-controls="faq-answer-1"
-                        >
-                            <span class="h4 fw-medium mb-0">Для чего компаниям нужна разработка сайтов?</span>
-                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div id="faq-answer-1" class="collapse show" data-bs-parent="#faq">
-                        <div class="accordion-divider"></div>
-                        <div class="accordion-body">
-                            <div class="accordion-content fw-light text-gray">
-                                <p><a href="#">Создание сайта под ключ</a> – 89% заказчиков AMD Media интересуются именно этой услугой. Не важно, как давно существует Ваша фирма и насколько она масштабна. Если ваш бизнес присутствует в Интернете, а значит развивается гораздо быстрее.</p>
-                                <p>Продуманный качественный сайт поможет Вам удержать внимание потенциальной аудитории и привлечь новых клиентов, получить узнаваемость бренда = увеличить прибыль. Посмотрите&nbsp;<a href="#">портфолио</a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @@include('partials/accordion-item.html', {
+                    "id": "1",
+                    "title": "Для чего компаниям нужна разработка сайтов?",
+                    "description": "<p><a href='#'>Создание сайта под ключ</a> – 89% заказчиков AMD Media интересуются именно этой услугой. Не важно, как давно существует Ваша фирма и насколько она масштабна. Если ваш бизнес присутствует в Интернете, а значит развивается гораздо быстрее.</p><p>Продуманный качественный сайт поможет Вам удержать внимание потенциальной аудитории и привлечь новых клиентов, получить узнаваемость бренда = увеличить прибыль. Посмотрите&nbsp;<a href='#'>портфолио</a>.</p>",
+                    "isOpen": true
+                })
                 <!-- accordion-item -->
-                <div class="accordion-item">
-                    <div id="faq-question-2" class="accordion-header">
-                        <button
-                        type="button"
-                        class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#faq-answer-2"
-                        aria-expanded="false"
-                        aria-controls="faq-answer-2"
-                        >
-                            <span class="h4 fw-medium mb-0">Почему сайты AMD Media – хорошо продают?</span>
-                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div id="faq-answer-2" class="collapse" data-bs-parent="#faq">
-                        <div class="accordion-divider"></div>
-                        <div class="accordion-body">
-                            <div class="accordion-content fw-light text-gray">
-                                <p>Наше Digital-Агентство создаст эффективный, современный сайт, который привлечет внимание потенциальных клиентов, повысит продажи. AMD Media — команда опытных специалистов. Находим персональный подход к каждому заказчику. Работаем на различных платформах и с разными технологиями для разработки ресурса, который соответствует вашим потребностям и требованиям.<br>
-                                Вторым этапом предлагаем услуги по продвижению в поисковых системах. Увеличим видимость и привлечем больше ЦА. Создаем качественный контент, оптимизируем мета-теги, ключевые слова, используем социальные сети. Закажите у нас&nbsp;<a href="#">продвижение сайтов</a>&nbsp;и получите скидку 10% на первый месяц.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @@include('partials/accordion-item.html', {
+                    "id": "2",
+                    "title": "Почему сайты AMD Media – хорошо продают?",
+                    "description": "<p>Наше Digital-Агентство создаст эффективный, современный сайт, который привлечет внимание потенциальных клиентов, повысит продажи. AMD Media — команда опытных специалистов. Находим персональный подход к каждому заказчику. Работаем на различных платформах и с разными технологиями для разработки ресурса, который соответствует вашим потребностям и требованиям.<br> Вторым этапом предлагаем услуги по продвижению в поисковых системах. Увеличим видимость и привлечем больше ЦА. Создаем качественный контент, оптимизируем мета-теги, ключевые слова, используем социальные сети. Закажите у нас&nbsp;<a href='#'>продвижение сайтов</a>&nbsp;и получите скидку 10% на первый месяц.</p>",
+                    "isOpen": false
+                })
                 <!-- accordion-item -->
-                <div class="accordion-item">
-                    <div id="faq-question-3" class="accordion-header">
-                        <button
-                        type="button"
-                        class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#faq-answer-3"
-                        aria-expanded="false"
-                        aria-controls="faq-answer-3"
-                        >
-                            <span class="h4 fw-medium mb-0">Кто работает над Вашим сайтом?</span>
-                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div id="faq-answer-3" class="collapse" data-bs-parent="#faq">
-                        <div class="accordion-divider"></div>
-                        <div class="accordion-body">
-                            <div class="accordion-content fw-light text-gray">
-                                <p>МАРКЕТОЛОГИ: выявляют УТП; проводят анализ вашей ниши и конкурентов; продумывают размещение всех разделов и блоков.<br>
-                                КОНТЕНТ-МЕНЕДЖЕРЫ: наполняют сайт текстами и визуальными материалами; готовят его для продвижения в поисковиках.<br>
-                                ДИЗАЙНЕРЫ: подбирают общую стилистику; разрабатывают айдентику и фирменный стиль; макет будущего ресурса.<br>
-                                SEO-СПЕЦИАЛИСТЫ: оптимизируют ваш сайт для поисковых систем и продвинут в ТОП органической выдачи.<br>
-                                ВЕБ-РАЗРАБОТЧИКИ: приступаем к верстке, перенося макеты дизайнера на HTML и CSS; настраивают формы обратной связи, интерактивные элементы и элементы управления; при необходимости интегрируют внешние сервисы.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @@include('partials/accordion-item.html', {
+                    "id": "3",
+                    "title": "Кто работает над Вашим сайтом?",
+                    "description": "<p>МАРКЕТОЛОГИ: выявляют УТП; проводят анализ вашей ниши и конкурентов; продумывают размещение всех разделов и блоков.<br>КОНТЕНТ-МЕНЕДЖЕРЫ: наполняют сайт текстами и визуальными материалами; готовят его для продвижения в поисковиках.<br>ДИЗАЙНЕРЫ: подбирают общую стилистику; разрабатывают айдентику и фирменный стиль; макет будущего ресурса.<br>SEO-СПЕЦИАЛИСТЫ: оптимизируют ваш сайт для поисковых систем и продвинут в ТОП органической выдачи.<br>ВЕБ-РАЗРАБОТЧИКИ: приступаем к верстке, перенося макеты дизайнера на HTML и CSS; настраивают формы обратной связи, интерактивные элементы и элементы управления; при необходимости интегрируют внешние сервисы.</p>",
+                    "isOpen": false
+                })
                 <!-- accordion-item -->
-                <div class="accordion-item">
-                    <div id="faq-question-4" class="accordion-header">
-                        <button
-                        type="button"
-                        class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#faq-answer-4"
-                        aria-expanded="false"
-                        aria-controls="faq-answer-4"
-                        >
-                            <span class="h4 fw-medium mb-0">Сколько стоит создать сайт?</span>
-                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div id="faq-answer-4" class="collapse" data-bs-parent="#faq">
-                        <div class="accordion-divider"></div>
-                        <div class="accordion-body">
-                            <div class="accordion-content fw-light text-gray">
-                                <p>Сразу на этот вопрос не ответит ни одно агентство. Стоимость любого сайта может складываться из количества страниц, сложности функционала, конкретных технических параметров. Каждый сайт уникален, поэтому цена индивидуальна.</p>
-                                <p>Напишите, что вы хотите видеть в своём проекте. Разработаем ресурс любой сложности. Рекомендуем посмотреть&nbsp;<a href="#">портфолио</a>. Поймете профессиональные возможности специалистов студии и подберете для себя идеальный формат веб-ресурса.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @@include('partials/accordion-item.html', {
+                    "id": "4",
+                    "title": "Сколько стоит создать сайт?",
+                    "description": "<p>Сразу на этот вопрос не ответит ни одно агентство. Стоимость любого сайта может складываться из количества страниц, сложности функционала, конкретных технических параметров. Каждый сайт уникален, поэтому цена индивидуальна.</p><p>Напишите, что вы хотите видеть в своём проекте. Разработаем ресурс любой сложности. Рекомендуем посмотреть&nbsp;<a href='#'>портфолио</a>. Поймете профессиональные возможности специалистов студии и подберете для себя идеальный формат веб-ресурса.</p>",
+                    "isOpen": false
+                })
                 <!-- accordion-item -->
-                <div class="accordion-item">
-                    <div id="faq-question-5" class="accordion-header">
-                        <button
-                        type="button"
-                        class="accordion-button collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#faq-answer-5"
-                        aria-expanded="false"
-                        aria-controls="faq-answer-5"
-                        >
-                            <span class="h4 fw-medium mb-0">Можно ли заказать у вас интернет-магазин?</span>
-                            <span class="accordion-icon btn btn-outline-black btn-icon-m">
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div id="faq-answer-5" class="collapse" data-bs-parent="#faq">
-                        <div class="accordion-divider"></div>
-                        <div class="accordion-body">
-                            <div class="accordion-content fw-light text-gray">
-                                <p>Идеальный вариант, если Вы реализуете какие-либо товары в большом количестве. Мы поможем разработать корпоративный дизайн для Вашего бизнеса. Внедрим все необходимые сторонние сервисы и создадим любой нужный функционал: заполним карточки товаров; создадим функцию корзины; добавим форму для отзывов; настроим панель управления.&nbsp;<a href="#">Примеры наших работ</a>.</p>
-                                <p>Разместим ресурс на подходящей системе управления, обеспечим надежную защиту и регулярное наполнение сайта актуальной информацией. Как происходит&nbsp;<a href="#">разработка интернет-магазина</a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @@include('partials/accordion-item.html', {
+                    "id": "5",
+                    "title": "Можно ли заказать у вас интернет-магазин?",
+                    "description": "<p>Идеальный вариант, если Вы реализуете какие-либо товары в большом количестве. Мы поможем разработать корпоративный дизайн для Вашего бизнеса. Внедрим все необходимые сторонние сервисы и создадим любой нужный функционал: заполним карточки товаров; создадим функцию корзины; добавим форму для отзывов; настроим панель управления.&nbsp;<a href='#'>Примеры наших работ</a>.</p><p>Разместим ресурс на подходящей системе управления, обеспечим надежную защиту и регулярное наполнение сайта актуальной информацией. Как происходит&nbsp;<a href='#'>разработка интернет-магазина</a>.</p>",
+                    "isOpen": false
+                })
             </div>
 
             <!-- section-faq-accordion__btn-wrp -->

@@ -10,7 +10,7 @@
     <section class="section">
         <div class="container-fluid">
             <!-- wrapper -->
-            <div class="mb-60 mb-md-70 mb-xl-80 mb-xxl-110">
+            <div>
 
                 <!-- breadcrumb -->
                 <nav aria-label="breadcrumb">
@@ -25,12 +25,8 @@
                 </nav>
 
                 <!-- heading -->
-                <div class="heading mb-20 mb-xl-40 mb-xxl-50">
-                    <div class="row">
-                        <div class="col-xl-7 col-xxl-8">
-                            <div class="h1 mb-0">Реализованные проекты</div>
-                        </div>
-                    </div>
+                <div class="section__heading mb-20 mb-xl-40 mb-xxl-50">
+                    <div class="section__title h1 mb-10">Реализованные проекты</div>
                 </div>
 
                 <!-- tags -->
@@ -59,7 +55,7 @@
                 </div>
 
                 <!-- content -->
-                <div class="content d-flex flex-column gap-15 gap-md-20 gap-xxl-30">
+                <div class="projects-cards-grid">
                     <!-- card -->
                     @@include('partials/card-project.html', {
                         "imgThumbURL": "img/projects/card-project-thumb-01.png",
@@ -120,7 +116,7 @@
                 </div>
 
                 <!-- show-more -->
-                <div class="d-flex justify-content-center mt-15 mt-md-20 mt-xl-40 mt-xxl-50">
+                <div class="show-more-wrapper">
                     <a href="#" class="btn btn-outline-black btn-m btn-animated">
                         <div class="animated-content">
                             <div class="animated-content__default">
