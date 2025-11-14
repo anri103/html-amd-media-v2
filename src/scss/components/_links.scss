@@ -19,3 +19,25 @@ a {
 .link-opacity-60 {
     --bs-link-opacity: 0.6;
 }
+
+.tag-pill-primary {
+    --bs-link-color-rgb: var(--theme-blue-rgb);
+    --bs-link-bg-color-rgb: var(--theme-blue-light-rgb);
+    --bs-link-hover-color-rgb: var(--theme-white-rgb);
+    --bs-link-hover-bg-color-rgb: var(--theme-black-rgb);
+    display: inline-block;
+    font-size: var(--fs-small);
+    line-height: 1.2;
+    padding: 4px 10px;
+    border-radius: var(--bs-border-radius-lg);
+    background-color: rgb(var(--bs-link-bg-color-rgb));
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: rgb(var(--bs-link-hover-bg-color-rgb));
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,70 @@
+@@include('partials/header.html', {
+    "title": "Статья",
+    "headerAbsolute": false
+})
+
+<!-- main -->
+<main class="main">
+
+    <!-- section -->
+    <section class="section">
+        <div class="container-fluid">
+            <!-- grid cols-2 -->
+            <div class="d-grid grid-cols-xl-2 gap-15 gap-md-20 gap-xxl-30 mb-20 mb-xxl-30">
+
+                <div class="rounded-wrapper bg-white">
+                    <!-- breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-20 mb-xl-30">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Главная</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="blog.html">Блог</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <span>Сайт-визитка: особенности и преимущества</span>
+                            </li>
+                        </ol>
+                    </nav>
+                    <!-- blog-meta -->
+                    <div class="blog-meta"></div>
+                    <!-- heading -->
+                    <div class="h2 mb-10 mb-xxl-20">Сайт-визитка: особенности и&nbsp;преимущества</div>
+                    <div class="fw-light text-gray">
+                        <p>Не секрет, что почти весь бизнес перешёл в онлайн. Купить в интернете можно все что угодно: от хлеба до кухонного гарнитура. Не каждому нужен многостраничник с каталогами, десятками разделов и сотнями услуг. Рассказываем, что такое сайт-визитка, в чем её отличие от лендинга и какие преимущества она даёт.</p>
+                        <p>Сайт-визитка — небольшой сайт, основная функция которого отражается в названии. На таком ресурсе несколько разделов и страниц, которые содержат информацию о товаре, услуге или человеке.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-wrapper bg-white">
+                    <!-- tags -->
+                    <div class="d-flex flex-wrap gap-1">
+                        <a href="#" class="tag-pill-primary">SEO</a>
+                        <a href="#" class="tag-pill-primary">Продвижение</a>
+                        <a href="#" class="tag-pill-primary">Аналитика</a>
+                        <a href="#" class="tag-pill-primary">Стратегия</a>
+                        <a href="#" class="tag-pill-primary">Развитие</a>
+                    </div>
+                    <!-- socials -->
+                    <div class="d-flex flex-wrap gap-10">
+                        <a href="#">
+                            <img src="img/blog/author-telegram.svg" alt="...">
+                        </a>
+                        <a href="#">
+                            <img src="img/blog/author-telegram.svg" alt="...">
+                        </a>
+                        <a href="#">
+                            <img src="img/blog/author-telegram.svg" alt="...">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')

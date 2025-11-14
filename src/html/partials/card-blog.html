@@ -1,6 +1,6 @@
 <div class="card card-blog">
     <div class="card-media">
-        <a href="#">
+        <a href="blog-single.html">
             <img src="@@mediaThumbURL" alt="...">
         </a>
     </div>
@@ -12,7 +12,7 @@
                         <img src="@@authorAvatarURL" alt="...">
                     </div>
                     <div>
-                        <a href="#">@@authorName</a>
+                        <a href="blog-author.html">@@authorName</a>
                     </div>
                 </div>
                 <div class="card-date fs-small">
@@ -25,15 +25,15 @@
                 </div>
             </div>
             <div class="card-title h4 fw-medium">
-                <a href="#">@@title</a>
+                <a href="blog-single.html">@@title</a>
             </div>
             <div class="card-description h6 fw-light text-gray lh-body">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
             <div class="card-tags">
-                @@if (context.tag1) {<a href="#">@@tag1</a>}
-                @@if (context.tag2) {<a href="#">@@tag2</a>}
-                @@if (context.tag3) {<a href="#">@@tag3</a>}
-                @@if (context.tag4) {<a href="#">@@tag4</a>}
-                @@if (context.tag5) {<a href="#">@@tag5</a>}
+                @@if (context.tag1) {<a href="#" class="tag-pill-primary">@@tag1</a>}
+                @@if (context.tag2) {<a href="#" class="tag-pill-primary">@@tag2</a>}
+                @@if (context.tag3) {<a href="#" class="tag-pill-primary">@@tag3</a>}
+                @@if (context.tag4) {<a href="#" class="tag-pill-primary">@@tag4</a>}
+                @@if (context.tag5) {<a href="#" class="tag-pill-primary">@@tag5</a>}
             </div>
         </div>
         <div class="card-bottom">

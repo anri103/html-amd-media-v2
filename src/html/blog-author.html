@@ -1,0 +1,203 @@
+@@include('partials/header.html', {
+    "title": "Блог Автор",
+    "headerAbsolute": false
+})
+
+<!-- main -->
+<main class="main">
+
+    <!-- section -->
+    <section class="section">
+        <div class="container-fluid">
+
+            <!-- grid cols-2 -->
+            <div class="d-grid grid-cols-xl-2 gap-15 gap-md-20 gap-xxl-30 mb-20 mb-xxl-30">
+
+                <!-- author-card -->
+                <div class="rounded-wrapper bg-white">
+                    <!-- breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-20 mb-xl-30">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Главная</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="blog.html">Блог</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <span>Виталий Кучеров</span>
+                            </li>
+                        </ol>
+                    </nav>
+                    <!-- heading -->
+                    <div class="d-flex flex-column flex-md-row gap-10 gap-xl-20 mb-20 mb-xl-30">
+                        <div class="flex-shrink-0">
+                            <!-- avatar -->
+                            <div class="author-avatar-big overflow-hidden bg-blue-light rounded">
+                                <img src="img/blog/author-avatar-big.png" alt="...">
+                            </div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <!-- heading -->
+                            <div class="border-bottom pb-10 mb-10">
+                                <div class="h2 mb-10">Виталий Кучеров</div>
+                                <div class="h5 fw-light text-gray mb-0" style="max-width: 800px;">SEO-Специалист по&nbsp;продвижению и&nbsp;развитию сайтов</div>
+                            </div>
+                            <div class="d-flex flex-wrap align-items-center gap-10">
+                                <div class="fw-light text-gray">Следите за&nbsp;мной:</div>
+                                <div class="d-flex flex-wrap gap-10">
+                                    <a href="#">
+                                        <img src="img/blog/author-telegram.svg" alt="...">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/blog/author-telegram.svg" alt="...">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/blog/author-telegram.svg" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- articles and news -->
+                    <div class="d-flex flex-wrap align-items-center gap-10 fw-light text-gray mb-20 mb-xl-30">
+                        <div>Автор:</div>
+                        <div>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <path d="M3.5 6.99996C3.5 6.38112 3.74583 5.78763 4.18342 5.35004C4.621 4.91246 5.21449 4.66663 5.83333 4.66663H22.1667C22.7855 4.66663 23.379 4.91246 23.8166 5.35004C24.2542 5.78763 24.5 6.38112 24.5 6.99996V21C24.5 21.6188 24.2542 22.2123 23.8166 22.6499C23.379 23.0875 22.7855 23.3333 22.1667 23.3333H5.83333C5.21449 23.3333 4.621 23.0875 4.18342 22.6499C3.74583 22.2123 3.5 21.6188 3.5 21V6.99996Z" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.1665 9.33337H19.8332" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.1665 14H19.8332" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.1665 18.6666H19.8332" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span>5 статей</span>
+                        </div>
+                        <div style="width: 1px; height: 25px; background-color: var(--bs-border-color);"></div>
+                        <div>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <path d="M18.6665 6.99996H22.1665C22.4759 6.99996 22.7727 7.12288 22.9915 7.34167C23.2103 7.56046 23.3332 7.85721 23.3332 8.16663V21C23.3332 21.6188 23.0873 22.2123 22.6498 22.6499C22.2122 23.0875 21.6187 23.3333 20.9998 23.3333M20.9998 23.3333C20.381 23.3333 19.7875 23.0875 19.3499 22.6499C18.9123 22.2123 18.6665 21.6188 18.6665 21V5.83329C18.6665 5.52387 18.5436 5.22713 18.3248 5.00833C18.106 4.78954 17.8093 4.66663 17.4998 4.66663H5.83317C5.52375 4.66663 5.22701 4.78954 5.00821 5.00833C4.78942 5.22713 4.6665 5.52387 4.6665 5.83329V19.8333C4.6665 20.7616 5.03525 21.6518 5.69163 22.3082C6.34801 22.9645 7.23825 23.3333 8.1665 23.3333H20.9998Z" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.3335 9.33337H14.0002" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.3335 14H14.0002" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.3335 18.6666H14.0002" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span>7 новостей</span>
+                        </div>
+                    </div>
+                    <!-- tags -->
+                    <div class="d-flex flex-wrap gap-1">
+                        <a href="#" class="tag-pill-primary">SEO</a>
+                        <a href="#" class="tag-pill-primary">Продвижение</a>
+                        <a href="#" class="tag-pill-primary">Аналитика</a>
+                        <a href="#" class="tag-pill-primary">Стратегия</a>
+                        <a href="#" class="tag-pill-primary">Развитие</a>
+                    </div>
+
+                </div>
+
+                <!-- about-author -->
+                <div class="rounded-wrapper bg-blue-light">
+                    <div class="h4 fw-medium mb-10 mb-xl-20">Уже&nbsp;больше 10&nbsp;лет&nbsp;я&nbsp;живу SEO: анализирую сайты 🔎, строю стратегии 📊 и&nbsp;нахожу точки роста для&nbsp;бизнеса 📈</div>
+                    <ul class="list-unstyled d-flex flex-column gap-10 gap-15 text-gray fw-light mb-0">
+                        <li>✨ Помогаю компаниям выходить в&nbsp;ТОП&nbsp;поисковиков</li>
+                        <li>🤝 Консультирую проекты&nbsp;— от&nbsp;стартапов до&nbsp;крупных брендов</li>
+                        <li>✍️ Люблю делиться практическими фишками и&nbsp;кейсами в&nbsp;блоге</li>
+                        <li>💡 Верю, что&nbsp;грамотное SEO&nbsp;— это&nbsp;не&nbsp;«магия», а&nbsp;системная работа</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- blog-cards-grid -->
+            <div class="blog-cards-grid">
+                <!-- card -->
+                @@include('partials/card-blog.html', {
+                    "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                    "authorAvatarURL": "img/blog/author-avatar-01.png",
+                    "authorName": "Виталий Кучеров",
+                    "title": "Реферальная программа",
+                    "tag1": "SEO",
+                    "tag2": "Продвижение",
+                    "tag3": "Аналитика",
+                    "tag4": "Стратегия"
+                })
+                <!-- card -->
+                @@include('partials/card-blog.html', {
+                    "mediaThumbURL": "img/blog/card-blog-02.jpg",
+                    "authorAvatarURL": "img/blog/author-avatar-01.png",
+                    "authorName": "Виталий Кучеров",
+                    "title": "Скидка 10% на первый месяц работ по SEO-продвижению",
+                    "tag1": "Продвижение",
+                    "tag2": "Аналитика",
+                    "tag3": "Стратегия"
+                })
+                <!-- card -->
+                @@include('partials/card-blog.html', {
+                    "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                    "authorAvatarURL": "img/blog/author-avatar-01.png",
+                    "authorName": "Виталий Кучеров",
+                    "title": "Реферальная программа",
+                    "tag1": "SEO",
+                    "tag2": "Продвижение",
+                    "tag3": "Аналитика",
+                    "tag4": "Длинный тег",
+                    "tag5": "Еще длинный тег"
+                })
+                <!-- card -->
+                @@include('partials/card-blog.html', {
+                    "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                    "authorAvatarURL": "img/blog/author-avatar-01.png",
+                    "authorName": "Виталий Кучеров",
+                    "title": "Реферальная программа",
+                    "tag1": "SEO",
+                    "tag2": "Продвижение",
+                    "tag3": "Аналитика",
+                    "tag4": "Стратегия"
+                })
+                <!-- card -->
+                @@include('partials/card-blog.html', {
+                    "mediaThumbURL": "img/blog/card-blog-01.jpg",
+                    "authorAvatarURL": "img/blog/author-avatar-01.png",
+                    "authorName": "Виталий Кучеров",
+                    "title": "Реферальная программа",
+                    "tag1": "SEO",
+                    "tag2": "Продвижение",
+                    "tag3": "Аналитика",
+                    "tag4": "Длинный тег",
+                    "tag5": "Еще длинный тег"
+                })
+                <!-- card -->
+                @@include('partials/card-blog.html', {
+                    "mediaThumbURL": "img/blog/card-blog-02.jpg",
+                    "authorAvatarURL": "img/blog/author-avatar-01.png",
+                    "authorName": "Виталий Кучеров",
+                    "title": "Скидка 10% на первый месяц работ по SEO-продвижению",
+                    "tag1": "Продвижение",
+                    "tag2": "Аналитика",
+                    "tag3": "Стратегия"
+                })
+            </div>
+
+            <!-- show-more -->
+            <div class="show-more-wrapper">
+                <a href="#" class="btn btn-outline-black btn-m btn-animated">
+                    <div class="animated-content">
+                        <div class="animated-content__default">
+                            <span>Показать ещё</span>
+                        </div>
+                        <div class="animated-content__hidden">
+                            <span>Показать ещё</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- footer -->
+@@include('partials/footer.html')
