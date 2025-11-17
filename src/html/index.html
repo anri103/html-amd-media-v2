@@ -9,41 +9,37 @@
     <!-- section-home-hero -->
     <section class="section section-home-hero">
         <div class="container-fluid">
-            <div class="hero-grid">
-                <div class="grid-col">
-                    <!-- hero-video-wrapper -->
-                    <div class="hero-video-wrapper">
-                        <video 
-                            autoplay 
-                            muted 
-                            loop 
-                            playsinline
-                            class="desktop-video"
-                            poster="img/home/hero-video-cover.png"
-                        >
-                            <!-- Desktop -->
-                            <!-- <source src="img/home/hero-video(1080x1080).mp4" type="video/mp4" media="(min-width: 992px)"> -->
+            <div class="row row-hero">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center justify-content-center h-100">
+
+                        <!-- home-hero-video -->
+                        <video class="home-hero-video" autoplay muted loop playsinline poster="img/home/hero-video-cover.png">
                             <!-- Tablet -->
                             <source src="img/home/hero-video(600x600).mp4" type="video/mp4" media="(min-width: 768px)">
-                            <!-- Mobile & Fallback -->
+                            <!-- Mobile -->
                             <source src="img/home/hero-video(400x400).mp4" type="video/mp4">
-                            <!-- Image Fallback -->
+                            <!-- Fallback Image -->
                             <img src="img/home/hero-video.gif">
                         </video>
 
-                        <picture class="mobile-image">
+                        <!-- home-hero-image -->
+                        <picture>
                             <source srcset="img/home/hero-video.webp" type="image/webp">
                             <source srcset="img/home/hero-video.gif" type="image/gif">
-                            <img src="img/home/hero-video.gif">
+                            <img class="home-hero-image" src="img/home/hero-video.gif">
                         </picture>
+
                     </div>
                 </div>
-                <div class="grid-col">
+                <div class="col-lg-6">
                     <div class="d-flex flex-column h-100">
-                        <!-- hero-card -->
+
+                        <!-- card-hero-info -->
                         @@include('partials/card-hero-info.html')
-                        <!-- hero-slider -->
-                        <div class="hero-swiper-wrapper">
+
+                        <div>
+                            <!-- swiperHeroGlassCards -->
                             <div class="swiper swiperHeroGlassCards">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -82,6 +78,7 @@
                                 <div class="swiper-pagination"></div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -450,7 +447,7 @@
                 <div class="cta-content">
                     <div class="cta-content__heading">
                         <div class="cta-content__title h2 fw-normal text-white">Напишите нам</div>
-                        <div class="cta-content__subtitle h5 fw-light text-white-blue">Получите бесплатный разбор вашей задачи с&nbsp;экспертом.&nbsp;Обсудим ваши потребности и&nbsp;цели, подскажем с&nbsp;чего&nbsp;начать и&nbsp;сколько это&nbsp;будет стоить</div>
+                        <div class="cta-content__subtitle h5 fw-light text-white-60">Получите бесплатный разбор вашей задачи с&nbsp;экспертом.&nbsp;Обсудим ваши потребности и&nbsp;цели, подскажем с&nbsp;чего&nbsp;начать и&nbsp;сколько это&nbsp;будет стоить</div>
                     </div>
                     <div class="cta-content__form">
                         <div class="form-wrapper">
@@ -476,13 +473,13 @@
                                     </div>
                                 </div>
                             </form>
-                            <div class="fs-x-small text-white-blue mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
+                            <div class="fs-x-small text-white-60 mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
                         </div>
                     </div>
                     <div class="cta-content__socials">
                         <div class="content-divider"></div>
                         <div class="content-wrapper">
-                            <div class="h5 fw-light text-white-blue mb-0">Заполните форму или&nbsp;свяжитесь с&nbsp;нами напрямую через&nbsp;мессенджер, нажав на&nbsp;кнопку</div>
+                            <div class="h5 fw-light text-white-60 mb-0">Заполните форму или&nbsp;свяжитесь с&nbsp;нами напрямую через&nbsp;мессенджер, нажав на&nbsp;кнопку</div>
                             <div class="contact-socials">
                                 <!-- telegram -->
                                 <a href="#" class="link-social">
@@ -609,7 +606,7 @@
         <div class="container-fluid">
             <div class="section-partners-slider__heading">
                 <h2 class="h2 mb-10">Официальные партнёры</h2>
-                <div class="h5 fw-light text-gray mb-0">Мы&nbsp;работаем в&nbsp;сфере интернет-маркетинга с&nbsp;2013&nbsp;года. За&nbsp;это&nbsp;время мы&nbsp;реализовали более <strong><a href="#">200&nbsp;проектов</a></strong> совместно с&nbsp;нашими партнёрами</div>
+                <div class="h5 fw-light text-black-60 link-blue-60 mb-0">Мы&nbsp;работаем в&nbsp;сфере интернет-маркетинга с&nbsp;2013&nbsp;года. За&nbsp;это&nbsp;время мы&nbsp;реализовали более <strong><a href="#">200&nbsp;проектов</a></strong> совместно с&nbsp;нашими партнёрами</div>
             </div>
         </div>
         <div class="swiper swiperPartners">

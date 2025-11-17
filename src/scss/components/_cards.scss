@@ -7,8 +7,7 @@
     --bs-card-spacer-y: 20px;
     --bs-card-spacer-x: 15px;
     --bs-card-border-radius: var(--bs-border-radius-lg);
-    --bs-card-bg: var(--bs-white);
-    flex-grow: 1;
+    --bs-card-bg: var(--theme-white);
 
     .card-body {
         display: flex;
@@ -390,7 +389,7 @@
 
     .card-price {
         text-align: center;
-        color: var(--bs-body-color);
+        color: var(--theme-black);
         margin-bottom: 15px;
     }
 
@@ -408,6 +407,7 @@
         }
 
         &__without {
+            color: var(--theme-blue);
             font-size: 14px;
             font-weight: 400;
             padding: 10px 20px;
@@ -438,6 +438,7 @@
             }
 
             .remark-title {
+                color: var(--theme-black);
                 margin-bottom: 2px;
             }
         }
@@ -465,13 +466,13 @@
     }
 
     .card-btn-more {
-        --bs-btn-color: var(--bs-body-color);
+        --bs-btn-color: var(--theme-black);
         --bs-btn-bg: transparent;
         --bs-btn-border-color: transparent;
-        --bs-btn-hover-color: #5A6169;
+        --bs-btn-hover-color: var(--theme-black-60);
         --bs-btn-hover-bg: transparent;
         --bs-btn-hover-border-color: transparent;
-        --bs-btn-active-color: #5A6169;
+        --bs-btn-active-color: var(--theme-black-60);
         --bs-btn-active-bg: transparent;
         --bs-btn-active-border-color: transparent;
 
@@ -498,7 +499,7 @@
 
         .remark-list-title {
             gap: 10px;
-            color: var(--bs-body-color);
+            color: var(--theme-black);
             font-family: var(--theme-ff-title);
             font-size: var(--fs-h4);
             font-weight: 500;
@@ -679,6 +680,7 @@
         display: flex;
         align-items: center;
         gap: 4px;
+        color: var(--theme-black);
         line-height: 1;
 
         svg {
@@ -708,6 +710,7 @@
     .card-bottom {
         display: flex;
         gap: 10px;
+        color: var(--theme-black);
         margin-top: 20px;
     }
 

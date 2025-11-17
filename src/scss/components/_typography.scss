@@ -15,9 +15,10 @@ h6,
 .h4,
 .h5,
 .h6 {
-    margin-bottom: 0.75rem;
+    color: var(--theme-black);
     font-family: var(--theme-ff-title);
     font-weight: 400;
+    margin-bottom: 0.75rem;
 }
 
 h1,
@@ -80,24 +81,12 @@ h6,
     font-size: 22px;
 }
 
-.text-white-blue {
-    color: #EAF1FF !important;
+.text-white-60 {
+    color: var(--theme-white-60) !important;
 }
 
-.text-gray {
-    color: #6A6367 !important;
-}
-
-.text-dark-blue {
-    color: #5A6169 !important;
-}
-
-.text-dark-green {
-    color: #006311 !important;
-}
-
-.text-opacity-60 {
-    --bs-text-opacity: 0.6;
+.text-black-60 {
+    color: var(--theme-black-60) !important;
 }
 
 .lh-body {
@@ -109,6 +98,12 @@ h6,
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+}
+
+.text-box {
+    p:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 // @include media-breakpoint-up(xxl) {

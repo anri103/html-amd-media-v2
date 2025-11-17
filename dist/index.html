@@ -32,16 +32,16 @@
                             <a href="services.html">Услуги</a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#">Партнёры</a>
+                            <a href="partners.html">Партнёры</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">О нас</a>
+                            <a href="about.html">О нас</a>
                         </li>
                         <li class="nav-item">
                             <a href="blog.html">Блог</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Контакты</a>
+                            <a href="contacts.html">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -114,44 +114,39 @@
     <!-- section-home-hero -->
     <section class="section section-home-hero">
         <div class="container-fluid">
-            <div class="hero-grid">
-                <div class="grid-col">
-                    <!-- hero-video-wrapper -->
-                    <div class="hero-video-wrapper">
-                        <video 
-                            autoplay 
-                            muted 
-                            loop 
-                            playsinline
-                            class="desktop-video"
-                            poster="img/home/hero-video-cover.png"
-                        >
-                            <!-- Desktop -->
-                            <!-- <source src="img/home/hero-video(1080x1080).mp4" type="video/mp4" media="(min-width: 992px)"> -->
+            <div class="row row-hero">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center justify-content-center h-100">
+
+                        <!-- home-hero-video -->
+                        <video class="home-hero-video" autoplay muted loop playsinline poster="img/home/hero-video-cover.png">
                             <!-- Tablet -->
                             <source src="img/home/hero-video(600x600).mp4" type="video/mp4" media="(min-width: 768px)">
-                            <!-- Mobile & Fallback -->
+                            <!-- Mobile -->
                             <source src="img/home/hero-video(400x400).mp4" type="video/mp4">
-                            <!-- Image Fallback -->
+                            <!-- Fallback Image -->
                             <img src="img/home/hero-video.gif">
                         </video>
 
-                        <picture class="mobile-image">
+                        <!-- home-hero-image -->
+                        <picture>
                             <source srcset="img/home/hero-video.webp" type="image/webp">
                             <source srcset="img/home/hero-video.gif" type="image/gif">
-                            <img src="img/home/hero-video.gif">
+                            <img class="home-hero-image" src="img/home/hero-video.gif">
                         </picture>
+
                     </div>
                 </div>
-                <div class="grid-col">
+                <div class="col-lg-6">
                     <div class="d-flex flex-column h-100">
-                        <!-- hero-card -->
+
+                        <!-- card-hero-info -->
                         <div class="card card-hero-info">
     <div class="card-body">
         <div>
             <h1 class="hero-title">Digital-продукты для&nbsp;бизнеса: эффективная стратегия под&nbsp;отрасль</h1>
-            <div class="d-flex gap-2">
-                <span class="me-1">
+            <div class="d-flex gap-10">
+                <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                         <circle cx="18" cy="2" r="2" fill="#F74251"/>
                         <circle cx="18" cy="10" r="2" fill="#F74251"/>
@@ -172,7 +167,7 @@
                         <circle cx="18" cy="34" r="2" fill="#F74251"/>
                     </svg>
                 </span>
-                <div class="hero-subtitle h5 fw-light text-gray mb-0">От&nbsp;шаблона до&nbsp;сложных экосистем.<br> Быстрый старт за&nbsp;14&nbsp;дней с&nbsp;возможностью масштабирования</div>
+                <div class="hero-subtitle h5 fw-light text-black-60 mb-0">От&nbsp;шаблона до&nbsp;сложных экосистем.<br> Быстрый старт за&nbsp;14&nbsp;дней с&nbsp;возможностью масштабирования</div>
             </div>
         </div>
         <div class="card-btn-wrapper">
@@ -199,8 +194,9 @@
         </div>
     </div>
 </div>
-                        <!-- hero-slider -->
-                        <div class="hero-swiper-wrapper">
+
+                        <div>
+                            <!-- swiperHeroGlassCards -->
                             <div class="swiper swiperHeroGlassCards">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -214,7 +210,7 @@
         <!-- text -->
         <div class="card-info">
             <div class="h4 fw-medium text-white mb-1">Гибкость под бизнес</div>
-            <div class="h6 fw-light text-white text-opacity-60 mb-0">Разрабатываем от Tilda до Bitrix и кастомных решений</div>
+            <div class="h6 fw-light text-white-60 mb-0">Разрабатываем от Tilda до Bitrix и кастомных решений</div>
         </div>
     </div>
 </div>
@@ -230,7 +226,7 @@
         <!-- text -->
         <div class="card-info">
             <div class="h4 fw-medium text-white mb-1">Прямое общение</div>
-            <div class="h6 fw-light text-white text-opacity-60 mb-0">Проектная команда доступна для открытого диалога</div>
+            <div class="h6 fw-light text-white-60 mb-0">Проектная команда доступна для открытого диалога</div>
         </div>
     </div>
 </div>
@@ -246,7 +242,7 @@
         <!-- text -->
         <div class="card-info">
             <div class="h4 fw-medium text-white mb-1">Автоматизация процессов</div>
-            <div class="h6 fw-light text-white text-opacity-60 mb-0">Повышение производительности за счёт интеграций</div>
+            <div class="h6 fw-light text-white-60 mb-0">Повышение производительности за счёт интеграций</div>
         </div>
     </div>
 </div>
@@ -262,7 +258,7 @@
         <!-- text -->
         <div class="card-info">
             <div class="h4 fw-medium text-white mb-1">Аналитика с первого дня</div>
-            <div class="h6 fw-light text-white text-opacity-60 mb-0">Реальную эффективность маркетинга и поддержка продаж</div>
+            <div class="h6 fw-light text-white-60 mb-0">Реальную эффективность маркетинга и поддержка продаж</div>
         </div>
     </div>
 </div>
@@ -271,6 +267,7 @@
                                 <div class="swiper-pagination"></div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -446,7 +443,7 @@
     <img class="card-bg-img" src="img/home/card-service-bg-01.svg">
     <div class="card-body">
         <div class="h3 fw-medium mb-1">Разработка сайтов</div>
-        <div class="h5 fw-light text-gray mb-0">Создание сайта под&nbsp;ваши цели с&nbsp;уникальным дизайном</div>
+        <div class="h5 fw-light text-black-60 mb-0">Создание сайта под&nbsp;ваши цели с&nbsp;уникальным дизайном</div>
     </div>
 </div>
                 <!-- card -->
@@ -454,7 +451,7 @@
     <img class="card-bg-img" src="img/home/card-service-bg-02.svg">
     <div class="card-body">
         <div class="h3 fw-medium mb-1">SEO-продвижение</div>
-        <div class="h5 fw-light text-gray mb-0">Раскрутка сайтов в&nbsp;Топ&nbsp;органической выдачи поисковых систем</div>
+        <div class="h5 fw-light text-black-60 mb-0">Раскрутка сайтов в&nbsp;Топ&nbsp;органической выдачи поисковых систем</div>
     </div>
 </div>
                 <!-- card -->
@@ -462,7 +459,7 @@
     <img class="card-bg-img" src="img/home/card-service-bg-03.svg">
     <div class="card-body">
         <div class="h3 fw-medium mb-1">Мобильные приложения</div>
-        <div class="h5 fw-light text-gray mb-0">Создание мобильных приложений для&nbsp;вашего бизнеса</div>
+        <div class="h5 fw-light text-black-60 mb-0">Создание мобильных приложений для&nbsp;вашего бизнеса</div>
     </div>
 </div>
                 <!-- card -->
@@ -470,7 +467,7 @@
     <img class="card-bg-img" src="img/home/card-service-bg-04.svg">
     <div class="card-body">
         <div class="h3 fw-medium mb-1">E-COMMERCE решения</div>
-        <div class="h5 fw-light text-gray mb-0">Создание интернет-магазинов и&nbsp;сервисов для&nbsp;бизнеса</div>
+        <div class="h5 fw-light text-black-60 mb-0">Создание интернет-магазинов и&nbsp;сервисов для&nbsp;бизнеса</div>
     </div>
 </div>
                 <!-- card -->
@@ -478,7 +475,7 @@
     <img class="card-bg-img" src="img/home/card-service-bg-05.svg">
     <div class="card-body">
         <div class="h3 fw-medium mb-1">UX/UI-дизайн</div>
-        <div class="h5 fw-light text-gray mb-0">Создание уникального и&nbsp;стильного дизайна для&nbsp;роста продаж</div>
+        <div class="h5 fw-light text-black-60 mb-0">Создание уникального и&nbsp;стильного дизайна для&nbsp;роста продаж</div>
     </div>
 </div>
                 <!-- card -->
@@ -486,7 +483,7 @@
     <img class="card-bg-img" src="img/home/card-service-bg-06.svg">
     <div class="card-body">
         <div class="h3 fw-medium mb-1">CRM-системы на заказ</div>
-        <div class="h5 fw-light text-gray mb-0">Проектируем инфраструктуру с&nbsp;минимальными рисками отказа системы</div>
+        <div class="h5 fw-light text-black-60 mb-0">Проектируем инфраструктуру с&nbsp;минимальными рисками отказа системы</div>
     </div>
 </div>
             </div>
@@ -576,35 +573,35 @@
             </div>
         </div>
         <div class="h3 fw-medium mb-1">Интернет-магазин керамической плитки</div>
-        <div class="h5 fw-light text-gray mb-0">Разработка интернет-магазина с нуля</div>
+        <div class="h5 fw-light text-black-60 mb-0">Разработка интернет-магазина с нуля</div>
         <div class="card-project-features-wrapper">
             <div class="card-project-features">
                 <!-- Фича 1 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">&gt;30%</div>
-                    <div class="h5 fw-light text-gray mb-0">запросов в ТОП 30 за 4 месяца</div>
+                    <div class="h5 fw-light text-black-60 mb-0">запросов в ТОП 30 за 4 месяца</div>
                 </div>
                 
                 <!-- Фича 2 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">+8 269</div>
-                    <div class="h5 fw-light text-gray mb-0">уникальных посетителей за 4 месяца</div>
+                    <div class="h5 fw-light text-black-60 mb-0">уникальных посетителей за 4 месяца</div>
                 </div>
                 
                 <!-- Фича 3 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">4,08 мин</div>
-                    <div class="h5 fw-light text-gray mb-0">среднее время посещения</div>
+                    <div class="h5 fw-light text-black-60 mb-0">среднее время посещения</div>
                 </div>
                 
                 <!-- Фича 4 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">ТОП 5</div>
-                    <div class="h5 fw-light text-gray mb-0">по ключу Магазин плитки</div>
+                    <div class="h5 fw-light text-black-60 mb-0">по ключу Магазин плитки</div>
                 </div>
                 
             </div>
@@ -656,35 +653,35 @@
             </div>
         </div>
         <div class="h3 fw-medium mb-1">Интернет-магазин для садоводов</div>
-        <div class="h5 fw-light text-gray mb-0">SEO-продвижение сайта в ТОП-10: вывели приоритетные кластеры</div>
+        <div class="h5 fw-light text-black-60 mb-0">SEO-продвижение сайта в ТОП-10: вывели приоритетные кластеры</div>
         <div class="card-project-features-wrapper">
             <div class="card-project-features">
                 <!-- Фича 1 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">+60%</div>
-                    <div class="h5 fw-light text-gray mb-0">увеличили трафик из поисковых систем</div>
+                    <div class="h5 fw-light text-black-60 mb-0">увеличили трафик из поисковых систем</div>
                 </div>
                 
                 <!-- Фича 2 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">+16 650</div>
-                    <div class="h5 fw-light text-gray mb-0">прирост уникальных посетителей</div>
+                    <div class="h5 fw-light text-black-60 mb-0">прирост уникальных посетителей</div>
                 </div>
                 
                 <!-- Фича 3 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">+1000</div>
-                    <div class="h5 fw-light text-gray mb-0">запросов к семантике</div>
+                    <div class="h5 fw-light text-black-60 mb-0">запросов к семантике</div>
                 </div>
                 
                 <!-- Фича 4 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">ТОП 1-10</div>
-                    <div class="h5 fw-light text-gray mb-0">вывели основной кластер Фунгициды</div>
+                    <div class="h5 fw-light text-black-60 mb-0">вывели основной кластер Фунгициды</div>
                 </div>
                 
             </div>
@@ -736,35 +733,35 @@
             </div>
         </div>
         <div class="h3 fw-medium mb-1">Интернет-магазин ювелирных украшений</div>
-        <div class="h5 fw-light text-gray mb-0">Клиенту был необходим проработанный интернет-магазин с массой функций и преимуществ: отслеживанием клиентской базы, удобной доставкой, промокодами и т.д.</div>
+        <div class="h5 fw-light text-black-60 mb-0">Клиенту был необходим проработанный интернет-магазин с массой функций и преимуществ: отслеживанием клиентской базы, удобной доставкой, промокодами и т.д.</div>
         <div class="card-project-features-wrapper">
             <div class="card-project-features">
                 <!-- Фича 1 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">91%</div>
-                    <div class="h5 fw-light text-gray mb-0">поисковая оптимизация по данным PageSpeed</div>
+                    <div class="h5 fw-light text-black-60 mb-0">поисковая оптимизация по данным PageSpeed</div>
                 </div>
                 
                 <!-- Фича 2 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">х1,9</div>
-                    <div class="h5 fw-light text-gray mb-0">увеличился трафик на сайт по сравнению с предыдущим периодом</div>
+                    <div class="h5 fw-light text-black-60 mb-0">увеличился трафик на сайт по сравнению с предыдущим периодом</div>
                 </div>
                 
                 <!-- Фича 3 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">на 9%</div>
-                    <div class="h5 fw-light text-gray mb-0">уменьшилась доля отказов</div>
+                    <div class="h5 fw-light text-black-60 mb-0">уменьшилась доля отказов</div>
                 </div>
                 
                 <!-- Фича 4 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">+18%</div>
-                    <div class="h5 fw-light text-gray mb-0">глубина просмотров страниц </div>
+                    <div class="h5 fw-light text-black-60 mb-0">глубина просмотров страниц </div>
                 </div>
                 
             </div>
@@ -816,35 +813,35 @@
             </div>
         </div>
         <div class="h3 fw-medium mb-1">Интернет-магазин для кудрявых</div>
-        <div class="h5 fw-light text-gray mb-0">Техническая поддержка и доработка сайтов, верстка лендинга</div>
+        <div class="h5 fw-light text-black-60 mb-0">Техническая поддержка и доработка сайтов, верстка лендинга</div>
         <div class="card-project-features-wrapper">
             <div class="card-project-features">
                 <!-- Фича 1 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">0,8 сек</div>
-                    <div class="h5 fw-light text-gray mb-0">FCP по данным PageSpeed</div>
+                    <div class="h5 fw-light text-black-60 mb-0">FCP по данным PageSpeed</div>
                 </div>
                 
                 <!-- Фича 2 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">+12%</div>
-                    <div class="h5 fw-light text-gray mb-0">выросло количество заказов через корзину</div>
+                    <div class="h5 fw-light text-black-60 mb-0">выросло количество заказов через корзину</div>
                 </div>
                 
                 <!-- Фича 3 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">х36 раз</div>
-                    <div class="h5 fw-light text-gray mb-0">увеличилось количество регулярных покупок</div>
+                    <div class="h5 fw-light text-black-60 mb-0">увеличилось количество регулярных покупок</div>
                 </div>
                 
                 <!-- Фича 4 -->
                 
                 <div class="card-project-features__item">
                     <div class="h3 fw-medium mb-2">х2 раза</div>
-                    <div class="h5 fw-light text-gray mb-0">вырос средний чек</div>
+                    <div class="h5 fw-light text-black-60 mb-0">вырос средний чек</div>
                 </div>
                 
             </div>
@@ -914,7 +911,7 @@
                 <div class="cta-content">
                     <div class="cta-content__heading">
                         <div class="cta-content__title h2 fw-normal text-white">Напишите нам</div>
-                        <div class="cta-content__subtitle h5 fw-light text-white-blue">Получите бесплатный разбор вашей задачи с&nbsp;экспертом.&nbsp;Обсудим ваши потребности и&nbsp;цели, подскажем с&nbsp;чего&nbsp;начать и&nbsp;сколько это&nbsp;будет стоить</div>
+                        <div class="cta-content__subtitle h5 fw-light text-white-60">Получите бесплатный разбор вашей задачи с&nbsp;экспертом.&nbsp;Обсудим ваши потребности и&nbsp;цели, подскажем с&nbsp;чего&nbsp;начать и&nbsp;сколько это&nbsp;будет стоить</div>
                     </div>
                     <div class="cta-content__form">
                         <div class="form-wrapper">
@@ -940,13 +937,13 @@
                                     </div>
                                 </div>
                             </form>
-                            <div class="fs-x-small text-white-blue mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
+                            <div class="fs-x-small text-white-60 mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
                         </div>
                     </div>
                     <div class="cta-content__socials">
                         <div class="content-divider"></div>
                         <div class="content-wrapper">
-                            <div class="h5 fw-light text-white-blue mb-0">Заполните форму или&nbsp;свяжитесь с&nbsp;нами напрямую через&nbsp;мессенджер, нажав на&nbsp;кнопку</div>
+                            <div class="h5 fw-light text-white-60 mb-0">Заполните форму или&nbsp;свяжитесь с&nbsp;нами напрямую через&nbsp;мессенджер, нажав на&nbsp;кнопку</div>
                             <div class="contact-socials">
                                 <!-- telegram -->
                                 <a href="#" class="link-social">
@@ -1018,13 +1015,13 @@
     <div class="card-body">
         <div class="card-heading">
             <div class="card-title">
-                <span class="h3 fw-medium">«Разработка сайтов»</span>
+                <span class="h3 fw-medium text-reset">«Разработка сайтов»</span>
             </div>
             <div class="card-subtitle">
                 <span>Для начинающих</span>
             </div>
             <div class="card-price">
-                <span class="h2 fw-normal">66 000 ₽</span>
+                <span class="h2 fw-normal text-reset">66 000 ₽</span>
             </div>
         </div>
         <div class="card-sale-info">
@@ -1049,7 +1046,7 @@
                 </div>
                 <div class="remark-item__body">
                     <div class="remark-title">Для кого:</div>
-                    <div class="text-dark-blue fw-light">Новых сайтов, небольших проектов, начинающих предпринимателей</div>
+                    <div class="fw-light text-black-60">Новых сайтов, небольших проектов, начинающих предпринимателей</div>
                 </div>
             </div>
             <div class="remark-item">
@@ -1058,7 +1055,7 @@
                 </div>
                 <div class="remark-item__body">
                     <div class="remark-title">Цель:</div>
-                    <div class="text-dark-blue fw-light">обеспечить присутствие в поиске и начать привлекать первых клиентов в интернете</div>
+                    <div class="fw-light text-black-60">обеспечить присутствие в поиске и начать привлекать первых клиентов в интернете</div>
                 </div>
             </div>
         </div>
@@ -1224,13 +1221,13 @@
     <div class="card-body">
         <div class="card-heading">
             <div class="card-title">
-                <span class="h3 fw-medium">«SEO-продвижение»</span>
+                <span class="h3 fw-medium text-reset">«SEO-продвижение»</span>
             </div>
             <div class="card-subtitle">
                 <span>Для развития бизнеса</span>
             </div>
             <div class="card-price">
-                <span class="h2 fw-normal">100 200 ₽</span>
+                <span class="h2 fw-normal text-reset">100 200 ₽</span>
             </div>
         </div>
         <div class="card-sale-info">
@@ -1255,7 +1252,7 @@
                 </div>
                 <div class="remark-item__body">
                     <div class="remark-title">Для кого:</div>
-                    <div class="text-dark-blue fw-light">Новых сайтов, небольших проектов, начинающих предпринимателей</div>
+                    <div class="fw-light text-black-60">Новых сайтов, небольших проектов, начинающих предпринимателей</div>
                 </div>
             </div>
             <div class="remark-item">
@@ -1264,7 +1261,7 @@
                 </div>
                 <div class="remark-item__body">
                     <div class="remark-title">Цель:</div>
-                    <div class="text-dark-blue fw-light">обеспечить присутствие в поиске и начать привлекать первых клиентов в интернете</div>
+                    <div class="fw-light text-black-60">обеспечить присутствие в поиске и начать привлекать первых клиентов в интернете</div>
                 </div>
             </div>
         </div>
@@ -1430,13 +1427,13 @@
     <div class="card-body">
         <div class="card-heading">
             <div class="card-title">
-                <span class="h3 fw-medium">«Интернет-магазин»</span>
+                <span class="h3 fw-medium text-reset">«Интернет-магазин»</span>
             </div>
             <div class="card-subtitle">
                 <span>Для увеличения продаж</span>
             </div>
             <div class="card-price">
-                <span class="h2 fw-normal">144 000 ₽</span>
+                <span class="h2 fw-normal text-reset">144 000 ₽</span>
             </div>
         </div>
         <div class="card-sale-info">
@@ -1461,7 +1458,7 @@
                 </div>
                 <div class="remark-item__body">
                     <div class="remark-title">Для кого:</div>
-                    <div class="text-dark-blue fw-light">Новых сайтов, небольших проектов, начинающих предпринимателей</div>
+                    <div class="fw-light text-black-60">Новых сайтов, небольших проектов, начинающих предпринимателей</div>
                 </div>
             </div>
             <div class="remark-item">
@@ -1470,7 +1467,7 @@
                 </div>
                 <div class="remark-item__body">
                     <div class="remark-title">Цель:</div>
-                    <div class="text-dark-blue fw-light">обеспечить присутствие в поиске и начать привлекать первых клиентов в интернете</div>
+                    <div class="fw-light text-black-60">обеспечить присутствие в поиске и начать привлекать первых клиентов в интернете</div>
                 </div>
             </div>
         </div>
@@ -1664,7 +1661,7 @@
         <div class="container-fluid">
             <div class="section-partners-slider__heading">
                 <h2 class="h2 mb-10">Официальные партнёры</h2>
-                <div class="h5 fw-light text-gray mb-0">Мы&nbsp;работаем в&nbsp;сфере интернет-маркетинга с&nbsp;2013&nbsp;года. За&nbsp;это&nbsp;время мы&nbsp;реализовали более <strong><a href="#">200&nbsp;проектов</a></strong> совместно с&nbsp;нашими партнёрами</div>
+                <div class="h5 fw-light text-black-60 link-blue-60 mb-0">Мы&nbsp;работаем в&nbsp;сфере интернет-маркетинга с&nbsp;2013&nbsp;года. За&nbsp;это&nbsp;время мы&nbsp;реализовали более <strong><a href="#">200&nbsp;проектов</a></strong> совместно с&nbsp;нашими партнёрами</div>
             </div>
         </div>
         <div class="swiper swiperPartners">
@@ -1759,14 +1756,14 @@
     <div class="card-body">
         <div class="card-heading">
             <div class="card-title h4 fw-medium">ООО «НЕОДОМ»</div>
-            <div class="card-description fw-light text-gray mb-0">
+            <div class="card-description fw-light text-black-60 mb-0">
                 Хотим выразить нашу искреннюю благодарность за вашу великолепную работу по созданию и комплексному SEO-продвижению сайта Neodom. С самого начала нашего сотрудничества вы проявили высокий уровень профессионализма и сумели найти индивидуальный подход к нашим потребностям. Особенно приятно было видеть
             </div>
         </div>
         <div class="d-flex align-items-center justify-content-between">
             <div>
                 <div class="h4 fw-medium mb-1">Романьков А.В.</div>
-                <div class="fs-small text-gray lh-sm">Генеральный директор</div>
+                <div class="fs-small text-black-60 lh-sm">Генеральный директор</div>
             </div>
             <div>
                 <a href="#" class="btn btn-outline-black btn-l btn-animated">
@@ -1800,14 +1797,14 @@
     <div class="card-body">
         <div class="card-heading">
             <div class="card-title h4 fw-medium">ООО «Техническая платформа»</div>
-            <div class="card-description fw-light text-gray mb-0">
+            <div class="card-description fw-light text-black-60 mb-0">
                 ООО «Техническая платформа» благодарит Веб-студию «AMD Media» за проявленный профессионализм и качественное выполнение работ под ключ: Дизайн, вёрстка и программирование, а также SEO-продвижение. Благодаря чему добились значительных результатов и достигли поставленных целей на нашем новом сайте по продаже промышленного и складского
             </div>
         </div>
         <div class="d-flex align-items-center justify-content-between">
             <div>
                 <div class="h4 fw-medium mb-1">Бочков Ю.В.</div>
-                <div class="fs-small text-gray lh-sm">Генеральный директор</div>
+                <div class="fs-small text-black-60 lh-sm">Генеральный директор</div>
             </div>
             <div>
                 <a href="#" class="btn btn-outline-black btn-l btn-animated">
@@ -1841,14 +1838,14 @@
     <div class="card-body">
         <div class="card-heading">
             <div class="card-title h4 fw-medium">«Лавка садовника»</div>
-            <div class="card-description fw-light text-gray mb-0">
+            <div class="card-description fw-light text-black-60 mb-0">
                 Хочу выразить огромную благодарность за вашу помощь в продвижении нашего сайта stroish.ru. Благодаря вашим усилиям наш бизнес стал более заметным и успешным в онлайн-сфере. Сначала сотрудничества я была приятно удивлена вашим профессионализмом и внимание к деталям. Работа по привлечению клиентов и наполнению сайта
             </div>
         </div>
         <div class="d-flex align-items-center justify-content-between">
             <div>
                 <div class="h4 fw-medium mb-1">Романьков А.В.</div>
-                <div class="fs-small text-gray lh-sm">Генеральный директор</div>
+                <div class="fs-small text-black-60 lh-sm">Генеральный директор</div>
             </div>
             <div>
                 <a href="#" class="btn btn-outline-black btn-l btn-animated">
@@ -1882,14 +1879,14 @@
     <div class="card-body">
         <div class="card-heading">
             <div class="card-title h4 fw-medium">ООО «Омега СпецСталь»</div>
-            <div class="card-description fw-light text-gray mb-0">
+            <div class="card-description fw-light text-black-60 mb-0">
                 В ходе совместной работы сотрудники студии проявили себя настоящими профессионалами. Ваша команда в кратчайшие сроки провела большую аналитическую работу, разработала необходимые страницы для нашего сайта, внесла необходимые изменения и корректировки, создала логотип компании для размещения на сайтах
             </div>
         </div>
         <div class="d-flex align-items-center justify-content-between">
             <div>
                 <div class="h4 fw-medium mb-1">Юрмин Б.Б.</div>
-                <div class="fs-small text-gray lh-sm">Генеральный директор</div>
+                <div class="fs-small text-black-60 lh-sm">Генеральный директор</div>
             </div>
             <div>
                 <a href="#" class="btn btn-outline-black btn-l btn-animated">
@@ -1923,14 +1920,14 @@
     <div class="card-body">
         <div class="card-heading">
             <div class="card-title h4 fw-medium">ОАО «Завод имени В.А. Дегтярева»</div>
-            <div class="card-description fw-light text-gray mb-0">
+            <div class="card-description fw-light text-black-60 mb-0">
                 Выражаем искреннюю признательность и благодарность коллективу веб-студии «АМД Медиа» и лично Латыпову А.Р. за техническую поддержку и адаптацию каталога продукции на французский язык. Специалисты веб-студии «АМД Медиа» зарекомендовали себя профессиональными и надёжными бизнес-партнёрами. Все поставленные задачи
             </div>
         </div>
         <div class="d-flex align-items-center justify-content-between">
             <div>
                 <div class="h4 fw-medium mb-1">Бочков Ю.В.</div>
-                <div class="fs-small text-gray lh-sm">Генеральный директор</div>
+                <div class="fs-small text-black-60 lh-sm">Генеральный директор</div>
             </div>
             <div>
                 <a href="#" class="btn btn-outline-black btn-l btn-animated">
@@ -2026,7 +2023,7 @@
             <div class="card-title h4 fw-medium">
                 <a href="blog-single.html">Реферальная программа</a>
             </div>
-            <div class="card-description h6 fw-light text-gray lh-body">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
+            <div class="card-description h6 fw-light lh-body text-black-60">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
             <div class="card-tags">
                 <a href="#" class="tag-pill-primary">SEO</a>
                 <a href="#" class="tag-pill-primary">Продвижение</a>
@@ -2087,7 +2084,7 @@
             <div class="card-title h4 fw-medium">
                 <a href="blog-single.html">Скидка 10% на первый месяц работ по SEO-продвижению</a>
             </div>
-            <div class="card-description h6 fw-light text-gray lh-body">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
+            <div class="card-description h6 fw-light lh-body text-black-60">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
             <div class="card-tags">
                 <a href="#" class="tag-pill-primary">Продвижение</a>
                 <a href="#" class="tag-pill-primary">Аналитика</a>
@@ -2148,7 +2145,7 @@
             <div class="card-title h4 fw-medium">
                 <a href="blog-single.html">Реферальная программа</a>
             </div>
-            <div class="card-description h6 fw-light text-gray lh-body">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
+            <div class="card-description h6 fw-light lh-body text-black-60">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
             <div class="card-tags">
                 <a href="#" class="tag-pill-primary">SEO</a>
                 <a href="#" class="tag-pill-primary">Продвижение</a>
@@ -2209,7 +2206,7 @@
             <div class="card-title h4 fw-medium">
                 <a href="blog-single.html">Реферальная программа</a>
             </div>
-            <div class="card-description h6 fw-light text-gray lh-body">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
+            <div class="card-description h6 fw-light lh-body text-black-60">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
             <div class="card-tags">
                 <a href="#" class="tag-pill-primary">SEO</a>
                 <a href="#" class="tag-pill-primary">Продвижение</a>
@@ -2270,7 +2267,7 @@
             <div class="card-title h4 fw-medium">
                 <a href="blog-single.html">Реферальная программа</a>
             </div>
-            <div class="card-description h6 fw-light text-gray lh-body">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
+            <div class="card-description h6 fw-light lh-body text-black-60">Рекомендуйте наши услуги по разработке, дизайну, интеграции, SEO, ведению контекстной рекламы своим клиентам, партнёрам, знакомым и получайте реальные деньги. Сотрудничаем с юридическими и физическими лицами.</div>
             <div class="card-tags">
                 <a href="#" class="tag-pill-primary">SEO</a>
                 <a href="#" class="tag-pill-primary">Продвижение</a>
@@ -2375,7 +2372,7 @@
         aria-expanded="true"
         aria-controls="faq-answer-1"
         >
-            <span class="h4 fw-medium mb-0">Для чего компаниям нужна разработка сайтов?</span>
+            <span class="h4 fw-medium text-reset mb-0">Для чего компаниям нужна разработка сайтов?</span>
             <span class="accordion-icon btn btn-outline-black btn-icon-m">
                 <svg width="14" height="14">
                     <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
@@ -2386,7 +2383,7 @@
     <div id="faq-answer-1" class="collapse show" data-bs-parent="#faq">
         <div class="accordion-divider"></div>
         <div class="accordion-body">
-            <div class="accordion-content fw-light text-gray">
+            <div class="accordion-content">
                 <p><a href='#'>Создание сайта под ключ</a> – 89% заказчиков AMD Media интересуются именно этой услугой. Не важно, как давно существует Ваша фирма и насколько она масштабна. Если ваш бизнес присутствует в Интернете, а значит развивается гораздо быстрее.</p><p>Продуманный качественный сайт поможет Вам удержать внимание потенциальной аудитории и привлечь новых клиентов, получить узнаваемость бренда = увеличить прибыль. Посмотрите&nbsp;<a href='#'>портфолио</a>.</p>
             </div>
         </div>
@@ -2403,7 +2400,7 @@
         aria-expanded="false"
         aria-controls="faq-answer-2"
         >
-            <span class="h4 fw-medium mb-0">Почему сайты AMD Media – хорошо продают?</span>
+            <span class="h4 fw-medium text-reset mb-0">Почему сайты AMD Media – хорошо продают?</span>
             <span class="accordion-icon btn btn-outline-black btn-icon-m">
                 <svg width="14" height="14">
                     <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
@@ -2414,7 +2411,7 @@
     <div id="faq-answer-2" class="collapse " data-bs-parent="#faq">
         <div class="accordion-divider"></div>
         <div class="accordion-body">
-            <div class="accordion-content fw-light text-gray">
+            <div class="accordion-content">
                 <p>Наше Digital-Агентство создаст эффективный, современный сайт, который привлечет внимание потенциальных клиентов, повысит продажи. AMD Media — команда опытных специалистов. Находим персональный подход к каждому заказчику. Работаем на различных платформах и с разными технологиями для разработки ресурса, который соответствует вашим потребностям и требованиям.<br> Вторым этапом предлагаем услуги по продвижению в поисковых системах. Увеличим видимость и привлечем больше ЦА. Создаем качественный контент, оптимизируем мета-теги, ключевые слова, используем социальные сети. Закажите у нас&nbsp;<a href='#'>продвижение сайтов</a>&nbsp;и получите скидку 10% на первый месяц.</p>
             </div>
         </div>
@@ -2431,7 +2428,7 @@
         aria-expanded="false"
         aria-controls="faq-answer-3"
         >
-            <span class="h4 fw-medium mb-0">Кто работает над Вашим сайтом?</span>
+            <span class="h4 fw-medium text-reset mb-0">Кто работает над Вашим сайтом?</span>
             <span class="accordion-icon btn btn-outline-black btn-icon-m">
                 <svg width="14" height="14">
                     <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
@@ -2442,7 +2439,7 @@
     <div id="faq-answer-3" class="collapse " data-bs-parent="#faq">
         <div class="accordion-divider"></div>
         <div class="accordion-body">
-            <div class="accordion-content fw-light text-gray">
+            <div class="accordion-content">
                 <p>МАРКЕТОЛОГИ: выявляют УТП; проводят анализ вашей ниши и конкурентов; продумывают размещение всех разделов и блоков.<br>КОНТЕНТ-МЕНЕДЖЕРЫ: наполняют сайт текстами и визуальными материалами; готовят его для продвижения в поисковиках.<br>ДИЗАЙНЕРЫ: подбирают общую стилистику; разрабатывают айдентику и фирменный стиль; макет будущего ресурса.<br>SEO-СПЕЦИАЛИСТЫ: оптимизируют ваш сайт для поисковых систем и продвинут в ТОП органической выдачи.<br>ВЕБ-РАЗРАБОТЧИКИ: приступаем к верстке, перенося макеты дизайнера на HTML и CSS; настраивают формы обратной связи, интерактивные элементы и элементы управления; при необходимости интегрируют внешние сервисы.</p>
             </div>
         </div>
@@ -2459,7 +2456,7 @@
         aria-expanded="false"
         aria-controls="faq-answer-4"
         >
-            <span class="h4 fw-medium mb-0">Сколько стоит создать сайт?</span>
+            <span class="h4 fw-medium text-reset mb-0">Сколько стоит создать сайт?</span>
             <span class="accordion-icon btn btn-outline-black btn-icon-m">
                 <svg width="14" height="14">
                     <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
@@ -2470,7 +2467,7 @@
     <div id="faq-answer-4" class="collapse " data-bs-parent="#faq">
         <div class="accordion-divider"></div>
         <div class="accordion-body">
-            <div class="accordion-content fw-light text-gray">
+            <div class="accordion-content">
                 <p>Сразу на этот вопрос не ответит ни одно агентство. Стоимость любого сайта может складываться из количества страниц, сложности функционала, конкретных технических параметров. Каждый сайт уникален, поэтому цена индивидуальна.</p><p>Напишите, что вы хотите видеть в своём проекте. Разработаем ресурс любой сложности. Рекомендуем посмотреть&nbsp;<a href='#'>портфолио</a>. Поймете профессиональные возможности специалистов студии и подберете для себя идеальный формат веб-ресурса.</p>
             </div>
         </div>
@@ -2487,7 +2484,7 @@
         aria-expanded="false"
         aria-controls="faq-answer-5"
         >
-            <span class="h4 fw-medium mb-0">Можно ли заказать у вас интернет-магазин?</span>
+            <span class="h4 fw-medium text-reset mb-0">Можно ли заказать у вас интернет-магазин?</span>
             <span class="accordion-icon btn btn-outline-black btn-icon-m">
                 <svg width="14" height="14">
                     <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
@@ -2498,7 +2495,7 @@
     <div id="faq-answer-5" class="collapse " data-bs-parent="#faq">
         <div class="accordion-divider"></div>
         <div class="accordion-body">
-            <div class="accordion-content fw-light text-gray">
+            <div class="accordion-content">
                 <p>Идеальный вариант, если Вы реализуете какие-либо товары в большом количестве. Мы поможем разработать корпоративный дизайн для Вашего бизнеса. Внедрим все необходимые сторонние сервисы и создадим любой нужный функционал: заполним карточки товаров; создадим функцию корзины; добавим форму для отзывов; настроим панель управления.&nbsp;<a href='#'>Примеры наших работ</a>.</p><p>Разместим ресурс на подходящей системе управления, обеспечим надежную защиту и регулярное наполнение сайта актуальной информацией. Как происходит&nbsp;<a href='#'>разработка интернет-магазина</a>.</p>
             </div>
         </div>
@@ -2610,7 +2607,7 @@
                                         </div>
                                     </div>
                                 </form>
-                                <div class="fs-x-small text-white-blue mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
+                                <div class="fs-x-small text-white-60 mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
                             </div>
                         </div>
                     </div>
@@ -2629,8 +2626,8 @@
                             <!-- Разработка -->
                             <div class="footer-widget">
                                 <div class="footer-widget__title">
-                                    <div class="fs-22 fw-medium">Разработка</div>
-                                    <a href="#footerNavDev" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                                    <div class="fs-22 fw-medium text-black">Разработка</div>
+                                    <a href="#footerNavDev" class="fs-22 fw-medium link-black collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                         Разработка
                                         <svg width="16" height="17">
                                             <use xlink:href="img/sprite.svg#arrow-down"/>
@@ -2665,8 +2662,8 @@
                             <!-- Выбор платформы -->
                             <div class="footer-widget">
                                 <div class="footer-widget__title">
-                                    <div class="fs-22 fw-medium">Выбор платформы</div>
-                                    <a href="#footerNavPlatform" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                                    <div class="fs-22 fw-medium text-black">Выбор платформы</div>
+                                    <a href="#footerNavPlatform" class="fs-22 fw-medium link-black collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                         Выбор платформы
                                         <svg width="16" height="17">
                                             <use xlink:href="img/sprite.svg#arrow-down"/>
@@ -2713,8 +2710,8 @@
                             <!-- Дизайн -->
                             <div class="footer-widget">
                                 <div class="footer-widget__title">
-                                    <div class="fs-22 fw-medium">Дизайн</div>
-                                    <a href="#footerNavDesign" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                                    <div class="fs-22 fw-medium text-black">Дизайн</div>
+                                    <a href="#footerNavDesign" class="fs-22 fw-medium link-black collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                         Дизайн
                                         <svg width="16" height="17">
                                             <use xlink:href="img/sprite.svg#arrow-down"/>
@@ -2740,8 +2737,8 @@
                             <!-- Интеграции -->
                             <div class="footer-widget">
                                 <div class="footer-widget__title">
-                                    <div class="fs-22 fw-medium">Интеграции</div>
-                                    <a href="#footerNavIntegrations" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                                    <div class="fs-22 fw-medium text-black">Интеграции</div>
+                                    <a href="#footerNavIntegrations" class="fs-22 fw-medium link-black collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                         Интеграции
                                         <svg width="16" height="17">
                                             <use xlink:href="img/sprite.svg#arrow-down"/>
@@ -2797,8 +2794,8 @@
                             <!-- Поддержка -->
                             <div class="footer-widget">
                                 <div class="footer-widget__title">
-                                    <div class="fs-22 fw-medium">Поддержка</div>
-                                    <a href="#footerNavSupport" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                                    <div class="fs-22 fw-medium text-black">Поддержка</div>
+                                    <a href="#footerNavSupport" class="fs-22 fw-medium link-black collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                         Поддержка
                                         <svg width="16" height="17">
                                             <use xlink:href="img/sprite.svg#arrow-down"/>
@@ -2818,8 +2815,8 @@
                             <!-- Компания -->
                             <div class="footer-widget">
                                 <div class="footer-widget__title">
-                                    <div class="fs-22 fw-medium">Компания</div>
-                                    <a href="#footerNavCompany" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                                    <div class="fs-22 fw-medium text-black">Компания</div>
+                                    <a href="#footerNavCompany" class="fs-22 fw-medium link-black collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                         Компания
                                         <svg width="16" height="17">
                                             <use xlink:href="img/sprite.svg#arrow-down"/>
@@ -2854,8 +2851,8 @@
                             <!-- Проекты -->
                             <div class="footer-widget">
                                 <div class="footer-widget__title">
-                                    <div class="fs-22 fw-medium">Проекты</div>
-                                    <a href="#footerNavProjects" class="fs-22 fw-medium collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                                    <div class="fs-22 fw-medium text-black">Проекты</div>
+                                    <a href="#footerNavProjects" class="fs-22 fw-medium link-black collapse-link collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                         Проекты
                                         <svg width="16" height="17">
                                             <use xlink:href="img/sprite.svg#arrow-down"/>
@@ -2898,7 +2895,7 @@
         <div class="footer__copyright-bar">
             <div class="container-fluid">
                 <div class="rounded-3 p-15 p-xl-20 bg-white">
-                    <div class="copyright-text text-center text-gray"><span>2014–2025г. © ООО «АМД Медиа» /</span> <span>сайт не является публичной офертой 2025г. /</span> <span><a href="#">Политика конфиденциальности</a></span></div>
+                    <div class="copyright-text text-center text-black-60 link-blue-60"><span>2014–2025г. © ООО «АМД Медиа» /</span> <span>сайт не является публичной офертой 2025г. /</span> <span><a href="#">Политика конфиденциальности</a></span></div>
                 </div>
             </div>
         </div>

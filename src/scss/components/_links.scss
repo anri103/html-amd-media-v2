@@ -5,19 +5,24 @@ a {
     text-decoration: none;
 }
 
-.text-muted {
-    --bs-link-color-rgb: var(--theme-blue-rgb);
-    --bs-link-hover-color-rgb: var(--bs-body-color-rgb);
-    --bs-link-opacity: 0.6;
+.link-white {
+    --bs-link-color-rgb: var(--theme-white-rgb);
+    --bs-link-hover-color-rgb: var(--theme-white-60-rgb);
 }
 
-.text-gray {
-    --bs-link-color-rgb: 133, 142, 242;
+.link-black {
+    --bs-link-color-rgb: var(--theme-black-rgb);
     --bs-link-hover-color-rgb: var(--theme-blue-rgb);
 }
 
-.link-opacity-60 {
-    --bs-link-opacity: 0.6;
+.link-blue {
+    --bs-link-color-rgb: var(--theme-blue-rgb);
+    --bs-link-hover-color-rgb: var(--theme-black-rgb);
+}
+
+.link-blue-60 {
+    --bs-link-color-rgb: var(--theme-blue-60-rgb);
+    --bs-link-hover-color-rgb: var(--theme-blue-rgb);
 }
 
 .tag-pill-primary {
