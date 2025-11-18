@@ -10,103 +10,360 @@
     <section class="section">
         <div class="container-fluid">
             <!-- row -->
-            <div class="row">
+            <div class="row gy-15 gy-md-20 gy-xxl-30">
 
-                <div class="col-lg-7">
-                    <!-- widget -->
-                    <div class="rounded-wrapper bg-white">
-                        <!-- breadcrumb -->
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb mb-20 mb-xl-30">
-                                <li class="breadcrumb-item">
-                                    <a href="index.html">Главная</a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="blog.html">Блог</a>
-                                </li>
-                                <li class="breadcrumb-item active" aria-current="page">
-                                    <span>Сайт-визитка: особенности и преимущества</span>
-                                </li>
-                            </ol>
-                        </nav>
-                        <!-- blog-meta -->
-                        <div class="blog-meta"></div>
-                        <!-- title -->
-                        <div class="h2 mb-10 mb-xxl-20">Сайт-визитка: особенности и&nbsp;преимущества</div>
-                        <!-- short description -->
-                        <div class="text-box fw-light text-black-60">
-                            <p>Не секрет, что почти весь бизнес перешёл в онлайн. Купить в интернете можно все что угодно: от хлеба до кухонного гарнитура. Не каждому нужен многостраничник с каталогами, десятками разделов и сотнями услуг. Рассказываем, что такое сайт-визитка, в чем её отличие от лендинга и какие преимущества она даёт.</p>
-                            <p>Сайт-визитка — небольшой сайт, основная функция которого отражается в названии. На таком ресурсе несколько разделов и страниц, которые содержат информацию о товаре, услуге или человеке.</p>
+                <div class="col-xl-7 col-xxl-8">
+                    <div class="d-flex flex-column gap-15 gap-md-20 gap-xxl-30 h-100">
+
+                        <!-- widget -->
+                        <div class="rounded-wrapper bg-white">
+                            <!-- breadcrumb -->
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-20 mb-xl-30">
+                                    <li class="breadcrumb-item">
+                                        <a href="index.html">Главная</a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="blog.html">Блог</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        <span>Сайт-визитка: особенности и преимущества</span>
+                                    </li>
+                                </ol>
+                            </nav>
+                            <!-- blog-meta -->
+                            <div class="blog-meta d-flex flex-wrap row-gap-1 column-gap-40 mb-15 mb-xl-30">
+                                <!-- date -->
+                                <div class="d-flex align-items-center gap-1 fs-small fw-light text-black lh-1">
+                                    <svg class="flex-shrink-0" width="24" height="24">
+                                        <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                                    </svg>
+                                    <span>16.08.2025</span>
+                                </div>
+                                <!-- views -->
+                                <div class="d-flex align-items-center gap-1 fs-small fw-light text-black lh-1">
+                                    <svg class="flex-shrink-0" width="24" height="24">
+                                        <use xlink:href="img/sprite.svg#icon-eye"></use>
+                                    </svg>
+                                    <span>166</span>
+                                </div>
+                                <!-- read-time -->
+                                <div class="d-flex align-items-center gap-1 fs-small fw-light text-black lh-1">
+                                    <svg class="flex-shrink-0" width="24" height="24">
+                                        <use xlink:href="img/sprite.svg#icon-timer"></use>
+                                    </svg>
+                                    <span>7 мин</span>
+                                </div>
+                            </div>
+                            <!-- title -->
+                            <div class="h2 mb-10 mb-xxl-20">Сайт-визитка: особенности и&nbsp;преимущества</div>
+                            <!-- short description -->
+                            <div class="text-box fw-light text-black-60">
+                                <p>Не секрет, что почти весь бизнес перешёл в онлайн. Купить в интернете можно все что угодно: от хлеба до кухонного гарнитура. Не каждому нужен многостраничник с каталогами, десятками разделов и сотнями услуг. Рассказываем, что такое сайт-визитка, в чем её отличие от лендинга и какие преимущества она даёт.</p>
+                                <p>Сайт-визитка — небольшой сайт, основная функция которого отражается в названии. На таком ресурсе несколько разделов и страниц, которые содержат информацию о товаре, услуге или человеке.</p>
+                            </div>
                         </div>
-                    </div>
-    
-                    <!-- widget -->
-                    <div class="rounded-wrapper bg-blue-gradient">
-                        <div class="h3 fw-medium text-white mb-10 mb-xl-20">Содержание</div>
-                        <ul class="list-unstyled d-flex flex-column gap-3 fw-light link-white mb-0">
-                            <li>
-                                <a href="#">Аудитория Вконтакте и Однокласников</a>
-                            </li>
-                            <li>
-                                <a href="#">Где найти то, что потерял?</a>
-                            </li>
-                            <li>
-                                <a href="#">Я нашёл то, что искал, что делать?</a>
-                            </li>
-                            <li>
-                                <a href="#">Где я? И что делать?</a>
-                            </li>
-                            <li>
-                                <a href="#">Это свет в конце тунеля или поезд?</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        
+                        <!-- widget: topics -->
+                        <div class="position-relative overflow-hidden rounded-wrapper bg-blue-gradient">
+                            <!-- bg-absolute-img -->
+                            <img class="img-fluid position-absolute top-0 end-0 h-100" src="img/blog/bg-topics.png" alt="...">
+                            <div class="position-relative">
+                                <div class="h3 fw-medium text-white mb-10 mb-xl-20">Содержание</div>
+                                <ul class="list-unstyled d-flex flex-column gap-3 fw-light link-white mb-0">
+                                    <li>
+                                        <a href="#">Аудитория Вконтакте и Однокласников</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Где найти то, что потерял?</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Я нашёл то, что искал, что делать?</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Где я? И что делать?</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Это свет в конце тунеля или поезд?</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-                <div class="col-lg-5">
-                    <!-- widget -->
-                    <div class="rounded-wrapper bg-white">
-                        <!-- author -->
-                        <div class="d-flex align-items-center gap-10 mb-10 mb-xl-20 mb-xxl-30">
-                            <div class="flex-shrink-0">
-                                <!-- avatar -->
-                                <div class="author-avatar-small overflow-hidden bg-blue-light rounded">
-                                    <a href="blog-author.html">
-                                        <img src="img/blog/author-avatar-big.png" alt="...">
+                        <!-- widget -->
+                        <div class="rounded-wrapper bg-white">
+
+                            <!-- content -->
+                            <div class="blog-content fw-light">
+                                <h3>В чем отличие от лендинга?</h3>
+                                <p>Сайт-визитка — небольшой сайт, основная функция которого отражается в названии. На таком ресурсе несколько разделов и страниц, которые содержат информацию о товаре, услуге или человеке.</p>
+                                <p class="my-4 my-xl-5">
+                                    <img class="img-fluid" src="img/blog/blog-content.jpg" alt="...">
+                                </p>
+                                <p>Лендинг создают для того, чтобы продать один определённый товар или услугу. Это одна страница с ярким и запоминающимся оформлением, минимумом текста. Лендинг содержит CTA и выгоду для покупателя, остальная информация избыточна.</p>
+                                <p>Визитка показывает продукт и ненавязчиво предлагает совершить целевое действие. На таких сайтах больше информации и разделов: история, портфолио, сертификаты, достаточно подробные описания сервиса и товаров.</p>
+                                <div class="position-relative overflow-hidden rounded p-15 p-xl-20 p-xxl-30 bg-blue-gradient my-4 my-xl-5">
+                                    <!-- bg-absolute-img -->
+                                    <img class="img-fluid position-absolute top-0 end-0 h-100" src="img/blog/bg-blog-cta.png" alt="...">
+                                    <div class="position-relative">
+                                        <div class="h4 text-white">Почему ваш сайт не попадает в ТОП?</div>
+                                        <div class="text-white text-opacity-80" style="max-width: 620px;">Узнайте 3 ключевые причины и простые шаги для исправления — бесплатно в письме на вашу почту</div>
+                                        <div class="mt-20 mt-md-50">
+                                            <a href="#" class="btn btn-secondary btn-m w-100 w-md-auto">Хочу узнать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 style="color: #F74251;">Визитка — для репутации, лендинг — для продажи</h3>
+                                <p>Для фрилансеров, ИП и прочего малого бизнеса сайт-визитка — полезный инструмент для создания и контроля имиджа.</p>
+                                <ul class="list-unstyled d-flex flex-column gap-20 gap-xxl-30">
+                                    <li class="d-flex gap-10">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid" src="img/blog/check.png" alt="...">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4>Возможность показать свои работы</h4>
+                                            <p>Визитку можно (и нужно) использовать как портфолио. Важная функция для фотографов, дизайнеров, веб-разработчиков и всех, кто создаёт контент.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex gap-10">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid" src="img/blog/check.png" alt="...">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4>Доступность 24/7</h4>
+                                            <p>Ресурс доступен в любое время дня, в любом часовом поясе. Пользователь может заполнить форму обратной связи или заказать обратный звонок. Адаптивная вёрстка улучшает UI с мобильных устройств и планшетов</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex gap-10">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid" src="img/blog/check.png" alt="...">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4>SEO</h4>
+                                            <p>Сайт-визитка оптимизируется (хотя бы минимально), стоит проиндексировать страницы и улучшить выдачу в поисковых системах</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex gap-10">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid" src="img/blog/check.png" alt="...">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4>Доверие и отзывы</h4>
+                                            <p>Мнение других покупателей нередко становится решающим для нового клиента. Отзывы (комментарии, фото или видео) помогут посетителям узнать больше о компании и качестве услуг.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex gap-10">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid" src="img/blog/check.png" alt="...">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4>Полезный контент</h4>
+                                            <p>Визитку можно использовать как блог. Уникальная информация, опубликованная на портале, увеличивает трафик.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex gap-10">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid" src="img/blog/check.png" alt="...">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4>Связующее звено</h4>
+                                            <p>Веб-сайт — связующее звеном между соцсетями, email рассылкой и офлайн взаимодействием с клиентами. Создание эко-системы полезно для бренда, это может увеличить узнаваемость и продаваемость</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="my-4 my-xl-5">
+                                    <div class="row g-2">
+                                        <div class="col-xl-6">
+                                            <img class="img-fluid rounded" src="img/blog/card-blog-01.jpg" alt="...">
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <img class="img-fluid rounded" src="img/blog/card-blog-01.jpg" alt="...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>Что добавить на сайт?</h3>
+                                <p>Контент варьируется в зависимости от товаров и сервиса. Чаще всего на визитки добавляют следующие разделы:</p>
+                                <div class="rounded p-15 p-xl-20 bg-blue-light mb-3">
+                                    <ul class="mb-0">
+                                        <li>О компании/О себе</li>
+                                        <li>Услуги или товары (cоветуем добавить качественные фотографии или видео, заказчик хочет видеть результаты работы)</li>
+                                        <li>Отзывы клиентов</li>
+                                        <li>FAQ</li>
+                                        <li>Форма обратной связи</li>
+                                        <li>Подписка на рассылку</li>
+                                        <li>Контакты</li>
+                                    </ul>
+                                </div>
+                                <h3>Как сделать сайт-визитку?</h3>
+                                <p>Создать небольшой сайт с несколькими разделами можно с помощью конструкторов, вроде: Tilda или Ucraft. Они не требуют навыков программирования и дизайна, страницы собираются по шаблонам и заготовкам. У таких ресурсов ограниченный функционал, а ещё за доступ придётся заплатить</p>
+                                <p>Если есть навыки программирования, то можно выбрать WordPress. Он достаточно прост в управлении и позволяет легко редактировать контент. Базовые шаблоны для WP не такие красивые и стильные, как для конструкторов. Хороший дизайн придётся придумывать самостоятельно</p>
+                                <div class="rounded p-15 p-xl-20 bg-blue-light">
+                                    <div class="d-flex flex-column flex-md-row gap-10">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid" src="img/blog/blog-content-light.png" alt="...">
+                                        </div>
+                                        <div class="text-box">
+                                            <p>АМД Медиа занимается веб-проектированием и digital-разработкой уже 10 лет. Поможем с разработкой и дизайном сайта-визитки. Заказать веб-сайт можно по телефону или через форму обратной связи. Заполните бриф, все остальное мы берём на себя!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- share -->
+                            <div class="rounded p-15 p-xl-20 bg-blue-light mt-15 mt-xl-40 mt-xxl-50">
+                                <div class="d-flex flex-wrap justify-content-center gap-10">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                            <path d="M21.6666 6.66663V13.3333C10.7083 15.0466 6.63328 24.6466 4.99995 33.3333C4.93828 33.6766 13.9733 23.3966 21.6666 23.3333V30L34.9999 18.3333L21.6666 6.66663Z" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <a href="#">
+                                        <img src="img/blog/author-telegram.svg" width="40" height="40" alt="...">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/blog/author-whatsapp.svg" width="40" height="40" alt="...">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/blog/author-ok.svg" width="40" height="40" alt="...">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/blog/author-max.png" width="40" height="40" alt="...">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/blog/author-vk.svg" width="40" height="40" alt="...">
                                     </a>
                                 </div>
                             </div>
-                            <div class="flex-grow-1">
-                                <div class="small text-black-60">Автор статьи</div>
-                                <div class="h4 fw-medium link-black mb-0">
-                                    <a href="blog-author.html">Виталий Кучеров</a>
-                                </div>
-                            </div>
+
                         </div>
-                        <!-- tags -->
-                        <div class="d-flex flex-wrap gap-1 mb-10 mb-xl-20 mb-xxl-30">
-                            <a href="#" class="tag-pill-primary">SEO</a>
-                            <a href="#" class="tag-pill-primary">Продвижение</a>
-                            <a href="#" class="tag-pill-primary">Аналитика</a>
-                            <a href="#" class="tag-pill-primary">Стратегия</a>
-                            <a href="#" class="tag-pill-primary">Развитие</a>
-                        </div>
-                        <!-- socials -->
-                        <div class="d-flex flex-wrap gap-10">
-                            <a href="#">
-                                <img src="img/blog/author-telegram.svg" alt="...">
-                            </a>
-                            <a href="#">
-                                <img src="img/blog/author-telegram.svg" alt="...">
-                            </a>
-                            <a href="#">
-                                <img src="img/blog/author-telegram.svg" alt="...">
-                            </a>
-                        </div>
+
                     </div>
                 </div>
 
+                <div class="col-xl-5 col-xxl-4">
+                    <div class="d-flex flex-column gap-15 gap-md-20 gap-xxl-30 h-100">
 
+                        <!-- widget -->
+                        <div class="rounded-wrapper p-xxl-40 bg-white">
+                            <!-- author -->
+                            <div class="d-flex align-items-center gap-10 mb-10 mb-xl-20 mb-xxl-30">
+                                <div class="flex-shrink-0">
+                                    <!-- avatar -->
+                                    <div class="author-avatar-small overflow-hidden bg-blue-light rounded">
+                                        <a href="blog-author.html">
+                                            <img src="img/blog/author-avatar-big.png" alt="...">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="small text-black-60">Автор статьи</div>
+                                    <div class="h4 fw-medium link-black mb-0">
+                                        <a href="blog-author.html">Виталий Кучеров</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tags -->
+                            <div class="d-flex flex-wrap gap-1 mb-10 mb-xl-20 mb-xxl-30">
+                                <a href="#" class="tag-pill-primary">SEO</a>
+                                <a href="#" class="tag-pill-primary">Продвижение</a>
+                                <a href="#" class="tag-pill-primary">Аналитика</a>
+                                <a href="#" class="tag-pill-primary">Стратегия</a>
+                                <a href="#" class="tag-pill-primary">Развитие</a>
+                            </div>
+                            <!-- socials -->
+                            <div class="d-flex flex-wrap gap-10">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <path d="M21.6666 6.66663V13.3333C10.7083 15.0466 6.63328 24.6466 4.99995 33.3333C4.93828 33.6766 13.9733 23.3966 21.6666 23.3333V30L34.9999 18.3333L21.6666 6.66663Z" stroke="#100102" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <a href="#">
+                                    <img src="img/blog/author-telegram.svg" width="40" height="40" alt="...">
+                                </a>
+                                <a href="#">
+                                    <img src="img/blog/author-whatsapp.svg" width="40" height="40" alt="...">
+                                </a>
+                                <a href="#">
+                                    <img src="img/blog/author-ok.svg" width="40" height="40" alt="...">
+                                </a>
+                                <a href="#">
+                                    <img src="img/blog/author-max.png" width="40" height="40" alt="...">
+                                </a>
+                                <a href="#">
+                                    <img src="img/blog/author-vk.svg" width="40" height="40" alt="...">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- widget -->
+                        <div class="rounded-wrapper p-xxl-40 bg-gray-gradient">
+                            <div class="d-flex flex-column">
+                                <div class="text-center">
+                                    <img class="img-fluid" src="img/blog/blog-widget-seo-gray.png" alt="..." style="filter: drop-shadow(0px 30px 10px rgba(86, 93, 101, 0.4));">
+                                </div>
+                                <div class="h4 fw-medium mb-10 mb-xl-20">Поднимите свой сайт в&nbsp;топ&nbsp;Яндекса</div>
+                                <div class="d-flex flex-column gap-10 fw-light text-black mb-0">
+                                    <div class="d-flex align-items-center gap-10">
+                                        <img class="img-fluid flex-shrink-0" src="img/blog/check.png" width="24" height="24" alt="...">
+                                        <div>Рост трафика уже через 30 дней</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-10">
+                                        <img class="img-fluid flex-shrink-0" src="img/blog/check.png" width="24" height="24" alt="...">
+                                        <div>Бесплатный SEO-аудит сайта</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-10">
+                                        <img class="img-fluid flex-shrink-0" src="img/blog/check.png" width="24" height="24" alt="...">
+                                        <div>Гарантия прозрачных результатов</div>
+                                    </div>
+                                </div>
+                                <div class="mt-20">
+                                    <a href="#" class="btn btn-outline-black btn-animated btn-m w-100">
+                                        <div class="animated-content">
+                                            <div class="animated-content__default">
+                                                <span>Получить консультацию</span>
+                                            </div>
+                                            <div class="animated-content__hidden">
+                                                <span>Получить консультацию</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- widget -->
+                        <div class="rounded-wrapper p-xxl-40 bg-red-gradient">
+                            <div class="h4 fw-medium text-white mb-10 mb-xl-20">Поднимите свой сайт в&nbsp;топ&nbsp;Яндекса</div>
+                            <div class="d-flex flex-column gap-10 fw-light text-white mb-0">
+                                <div class="d-flex align-items-center gap-10">
+                                    <img class="img-fluid flex-shrink-0" src="img/blog/check.png" width="24" height="24" alt="...">
+                                    <div>Рост трафика уже через 30 дней</div>
+                                </div>
+                                <div class="d-flex align-items-center gap-10">
+                                    <img class="img-fluid flex-shrink-0" src="img/blog/check.png" width="24" height="24" alt="...">
+                                    <div>Бесплатный SEO-аудит сайта</div>
+                                </div>
+                                <div class="d-flex align-items-center gap-10">
+                                    <img class="img-fluid flex-shrink-0" src="img/blog/check.png" width="24" height="24" alt="...">
+                                    <div>Гарантия прозрачных результатов</div>
+                                </div>
+                            </div>
+                            <div class="mt-20">
+                                <a href="#" class="btn btn-white btn-m btn-animated w-100">
+                                    <div class="animated-content">
+                                        <div class="animated-content__default">
+                                            <span>Telegram-канал</span>
+                                        </div>
+                                        <div class="animated-content__hidden">
+                                            <span>Telegram-канал</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
         </div>

@@ -54,6 +54,10 @@ body {
     background-image: var(--theme-red-gradient);
 }
 
+.bg-gray-gradient {
+    background-image: var(--theme-gray-gradient);
+}
+
 .bg-blue-light {
     background-color: var(--theme-blue-light) !important;
 }
@@ -76,6 +80,10 @@ body {
 
 .mt-15 {
     margin-top: 15px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
 }
 
 .mb-10 {
@@ -112,6 +120,16 @@ body {
     gap: 20px !important;
 }
 
+.column-gap-40 {
+    column-gap: 40px !important;
+}
+
+// gutters
+
+.gy-15 {
+    --bs-gutter-y: 15px;
+}
+
 // Максимальная ширина
 
 @include media-breakpoint-down(xl) {
@@ -123,7 +141,15 @@ body {
 // Минимальная ширина
 
 @include media-breakpoint-up(md) {
+    .w-md-auto {
+        width: auto !important;
+    }
+
     // margins
+
+    .mt-md-50 {
+        margin-top: 50px !important;
+    }
 
     .mb-md-20 {
         margin-bottom: 20px !important;
@@ -142,6 +168,12 @@ body {
     .gap-md-20 {
         gap: 20px !important;
     }
+
+    // gutters
+
+    .gy-md-20 {
+        --bs-gutter-y: 20px;
+    }
 }
 
 @include media-breakpoint-up(xl) {
@@ -157,8 +189,16 @@ body {
 
     // margins
 
+    .mt-xl-40 {
+        margin-top: 40px !important;
+    }
+
     .mb-xl-20 {
         margin-bottom: 20px !important;
+    }
+
+    .mb-xl-30 {
+        margin-bottom: 30px !important;
     }
 
     .mb-xl-40 {
@@ -185,7 +225,25 @@ body {
 }
 
 @include media-breakpoint-up(xxl) {
+    // paddings
+
+    .p-xxl-30 {
+        padding: 30px !important;
+    }
+
+    .p-xxl-40 {
+        padding: 40px !important;
+    }
+
     // margins
+
+    .mt-xxl-50 {
+        margin-top: 50px !important;
+    }
+
+    .mb-xxl-20 {
+        margin-bottom: 20px !important;
+    }
 
     .mb-xxl-30 {
         margin-bottom: 30px !important;
@@ -207,6 +265,12 @@ body {
 
     .gap-xxl-30 {
         gap: 30px !important;
+    }
+
+    // gutters
+
+    .gy-xxl-30 {
+        --bs-gutter-y: 30px;
     }
 }
 

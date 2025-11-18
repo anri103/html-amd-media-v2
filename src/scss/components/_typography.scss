@@ -82,11 +82,21 @@ h6,
 }
 
 .text-white-60 {
-    color: var(--theme-white-60) !important;
+    --bs-text-opacity: 1;
+    color: rgba(var(--theme-white-60-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-black-60 {
-    color: var(--theme-black-60) !important;
+    --bs-text-opacity: 1;
+    color: rgba(var(--theme-black-60-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-opacity-60 {
+    --bs-text-opacity: 0.6;
+}
+
+.text-opacity-80 {
+    --bs-text-opacity: 0.8;
 }
 
 .lh-body {

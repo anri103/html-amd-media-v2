@@ -110,6 +110,21 @@
     --bs-gradient: none;
 }
 
+.btn-white {
+    --bs-btn-color: var(--theme-black);
+    --bs-btn-bg: var(--theme-white);
+    --bs-btn-border-color: var(--theme-white);
+    --bs-btn-hover-color: var(--theme-white);
+    --bs-btn-hover-bg: var(--theme-black);
+    --bs-btn-hover-border-color: var(--theme-black);
+    --bs-btn-active-color: var(--theme-white);
+    --bs-btn-active-bg: var(--theme-black);
+    --bs-btn-active-border-color: var(--theme-black);
+    --bs-btn-disabled-color: var(--theme-black);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--theme-black);
+}
+
 .btn-animated {
     --bs-btn-line-height: 1.5;
 
