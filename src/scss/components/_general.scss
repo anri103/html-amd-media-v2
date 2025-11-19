@@ -68,6 +68,10 @@ body {
     padding: 15px !important;
 }
 
+.p-40 {
+    padding: 40px !important;
+}
+
 .pb-10 {
     padding-bottom: 10px !important;
 }
@@ -96,6 +100,10 @@ body {
 
 .mb-20 {
     margin-bottom: 20px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
 }
 
 .mb-40 {
@@ -140,7 +148,17 @@ body {
 
 // Минимальная ширина
 
+@include media-breakpoint-up(sm) {
+    .grid-cols-sm-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @include media-breakpoint-up(md) {
+    .grid-cols-md-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .w-md-auto {
         width: auto !important;
     }
@@ -179,6 +197,10 @@ body {
 @include media-breakpoint-up(xl) {
     .grid-cols-xl-2 {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-cols-xl-3 {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     // paddings

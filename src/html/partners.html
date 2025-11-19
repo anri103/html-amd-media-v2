@@ -31,9 +31,50 @@
                 </div>
 
                 <!-- content -->
-                 
-                <!-- section-404 -->
-                @@include('partials/section-404.html')
+                <div class="d-grid grid-cols-sm-2 grid-cols-xl-3 gap-15 gap-md-20 gap-xxl-30 mb-20 mb-xxl-30">
+                    <!-- card -->
+                    @@include('partials/card-partner.html', {
+                        "imgPreview": "img/partners/bitrix.svg",
+                        "title": "Битрикс24",
+                        "description": "Официальный статус партнёра Битрикс24 позволяет нам предоставлять льготные условия подключения нашим клиентам",
+                        "imgSmall": "img/partners/bitrix-sm.svg"
+                    })
+                    <!-- card -->
+                    @@include('partials/card-partner.html', {
+                        "imgPreview": "img/partners/1c.svg",
+                        "title": "1С-Битрикс",
+                        "description": "Скидка 20% на работы с CMS Битрикс для наших клиентов благодаря статусу официального партнёра",
+                        "imgSmall": "img/partners/1c-sm.svg"
+                    })
+                    <!-- card -->
+                    @@include('partials/card-partner.html', {
+                        "imgPreview": "img/partners/tbank.svg",
+                        "title": "Т-Банк эквайринг",
+                        "description": "Индивидуальные условия для каждого клиента. По партнерскому договору имеем личную скидку, которой готовы поделиться с вами",
+                        "imgSmall": "img/partners/tbank-sm.svg"
+                    })
+                    <!-- card -->
+                    @@include('partials/card-partner.html', {
+                        "imgPreview": "img/partners/jivo.svg",
+                        "title": "Jivosite",
+                        "description": "Предоставим пробную версию на 30 дней бесплатно. Далее подберем самый выгодный тариф под ваши потребности",
+                        "imgSmall": "img/partners/jivo-sm.svg"
+                    })
+                    <!-- card -->
+                    @@include('partials/card-partner.html', {
+                        "imgPreview": "img/partners/cs-cart.svg",
+                        "title": "CS-Cart",
+                        "description": "Скидка 10% на работы с CS-Cart для наших клиентов благодаря статусу официального партнера",
+                        "imgSmall": "img/partners/cs-cart-sm.svg"
+                    })
+                    <!-- card -->
+                    @@include('partials/card-partner.html', {
+                        "imgPreview": "img/partners/roistat.png",
+                        "title": "Roistat",
+                        "description": "Получите 14 дней бесплатного доступа к сервису сквозной аналитики и 2000 руб. на счет при подключении через наше агентство",
+                        "imgSmall": "img/partners/roistat-sm.png"
+                    })
+                </div>
 
             </div>
         </div>
