@@ -53,7 +53,6 @@
     position: relative;
     padding-top: 81px;
     padding-bottom: 30px;
-    margin: 0;
     background-color: #000;
 
     .home-hero-video {
@@ -997,4 +996,13 @@
 .section-404 {
     position: relative;
     overflow: hidden;
+}
+
+/*------------------------------------------------------------------
+[ page services ]*/
+
+/* section-stages-slider */
+
+.section-stages-slider {
+    overflow-x: hidden;
 }

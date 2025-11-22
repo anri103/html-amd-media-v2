@@ -197,3 +197,32 @@
         }
     }
 }
+
+/* swiperStages */
+
+.swiperStages {
+    overflow: visible;
+    
+    .swiper-slide {
+        width: auto;
+    }
+
+    .card-stage {
+        width: 300px;
+        height: 300px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .card-stage {
+            width: 320px;
+            height: 320px;
+        }   
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .card-stage {
+            width: 380px;
+            height: 380px;
+        }   
+    }
+}

@@ -1,0 +1,27 @@
+@@if (lastItem) {
+<div class="card card-stage bg-blue-gradient">
+    <div class="card-body bg-img-bottom" style="background-image: url(img/services/bg-card-stage-last.png);">
+        <div class="d-flex flex-column justify-content-between h-100">
+            <div>
+                <div class="h4 fw-medium text-white mb-10">@@title</div>
+                <div class="fw-light text-white-60">@@description</div>
+            </div>
+            <div>
+                <a href="#" class="btn btn-black btn-m w-100">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (!lastItem) {
+<div class="card card-stage">
+    <div class="card-body">
+        <div class="d-flex flex-column justify-content-between h-100">
+            <div>
+                <div class="fw-light text-black">@@description</div>
+            </div>
+            <div class="fs-80 fw-light">@@order</div>
+        </div>
+    </div>
+</div>
+}

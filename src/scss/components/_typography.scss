@@ -81,6 +81,10 @@ h6,
     font-size: 22px;
 }
 
+.fs-80 {
+    font-size: 80px;
+}
+
 .text-white-60 {
     --bs-text-opacity: 1;
     color: rgba(var(--theme-white-60-rgb), var(--bs-text-opacity)) !important;

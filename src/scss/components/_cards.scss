@@ -834,3 +834,27 @@
         --bs-card-spacer-x: 40px;
     }
 }
+
+/* card-stage */
+
+.card-stage {
+    --bs-card-spacer-y: 20px;
+    --bs-card-spacer-x: 15px;
+    --bs-card-border-radius: var(--bs-border-radius-lg);
+    --bs-card-border-color: transparent;
+    --bs-card-bg: var(--theme-white);
+
+    .bg-img-bottom {
+        background-size: contain;
+    }
+
+    @include media-breakpoint-up(xl) {
+        --bs-card-spacer-y: 30px;
+        --bs-card-spacer-x: 30px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        --bs-card-spacer-y: 40px;
+        --bs-card-spacer-x: 40px;
+    }
+}

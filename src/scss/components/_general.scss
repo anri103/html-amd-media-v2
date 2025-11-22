@@ -46,6 +46,12 @@ body {
     background-size: cover;
 }
 
+.bg-img-bottom {
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .bg-blue-gradient {
     background-image: var(--theme-blue-gradient);
 }
@@ -126,6 +132,10 @@ body {
 
 .gap-20 {
     gap: 20px !important;
+}
+
+.gap-30 {
+    gap: 30px !important;
 }
 
 .column-gap-40 {
@@ -244,6 +254,10 @@ body {
     .gap-xl-30 {
         gap: 30px !important;
     }
+
+    .gap-xl-40 {
+        gap: 40px !important;
+    }
 }
 
 @include media-breakpoint-up(xxl) {
@@ -287,6 +301,10 @@ body {
 
     .gap-xxl-30 {
         gap: 30px !important;
+    }
+
+    .gap-xxl-50 {
+        gap: 50px !important;
     }
 
     // gutters

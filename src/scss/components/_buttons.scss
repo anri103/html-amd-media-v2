@@ -125,6 +125,21 @@
     --bs-btn-disabled-border-color: var(--theme-black);
 }
 
+.btn-black {
+    --bs-btn-color: var(--theme-white);
+    --bs-btn-bg: var(--theme-black);
+    --bs-btn-border-color: var(--theme-black);
+    --bs-btn-hover-color: var(--theme-black);
+    --bs-btn-hover-bg: var(--theme-white);
+    --bs-btn-hover-border-color: var(--theme-white);
+    --bs-btn-active-color: var(--theme-black);
+    --bs-btn-active-bg: var(--theme-white);
+    --bs-btn-active-border-color: var(--theme-white);
+    --bs-btn-disabled-color: var(--theme-white);
+    --bs-btn-disabled-bg: var(--theme-black);
+    --bs-btn-disabled-border-color: var(--theme-black);
+}
+
 .btn-animated {
     --bs-btn-line-height: 1.5;
 

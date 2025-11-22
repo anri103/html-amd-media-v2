@@ -4,6 +4,7 @@ const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const fileInclude = require('gulp-file-include');
 const del = require('del');
+const sourcemaps = require('gulp-sourcemaps');
 
 // ===== Очистка dist =====
 function clean() {
@@ -21,8 +22,19 @@ function html() {
     .pipe(browserSync.stream());
 }
 
-// ===== SCSS: стили проекта =====
-function scssStyle() {
+// ===== SCSS: стили проекта (для разработки с sourcemaps) =====
+function scssStyleDev() {
+  return gulp.src('src/scss/main.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/css/'))
+    .pipe(browserSync.stream());
+}
+
+// ===== SCSS: стили проекта (для продакшена без sourcemaps) =====
+function scssStyleBuild() {
   return gulp.src('src/scss/main.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(rename('style.min.css'))
@@ -93,7 +105,7 @@ function serve() {
 // ===== Наблюдение за изменениями =====
 function watch() {
   gulp.watch('src/html/**/*.html', html);
-  gulp.watch('src/scss/**/*.scss', scssStyle);
+  gulp.watch('src/scss/**/*.scss', scssStyleDev);
   gulp.watch('src/css/**/*.css', css);
   gulp.watch('src/js/**/*.js', scripts);
   gulp.watch('src/img/**/*', images);
@@ -101,10 +113,17 @@ function watch() {
 }
 
 // ===== Сборка =====
-const build = gulp.series(clean, gulp.parallel(html, scssStyle, css, scripts, images, fonts));
+const build = gulp.series(
+  clean,
+  gulp.parallel(html, scssStyleBuild, css, scripts, images, fonts)
+);
 
 // ===== Разработка =====
-const dev = gulp.series(build, gulp.parallel(serve, watch));
+const dev = gulp.series(
+  clean,
+  gulp.parallel(html, scssStyleDev, css, scripts, images, fonts),
+  gulp.parallel(serve, watch)
+);
 
 // ===== Объединённая задача для вендоров =====
 const vendors = gulp.parallel(vendorsCss, vendorsJs);
@@ -112,7 +131,8 @@ const vendors = gulp.parallel(vendorsCss, vendorsJs);
 // ===== Экспорт задач =====
 exports.clean = clean;
 exports.html = html;
-exports.scssStyle = scssStyle;
+exports.scssStyleDev = scssStyleDev;
+exports.scssStyleBuild = scssStyleBuild;
 exports.css = css;
 exports.scripts = scripts;
 exports.images = images;

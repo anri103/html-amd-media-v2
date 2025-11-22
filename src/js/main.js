@@ -130,4 +130,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // swiperStages
+    const swiperStages = document.querySelector('.swiperStages');
+    if (swiperStages) {
+        new Swiper(swiperStages, {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            loop: false,
+            navigation: {
+                nextEl: '.section-stages-slider .btn-swiper-right',
+                prevEl: '.section-stages-slider .btn-swiper-left',
+            },
+            breakpoints: {
+                768: {
+                    spaceBetween: 20,
+                }
+            },
+        });
+    }
+
 });
