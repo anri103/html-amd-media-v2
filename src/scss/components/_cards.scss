@@ -44,6 +44,7 @@
 
         .hero-title {
             line-height: 1.1;
+             margin-bottom: 30px;
         }
     }
 }
@@ -375,15 +376,17 @@
         text-align: center;
         margin-bottom: 15px;
 
-        span {
+        .tag-pill {
             display: inline-block;
             color: var(--theme-blue);
             font-size: 16px;
             font-weight: 400;
             line-height: 1.1;
+            padding: 10px 20px;
             border: 1px solid var(--theme-blue);
             border-radius: var(--bs-border-radius-pill);
-            padding: 10px 20px;
+            background-color: transparent;
+            transition: 0.3s ease;
         }
     }
 
@@ -519,6 +522,51 @@
         padding-top: 10px;
     }
 
+    // hover
+
+    &:hover {
+        background-image: var(--theme-blue-gradient);
+
+        .card-title {
+            color: var(--theme-white);
+        }
+
+        .card-subtitle {
+            .tag-pill {
+                color: var(--theme-white);
+                border-color: var(--theme-white);
+            }
+        }
+
+        .card-price {
+            color: var(--theme-white);
+        }
+
+        .card-btn-more {
+            --bs-btn-color: var(--theme-white);
+            --bs-btn-hover-color: var(--theme-white-60);
+            --bs-btn-active-color: var(--theme-white-60);
+        }
+
+        .card-collapse-description {
+            .remark-list-title {
+                color: var(--theme-white);
+            }
+
+            .remark-list-item {
+                color: var(--theme-white-60);
+            }
+        }
+
+        .card-bottom {
+            .btn-outline-black {
+                --bs-btn-color: var(--theme-white);
+                --bs-btn-bg: var(--theme-black);
+                --bs-btn-border-color: var(--theme-black);
+            }
+        }
+    }
+
     @include media-breakpoint-up(lg) {
         .card-sale-info {
             &__wrapper {
@@ -536,7 +584,7 @@
         --bs-card-spacer-y: 30px;
         --bs-card-spacer-x: 30px;
     }
-    
+
     @include media-breakpoint-up(xxl) {
         --bs-card-spacer-y: 50px;
         --bs-card-spacer-x: 50px;
