@@ -1,6 +1,10 @@
 /*------------------------------------------------------------------
 [ typography ]*/
 
+.ff-title {
+    font-family: var(--theme-ff-title);
+}
+
 // Headings
 
 h1,
@@ -49,10 +53,6 @@ h5,
 h6,
 .h6 {
     font-size: var(--fs-h6);
-}
-
-.ff-title {
-    font-family: var(--theme-ff-title);
 }
 
 // Font Size

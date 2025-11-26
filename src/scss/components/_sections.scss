@@ -1006,3 +1006,37 @@
 .section-stages-slider {
     overflow-x: hidden;
 }
+
+/*------------------------------------------------------------------
+[ page projects-single ]*/
+
+/* section-project-single */
+
+.section-project-single {
+    .media-container {
+        height: 200px;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    @include media-breakpoint-up(md) {
+        .media-container {
+            height: 400px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .media-container {
+            height: 600px;
+            margin-right: -40px;
+            margin-left: -40px;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .media-container {
+            margin-right: -50px;
+            margin-left: -50px;
+        }
+    }
+}

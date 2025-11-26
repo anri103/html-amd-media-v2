@@ -36,23 +36,58 @@ a {
 }
 
 .tag-pill-primary {
-    --bs-link-color-rgb: var(--theme-blue-rgb);
-    --bs-link-bg-color-rgb: var(--theme-blue-light-rgb);
-    --bs-link-hover-color-rgb: var(--theme-white-rgb);
-    --bs-link-hover-bg-color-rgb: var(--theme-black-rgb);
+    --bs-link-color-rgb: var(--theme-blue-rgb); // RGB only this one
+    --bs-link-bg-color: var(--theme-blue-light);
+    --bs-link-border-color: transparent;
+    --bs-link-hover-color-rgb: var(--theme-white-rgb); // RGB only this one
+    --bs-link-hover-bg-color: var(--theme-black);
+    --bs-link-hover-border-color: transparent;
     display: inline-block;
     font-size: var(--fs-small);
     line-height: 1.2;
     padding: 4px 10px;
+    border: 1px solid var(--bs-link-border-color);
     border-radius: var(--bs-border-radius-lg);
-    background-color: rgb(var(--bs-link-bg-color-rgb));
+    background-color: var(--bs-link-bg-color);
     transition: 0.3s ease;
 
     &:hover {
-        background-color: rgb(var(--bs-link-hover-bg-color-rgb));
+        border-color: var(--bs-link-hover-border-color);
+        background-color: var(--bs-link-hover-bg-color);
     }
 
     @include media-breakpoint-up(xxl) {
         padding: 8px 16px;
+    }
+}
+
+.tag-pill-outline {
+    --bs-link-color-rgb: var(--theme-blue-rgb); // RGB only this one
+    --bs-link-bg-color: transparent;
+    --bs-link-border-color: var(--theme-blue);
+    --bs-link-hover-color-rgb: var(--theme-black-rgb); // RGB only this one
+    --bs-link-hover-bg-color: transparent;
+    --bs-link-hover-border-color: var(--theme-black);
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--bs-link-border-color);
+    border-radius: var(--bs-border-radius-pill);
+    background-color: var(--bs-link-bg-color);
+    transition: 0.3s ease;
+
+    &:hover {
+        border-color: var(--bs-link-hover-border-color);
+        background-color: var(--bs-link-hover-bg-color);
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 16px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 20px;
+        padding: 10px 16px;
     }
 }

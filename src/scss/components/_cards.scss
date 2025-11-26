@@ -204,24 +204,9 @@
     }
 
     .card-tags {
-        --bs-link-color-rgb: var(--theme-blue-rgb);
-        --bs-link-hover-color-rgb: var(--theme-black-rgb);
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
-
-        a {
-            display: inline-block;
-            font-size: 13px;
-            line-height: 1;
-            border: 1px solid var(--theme-blue);
-            border-radius: var(--bs-border-radius-pill);
-            padding: 8px 12px;
-
-            &:hover {
-                border-color: var(--theme-black);
-            }
-        }
     }
 
     .card-project-features-wrapper {
