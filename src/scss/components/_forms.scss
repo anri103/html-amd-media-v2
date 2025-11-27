@@ -2,10 +2,12 @@
 [ forms ]*/
 
 .form-control {
+    color: var(--theme-black);
     box-shadow: none !important;
 
     &:focus {
-        border-color: var(--theme-black);
+        color: var(--theme-black);
+        border-color: var(--theme-black-60);
     }
 }
 

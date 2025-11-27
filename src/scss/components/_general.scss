@@ -260,6 +260,12 @@ body {
     }
 }
 
+@include media-breakpoint-up(lg) {
+    .grid-cols-lg-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @include media-breakpoint-up(xl) {
     .container,
     .container-fluid,

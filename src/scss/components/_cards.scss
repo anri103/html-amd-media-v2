@@ -552,6 +552,53 @@
         }
     }
 
+    // Максимальная ширина
+
+    @include media-breakpoint-down(lg) {
+        background-image: var(--theme-blue-gradient);
+
+        .card-title {
+            color: var(--theme-white);
+        }
+
+        .card-subtitle {
+            .tag-pill {
+                color: var(--theme-white);
+                border-color: var(--theme-white);
+            }
+        }
+
+        .card-price {
+            color: var(--theme-white);
+        }
+
+        .card-btn-more {
+            --bs-btn-color: var(--theme-white);
+            --bs-btn-hover-color: var(--theme-white-60);
+            --bs-btn-active-color: var(--theme-white-60);
+        }
+
+        .card-collapse-description {
+            .remark-list-title {
+                color: var(--theme-white);
+            }
+
+            .remark-list-item {
+                color: var(--theme-white-60);
+            }
+        }
+
+        .card-bottom {
+            .btn-outline-black {
+                --bs-btn-color: var(--theme-white);
+                --bs-btn-bg: var(--theme-black);
+                --bs-btn-border-color: var(--theme-black);
+            }
+        }
+    }
+
+    // Минимальная ширина
+
     @include media-breakpoint-up(lg) {
         .card-sale-info {
             &__wrapper {

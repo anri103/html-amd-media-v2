@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // });
 
+    // Phone mask
+    var maskPhone = document.querySelectorAll('.maskPhone')
+    maskPhone.forEach(function (el) {
+        IMask(el, {
+            mask: '+{7}(000)000-00-00'
+        });
+    });
+
     // Fancybox
     Fancybox.bind("[data-fancybox]", {});
 
