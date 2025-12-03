@@ -1,0 +1,40 @@
+/*------------------------------------------------------------------
+[ scrollable ]*/
+
+.scrollable-container {
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.scrollable-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.scrollable-item {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .scrollable-wrapper {
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+}

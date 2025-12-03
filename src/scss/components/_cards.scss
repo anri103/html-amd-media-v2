@@ -188,7 +188,7 @@
     --bs-card-bg: var(--theme-white);
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
 
     .card-body {
         display: flex;
@@ -216,7 +216,7 @@
 
     .card-project-features {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 4px;
 
         &__item {
@@ -244,7 +244,7 @@
     @include media-breakpoint-up(sm) {
         .card-project-features {
             gap: 4px;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
     }
 
@@ -255,17 +255,17 @@
     }
 
     @include media-breakpoint-up(lg) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
         .card-project-features {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
         }
     }
 
     @include media-breakpoint-up(xl) {
         --bs-card-spacer-y: 40px;
         --bs-card-spacer-x: 40px;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
 
         .card-media {
             display: none;
@@ -292,7 +292,7 @@
         }
 
         .card-project-features {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 8px;
 
             &__item {
@@ -309,7 +309,7 @@
     @include media-breakpoint-up(xxl) {
         --bs-card-spacer-y: 50px;
         --bs-card-spacer-x: 50px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
         .card-media {
             display: block;
