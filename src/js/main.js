@@ -157,4 +157,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // teamSwiper
+    const teamSwiper = document.querySelector('.teamSwiper');
+    if (teamSwiper) {
+        new Swiper('.teamSwiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            loop: false,
+            freeMode: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.section-about-photos .btn-swiper-right',
+                prevEl: '.section-about-photos .btn-swiper-left',
+            }
+        });
+    }
+
 });

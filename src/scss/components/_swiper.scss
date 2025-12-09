@@ -226,3 +226,24 @@
         }   
     }
 }
+
+/* teamSwiper */
+
+.teamSwiper {
+    .swiper-slide {
+        width: auto;
+    }
+
+    .swiper-img {
+        max-width: 300px;
+        height: auto;
+        border-radius: var(--bs-border-radius-lg);
+        // object-fit: cover;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .swiper-img {
+            max-width: 100%;
+        }
+    }
+}
