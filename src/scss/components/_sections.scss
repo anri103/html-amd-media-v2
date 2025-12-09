@@ -1126,6 +1126,11 @@
 
     @include media-breakpoint-up(xl) {
         .about-hero {
+            &__image {
+                height: 680px;
+                object-position: 0 25%;
+            }
+
             &__content {
                 padding: 40px;
             }
@@ -1136,7 +1141,6 @@
         .about-hero {
             &__image {
                 height: 820px;
-                object-position: 0 25%;
             }
 
             &__content {
