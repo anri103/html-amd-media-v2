@@ -1428,3 +1428,80 @@
         }
     }
 }
+
+/*------------------------------------------------------------------
+[ contacts page ]*/
+
+/* section-contacts */
+
+.section-contacts {
+    .bg-absolute-img {
+        position: absolute;
+        bottom: 0;
+        left: 44.25%;
+        transform: translate(-50%, 0);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .contacts-right-col-text {
+        p {
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // Максимальная ширина
+
+    @include media-breakpoint-down(md) {
+        .bg-absolute-img {
+            display: none;
+        }
+    }
+
+    // Минимальная ширина
+
+    @include media-breakpoint-between(md, xl) {
+        .bg-absolute-img {
+            max-width: 430px;
+        }
+    
+        &__body {
+            padding-bottom: 360px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .contacts-right-col-text {
+            p {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .contacts-right-col-text {
+            p {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+/* section-contact-map */
+
+.section-contact-map {
+    @include media-breakpoint-up(xl) {
+        iframe {
+            height: 600px;
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+        iframe {
+            height: 680px;
+        }
+    }
+}
