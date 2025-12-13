@@ -1,0 +1,141 @@
+@@if (lastItem) {
+<div class="card card-devcycle bg-blue-gradient">
+    <div class="card-body">
+        <img class="bg-absolute-img" src="img/services/bg-card-img-devcycle.png" alt="...">
+        <div class="position-relative d-flex flex-column justify-content-between h-100">
+            <div>
+                <div class="h4 fw-medium text-white mb-10">@@title</div>
+                <div class="fw-light text-white-60">@@subtitle</div>
+            </div>
+            <div>
+                <a href="#" class="btn btn-black btn-l w-100">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@@if (!lastItem) {
+<div class="card card-devcycle">
+
+    <div class="card-layer-default bg-blue-gradient">
+        <div class="card-body">
+            <div class="d-flex flex-column h-100">
+                <div class="text-end">
+                    <svg class="flex-shrink-0 text-white" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <path d="M2.09999 1.39995L26.6 1.39995M26.6 1.39995L26.6 25.9M26.6 1.39995L1.04999 26.95" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="flex-fill d-flex align-items-center justify-content-center">
+                    <div class="flex-shrink-0">
+                        <img
+                            src="@@mediaThumbURLx2"
+                            class="img-fluid"
+                            width="200"
+                            height="200"
+                            alt="..."
+                            srcset="@@mediaThumbURL 1x, @@mediaThumbURLx2 2x"
+                        >
+                    </div>
+                </div>
+                <div class="h4 fw-medium text-white mb-0">@@title</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-layer-hidden">
+        <!-- card-header -->
+        <div class="card-header bg-blue-gradient d-xl-none">
+            <div class="d-flex align-items-center gap-10">
+                <div class="flex-shrink-0">
+                    <img
+                        src="@@mediaHeaderURL"
+                        class="img-fluid"
+                        width="80"
+                        height="80"
+                        alt="..."
+                        srcset="@@mediaHeaderURL 1x, @@mediaHeaderURLx2 2x"
+                    >
+                </div>
+                <div class="text-white">@@title</div>
+            </div>
+        </div>
+        <!-- card-body -->
+        <div class="card-body">
+            <div class="d-flex flex-column h-100">
+                <div class="h4 fw-medium mb-20 d-none d-xl-block">@@title</div>
+                <!-- features list -->
+                <div class="flex-fill d-flex flex-column gap-10">
+                    <!-- item -->
+                    <div class="d-flex gap-10 border-bottom pb-10">
+                        <div class="flex-shrink-0">
+                            <img
+                                src="img/icons/check-gradient@2x.png"
+                                class="img-fluid"
+                                width="24"
+                                height="24"
+                                alt="..."
+                                srcset="img/icons/check-gradient.png 1x, img/icons/check-gradient@2x.png 2x"
+                            >
+                        </div>
+                        <div class="fw-light text-black-60">Проведём аудит бизнеса и&nbsp;целевой аудитории, чтобы&nbsp;определить структуру и&nbsp;ключевые разделы сайта</div>
+                    </div>
+                    <!-- item -->
+                    <div class="d-flex gap-10 border-bottom pb-10">
+                        <div class="flex-shrink-0">
+                            <img
+                                src="img/icons/check-gradient@2x.png"
+                                class="img-fluid"
+                                width="24"
+                                height="24"
+                                alt="..."
+                                srcset="img/icons/check-gradient.png 1x, img/icons/check-gradient@2x.png 2x"
+                            >
+                        </div>
+                        <div class="fw-light text-black-60">Разработаем пользовательский дизайн и&nbsp;интерактивные прототипы</div>
+                    </div>
+                    <!-- item -->
+                    <div class="d-flex gap-10 pb-10">
+                        <div class="flex-shrink-0">
+                            <img
+                                src="img/icons/check-gradient@2x.png"
+                                class="img-fluid"
+                                width="24"
+                                height="24"
+                                alt="..."
+                                srcset="img/icons/check-gradient.png 1x, img/icons/check-gradient@2x.png 2x"
+                            >
+                        </div>
+                        <div class="fw-light text-black-60">Реализуем фронтенд и&nbsp;бэкенд, подключим формы, </div>
+                    </div>
+                </div>
+                @@if (showButton) {
+                <!-- btn-wrap -->
+                <div class="mt-15 mt-md-20 mt-xl-40">
+                    <a href="#" class="btn btn-primary btn-l btn-animated w-100">
+                        <div class="animated-content">
+                            <div class="animated-content__default">
+                                <span>Узнать цену</span>
+                                <span>
+                                    <svg width="14" height="14">
+                                        <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="animated-content__hidden">
+                                <span>Узнать цену</span>
+                                <span>
+                                    <svg width="14" height="14">
+                                        <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+}

@@ -1,0 +1,82 @@
+<section class="section section-stages-slider">
+    <div class="container-fluid">
+
+        <!-- heading -->
+        <div class="d-flex align-items-center justify-content-between mb-15 mb-md-20 mb-xl-40 mb-xxl-50">
+            <h2 class="h2 mb-0">Основные этапы работы</h2>
+            <div class="d-flex align-items-center gap-20">
+                <div class="d-flex align-items-center gap-10 hide-on-mobile">
+                    <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-left">
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-left"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-right">
+                        <span>
+                            <svg width="14" height="14">
+                                <use xlink:href="img/sprite.svg#btn-arrow-right"></use>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- swiperStages -->
+        <div class="swiper swiperStages">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- card -->
+                    @@include('card-stage.html', {
+                        "lastItem": false,
+                        "description": "Оставляете нам заявку. Перезваниваем, узнаем все детали. Анализируем полученную информацию",
+                        "order": "1"
+                    })
+                </div>
+                <div class="swiper-slide">
+                    <!-- card -->
+                    @@include('card-stage.html', {
+                        "lastItem": false,
+                        "description": "Проводим анализ бизнес-потребностей, определяем функциональные и&nbsp;дизайнерские требования",
+                        "order": "2"
+                    })
+                </div>
+                <div class="swiper-slide">
+                    <!-- card -->
+                    @@include('card-stage.html', {
+                        "lastItem": false,
+                        "description": "Разрабатываем техзадание с&nbsp;учётом полученной информации",
+                        "order": "3"
+                    })
+                </div>
+                <div class="swiper-slide">
+                    <!-- card -->
+                    @@include('card-stage.html', {
+                        "lastItem": false,
+                        "description": "Разрабатываем структуру, проектируем интерфейс и&nbsp;дизайн согласно техзаданию",
+                        "order": "4"
+                    })
+                </div>
+                <div class="swiper-slide">
+                    <!-- card -->
+                    @@include('card-stage.html', {
+                        "lastItem": false,
+                        "description": "Программируем функционал, интегрируем модули и&nbsp;тестируем работу в&nbsp;комплексе",
+                        "order": "5"
+                    })
+                </div>
+                <div class="swiper-slide">
+                    <!-- card -->
+                    @@include('card-stage.html', {
+                        "lastItem": true,
+                        "title": "Мы надежный цифровой партнер",
+                        "description": "Оставьте заявку на&nbsp;разработку сайта"
+                    })
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

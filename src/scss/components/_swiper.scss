@@ -198,6 +198,32 @@
     }
 }
 
+/* swiperDevCycle */
+
+.swiperDevCycle {
+    .swiper-slide {
+        width: auto;
+        height: auto;
+    }
+
+    .card {
+        width: 300px;
+        height: 100%;
+    }
+
+    // @include media-breakpoint-up(md) {
+    //     .card {
+    //         width: 442px;
+    //     }
+    // }
+
+    @include media-breakpoint-up(xl) {
+        .card {
+            width: auto;
+        }
+    }
+}
+
 /* swiperStages */
 
 .swiperStages {

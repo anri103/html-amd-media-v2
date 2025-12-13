@@ -159,90 +159,64 @@
         </div>
     </section>
 
-    <!-- section-stages-slider -->
-    <section class="section section-stages-slider">
+    <!-- section-devcycle-slider -->
+    <section class="section section-devcycle-slider">
         <div class="container-fluid">
 
-            <!-- heading -->
-            <div class="d-flex align-items-center justify-content-between mb-15 mb-md-20 mb-xl-40 mb-xxl-50">
-                <h2 class="h2 mb-0">Основные этапы работы</h2>
-                <div class="d-flex align-items-center gap-20">
-                    <div class="d-flex align-items-center gap-10 hide-on-mobile">
-                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-left">
-                            <span>
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-left"></use>
-                                </svg>
-                            </span>
-                        </button>
-                        <button type="button" class="btn btn-outline-black btn-icon-l btn-swiper-right">
-                            <span>
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-right"></use>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <!-- title -->
+            <h2 class="section-title mb-15 mb-md-20 mb-xl-40 mb-xxl-50">Полный цикл разработки</h2>
 
-            <!-- swiperStages -->
-            <div class="swiper swiperStages">
+            <!-- swiperDevCycle -->
+            <div class="swiper swiperDevCycle">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <!-- card -->
-                        @@include('partials/card-stage.html', {
+                        @@include('partials/card-devcycle.html', {
                             "lastItem": false,
-                            "description": "Оставляете нам заявку. Перезваниваем, узнаем все детали. Анализируем полученную информацию",
-                            "order": "1"
+                            "mediaThumbURL": "img/services/card-img-devcycle-01-big.png",
+                            "mediaThumbURLx2": "img/services/card-img-devcycle-01-big@2x.png",
+                            "mediaHeaderURL": "img/services/card-img-devcycle-01.png",
+                            "mediaHeaderURLx2": "img/services/card-img-devcycle-01@2x.png",
+                            "title": "Что возьмём на&nbsp;себя?",
+                            "showButton": false
                         })
                     </div>
                     <div class="swiper-slide">
                         <!-- card -->
-                        @@include('partials/card-stage.html', {
+                        @@include('partials/card-devcycle.html', {
                             "lastItem": false,
-                            "description": "Проводим анализ бизнес-потребностей, определяем функциональные и&nbsp;дизайнерские требования",
-                            "order": "2"
+                            "mediaThumbURL": "img/services/card-img-devcycle-02-big.png",
+                            "mediaThumbURLx2": "img/services/card-img-devcycle-02-big@2x.png",
+                            "mediaHeaderURL": "img/services/card-img-devcycle-02.png",
+                            "mediaHeaderURLx2": "img/services/card-img-devcycle-02@2x.png",
+                            "title": "Как мы работаем?",
+                            "showButton": false
                         })
                     </div>
                     <div class="swiper-slide">
                         <!-- card -->
-                        @@include('partials/card-stage.html', {
+                        @@include('partials/card-devcycle.html', {
                             "lastItem": false,
-                            "description": "Разрабатываем техзадание с&nbsp;учётом полученной информации",
-                            "order": "3"
+                            "mediaThumbURL": "img/services/card-img-devcycle-03-big.png",
+                            "mediaThumbURLx2": "img/services/card-img-devcycle-03-big@2x.png",
+                            "mediaHeaderURL": "img/services/card-img-devcycle-03.png",
+                            "mediaHeaderURLx2": "img/services/card-img-devcycle-03@2x.png",
+                            "title": "Что вы получите?",
+                            "showButton": true
                         })
                     </div>
                     <div class="swiper-slide">
                         <!-- card -->
-                        @@include('partials/card-stage.html', {
-                            "lastItem": false,
-                            "description": "Разрабатываем структуру, проектируем интерфейс и&nbsp;дизайн согласно техзаданию",
-                            "order": "4"
-                        })
-                    </div>
-                    <div class="swiper-slide">
-                        <!-- card -->
-                        @@include('partials/card-stage.html', {
-                            "lastItem": false,
-                            "description": "Программируем функционал, интегрируем модули и&nbsp;тестируем работу в&nbsp;комплексе",
-                            "order": "5"
-                        })
-                    </div>
-                    <div class="swiper-slide">
-                        <!-- card -->
-                        @@include('partials/card-stage.html', {
+                        @@include('partials/card-devcycle.html', {
                             "lastItem": true,
                             "title": "Мы надежный цифровой партнер",
-                            "description": "Оставьте заявку на&nbsp;разработку сайта"
+                            "subtitle": "Оставьте заявку на&nbsp;разработку сайта"
                         })
                     </div>
                 </div>
             </div>
 
         </div>
-
-
     </section>
 
     <!-- section-projects-grid -->
@@ -342,37 +316,13 @@
     <!-- section-tariffs -->
     <section class="section section-tariffs">
         <div class="container-fluid">
-            
-            <!-- section-tariffs__heading -->
-            <div class="section-tariffs__heading">
-                <h2 class="h2 mb-0">Цены на&nbsp;разработку сайтов под&nbsp;ключ</h2>
-                <div class="d-flex align-items-center gap-20">
-                    <a href="#" class="btn btn-outline-black btn-l btn-animated hide-on-mobile">
-                        <div class="animated-content">
-                            <div class="animated-content__default">
-                                <span>Все&nbsp;услуги</span>
-                                <span>
-                                    <svg width="14" height="14">
-                                        <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="animated-content__hidden">
-                                <span>Все&nbsp;услуги</span>
-                                <span>
-                                    <svg width="14" height="14">
-                                        <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
 
-            <!-- section-tariffs__grid -->
-            <div class="section-tariffs__grid">
-                <div class="grid-col">
+            <!-- title -->
+            <h2 class="section-title mb-15 mb-md-20 mb-xl-40 mb-xxl-50">Цены на&nbsp;разработку сайтов под&nbsp;ключ</h2>
+
+            <!-- grid -->
+            <div class="d-grid grid-cols-12 row-gap-30 gap-md-20 gap-xxl-30">
+                <div class="col-span-12 col-span-xl-4">
                     <!-- card -->
                     @@include('partials/card-tariff-plan.html', {
                         "id": "1",
@@ -381,7 +331,7 @@
                         "price": "66 000 ₽"
                     })
                 </div>
-                <div class="grid-col">
+                <div class="col-span-12 col-span-xl-4">
                     <!-- card -->
                     @@include('partials/card-tariff-plan.html', {
                         "id": "2",
@@ -390,7 +340,7 @@
                         "price": "100 200 ₽"
                     })
                 </div>
-                <div class="grid-col">
+                <div class="col-span-12 col-span-xl-4">
                     <!-- card -->
                     @@include('partials/card-tariff-plan.html', {
                         "id": "3",
@@ -399,30 +349,24 @@
                         "price": "144 000 ₽"
                     })
                 </div>
-            </div>
-
-            <!-- section-tariffs__btn-wrp -->
-            <div class="section-tariffs__btn-wrp">
-                <a href="#" class="btn btn-primary-light btn-l btn-animated w-100">
-                    <div class="animated-content">
-                        <div class="animated-content__default">
-                            <span>Все услуги</span>
-                            <span>
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-up"></use>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="animated-content__hidden">
-                            <span>Все услуги</span>
-                            <span>
-                                <svg width="14" height="14">
-                                    <use xlink:href="img/sprite.svg#btn-arrow-down"></use>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </a>
+                <div class="col-span-12 col-span-xl-6">
+                    <!-- card -->
+                    @@include('partials/card-tariff-plan.html', {
+                        "id": "4",
+                        "title": "«SEO-продвижение»",
+                        "subtitle": "Для развития бизнеса",
+                        "price": "100 200 ₽"
+                    })
+                </div>
+                <div class="col-span-12 col-span-xl-6">
+                    <!-- card -->
+                    @@include('partials/card-tariff-plan.html', {
+                        "id": "5",
+                        "title": "«Интернет-магазин»",
+                        "subtitle": "Для увеличения продаж",
+                        "price": "144 000 ₽"
+                    })
+                </div>
             </div>
 
         </div>
@@ -517,9 +461,9 @@
                 <div class="h2 mb-15 mb-xl-40 mb-xxl-50">Каким будет ваш&nbsp;сайт</div>
 
                 <!-- grid -->
-                <div class="d-grid grid-cols-1 grid-cols-md-2 grid-cols-xl-3 gap-30 gap-md-20 gap-xl-40 gap-xxl-50">
+                <div class="d-grid grid-cols-12 row-gap-30 gap-md-20 gap-xl-40 gap-xxl-50">
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-6 col-span-xl-4">
                         <div class="mb-10">
                             <img class="img-fluid" src="img/services/icon-website-01.png" alt="...">
                         </div>
@@ -527,7 +471,7 @@
                         <div class="fw-light text-black-60">Мы разрабатываем продукты с учётом всех требований к оптимизации, поэтому гарантируем, что ваш сайт будет мгновенно загружаться на любых устройствах</div>
                     </div>
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-6 col-span-xl-4">
                         <div class="mb-10">
                             <img class="img-fluid" src="img/services/icon-website-02.png" alt="...">
                         </div>
@@ -535,7 +479,7 @@
                         <div class="fw-light text-black-60">Каждый элемент на страницах максимально продуман, чтобы сайтом было комфортно пользоваться на интуитивном уровне любому посетителю</div>
                     </div>
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-6 col-span-xl-4">
                         <div class="mb-10">
                             <img class="img-fluid" src="img/services/icon-website-03.png" alt="...">
                         </div>
@@ -543,7 +487,7 @@
                         <div class="fw-light text-black-60">Неважно с какого устройства пользователь заходит на ваш сайт — он всегда получит идеальное отображение страниц без перенагрузки на его устройство</div>
                     </div>
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-6 col-span-xl-4">
                         <div class="mb-10">
                             <img class="img-fluid" src="img/services/icon-website-04.png" alt="...">
                         </div>
@@ -551,7 +495,7 @@
                         <div class="fw-light text-black-60">Настроенные мета-теги, sitemap, настройка URL и другие функции для хорошего старта в продвижении. (*не входит в базовый тариф, подробнее можно уточнить у менеджера)</div>
                     </div>
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-6 col-span-xl-4">
                         <div class="mb-10">
                             <img class="img-fluid" src="img/services/icon-website-05.png" alt="...">
                         </div>
@@ -559,7 +503,7 @@
                         <div class="fw-light text-black-60">Модули и сервисы для оплаты на сайте, службы доставки и онлайн-кассы упростят работу с сайтом и складами в десятки раз, а также помогут сэкономить время и бюджет</div>
                     </div>
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-6 col-span-xl-4">
                         <div class="mb-10">
                             <img class="img-fluid" src="img/services/icon-website-06.png" alt="...">
                         </div>
@@ -580,9 +524,9 @@
                 <div class="h2 mb-15 mb-xl-40 mb-xxl-50">Выбор платформы</div>
 
                 <!-- grid -->
-                <div class="d-grid grid-cols-1 grid-cols-md-2 grid-cols-xl-3 gap-30 gap-md-20 gap-xl-40 gap-xxl-50">
+                <div class="d-grid grid-cols-12 row-gap-30 gap-md-20 gap-xl-40 gap-xxl-50">
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-12 col-span-xl-4">
                         <div class="h3 fw-medium mb-10">Разработка сайта на&nbsp;1С-Битрикс</div>
                         <div class="flex-fill fw-light text-black-60 mb-20">На платформе «1С-Битрикс: Управление сайтом» вы можете создать интернет-магазин любого масштаба. Интернет-магазин включён в 3 лицензии: «Малый бизнес», «Бизнес» и «Enterprise».</div>
                         <div class="d-flex flex-wrap align-items-center gap-10">
@@ -590,7 +534,7 @@
                         </div>
                     </div>
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-12 col-span-xl-4">
                         <div class="h3 fw-medium mb-10">Разработка сайта на&nbsp;WordPress</div>
                         <div class="flex-fill fw-light text-black-60 mb-20">Wordpress можно с уверенностью назвать наиболее дружелюбной платформой для создания сайта. Освоить её сможет без преувеличения каждый пользователь интернета. Во‑первых, это просто, а во‑вторых, для этого есть огромная база знаний</div>
                         <div class="d-flex flex-wrap align-items-center gap-10">
@@ -598,7 +542,7 @@
                         </div>
                     </div>
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-12 col-span-xl-4">
                         <div class="h3 fw-medium mb-10">Создание сайта на&nbsp;OpenCart</div>
                         <div class="flex-fill fw-light text-black-60 mb-20">Cоздание торговой онлайн-площадки на второй в мире по популярности платформе для электронной коммерции. Удобное администрирование, гибкая настройка и свободное масштабирование</div>
                         <div class="d-flex flex-wrap align-items-center gap-10">
@@ -606,7 +550,7 @@
                         </div>
                     </div>
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-12 col-span-xl-6">
                         <div class="h3 fw-medium mb-10">Разработка на&nbsp;PHP фреймворках</div>
                         <div class="flex-fill fw-light text-black-60 mb-20">Это динамически пополняемая библиотека языка программирования, в которой собраны его основные модули. Фреймворки обеспечивают упрощение процессов разработки сайтов и других сервисов. От зависимости целей и задач иногда гораздо проще обратиться к готовым шаблонам фреймворков</div>
                         <div class="d-flex flex-wrap align-items-center gap-10">
@@ -616,7 +560,7 @@
                         </div>
                     </div>
                     <!-- item -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column col-span-12 col-span-md-12 col-span-xl-6">
                         <div class="h3 fw-medium mb-10">Разработка на&nbsp;JavaScript фреймворках</div>
                         <div class="flex-fill fw-light text-black-60 mb-20">Фреймворки JS — это набор предварительно написанного кода, который служит шаблоном или схемой, помогающей разработчикам более эффективно создавать веб-приложения</div>
                         <div class="d-flex flex-wrap align-items-center gap-10">
