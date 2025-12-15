@@ -50,12 +50,6 @@ body {
     background-size: cover;
 }
 
-.bg-img-bottom {
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 // bg color
 .bg-blue-gradient { background-image: var(--theme-blue-gradient); }
 .bg-red-gradient { background-image: var(--theme-red-gradient); }
@@ -78,6 +72,7 @@ body {
 .grid-cols-24 { grid-template-columns: repeat(24, minmax(0, 1fr)); }
 
 // col-span
+.col-span-1 { grid-column: span 1 / span 1; }
 .col-span-2 { grid-column: span 2 / span 2; }
 .col-span-6 { grid-column: span 6 / span 6; }
 .col-span-12 { grid-column: span 12 / span 12; }
@@ -111,6 +106,7 @@ body {
 
 // max-width
 .max-w-235 { max-width: 235px; }
+.max-w-500 { max-width: 500px; }
 .max-w-700 { max-width: 700px; }
 .max-w-900 { max-width: 900px; }
 .max-w-1100 { max-width: 1100px; }
@@ -125,6 +121,7 @@ body {
 .pb-20 { padding-bottom: 20px !important; }
 
 // margins
+.mt-10 { margin-top: 10px !important; }
 .mt-15 { margin-top: 15px !important; }
 .mt-20 { margin-top: 20px !important; }
 .mb-10 { margin-bottom: 10px !important; }
@@ -167,6 +164,7 @@ body {
     .grid-cols-sm-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
     // col-span
+    .col-span-sm-1 { grid-column: span 1 / span 1; }
     .col-span-sm-2 { grid-column: span 2 / span 2; }
     .col-span-sm-6 { grid-column: span 6 / span 6; }
     .col-span-sm-12 { grid-column: span 12 / span 12; }

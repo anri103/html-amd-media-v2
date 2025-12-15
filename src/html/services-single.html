@@ -62,15 +62,15 @@
                                     <!-- list -->
                                     <div class="d-flex flex-column gap-10 fw-light text-black-60 mb-0">
                                         <div class="d-flex align-items-start gap-10">
-                                            <img class="img-fluid flex-shrink-0" src="img/blog/check.png" width="24" height="24" alt="...">
+                                            <img class="img-fluid flex-shrink-0 mt-1" src="img/icons/check-24x24@2x.png" alt="..." width="24" height="24">
                                             <div>Портал может быть информационным, тематическим, государственным, внутренним (интранет). Но&nbsp;каждый должен обязательно отличаться удобной навигаций и&nbsp;поиском.</div>
                                         </div>
                                         <div class="d-flex align-items-start gap-10">
-                                            <img class="img-fluid flex-shrink-0" src="img/blog/check.png" width="24" height="24" alt="...">
+                                            <img class="img-fluid flex-shrink-0 mt-1" src="img/icons/check-24x24@2x.png" alt="..." width="24" height="24">
                                             <div>Для&nbsp;удобства пользователей мы&nbsp;интегрируем популярные онлайн-сервисы, формируем базы с&nbsp;файлами и&nbsp;документами, устанавливаем личные кабинеты, настраиваем рассылки email, СМС&nbsp;и&nbsp;пуш-уведомлений</div>
                                         </div>
                                         <div class="d-flex align-items-start gap-10">
-                                            <img class="img-fluid flex-shrink-0" src="img/blog/check.png" width="24" height="24" alt="...">
+                                            <img class="img-fluid flex-shrink-0 mt-1" src="img/icons/check-24x24@2x.png" alt="..." width="24" height="24">
                                             <div>При&nbsp;разработке мы&nbsp;обязательно продумываем логику и&nbsp;адаптируем портал под&nbsp;ваш&nbsp;бизнес</div>
                                         </div>
                                     </div>
@@ -99,7 +99,7 @@
                                             </div>
                                         </a>
                                         <!-- btn-outline-black -->
-                                        <a href="#" class="btn btn-outline-black btn-l btn-animated w-100">
+                                        <a href="#modalConsultation" class="btn btn-outline-black btn-l btn-animated w-100" data-bs-toggle="modal">
                                             <div class="animated-content">
                                                 <div class="animated-content__default">
                                                     <span>Бесплатная консультация</span>
@@ -173,10 +173,9 @@
                         <!-- card -->
                         @@include('partials/card-devcycle.html', {
                             "lastItem": false,
-                            "mediaThumbURL": "img/services/card-img-devcycle-01-big.png",
-                            "mediaThumbURLx2": "img/services/card-img-devcycle-01-big@2x.png",
-                            "mediaHeaderURL": "img/services/card-img-devcycle-01.png",
-                            "mediaHeaderURLx2": "img/services/card-img-devcycle-01@2x.png",
+                            "mediaThumbURL": "img/services/card-devcycle-thumb-01-200x200@2x.png",
+                            "mediaThumbURLx2": "img/services/card-devcycle-thumb-01-240x240@2x.png",
+                            "mediaHeaderURL": "img/services/card-devcycle-header-01-80x80@2x.png",
                             "title": "Что возьмём на&nbsp;себя?",
                             "showButton": false
                         })
@@ -185,10 +184,9 @@
                         <!-- card -->
                         @@include('partials/card-devcycle.html', {
                             "lastItem": false,
-                            "mediaThumbURL": "img/services/card-img-devcycle-02-big.png",
-                            "mediaThumbURLx2": "img/services/card-img-devcycle-02-big@2x.png",
-                            "mediaHeaderURL": "img/services/card-img-devcycle-02.png",
-                            "mediaHeaderURLx2": "img/services/card-img-devcycle-02@2x.png",
+                            "mediaThumbURL": "img/services/card-devcycle-thumb-02-200x200@2x.png",
+                            "mediaThumbURLx2": "img/services/card-devcycle-thumb-02-240x240@2x.png",
+                            "mediaHeaderURL": "img/services/card-devcycle-header-02-80x80@2x.png",
                             "title": "Как мы работаем?",
                             "showButton": false
                         })
@@ -197,10 +195,9 @@
                         <!-- card -->
                         @@include('partials/card-devcycle.html', {
                             "lastItem": false,
-                            "mediaThumbURL": "img/services/card-img-devcycle-03-big.png",
-                            "mediaThumbURLx2": "img/services/card-img-devcycle-03-big@2x.png",
-                            "mediaHeaderURL": "img/services/card-img-devcycle-03.png",
-                            "mediaHeaderURLx2": "img/services/card-img-devcycle-03@2x.png",
+                            "mediaThumbURL": "img/services/card-devcycle-thumb-03-200x200@2x.png",
+                            "mediaThumbURLx2": "img/services/card-devcycle-thumb-03-240x240@2x.png",
+                            "mediaHeaderURL": "img/services/card-devcycle-header-03-80x80@2x.png",
                             "title": "Что вы получите?",
                             "showButton": true
                         })
@@ -453,6 +450,7 @@
         </div>
     </section>
 
+    <!-- section -->
     <section class="section">
         <div class="container-fluid">
             <div class="rounded-wrapper bg-white">
@@ -516,6 +514,7 @@
         </div>
     </section>
 
+    <!-- section -->
     <section class="section">
         <div class="container-fluid">
             <div class="rounded-wrapper bg-white">

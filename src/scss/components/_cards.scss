@@ -444,6 +444,7 @@
 
     .remark-item {
         display: flex;
+        align-items: flex-start;
         gap: 8px;
 
         &__icon {
@@ -1024,9 +1025,16 @@
     --bs-card-border-radius: var(--bs-border-radius-lg);
     --bs-card-border-color: transparent;
     --bs-card-bg: var(--theme-white);
+    position: relative;
+    overflow: hidden;
 
-    .bg-img-bottom {
-        background-size: contain;
+    .bg-absolute-img {
+        position: absolute;
+        bottom: -70%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        max-width: 120%;
+        height: auto;
     }
 
     @include media-breakpoint-up(xl) {

@@ -29,11 +29,15 @@
                     <div class="flex-shrink-0">
                         <img
                             src="@@mediaThumbURLx2"
-                            class="img-fluid"
-                            width="200"
-                            height="200"
                             alt="..."
-                            srcset="@@mediaThumbURL 1x, @@mediaThumbURLx2 2x"
+                            srcset="
+                                @@mediaThumbURL 800w,
+                                @@mediaThumbURLx2 960w
+                            "
+                            sizes="
+                                (max-width: 1599px) 200px,
+                                240px
+                            "
                         >
                     </div>
                 </div>
@@ -47,14 +51,7 @@
         <div class="card-header bg-blue-gradient d-xl-none">
             <div class="d-flex align-items-center gap-10">
                 <div class="flex-shrink-0">
-                    <img
-                        src="@@mediaHeaderURL"
-                        class="img-fluid"
-                        width="80"
-                        height="80"
-                        alt="..."
-                        srcset="@@mediaHeaderURL 1x, @@mediaHeaderURLx2 2x"
-                    >
+                    <img src="@@mediaHeaderURL" class="img-fluid" alt="..." width="80" height="80">
                 </div>
                 <div class="text-white">@@title</div>
             </div>
@@ -68,42 +65,21 @@
                     <!-- item -->
                     <div class="d-flex gap-10 border-bottom pb-10">
                         <div class="flex-shrink-0">
-                            <img
-                                src="img/icons/check-gradient@2x.png"
-                                class="img-fluid"
-                                width="24"
-                                height="24"
-                                alt="..."
-                                srcset="img/icons/check-gradient.png 1x, img/icons/check-gradient@2x.png 2x"
-                            >
+                            <img class="img-fluid" src="img/icons/check-24x24@2x.png" alt="..." width="24" height="24">
                         </div>
                         <div class="fw-light text-black-60">Проведём аудит бизнеса и&nbsp;целевой аудитории, чтобы&nbsp;определить структуру и&nbsp;ключевые разделы сайта</div>
                     </div>
                     <!-- item -->
                     <div class="d-flex gap-10 border-bottom pb-10">
                         <div class="flex-shrink-0">
-                            <img
-                                src="img/icons/check-gradient@2x.png"
-                                class="img-fluid"
-                                width="24"
-                                height="24"
-                                alt="..."
-                                srcset="img/icons/check-gradient.png 1x, img/icons/check-gradient@2x.png 2x"
-                            >
+                            <img class="img-fluid" src="img/icons/check-24x24@2x.png" alt="..." width="24" height="24">
                         </div>
                         <div class="fw-light text-black-60">Разработаем пользовательский дизайн и&nbsp;интерактивные прототипы</div>
                     </div>
                     <!-- item -->
                     <div class="d-flex gap-10 pb-10">
                         <div class="flex-shrink-0">
-                            <img
-                                src="img/icons/check-gradient@2x.png"
-                                class="img-fluid"
-                                width="24"
-                                height="24"
-                                alt="..."
-                                srcset="img/icons/check-gradient.png 1x, img/icons/check-gradient@2x.png 2x"
-                            >
+                            <img class="img-fluid" src="img/icons/check-24x24@2x.png" alt="..." width="24" height="24">
                         </div>
                         <div class="fw-light text-black-60">Реализуем фронтенд и&nbsp;бэкенд, подключим формы, </div>
                     </div>
