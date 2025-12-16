@@ -167,7 +167,7 @@
     </section>
 
     <!-- section-contact-map -->
-    <section class="section section-contact-map" id="contactMap">
+    <section class="section section-contact-map mb-15 mb-md-20 mb-xxl-30" id="contactMap">
         <div class="container-fluid">
             <div class="position-relative overflow-hidden rounded-3">
                 <!-- iframe -->
@@ -179,4 +179,6 @@
 </main>
 
 <!-- footer -->
-@@include('partials/footer.html')
+@@include('partials/footer.html', {
+    "showCtaBar": false,
+})

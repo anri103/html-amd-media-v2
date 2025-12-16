@@ -1,3 +1,15 @@
+// Универсальная функция для переключения модальных окон
+function closeOffcanvas() {
+    // Находим и закрываем открытый offcanvas
+    const openOffcanvas = document.querySelector('.offcanvas.show');
+    if (openOffcanvas) {
+        const offcanvasInstance = bootstrap.Offcanvas.getInstance(openOffcanvas);
+        if (offcanvasInstance) {
+            offcanvasInstance.hide();
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Fixed header

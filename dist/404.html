@@ -217,6 +217,7 @@
 <!-- footer -->
     <footer class="footer">
 
+        
         <!-- footer__cta-bar -->
         <div class="footer__cta-bar">
             <div class="container-fluid">
@@ -287,9 +288,14 @@
                                                 </div>
                                             </button>
                                         </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="ctaCheck2">
+                                                <label class="form-check-label fs-x-small text-white-60" for="ctaCheck2">Я даю своё согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с&nbsp;политикой конфиденциальности</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
-                                <div class="fs-x-small text-white-60 mt-4">Нажимая кнопку отправить я даю своё согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</div>
                             </div>
                         </div>
                     </div>
@@ -297,6 +303,7 @@
                 </div>
             </div>
         </div>
+        
 
         <!-- footer__main-bar -->
         <div class="footer__main-bar">
@@ -610,7 +617,7 @@
                             <img class="img-fluid" src="img/footer/captcha.jpg" alt="">
                         </div>
                         <div class="col-span-2">
-                            <button type="submit" class="btn btn-primary btn-l btn-animated w-100">
+                            <a href="#modalSuccess" class="btn btn-primary btn-l btn-animated w-100" data-bs-toggle="modal" data-bs-dismiss="offcanvas" onclick="closeOffcanvas()">
                                 <div class="animated-content">
                                     <div class="animated-content__default">
                                         <span>Отправить</span>
@@ -619,12 +626,12 @@
                                         <span>Отправить</span>
                                     </div>
                                 </div>
-                            </button>
+                            </a>
                         </div>
                         <div class="col-span-2 mt-10">
-                            <div class="form-check fs-x-small max-w-500">
+                            <div class="form-check max-w-500">
                                 <input type="checkbox" class="form-check-input" id="contactCheck">
-                                <label class="form-check-label" for="contactCheck">Я даю своё согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с&nbsp;политикой конфиденциальности</label>
+                                <label class="form-check-label fs-x-small" for="contactCheck">Я даю своё согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с&nbsp;политикой конфиденциальности</label>
                             </div>
                         </div>
                     </div>
@@ -713,14 +720,63 @@
                             <div class="col-span-2">
                                 <textarea class="form-control" rows="4" placeholder="Что не устраивает сайчас?"></textarea>
                             </div>
-                            <div class="col-span-2 mt-10">
-                                <div class="form-check fs-x-small max-w-500">
+                            <div class="col-span-2 mt-10 mt-xl-30">
+                                <a href="#modalSuccess" class="btn btn-primary btn-l btn-animated w-100" data-bs-toggle="modal">
+                                    <div class="animated-content">
+                                        <div class="animated-content__default">
+                                            <span>Отправить</span>
+                                        </div>
+                                        <div class="animated-content__hidden">
+                                            <span>Отправить</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-span-2">
+                                <div class="form-check max-w-500">
                                     <input type="checkbox" class="form-check-input" id="consultationCheck">
-                                    <label class="form-check-label" for="consultationCheck">Я даю своё согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с&nbsp;политикой конфиденциальности</label>
+                                    <label class="form-check-label fs-x-small" for="consultationCheck">Я даю своё согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с&nbsp;политикой конфиденциальности</label>
                                 </div>
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- modal-success -->
+    <div class="modal modal-success fade" id="modalSuccess" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <!-- bg-absolute-blue-gradient-divider -->
+                <div class="bg-absolute-blue-gradient-divider">
+                    <svg role="presentation" class="bg-absolute-blue-gradient-divider__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 200" preserveAspectRatio="none"><path d="M1280 200H0V0l1280 195.5v4.5z"></path></svg>
+                </div>
+                <div class="bg-absolute-blue-gradient-spacer"></div>
+                <!-- bg-absolute-img -->
+                <img class="bg-absolute-img" src="img/footer/bg-modal-success.png" alt="..." style="filter: drop-shadow(0px 40px 60px rgba(0, 0, 44, 0.25));">
+                <!-- btn-close -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="position-relative">
+                    <div class="h4 fw-medium mb-1">Спасибо!</div>
+                    <div class="fs-6 fw-light">Ваша заявка принята. Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</div>
+                    <div class="mt-20">
+                        <button class="btn btn-outline-black btn-l btn-animated w-100" data-bs-dismiss="modal">
+                            <div class="animated-content">
+                                <div class="animated-content__default">
+                                    <span>Закрыть</span>
+                                </div>
+                                <div class="animated-content__hidden">
+                                    <span>Закрыть</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

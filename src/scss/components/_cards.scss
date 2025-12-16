@@ -959,7 +959,7 @@
         width: 100%;
         height: 100%;
         opacity: 1;
-        transition: 0.9s ease;
+        transition: 0.3s ease;
     }
 
     .card-layer-hidden {
@@ -969,7 +969,7 @@
         min-width: 0;
         transform: translateY(100%);
         opacity: 0;
-        transition: 0.9s ease;
+        transition: 0.3s ease;
     }
 
     &:hover {
@@ -1005,8 +1005,8 @@
         min-height: 580px;
 
         .bg-absolute-img {
-            bottom: -40%;
-            max-width: 110%;
+            bottom: -30%;
+            max-width: 120%;
         }
     }
 
