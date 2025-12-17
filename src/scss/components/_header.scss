@@ -327,9 +327,9 @@ body.header-fixed {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 900;
-}
 
-.js-header-hover .header-backdrop {
-    opacity: 0.5;
-    visibility: visible;
+    &.active {
+        opacity: 0.5;
+        visibility: visible;
+    }
 }

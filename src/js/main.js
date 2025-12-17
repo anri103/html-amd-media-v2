@@ -23,26 +23,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // header-backdrop activate
     const header = document.querySelector('header.header');
-    const megaMenuItems = document.querySelectorAll('li.has-mega-menu');
-    const body = document.body;
+    // const megaMenuItems = document.querySelectorAll('li.has-mega-menu');
+    const backdrop = document.getElementById('headerBackdrop');
+    if (!backdrop) {
+        console.error('Элемент #headerBackdrop не найден!');
+        return;
+    }
     if (header) {
         header.addEventListener('mouseenter', () => {
-            body.classList.add('js-header-hover');
+            backdrop.classList.add('active');
         });
 
         header.addEventListener('mouseleave', () => {
-            body.classList.remove('js-header-hover');
+            backdrop.classList.remove('active');
         });
     }
-    megaMenuItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            body.classList.add('js-mega-menu-hover');
-        });
+    // megaMenuItems.forEach(item => {
+    //     item.addEventListener('mouseenter', () => {
+    //         backdrop.classList.add('js-mega-menu-hover');
+    //     });
 
-        item.addEventListener('mouseleave', () => {
-            body.classList.remove('js-mega-menu-hover');
-        });
-    });
+    //     item.addEventListener('mouseleave', () => {
+    //         backdrop.classList.remove('js-mega-menu-hover');
+    //     });
+    // });
 
     // megaMenu tabs
     const tabLinks = document.querySelectorAll('.mega-menu__nav-link');
