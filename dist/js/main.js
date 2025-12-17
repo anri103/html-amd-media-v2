@@ -1,4 +1,5 @@
 // Универсальная функция для переключения модальных окон
+// На релизе УБРАТЬ
 function closeOffcanvas() {
     // Находим и закрываем открытый offcanvas
     const openOffcanvas = document.querySelector('.offcanvas.show');
@@ -19,6 +20,53 @@ document.addEventListener('DOMContentLoaded', () => {
     //     fixedHeader.classList.toggle('js-fixed', window.scrollY > 100);
     //     }
     // });
+
+    // header-backdrop activate
+    const header = document.querySelector('header.header');
+    const megaMenuItems = document.querySelectorAll('li.has-mega-menu');
+    const body = document.body;
+    if (header) {
+        header.addEventListener('mouseenter', () => {
+            body.classList.add('js-header-hover');
+        });
+
+        header.addEventListener('mouseleave', () => {
+            body.classList.remove('js-header-hover');
+        });
+    }
+    megaMenuItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            body.classList.add('js-mega-menu-hover');
+        });
+
+        item.addEventListener('mouseleave', () => {
+            body.classList.remove('js-mega-menu-hover');
+        });
+    });
+
+    // megaMenu tabs
+    const tabLinks = document.querySelectorAll('.mega-menu__nav-link');
+    const tabPanes = document.querySelectorAll('.mega-menu__col-content .tab-pane');
+    tabLinks.forEach(link => {
+        link.addEventListener('mouseenter', function (e) {
+            e.preventDefault();
+
+            tabLinks.forEach(l => l.classList.remove('active'));
+            tabPanes.forEach(p => {
+                p.classList.remove('show', 'active');
+                p.classList.add('fade');
+            });
+
+            this.classList.add('active');
+
+            const targetId = this.getAttribute('href');
+            const targetPane = document.querySelector(targetId);
+            if (targetPane) {
+                targetPane.classList.add('show', 'active');
+                targetPane.classList.remove('fade');
+            }
+        });
+    });
 
     // Phone mask
     var maskPhone = document.querySelectorAll('.maskPhone')
