@@ -351,6 +351,10 @@ body.header-fixed {
     .has-sub-menu {
         &:has(.sub-menu.open) > span {
             background-color: var(--theme-blue-light);
+
+            > span > a {
+                color: var(--theme-blue);
+            }
         }
 
         .has-sub-menu {
@@ -377,7 +381,12 @@ body.header-fixed {
         user-select: none;
         border: none;
         outline: none;
+        color: #100102;
         background: none;
+
+        &.sub-menu-active {
+            color: var(--theme-blue);
+        }
         
         svg {
             transition: 0.3s ease;
