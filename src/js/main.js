@@ -72,6 +72,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Mobile sub-menu
+    const mobileSubmenuTogglers = document.querySelectorAll('.sub-menu-toggler');
+    mobileSubmenuTogglers.forEach(toggler => {
+        toggler.addEventListener('click', function () {
+            const parentItem = this.closest('.has-sub-menu');
+            if (!parentItem) return;
+
+            const submenu = parentItem.querySelector('.sub-menu');
+            if (submenu) {
+                submenu.classList.toggle('open');
+                this.classList.toggle('sub-menu-active');
+            }
+        });
+    });
+
     // Phone mask
     var maskPhone = document.querySelectorAll('.maskPhone')
     maskPhone.forEach(function (el) {

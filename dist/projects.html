@@ -45,9 +45,7 @@
                                             <li role="presentation">
                                                 <a href="#tab1" class="mega-menu__nav-link active" data-bs-toggle="tab" role="tab" aria-selected="true">
                                                     <div class="nav-link-icon">
-                                                        <svg width="16" height="16">
-                                                            <use xlink:href="img/sprite.svg#menu-icon-dev"/>
-                                                        </svg>
+                                                        <img src="img/icons/menu-icon-dev.svg" alt="menu-icon-dev" width="16" height="16">
                                                     </div>
                                                     <span>Разработка</span>
                                                 </a>
@@ -55,9 +53,7 @@
                                             <li role="presentation">
                                                 <a href="#tab2" class="mega-menu__nav-link" data-bs-toggle="tab" role="tab" aria-selected="false">
                                                     <div class="nav-link-icon">
-                                                        <svg width="16" height="16">
-                                                            <use xlink:href="img/sprite.svg#menu-icon-platform"/>
-                                                        </svg>
+                                                        <img src="img/icons/menu-icon-platform.svg" alt="menu-icon-platform" width="16" height="16">
                                                     </div>
                                                     <span>Выбор платформы</span>
                                                 </a>
@@ -65,9 +61,7 @@
                                             <li role="presentation">
                                                 <a href="#tab1" class="mega-menu__nav-link" data-bs-toggle="tab" role="tab" aria-selected="false">
                                                     <div class="nav-link-icon">
-                                                        <svg width="16" height="16">
-                                                            <use xlink:href="img/sprite.svg#menu-icon-promotion"/>
-                                                        </svg>
+                                                        <img src="img/icons/menu-icon-promotion.svg" alt="menu-icon-promotion" width="16" height="16">
                                                     </div>
                                                     <span>Продвижение</span>
                                                 </a>
@@ -75,9 +69,7 @@
                                             <li role="presentation">
                                                 <a href="#tab2" class="mega-menu__nav-link" data-bs-toggle="tab" role="tab" aria-selected="false">
                                                     <div class="nav-link-icon">
-                                                        <svg width="16" height="16">
-                                                            <use xlink:href="img/sprite.svg#menu-icon-design"/>
-                                                        </svg>
+                                                        <img src="img/icons/menu-icon-design.svg" alt="menu-icon-design" width="16" height="16">
                                                     </div>
                                                     <span>Дизайн</span>
                                                 </a>
@@ -85,9 +77,7 @@
                                             <li role="presentation">
                                                 <a href="#tab1" class="mega-menu__nav-link" data-bs-toggle="tab" role="tab" aria-selected="false">
                                                     <div class="nav-link-icon">
-                                                        <svg width="16" height="16">
-                                                            <use xlink:href="img/sprite.svg#menu-icon-integrations"/>
-                                                        </svg>
+                                                        <img src="img/icons/menu-icon-integrations.svg" alt="menu-icon-integrations" width="16" height="16">
                                                     </div>
                                                     <span>Интеграции</span>
                                                 </a>
@@ -95,9 +85,7 @@
                                             <li role="presentation">
                                                 <a href="#tab2" class="mega-menu__nav-link" data-bs-toggle="tab" role="tab" aria-selected="false">
                                                     <div class="nav-link-icon">
-                                                        <svg width="16" height="16">
-                                                            <use xlink:href="img/sprite.svg#menu-icon-support"/>
-                                                        </svg>
+                                                        <img src="img/icons/menu-icon-support.svg" alt="menu-icon-support" width="16" height="16">
                                                     </div>
                                                     <span>Поддержка</span>
                                                 </a>
@@ -371,28 +359,147 @@
         </div>
         <div class="offcanvas-body">
             <div class="d-flex flex-column justify-content-between h-100">
-                <ul class="mobile-nav nav flex-column border-top">
+                <!-- mobile-nav -->
+                <ul class="mobile-nav">
                     <li class="nav-item">
-                        <a href="projects.html" class="d-block fs-22 py-3 border-bottom">Проекты</a>
+                        <span>
+                            <span>
+                                <a href="projects.html">Проекты</a>
+                            </span>
+                        </span>
                     </li>
-                    <li class="nav-item has-mega-menu">
-                        <a href="services.html" class="d-block fs-22 py-3 border-bottom">Услуги</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="partners.html" class="d-block fs-22 py-3 border-bottom">Партнёры</a>
+                    <li class="nav-item has-sub-menu">
+                        <span>
+                            <span>
+                                <a href="services.html">Услуги</a>
+                                <button type="button" class="sub-menu-toggler">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="img/sprite.svg#btn-arrow-down"/>
+                                    </svg>
+                                </button>
+                            </span>
+                        </span>
+                        <ul class="sub-menu servicesMenu">
+                            <li class="has-sub-menu">
+                                <span>
+                                    <span>
+                                        <a href="#">
+                                            <div class="nav-link-icon">
+                                                <img src="img/icons/menu-icon-dev.svg" alt="menu-icon-dev" width="16" height="16">
+                                            </div>
+                                            Разработка
+                                        </a>
+                                        <button type="button" class="sub-menu-toggler">
+                                            <svg width="16" height="16">
+                                                <use xlink:href="img/sprite.svg#btn-arrow-down"/>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                </span>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <a href="#">Корпоративный сайт</a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <a href="#">Интернет-магазин</a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <a href="#">Мобильное приложение</a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <a href="#">Сайты</a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-sub-menu">
+                                <span>
+                                    <span>
+                                        <a href="#">
+                                            <div class="nav-link-icon">
+                                                <img src="img/icons/menu-icon-platform.svg" alt="menu-icon-platform" width="16" height="16">
+                                            </div>
+                                            Выбор платформы
+                                        </a>
+                                        <button type="button" class="sub-menu-toggler">
+                                            <svg width="16" height="16">
+                                                <use xlink:href="img/sprite.svg#btn-arrow-down"/>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                </span>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <a href="#">1С-Битрикс</a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <a href="#">Tilda</a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <a href="#">WORDPRESS</a>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="d-block fs-22 py-3 border-bottom">О нас</a>
+                        <span>
+                            <span>
+                                <a href="partners.html">Партнёры</a>
+                            </span>
+                        </span>
                     </li>
                     <li class="nav-item">
-                        <a href="blog.html" class="d-block fs-22 py-3 border-bottom">Блог</a>
+                        <span>
+                            <span>
+                                <a href="about.html">О нас</a>
+                            </span>
+                        </span>
                     </li>
                     <li class="nav-item">
-                        <a href="contacts.html" class="d-block fs-22 py-3 border-bottom">Контакты</a>
+                        <span>
+                            <span>
+                                <a href="blog.html">Блог</a>
+                            </span>
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <span>
+                            <span>
+                                <a href="contacts.html">Контакты</a>
+                            </span>
+                        </span>
                     </li>
                 </ul>
                 <!-- contacts -->
-                <div>
+                <div class="mt-5 mb-3">
                     <div class="text-center mb-10">
                         <a href="tel:+74951595901" class="fs-2 fw-medium link-blue">+7 495 159-59-01</a>
                     </div>
