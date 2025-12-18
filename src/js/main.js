@@ -23,30 +23,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // header-backdrop activate
     const header = document.querySelector('header.header');
-    // const megaMenuItems = document.querySelectorAll('li.has-mega-menu');
     const backdrop = document.getElementById('headerBackdrop');
-    if (!backdrop) {
-        console.error('Элемент #headerBackdrop не найден!');
-        return;
-    }
-    if (header) {
-        header.addEventListener('mouseenter', () => {
-            backdrop.classList.add('active');
-        });
+    if (!header || !backdrop) return;
+    const desktopQuery = window.matchMedia('(min-width: 1024px)');
+    let isActive = false;
+    function enableHover() {
+        if (isActive) return;
 
-        header.addEventListener('mouseleave', () => {
-            backdrop.classList.remove('active');
-        });
+        header.addEventListener('mouseenter', onEnter);
+        header.addEventListener('mouseleave', onLeave);
+        isActive = true;
     }
-    // megaMenuItems.forEach(item => {
-    //     item.addEventListener('mouseenter', () => {
-    //         backdrop.classList.add('js-mega-menu-hover');
-    //     });
+    function disableHover() {
+        if (!isActive) return;
 
-    //     item.addEventListener('mouseleave', () => {
-    //         backdrop.classList.remove('js-mega-menu-hover');
-    //     });
-    // });
+        header.removeEventListener('mouseenter', onEnter);
+        header.removeEventListener('mouseleave', onLeave);
+        backdrop.classList.remove('active');
+        isActive = false;
+    }
+    function onEnter() {
+        backdrop.classList.add('active');
+    }
+    function onLeave() {
+        backdrop.classList.remove('active');
+    }
+    function checkDevice(e) {
+        if (e.matches) {
+            enableHover();
+        } else {
+            disableHover();
+        }
+    }
+    checkDevice(desktopQuery);
+    desktopQuery.addEventListener('change', checkDevice);
 
     // megaMenu tabs
     const tabLinks = document.querySelectorAll('.mega-menu__nav-link');

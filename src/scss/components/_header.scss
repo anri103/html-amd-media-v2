@@ -336,8 +336,9 @@ body.header-fixed {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-top: 15px;
-            padding-bottom: 15px;
+            height: 63px;
+            // padding-top: 15px;
+            // padding-bottom: 15px;
             border-bottom: 1px solid var(--bs-border-color);
     
         }
@@ -370,9 +371,9 @@ body.header-fixed {
 
     .sub-menu-toggler {
         display: block;
-        width: 30px;
-        height: 30px;
+        height: 100%;
         padding: 0;
+        padding-left: 40px;
         flex-shrink: 0;
         text-align: center;
         text-decoration: none;
@@ -411,9 +412,14 @@ body.header-fixed {
             padding-left: 35px;
             
             > span {
-                padding-top: 14px;
-                padding-bottom: 14px;
+                height: 61px;
+                // padding-top: 14px;
+                // padding-bottom: 14px;
             }
+        }
+
+        .sub-menu li > span > span {
+            height: 53px;
         }
 
         a {
