@@ -21,18 +21,10 @@
 }
 
 .scrollable-item {
-    position: relative;
-    display: inline-block;
     flex-shrink: 0;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-
-    &:last-child {
-        margin-right: 0;
-    }
 }
 
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(lg) {
     .scrollable-wrapper {
         flex-wrap: wrap;
         white-space: normal;

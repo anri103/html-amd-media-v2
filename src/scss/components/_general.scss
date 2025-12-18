@@ -21,6 +21,16 @@ body {
 .container-xl,
 .container-xxl { --bs-gutter-x: 30px; }
 
+.mx-n-gx {
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.px-gx {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
 // Custom Scrollbar
 
 // ::-webkit-scrollbar {
@@ -55,6 +65,7 @@ body {
 .bg-red-gradient { background-image: var(--theme-red-gradient); }
 .bg-gray-gradient { background-image: var(--theme-gray-gradient); }
 .bg-blue-light { background-color: var(--theme-blue-light) !important; }
+.bg-blue-100 { background-color: var(--theme-blue-100) !important; }
 
 .bg-overlay {
     position: absolute;

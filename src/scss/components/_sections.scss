@@ -961,6 +961,68 @@
     top: 20px;
 }
 
+/* component: widget-topics */
+
+.content-widget-topics {
+    .bg-absolute-img {
+        position: absolute;
+        top: -33px;
+        right: -40px;
+        max-width: 100%;
+        width: 100px;
+        height: auto;
+        transform: rotate(-55deg);
+    }
+
+    @include media-breakpoint-up(sm) {
+        .bg-absolute-img {
+            top: -10%;
+            right: 5%;
+            width: 180px;
+            transform: none;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .bg-absolute-img {
+            top: -40%;
+            width: 320px;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .bg-absolute-img {
+            top: -50%;
+            width: 400px;
+        }
+    }
+}
+
+/* component: widget-cta1 */
+
+.content-widget-cta1 {
+    .bg-absolute-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -60%;
+        width: auto;
+        height: 100%;
+    }
+
+    @include media-breakpoint-up(md) {
+        .bg-absolute-img {
+            right: -10%;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .bg-absolute-img {
+            right: 0;
+        }
+    }
+}
+
 /*------------------------------------------------------------------
 [ projects page ]*/
 
@@ -982,6 +1044,43 @@
     @include media-breakpoint-up(xxl) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 30px;
+    }
+}
+
+/* component: widget-cta2 */
+
+.content-widget-cta2 {
+    .bg-absolute-img {
+        position: absolute;
+        top: -10px;
+        right: -130px;
+        max-width: 100%;
+        width: 220px;
+        height: auto;
+    }
+
+    @include media-breakpoint-up(md) {
+        .bg-absolute-img {
+            top: -10%;
+            right: 1%;
+            width: 210px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .bg-absolute-img {
+            top: -5%;
+            right: 5%;
+            width: 320px;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .bg-absolute-img {
+            top: -40%;
+            right: 10%;
+            width: 550px;
+        }
     }
 }
 
