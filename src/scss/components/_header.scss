@@ -401,14 +401,17 @@ body.header-fixed {
     }
 
     .sub-menu {
-        display: none;
+        // display: none;
         margin: 0;
         padding: 0;
         list-style: none;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.35s ease;
 
-        &.open {
-            display: block;
-        }
+        // &.open {
+        //     display: block;
+        // }
 
         li > span {
             padding-left: 35px;

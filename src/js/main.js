@@ -83,19 +83,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Mobile sub-menu
-    const mobileSubmenuTogglers = document.querySelectorAll('.sub-menu-toggler');
-    mobileSubmenuTogglers.forEach(toggler => {
-        toggler.addEventListener('click', function () {
-            const parentItem = this.closest('.has-sub-menu');
-            if (!parentItem) return;
+    document.querySelectorAll('.sub-menu-toggler').forEach(toggler => {
+        toggler.addEventListener('click', () => {
+            const parent = toggler.closest('.has-sub-menu');
+            const submenu = parent.querySelector('.sub-menu');
+            if (!submenu) return;
 
-            const submenu = parentItem.querySelector('.sub-menu');
-            if (submenu) {
-                submenu.classList.toggle('open');
-                this.classList.toggle('sub-menu-active');
+            const isOpen = submenu.classList.contains('open');
+
+            if (isOpen) {
+                close(submenu);
+                toggler.classList.remove('sub-menu-active');
+            } else {
+                open(submenu);
+                toggler.classList.add('sub-menu-active');
             }
         });
     });
+
+    function open(el) {
+        el.classList.add('open');
+        const h = el.scrollHeight;
+        el.style.height = h + 'px';
+
+        el.addEventListener('transitionend', () => {
+            el.style.height = 'auto';
+        }, { once: true });
+    }
+
+    function close(el) {
+        el.style.height = el.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+            el.style.height = '0px';
+        });
+        el.classList.remove('open');
+    }
+
+    // Mobile sub-menu (old)
+    // const mobileSubmenuTogglers = document.querySelectorAll('.sub-menu-toggler');
+    // mobileSubmenuTogglers.forEach(toggler => {
+    //     toggler.addEventListener('click', function () {
+    //         const parentItem = this.closest('.has-sub-menu');
+    //         if (!parentItem) return;
+
+    //         const submenu = parentItem.querySelector('.sub-menu');
+    //         if (submenu) {
+    //             submenu.classList.toggle('open');
+    //             this.classList.toggle('sub-menu-active');
+    //         }
+    //     });
+    // });
 
     // Phone mask
     var maskPhone = document.querySelectorAll('.maskPhone')
