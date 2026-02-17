@@ -58,6 +58,15 @@ body.header-fixed {
     }
 }
 
+.site-logo {
+    width: auto;
+    height: 23px;
+
+    @include media-breakpoint-up(xxl) {
+        height: 29px;
+    }
+}
+
 .header-row {
     display: flex;
     align-items: center;
@@ -71,14 +80,7 @@ body.header-fixed {
     transition: all 0.3s ease;
 
     &__logo {
-        height: 34px;
         margin-left: 7px;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
     }
 
     &__navigation {
@@ -139,7 +141,6 @@ body.header-fixed {
         height: 90px;
 
         &__logo {
-            height: 42px;
             margin-left: 12px;
         }
     }
